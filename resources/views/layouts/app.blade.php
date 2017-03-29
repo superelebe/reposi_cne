@@ -151,8 +151,8 @@ $(document).ready( function(){
                 <li><a href="{{ url('/servicios') }}">SERVICIOS</a></li>
                 <li><a href="{{ url('/afiliados') }}">AFILIADOS</a></li>
                 <li><a href="{{ url('/contacto') }}">CONTACTO</a></li>
-                <li><a href="{{ url('/capacitacion') }}">CAPACITACIÓN</a></li>
-                <li><a href="{{ url('/register') }}">AF&Iacute;LIATE</a></li>
+                <li><a href="{{ url('/capacitaciones') }}">CAPACITACIÓN</a></li>
+                <li><a href="{{ url('/') }}">AF&Iacute;LIATE</a></li>
             </ul>
         </div>
         <div id="logos">
@@ -207,7 +207,7 @@ $(document).ready( function(){
                         <!-- Authentication Links -->
                         @if (Auth::guest())
                             <li><a href="{{ route('login') }}">Login</a></li>
-                            <li><a href="{{ route('register') }}">Register</a></li>
+                            <li><a href="{{ url('/') }}">Register</a></li>
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -311,7 +311,7 @@ $(document).ready( function(){
             <li><a href="{{ url('/afiliados') }}">AFILIADOS</a></li>
             <li><a href="{{ url('/contacto') }}">CONTACTO</a></li>
             <li><a href="{{ url('/capacitacion') }}">CAPACITACIÓN</a></li>
-            <li><a href="{{ url('/register') }}">AFILIATE</a></li>
+            <li><a href="{{ url('/') }}">AFILIATE</a></li>
         </ul>
     </div>
 </div>

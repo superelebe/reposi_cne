@@ -161,7 +161,7 @@ class ArticleController extends Controller
      	$article->delete();
         return URL::to('article');
     }
-    public function mostrar(){
+    public function noticias(){
         $potato = Article::orderBy('created_at', 'ASC')->paginate(5);
         return view('article.noticias')->with('noticia',$potato);
         // $articulos = Article::orderBy('created_at', 'ASC')->paginate(6);
