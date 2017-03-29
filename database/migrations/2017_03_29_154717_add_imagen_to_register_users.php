@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddImagenToBolsaTrabajo extends Migration
+class AddImagenToRegisterUsers extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,9 @@ class AddImagenToBolsaTrabajo extends Migration
      */
     public function up()
     {
-        Schema::table('bolsa_trabajo', function (Blueprint $table) {
-            $table->string('imagen')->default('default.png'); 
+        Schema::table('register_users', function (Blueprint $table) {
+            $table->string('imagen');
+            $table->string('cv');
         });
     }
 
@@ -25,8 +26,9 @@ class AddImagenToBolsaTrabajo extends Migration
      */
     public function down()
     {
-        Schema::table('bolsa_trabajo', function (Blueprint $table) {
-            $table->string('imagen')->default('default.png'); 
+        Schema::table('register_users', function (Blueprint $table) {
+            $table->string('imagen');
+            $table->string('cv');
         });
     }
 }

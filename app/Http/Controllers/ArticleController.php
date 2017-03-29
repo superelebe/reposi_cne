@@ -9,6 +9,7 @@ use App\Article;
 use Amranidev\Ajaxis\Ajaxis;
 use URL;
 use Image;
+use Carbon\Carbon;
 
 /**
  * Class ArticleController.

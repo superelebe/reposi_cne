@@ -18,6 +18,9 @@ class Banner extends Model
 
 	protected $dates = ['deleted_at'];
     
+    public function scopeActivo($query){
+    	return $query->where('activo',1)->get();
+    }
 	
     protected $table = 'banners';
     protected $fillable = ['titulo', 'imagen', 'thumb', 'link'];
