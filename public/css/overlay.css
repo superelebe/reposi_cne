@@ -1,0 +1,77 @@
+/* the overlayed element */
+.simple_overlay {
+ 
+    /* must be initially hidden */
+    display:none;
+ 
+    /* place overlay on top of other elements */
+    z-index:10000;
+ 
+    /* styling */
+   
+ 
+    width:880px;
+    min-height:200px;
+    border:1px solid #666;
+	
+	margin:-50px;
+	background:#CAC8C8;
+ 
+    /* CSS3 styling for latest browsers */
+    -moz-box-shadow:0 0 90px 5px #000;
+    -webkit-box-shadow: 0 0 90px #000;
+}
+ 
+/* close button positioned on upper right corner */
+.simple_overlay .close {
+    background-image:url(../img/close.png);
+    position:absolute;
+    right:-5px;
+    top:-5px;
+    cursor:pointer;
+    height:45px;
+    width:35px;
+}
+
+
+
+
+/* styling for elements inside overlay */
+  .details {
+  position:absolute;
+  top:300px;
+  font-size:15px;
+  color:#455560;
+  width:740px;
+  text-align:justify;
+  line-height: 130% ;
+  margin:auto 70px;
+}
+ 
+  .details h3 {
+  color:#455560;
+  font-size:2em;
+  margin-bottom:20px;
+  line-height: 130% ;
+  }
+  
+   .details li {
+	   list-style-image:url(../img/bullet-penta2.png);
+	     }
+  
+  .detailspresidente {
+   position:absolute;
+   color:#455560;
+  font-size:12px;
+  width:740px;
+  text-align:justify;
+  line-height: 130% ;
+  margin:75px 70px;
+}
+
+.detailspresidente h5 {
+  color:#455560;
+  font-size:13px;
+  margin-bottom:10px;
+   line-height: 130% ;
+  }
