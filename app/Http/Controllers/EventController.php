@@ -9,6 +9,7 @@ use App\Event;
 use Amranidev\Ajaxis\Ajaxis;
 use URL;
 use Image;
+use Carbon\Carbon;
 
 /**
  * Class EventController.
@@ -141,16 +142,16 @@ class EventController extends Controller
     public function update($id,Request $request)
     {
         if ($request->hasFile('imagen')) {
-        $imagen = $request->file('imagen');
-                $filename = time().'.'.$imagen->getClientOriginalExtension();
-                $path = public_path('uploads/evento/' . $filename);
-                Image::make($imagen)->resize(null, 400, function ($constraint) {
+            $imagen = $request->file('imagen');
+            $filename = time().'.'.$imagen->getClientOriginalExtension();
+            $path = public_path('uploads/evento/' . $filename);
+            Image::make($imagen)->resize(null, 400, function ($constraint) {
                     $constraint->aspectRatio();
                     $constraint->upsize();
                 })->save($path);
 
         
-        $event->imagen = '/uploads/evento/'.$filename;
+            $event->imagen = '/uploads/evento/'.$filename;
         }
 
         $event = Event::findOrfail($id);

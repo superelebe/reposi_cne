@@ -16,7 +16,27 @@
                 <div class="title m-b-md">
                     Laravel
                 </div>
-
+                <div>
+                    @foreach($banners as $banner)
+                        <div>
+                            <img src="{{$banner->imagen}}" alt="">
+                        </div>
+                    @endforeach
+                </div>
+                <div>
+                    <div>
+                        @foreach($noticias as $noticia)
+                            <div>
+                                <img src="{{$noticia->imagen}}" alt="">
+                                <div>{{ $noticia->titulo}}</div>
+                                <div>{{ $noticia->created_at->diffForHumans()}}</div>
+                            </div>
+                        @endforeach
+                    </div>
+                    <div>
+                        <a href="{{route('mostrar')}}">Ver mas noticias</a>
+                    </div>
+                </div>
                 <div class="links">
                     <a href="https://laravel.com/docs">Documentation</a>
                     <a href="https://laracasts.com">Laracasts</a>

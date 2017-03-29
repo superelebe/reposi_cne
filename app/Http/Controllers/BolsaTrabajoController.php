@@ -135,7 +135,7 @@ class BolsaTrabajoController extends Controller
             $eldia=date("D_M_d_G:i"); //this returns the current date time
             $fileName = str_slug(pathinfo($archivo->getClientOriginalName(), PATHINFO_FILENAME)).'_'.$md5Name.'.'.$archivo->getClientOriginalExtension();
 
-            $path = base_path() . '/storage/app/cv/';
+            $path = base_path() . '/storage/app/vacantes/cv/';
             $mipath = $path.$fileName;
             $archivo->move($path , $fileName);
             // return Storage::put($fileName,file_get_contents($archivo));
