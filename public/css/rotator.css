@@ -1,0 +1,123 @@
+@charset "utf-8";
+
+/*----------------------------- 
+-------------------------------
+ESTILOS POR SECIONES DEL SITIO
+------------------------------- 
+-----------------------------*/
+
+/*----- INDEX -----*/
+/*------ ROTATOR PRINCIPAL------*/
+#rotador-index {
+	background: #455560;
+	position:absolute;
+	overflow:visible;
+	width: 1024px;
+	height: 280px;
+	margin:0 auto;
+	-webkit-border-top-left-radius: 6px;
+	-webkit-border-top-right-radius: 6px;
+	-moz-border-radius-topleft: 6px;
+	-moz-border-radius-topright: 6px;
+	}
+/*----clase contenedora---*/	
+
+.jshowoff {
+ background: #455560 none repeat scroll 0 0;
+    height: 350px;
+    margin: 0 auto 35px;
+    overflow-y: hidden;
+    width: 100%;
+    overflow-x: hidden;
+	}
+
+.jshowoff div {	
+	width: 1024px;
+	height: 280px;
+	
+	}
+.jshowoff img{
+	margin:0 -133px;
+}
+ 
+.jshowoff div, .jshowoff img, .jshowoff {
+	-webkit-border-top-left-radius: 6px;
+	-webkit-border-top-right-radius: 6px;
+	}
+	
+#basicFeatures, .jshowoff.basicFeatures, .jshowoff.basicFeatures img, .jshowoff.basicFeatures div {
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	}
+/*---CONTENEDOR DE MIANTURAS--*/
+
+.jshowoff-slidelinks a, .jshowoff-controls a {
+	background-color: #FFF;
+	color: #fff;
+	padding: 0;
+	margin: 0;
+	float:right;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	}
+.jshowoff-slidelinks a:hover, .jshowoff-controls a:hover {
+	color: #fff;
+	}
+.jshowoff-slidelinks a.jshowoff-active, .jshowoff-slidelinks a.jshowoff-active:hover {
+	background-color: #fff;
+	}
+
+/*-- Re-styled Thumbnail Demo --*/
+.thumbFeatures p.jshowoff-slidelinks {
+	background: #455560;
+	margin:3px auto;
+	width:880px;
+	height:50px;
+	filter:alpha(opacity=90);
+	-moz-opacity:.90;
+	opacity:.90;
+	}
+	
+.thumbFeatures .jshowoff-slidelinks a {
+	width: 120px;
+	height: 27px;
+	background-color: none;
+	background-repeat: no-repeat;
+	margin: 6px 5px 0 5px;
+	border: 3px solid #808C97;
+	text-indent: -10000em;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+	z-index: 999;
+	}
+.thumbFeatures .jshowoff-slidelinks a.jshowoff-active {
+	border: 3px solid #769D2E;
+	}
+.thumbFeatures .jshowoff-slidelink-0 {
+	background-image:url(../img/tumb-banner-01.jpg);
+	}
+.thumbFeatures .jshowoff-slidelink-1 {
+	background-image: url(../img/tumb-banner-02.jpg);
+	}
+.thumbFeatures .jshowoff-slidelink-2 {
+	background-image: url(../img/tumb-banner-03.jpg);
+	}
+.thumbFeatures .jshowoff-slidelink-3 {
+	background-image: url(../img/thumb-banner-04.jpg);
+	}
+.thumbFeatures .jshowoff-slidelink-4 {
+	background-image: url(../img/tumb-banner-05.jpg);
+	}
+.thumbFeatures .jshowoff-slidelink-5 {
+	background-image: url(../img/tumb-banner-06.jpg);
+	}
+
+.thumbFeatures p.jshowoff-controls {
+	visibility:hidden;
+	background: #769D2E;
+	height: 38px;
+	overflow: visible;
+	padding: 0;
+	position: absolute;
+	z-index: 150;
+	}

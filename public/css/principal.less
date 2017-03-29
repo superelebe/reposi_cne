@@ -1,0 +1,114 @@
+@charset "utf-8";
+/* Estilos CSS principales para  CNEC */
+
+/*GUIA DE COLORES*/
+/*
+VERDECLARO : #A1BA77;
+VERDEMEDIO : #769D2E;
+AZULGRISCLARO : #B5BFC7;
+AZULGRISMEDIO : #808C97;
+AZULGRISOSCURO : #455560;
+*/
+
+/*----- FONTS -----*/
+@font-face { 
+	font-family: 'Cabin'; 
+	src: url('../fonts/Cabin-Regular.otf'); 
+}
+@font-face { 
+	font-family: 'Cabin'; 
+	src: url('../fonts/Cabin-Bold.otf');
+	font-weight:bold; 
+}
+
+/*variables LESS*/
+
+@vc: #A1BA77;
+@vm: #769D2E;
+@agc: #B5BFC7;
+@agm: #808C97;
+@ago: #455560;
+
+/*----- ESTILOS GENERALES -----*/
+body{
+	font-family:Cabin, Verdana, Arial, sans-serif;
+}
+
+a{
+	text-decoration:none;
+}
+
+a img {
+	border:none;
+}
+
+/*----- HEADER -----*/
+#header{
+	height:60px;
+	background-color:@agm;
+}
+
+#header #menu{
+	width:350px;
+	font-size:.8em;
+	background:#F1F1F1;
+}
+#header #menu li{
+	height:15px;
+	width:162px;
+}
+
+/*----- ROTADOR -----*/
+
+/*----- ENLACES DE INTERES -----*/
+#interes{
+	background-color: @agc;
+}
+
+/*----- FOOTER -----*/
+#footer{
+	background-color: @agm;
+}
+
+/*----------------------------- 
+-------------------------------
+ESTILOS POR SECIONES DEL SITIO
+------------------------------- 
+-----------------------------*/
+/*----- INDEX -----*/
+#rotador-index{
+    background:@ago;
+}
+
+
+/*social*/
+#twitter{
+	background:@agm;
+}
+
+#facebook{
+	background:@agc;
+}
+
+#areas{
+	background:@vm;
+}
+
+#calendario{
+	background:@vc;
+}
+
+#noticias{
+	background:@agm;
+}
+
+/*----- CLASES -----*/
+.ocho80{
+	width:880px;
+	margin: 0 auto;
+}
+
+.clearfix{
+	clear:both;
+}
+

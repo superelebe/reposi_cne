@@ -18,6 +18,60 @@ Auth::routes();
 Route::get('/home', 'HomeController@index');
 
 
+
+Route::get('cnec' , function(){
+  return view('estatico.cnec');
+});
+Route::get('servicios' , function(){
+  return view('estatico.servicios');
+});
+Route::get('licitaciones' , function(){
+  return view('estatico.licitaciones');
+});
+Route::get('monitoreo' , function(){
+  return view('estatico.monitoreo');
+});
+Route::get('calculo' , function(){
+  return view('estatico.calculo');
+});
+Route::get('consultores' , function(){
+  return view('estatico.consultores');
+});
+Route::get('adiestramiento' , function(){
+  return view('estatico.adiestramiento');
+});
+Route::get('afiliadas' , function(){
+  return view('estatico.afiliadas');
+});
+Route::get('capacitaciones' , function(){
+  return view('estatico.capacitaciones');
+});
+Route::get('publicaciones' , function(){
+  return view('estatico.publicaciones');
+});
+Route::get('comisiones' , function(){
+  return view('estatico.comisiones');
+});
+Route::get('conocimiento' , function(){
+  return view('estatico.conocimiento');
+});
+Route::get('siem' , function(){
+  return view('estatico.siem');
+});
+
+
+Route::get('capacitacion' , function(){
+  return view('estatico.capacitacion');
+});
+
+
+
+
+
+
+
+
+
 Route::get('/admincnec/login', 'Auth\AdminLoginController@showLoginForm')->name('admincnec.login');
 
 Route::post('/admincnec/login', 'Auth\AdminLoginController@login')->name('admincnec.login.submit');

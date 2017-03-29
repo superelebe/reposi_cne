@@ -1,0 +1,1616 @@
+@charset "utf-8";
+/* Estilos CSS principales para  CNEC */
+/*GUIA DE COLORES*/
+/*
+VERDECLARO : #A1BA77;
+VERDEMEDIO : #769D2E;
+AZULGRISCLARO : #B5BFC7;
+AZULGRISMEDIO : #808C97;
+AZULGRISOSCURO : #455560;
+*/
+
+/*----- FONTS -----*/
+
+@font-face {
+    font-family: 'Cabin';
+	src: url('../fonts/Cabin-Regular.otf');
+    src: url('../fonts/cabin-regular-webfont.eot');
+    src: url('../fonts/cabin-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/cabin-regular-webfont.woff') format('woff'),
+         url('../fonts/cabin-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'Cabin';
+	src: url('../fonts/Cabin-Bold.otf');
+    src: url('../fonts/cabin-bold-webfont.eot');
+    src: url('../fonts/cabin-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/cabin-bold-webfont.woff') format('woff'),
+         url('../fonts/cabin-bold-webfont.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+
+}
+/*----- ESTILOS GENERALES -----*/
+body {
+	font-family: Cabin, Verdana, Arial, sans-serif;
+}
+a {
+	text-decoration: none;
+}
+a img {
+	border: none;
+}
+
+h2{
+	font-size:1.3em;
+}
+
+h3{
+	font-size:1.4em;
+	letter-spacing:-1px;
+}
+
+/*----- HEADER -----*/
+#header {
+	height: 60px;
+	background-color: #808c97;
+}
+#header #menu {
+	width: 347px;
+	font-size: .71em;
+	background: #F1F1F1;
+	float:left;
+	height:60px;
+	padding-left:3px;
+	text-align:center;
+}
+#header #menu li {
+	height: 15px;
+	width: 162px;
+	float:left;
+	margin:3px 5px;
+}
+
+#header #menu li a{
+	color:#f1f1f1;
+	height: 12px;
+	width: 162px;
+	display:block;
+	padding-top:3px;
+	background:#808C97;
+}
+#header #menu li a:hover{
+	background:#A1BA77;
+}
+
+#header #logos{
+	float:left;
+	width:530px;
+}
+#header #logos img{
+	margin:5px 0 0 27px;
+}
+
+/*----- ROTADOR -----*/
+#slides{
+	float:right;
+	margin-left:-5px;
+}
+
+
+/*----- ENLACES DE INTERES -----*/
+#interes {
+	background-color: #b5bfc7;
+	margin-top:10px;
+	padding:20px;
+}
+
+#interes h3 {
+	border-bottom: 1px solid #fff;
+	border-top: 1px solid #455560;
+	color:#fff;
+	margin-top:0px;
+	padding:3px 0;
+	text-align:center;
+	width: 880px;
+	
+}
+
+#interes .enlace{
+	float:left;
+	margin-left:20px;
+	padding-top:10px;
+	position:relative;
+}
+
+#interes .enlace a{
+	background:url(../img/pentagono-e.gif) no-repeat left top;
+	height:30px;
+	display:block;
+}
+
+#interes .enlace a:hover{
+	background:url(../img/pentagono-e-hover.gif) no-repeat left top;
+}
+
+
+#interes .enlace h5, #interes .enlace p{
+	padding-left:25px;
+	color:#455560;
+}
+
+#interes .enlace h5{
+	font-size:13px;
+	font-weight:500;
+}
+#interes .enlace p {
+	font-size:.8em;
+	line-height:120%;
+	text-align:left;
+}
+
+
+/*----- FOOTER -----*/
+#footconten{
+	margin-top:50px;
+}
+#footer {
+	padding:28px 0 10px 0;
+	/*background-color: #808c97;*/
+	background-color: #f1f1f1;
+	height:186px;
+	border-top:6px solid #455560;
+	color:#fff;
+}
+
+#footer #direccion{
+	width:175px;
+	float:left;
+	text-align:right;
+	font-size:.8em;
+	color: #455560;
+}
+
+#footer #direccion li{
+	margin-bottom:5px;
+}
+
+#footer #telefonos{
+	width:378px;
+	float:left;
+	font-size:1.9em;
+	padding:0px 60px 0 75px;
+}
+#footer #telefonos .tel{
+	color:#B5BFC7;
+}
+#footer #telefonos .fax{
+	color:#455560;
+	padding-top:5px;
+}
+#footer #telefonos .contactanos{
+	color:#B5BFC7;
+	font-size:1.4em;
+}
+
+#footer #telefonos .sobre{
+	margin: 5px 0 0 7px;
+}
+
+
+#footer #logofooter{
+	width: 180px;
+	float: left;
+}
+#footer #logofooter img{
+	width: 100%;
+}
+
+#footer #derechos {
+	color: #455560;
+	font-size:.8em;
+	text-align:center;
+	padding-top:55px;
+}
+
+#footer #derechos span, #footer #derechos a{
+	color:#455560;
+}
+
+/*----------------------------- 
+-------------------------------
+ESTILOS POR SECIONES DEL SITIO
+------------------------------- 
+-----------------------------*/
+
+/*----- INDEX -----*/
+
+
+/*presidente*/
+#mensajes {
+	margin-top:25px;
+}
+
+#mensajes p, #mensajes ul {
+	font-size:.8em;
+	line-height:1.25em;
+	color:#455560;
+	padding:10px 5px;
+}
+
+#mensajes .consultores li{
+	background: url(../img/bullet-penta.gif) no-repeat left 6px;
+	padding:0 0 12px 15px;
+}
+
+
+#mensajes .consultores img{
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index:-1000;
+	
+}
+
+#mensajes .consultores{
+	float:left;
+	width:168px;
+	margin-right:8px;
+	height:340px;
+	position:relative;
+	
+}
+#mensajes .consultores h2{
+	height:92px;
+	text-align:left;
+	color:#fff;
+	padding:150px 3px 0 3px ;
+	margin:0 0 -20px;
+}
+
+#mensajes .consultores .vermas{
+	position:absolute;
+	bottom:0;
+	display:block;
+	width:100%;
+	text-transform:uppercase;
+	text-align:center;
+	font-size:1em;
+	padding:2px 0;
+}
+
+#mensajes .consultores .vermas a{
+	color:#fff;
+}
+
+#mensajes #mensaje_director{
+	float:left;
+	width:344px;
+	position:relative;
+	height:340px;
+}
+
+
+#mensajes #mensaje_director p {
+	padding:6px 5px;
+}
+
+#mensajes #mensaje_director .vermas {
+	position:absolute;
+	bottom:0;
+	display:block;
+	width:100%;
+	text-transform:uppercase;
+	text-align:center;
+	font-size:1em;
+	padding:2px 0;
+}
+
+#mensajes #mensaje_director .vermas a{
+	color:#fff;
+}
+
+#mensajes #mensaje_director div {
+	padding-top:1px;
+	position:relative;
+	
+}
+
+#mensajes #mensaje_director div img{
+	position:absolute;
+	top:0px; left:0px;
+	z-index:-1000;
+}
+
+#mensajes #mensaje_director div span{
+	width:235px;
+	color:#FFF;
+	line-height:1.2em;
+	font-size:12px;
+	padding:6px;
+	display:block;
+	margin-top:140px;
+}
+
+#mensajes #mensaje_director div p{
+	color:#fff;
+	line-height:1.2em;
+	font-size:1.2em;
+	margin-top:20px;
+}
+
+
+/*---social---*/
+#social{
+	height:485px;
+	margin-top:25px;
+}
+
+#social h2{
+	font-size:1.2em;
+	color:#fff;
+	border-bottom:1px solid #fff;
+	border-top:1px solid #455560;
+	width:200px;
+	padding:7px 0 7px 20px;
+	margin:12px 0px 0px 35px;
+}
+
+#social h3 {
+	color:#fff;
+	padding:12px 0;
+	text-align:center;
+	font-size:1.3em;
+}
+
+.columna3{
+	float:left;
+	width:293px;
+}
+
+
+#twitter {
+	background: #808c97 url(../img/icon-twitter.gif) no-repeat 5px 16px;
+	height:210px;
+	padding-top:1px;
+}
+#twittconten {
+	float:left;
+	display:block;
+	position:relative;
+	height:50px;
+	width:50px;
+	padding:30px 100px;
+}
+
+				
+
+#facebook {
+	background: #b5bfc7;
+	height:210px;
+	padding-top:1px;
+}
+
+#areas {
+	border: 1px solid #769D2E;
+	position:relative;
+	height:272px;
+}
+
+#calendario {
+	position:relative;
+	height:274px;
+	background-color:#FFF;
+}
+
+#calendario  li{
+	margin-bottom:15px;
+}
+
+.fecha {
+	color:#455560;;
+	margin:20px 0;
+	font-size:13px;
+	margin:10px 40px 10px 20px;
+	text-align:justify;
+}
+.fecha a{
+	background:url(../img/cruzmas.gif) no-repeat top left;
+	padding:30px 13px;
+	margin:-25px 5px;
+	right:5px;
+	position:absolute;
+}
+.fecha span{
+	color:#808C97;
+	display:block;
+	font-size:12px;
+	margin:5px 0;
+
+}
+
+#areas .vermas, #calendario .vermas{
+	position:absolute;
+	bottom:0;
+	display:block;
+	width:98%;
+	text-transform:uppercase;
+	text-align: right;
+	font-size:1em;
+	padding:5px 1%;
+}
+#areas ul{
+	margin:30px auto;
+}
+
+#areas li{
+	background: url(../img/bullet-penta.gif) no-repeat left 3px;
+	margin-top: 10px;
+	padding-left:15px;
+	font-size: 1em;
+	color: #769D2E;
+	margin-left:12px;
+}
+
+#areas .vermas a, #calendario .vermas a{
+	color:#fff;
+}
+
+#noticias {
+	background: #808c97 url(../img/icon-noticias.gif) no-repeat 5px 16px;
+	padding-top:1px;
+	height:484px;
+}
+
+#noticias .articulo {
+	margin: 10px 0 12px 10px;
+	border-bottom:1px solid #fff;
+	color:#fff;
+	padding:0 0 17px;
+	position:relative;
+}
+
+#noticias .articulo img.noticia {
+	margin:5px;
+	background:#455560;
+	border:3px solid #455560;
+	padding:0;
+}
+#noticias .articulo img.imgmas {
+	position:absolute;
+	left:227px;
+	top:50px;
+}
+
+#noticias .articulo p{
+	color:#455560;
+	font-size:14px;
+	width:220px;
+	
+}
+/*----- convenios -----*/
+#convenios{
+	width: 880px;
+	height: 100px;
+	margin: 0 auto;
+	position:relative;
+	top: 25px;
+}
+/*----- QUE ES LA CNEC -----*/
+#cnec #bloque1{
+	background:url(../img/fondo-queeslacnec.png) no-repeat 50% top;
+	height:1120px;
+	padding-top:1px;
+}
+#cnec #bloque1 #textocnec{
+	color:#fff;
+	width:288px;
+	margin-top:200px;
+}
+
+#cnec #bloque1 #textocnec p{
+	line-height:1.3em;
+}
+
+#cnec #bloque1 #textocnec h3{
+	font-size:2.2em;
+	text-align:right;
+	margin:25px 0;
+}
+
+#cnec #bloque1 a{
+	background:#A1BA77;
+	font-size:0.9em;
+	color:#FFF;
+	height:30px;
+	left:700px;
+	margin:25px 0;
+	padding:5px 20px;
+	position:relative;
+	text-align:center;
+	top:790px;
+	
+	width:200px;
+}
+#cnec #objetivos {
+	height:97px;
+	background:#fff;
+}
+#cnec #objetivos h2{
+	color:#A1BA77;
+	font-size:2.1em;
+	padding:11px;
+	width:266px;
+	border-bottom:1px solid #A1BA77;
+}
+
+#cnec #bloque2{
+	background:url(../img/fondo-queeslacnec2.png) no-repeat 50% top;
+	height:676px;
+}
+
+#cnec #bloque2 #ulizq{
+	width:240px;
+	color:#fff;
+	padding:10px 0 35px;
+	float:left;	
+}
+
+#cnec #bloque2 #ulizq li{
+	padding:12px 0 12px 20px;
+	border-bottom:1px solid #fff;
+	font-size:1.1em;
+	line-height:1.25em;
+	background:url(../img/pentagon3.gif) no-repeat left 17px;
+}
+
+#cnec #derecha{
+	float:right;
+	width:580px;
+}
+
+#cnec #derecha h2{
+	height:74px;
+	color:#fff;
+	font-size:2.6em;
+	padding:10px 0 0 40px;
+	line-height:.8em;
+}
+
+#cnec #derecha #oportunidad ul, #cnec #derecha #participacion ul{
+	float:left;
+	width:46%;
+	padding:15px 3% 30px 0;
+	color:#455560;
+	font-size:1.1em;
+	border-top:1px solid #769d2e;
+	margin-top:7px;
+}
+
+#cnec #derecha #oportunidad li, #cnec #derecha #participacion li{
+	margin-bottom:20px;
+	padding-left:20px;
+	background:url(../img/pentagon4.gif) no-repeat left 2px;
+}
+
+/*organigrama*/
+#cnec #organigrama {
+	
+}
+
+#cnec #organigrama #titulo-org{
+	height:80px;
+	padding:10px;
+}
+
+#organigrama #titulo-org h1{
+	font-size:2.6em;	
+}
+
+#organigrama #mapa{
+	background:#E6EAEC;
+	height:440px;
+}
+
+#organigrama #mapa .ocho80{
+	background:url(../img/organigrama-2.jpg) no-repeat center top;
+	height:440px;
+}
+
+#organigrama #pie{
+	background:#455560;
+	height:131px;
+}
+#organigrama #pie .ocho80{
+	background: url(../img/pie-organigrama.png) no-repeat;
+	height:131px;
+}
+#organigrama #pie p{
+	color:#fff;
+	width:340px;
+	padding:30px 15px 0 15px;
+	margin-left:530px;
+	font-size:1.2em;
+}
+
+
+
+/*----- SERVICIOS CNEC -----*/
+#servicios{
+	background:url(../img/fondo-servicios.png) no-repeat center top;
+	padding-top:1px;
+}
+
+#servicios #contenedorserv{
+	margin-top:555px;
+}
+
+.tiraservicio{
+	clear:both;
+	margin-bottom:90px;
+}
+
+.tiraservicio .icoservicio {
+	width:212px;
+	position:relative;
+	float:left;
+	margin:0 40px;
+	height:230px;
+}
+
+.tiraservicio .icoservicio img{
+	padding-bottom:5px;
+	border-bottom:1px solid #769d2e;
+}
+
+.tiraservicio .icoservicio h5{
+	font-size:1.1em;
+	color:#455560;
+	text-align:center;
+	padding:12px 0 5px;
+	border-bottom:1px solid #769d2e;
+	height:70px;
+}
+.tiraservicio .icoservicio h5 span{
+	color:#808c97;
+}
+
+.tiraservicio .icoservicio span.vermas{
+	display:block;
+	width:100%;
+	position:absolute;
+	bottom:0;
+	text-align:center;
+	padding:2px 0;
+}
+
+.tiraservicio .icoservicio span.vermas a{
+	color:#fff;
+}
+
+/* serviciosindividual */
+#servicios-cnec{
+	background:url(../img/servicios-fondito.png) no-repeat center top;
+}
+
+#servicios-cnec #titulo{
+	height:280px;
+}
+
+#servicios-cnec #titulo img{
+	float:left;
+	margin:80px 0 0 100px;
+}
+
+#servicios-cnec #titulo h1{
+	float:left;
+	width:550px;
+	padding:60px 0 0 50px;
+	color:#b5bfc7;
+	font-size:3.2em;
+}
+
+#servicios-cnec #contenido{
+	margin:24px 0 0 290px;
+	position:relative;
+}
+
+#servicios-cnec #contenido p {
+	float:left;
+	width:250px;
+	text-align:justify;
+	color:#455560;
+	padding:0 12px 0 30px;
+	line-height:1.4em;
+	font-size:1.05em;
+}
+
+#servicios-cnec #contenido a{
+	display: block;
+	position:absolute;
+	width:185px;
+	height:90px;
+	left:-200px;
+	top:40px;
+}
+
+/*----- AFILIADOS -----*/
+#empresas{
+	background:url(../img/banner-afiliados.png) no-repeat center top;
+	padding-top:1px;
+}
+
+#empresas #selects{
+	margin-top:228px;
+	height:20px;
+}
+
+#empresas #selects select{
+  font-size: 12px;
+  color: #455560;
+  background-color:#FFF;
+}
+#empresas #selects option {
+	background-color: #B5BFC7;
+}
+
+#empresas #selects a{
+	background:url(../img/btn-regresar-flip.png) no-repeat top left;
+	display:block;
+	height:65px;
+	margin:-10x -20px 0 0;
+	overflow:hidden;
+	text-indent:-500px;
+	width:330px;
+}
+#empresas table{
+	margin:50px 0 0 0;
+	font-size:.85em;
+}
+
+#empresas table thead{
+	background:#808E99;
+	color:#fff;
+	font-size:1.2em;
+	padding:5px;
+}
+
+#empresas table tr{
+	padding:15px 0;
+}
+
+#empresas table td{
+	border-bottom:#769D2E solid 1px;
+	padding:10px 15px;
+}
+
+#empresas table td a{
+	background:#A1BA77;
+	color:#FFF;
+	font-size:12px;
+	padding:7px 3px;
+	
+	
+}
+
+#empresas #nombre{
+	color:#455560; 
+	text-transform:uppercase;
+	font-weight:600;
+	font-size:1.5em;
+	margin-bottom:10px;	
+}
+
+#empresas #subarea{
+	font-size:1.2em;
+		color:#808C97;
+		margin-bottom:10px;
+}
+#empresas #certificacion{
+	color:#455560; 
+	font-size:16px; 
+	margin-bottom:15px;
+}
+#empresas #tel{
+	color:#455560; 
+	text-transform:uppercase;
+	font-weight:600;
+	font-size:2em;
+	margin-bottom:10px;	
+}
+#empresas #email{
+	margin-bottom:10px;	
+}
+#empresas #direccion{
+	color:#455560;
+	font-size:16px;
+	margin-top:5px;
+		
+}
+
+/*-----  AFILIATE  -----*/
+#afiliate{
+	background:url(../img/afiliate-a-la-cenec-banner.png) no-repeat center top;
+}
+
+#afiliate h2, #documentos h2{
+	font-size:2.7em;
+	color:#808C97;
+	border-bottom:2px solid #769D2E;
+	margin-bottom:10px;
+}
+
+#afiliate .ocho80{
+	position:relative;
+	padding-top:1px;
+}
+
+
+#pendon{
+	background:url(../img/pendon.png) no-repeat;
+	height:351px;
+	position:absolute;
+	top:430px;
+	padding:275px 10px 0 10px;
+	left:630px;
+	width:183px;
+}
+#pendon span {
+	padding-left:40px;
+	
+}
+
+#pendon span a{
+	color:#fff;
+}
+
+#pendon span p{
+	color:#fff;
+	font-size:14px;
+	text-align:center;
+	
+}
+
+#formulario {
+	width:540px;
+	padding:0 25px;
+	margin-top:650px;
+}
+
+#formulario label{
+	color:#455560;
+	font-size:1em;
+	font-weight:bold;
+}
+
+#formulario input, textarea {
+	border: 1px solid #455560;
+	margin:8px 0;
+	padding:5px;
+}
+
+#formulario #nombre, #formulario #empresa, textarea{
+	width:540px;
+}
+
+#formulario #enviar{
+	background:#455560;	
+	color:#fff;
+	margin:-9px 0 0 497px;
+}
+
+#telefono, #email{
+	width:255px;
+}
+
+#formulario p{
+	width:260px;
+	float:left;
+}
+
+/*documentos*/
+#documentos{
+	background:#455560;
+	margin-top:25px;
+	padding: 15px 0 30px;
+	color:#fff;
+	font-size:1.05em;
+}
+
+#documentos h2{
+	padding-bottom:15px;
+	border-bottom:2px solid #fff;
+	width:645px;
+}
+
+#documentos ul{
+	line-height:1.7em;
+	float:left;
+	width:380px;
+	margin-left:20px;
+}
+
+#documentos li{
+	list-style-image:url(../img/bullet-penta2.png);
+	
+}
+
+#documentos p {
+	width:290px;
+	float:left;
+	margin-bottom:20px;
+	font-size:.9em;
+	line-height:1.2em;
+	margin-left:190px;
+}
+/*-----AREAS DE ESPECIALIDAD -----*/
+#arease{
+	background:url(../img/banner-areas.png) no-repeat center top;
+	padding-top:1px;
+}
+#arease #contenedorareas{
+	margin:260px 0 0;
+
+}
+.tiraarea{
+	clear:both;
+	margin-bottom:90px;
+}
+#arease .areatit{
+}
+#arease .areatit a{
+	background:#A1BA77;
+    float: left;
+    height: 70px;
+    margin: 5px;
+    padding:9px;
+    text-align: center;
+    width: 265px;
+	cursor:pointer;
+	font-size:.8em;
+	color:#FFF;
+	text-align:center;
+}
+#arease .areatit img{
+	float:left;
+}
+#arease .areatit h5{
+	font-size:2em;
+	color:#455560;
+	text-align:center;
+	padding:5px 0 5px;
+	margin:0 0 10px;
+	border-bottom:1px solid #769d2e;
+}
+
+.listarea{
+	background:#B5BFC7;
+    float: left;
+    margin: 5px;
+    padding:9px;
+    width: 265px;
+	height:200px;
+	
+}
+.listarea h3{
+	color:#455560;
+	font-size:18px;
+	margin-bottom:10px;
+}
+.listarea li{
+    text-align: left;
+	font-size:14px;
+	line-height:130%
+}
+
+/*-----NOTICIA DETALLE-----*/
+.simibanner {
+	width:100%;
+	height: 284px;
+	margin:0 auto ;
+	background: #455560;
+	border-bottom:#A1BA77 solid medium;
+	border-top:#A1BA77 solid medium;
+	position:absolute;
+	z-index:-1000;
+}
+	
+.notifoto{
+	margin:0px auto 0;
+	width:500px;
+	height:380px;
+	
+}
+
+.notifoto img{
+	border:2px #A1BA77 solid;
+}
+
+#noti{
+	background:url(../img/fondo-noti.png) no-repeat center top;
+	padding:100px 0 100px 0;
+	margin:-90px auto;
+}
+
+#noti #noticonten{
+	width: 500px;
+	margin:20px auto;
+
+}
+
+#noti #noticonten h3{
+	color:#FFF;
+	font-size:36px;
+	margin-bottom:10px;
+}
+
+#noti #noticonten p{
+	font-size:14px;
+	line-height:130%;
+	text-align:justify;
+
+}
+#noti #noticonten div{
+	font-size:14px;
+	line-height:130%;
+	text-align:justify;
+
+}
+#noti #noticonten span{
+	color:#B5BFC7;
+	display:block;
+	font-size:16px;
+	margin-bottom:10px;
+}
+
+#noti #noticonten a{
+	display:block;
+	position:relative;
+	margin:20px 375px;
+}
+/*-----NOTICIA LISTADO -----*/
+#notilist{
+	background:url(../img/banner-noti.png) no-repeat center top;
+	padding-top:1px;	
+}
+#notilistconten{
+	margin-top:260px;
+}
+.noticia{
+	background:#B5BFC7;
+	width:244px;
+	float:left;
+	min-height:30px;
+	padding:15px 15px 50px;
+	margin:10px 15px 10px 0px;
+	display:block;
+	position:relative;
+}
+.noticia h3{
+	color:#455560;
+}
+.noticia span{
+	color: #FFF;
+	font-size:15px;
+}
+.noticia img{
+	border:5px #455560 solid;
+	margin:5px 0 10px -4px;
+}
+.noticia p{
+	font-size:.85em;
+	color:#455560;
+	line-height:120%;
+}
+.noticia a{
+	bottom:15px;
+	display:inline-block;
+	width:100px;
+	padding:10px;
+	text-align:center;
+	background-color:#A1BA77;
+	position:absolute;
+	right:15px;
+	color:#FFF;
+	border-bottom:2px #769D2E solid;
+	border-top:1px #fff solid;
+}
+
+/*----- SECION DE CALENDARIO-----*/
+#calendar{
+	background:url(../img/banner-cal.png) no-repeat center top;
+	padding-top:1px;
+}
+#calendar h3{
+	color:#fff;
+	font-size:2em;
+	padding:8px 0;
+	border-bottom: 1px solid #fff;
+	border-top: 1px solid #455560;
+}
+
+#calendar #calconten{
+	margin-top:260px;	
+}
+#mes{
+	width:550px;
+	margin: 10px 0 20px;
+	float:left;
+
+}
+#mes h2{
+	font-size:1.5em;
+	color:#455560;
+	height:30px;
+	background:#A1BA77;
+	padding:5px 0 ;
+	border:1px solid #455560;
+}
+
+#mes h5{
+	font-size:36px;
+	text-align:center;
+	color:#455560;
+	width:505px;
+	padding:10px 0;
+	background:#A1BA77;
+	margin-bottom:10px;
+}
+#semana{
+	display:block;
+}
+.dia{
+	border:1px solid #A1BA77;
+	float:left;
+	width:70px;
+	height:35px;
+	text-align:center;
+	font-size:1.5em;
+	color:#455560;
+	padding-top:10px;
+}
+.dia a{
+	color:#455560;
+	font-size:1em;
+	text-align:center;
+}
+.ocupado{
+	background:#A1BA77;
+	color:#FFF;
+	cursor:pointer;
+}
+
+#peventos{
+	background-color:#455560;
+	float:left;
+	width:300px;
+	margin:10px 0 0 -20px;
+	padding:10px 30px 10px 20px;
+	position:relative;
+}
+.evento {
+	color:#808C97;
+	margin:20px 0;
+}
+.evento a{
+	background:url(../img/cruzmas.gif) no-repeat top left;
+	padding:30px 13px;
+	margin:-15px 5px;
+	right:0px;
+	position:absolute;
+}
+.evento span{
+	color:#B5BFC7;
+	display:block;
+	font-size:12px;
+	margin:5px 0;
+
+}
+.tooltip {
+    display:none;
+    background:url(../img/tooltip.png);
+    font-size:12px;
+	text-align:right;
+    height:70px;
+    width:140px;
+	padding:10px 20px 30px;
+    color:#FFF;
+ }
+/*----- SECION DE CAPCITACION-----*/
+
+#capacitacion{
+	background:url(../img/fondo-capacitacion.png) no-repeat center top;
+	padding-top:1px;
+    position:relative;
+}
+#capacitacion #capaconten{
+	margin-top:555px;
+	min-height:400px;
+	position:relative;
+	
+}
+#pendondgray{
+	background:url(../img/pendon-dg.png) no-repeat;
+	height:351px;
+	left:50px;
+	padding:333px 10px 0 10px;
+	position:absolute;
+	top:-320px;
+	width:183px;
+}
+#pendondgray span {
+	padding-left:40px;
+}
+
+#pendondgray span a{
+	color:#B5BFC7;
+	font-size:14px;
+	text-align:center;
+	
+}
+#pendondgray span p{
+	margin-left:5px;
+}
+.curso{
+	/*background:#455560;*/
+	width:540px;
+	margin: 10px 0 20px 270px;
+	padding:15px 25px 50px;
+}
+.curso h2{
+	color:#FFF;
+	font-size:1.5em;
+	margin-bottom:10px;
+}
+.curso span{
+	color:#808C97;
+	font-size:1.5em;
+	
+}
+.curso p{
+	margin-top:10px;
+	color:#B5BFC7;
+	font-size:14px;
+	line-height:130%;
+}
+.curso a{
+	width:60px;
+	background:#A1BA77;
+	border-bottom:2px #769D2E solid;
+	border-top:1px #FFF solid;
+	padding:10px 20px;
+	color:#FFF;
+	position:absolute;
+	right:35px;
+	
+	
+}
+
+
+/*
+VERDECLARO : #A1BA77;
+VERDEMEDIO : #769D2E;
+AZULGRISCLARO : #B5BFC7;
+AZULGRISMEDIO : #808C97;
+AZULGRISOSCURO : #455560;
+*/
+
+
+/*----- SECION DE CONVENIOS-----*/
+
+#capaconvenio{
+	background:url(../img/CNECconvenios.jpg) no-repeat center top;
+	padding-top:1px;
+    position:relative;
+}
+#capaconvenio #capaconten{
+	margin-top:555px;
+	min-height:400px;
+	position:relative;
+	
+}
+
+.curso{
+	/*background: #455560;*/
+	width: 260px;
+	margin: 10px 0 20px 270px;
+	padding: 15px 25px 50px;
+}
+.curso h2{
+	color:#455560;
+	font-size:1.5em;
+	margin-bottom:10px;
+}
+.curso span{
+	color:#808C97;
+	font-size:1em;
+	
+}
+.curso p{
+	margin-top:10px;
+	color:#B5BFC7;
+	font-size:14px;
+	line-height:130%;
+}
+.curso a{
+	width:60px;
+	background:#A1BA77;
+	border-bottom:2px #769D2E solid;
+	border-top:1px #FFF solid;
+	padding: 10px 20px;
+	color:#FFF;
+	position:absolute;
+	right: 325px;
+	
+	
+	margin-top: 20px;
+	z-index: 10;
+}
+
+.columna-2{
+	position: absolute;
+	margin-top: -1558px;
+	margin-left: 680px;
+}
+.columna-3{
+	position: absolute;
+	margin-top: -1558px;
+	margin-left: 340px;
+}
+
+
+#pendondgrayconvenios{
+	background: url(../img/pendon_convinios.png) no-repeat;
+	height: 351px;
+	left: -205px;
+	padding: 333px 10px 0 10px;
+	position: absolute;
+	top: -450px;
+	width: 183px;
+}
+
+
+
+/*
+VERDECLARO : #A1BA77;
+VERDEMEDIO : #769D2E;
+AZULGRISCLARO : #B5BFC7;
+AZULGRISMEDIO : #808C97;
+AZULGRISOSCURO : #455560;
+*/
+
+
+
+
+
+
+/*----- SECION DE CONTACTO -----*/
+#contacto{
+	background:url(../img/banner-contac.png) no-repeat center top ;
+	padding-top:1px;
+}
+#contacto .top{
+	background:#455560;
+	padding:30px 0;
+	border-top:#769d2e;
+	color:#fff;
+	margin-top:260px;
+}
+#contacto .top h1 {
+	color:#B5BFC7;
+	font-size:3.6em;
+	margin-bottom:20px;
+}
+
+#contacto .top p{
+	padding:7px 0;
+	border-bottom:1px solid #151C2B;
+	font-size:1.25em;
+}
+
+#contacto #datosc{
+	float:left;
+	height:250px;
+	width:420px;
+	
+}
+
+#contacto #map{
+	background-color:#FFF;
+	border:4px #151C2B solid; 
+	height:260px;
+	margin-left:20px; 
+	width:420px;
+}
+
+#contacto .bottom{
+	background: url(../img/fondocontacto.jpg) no-repeat center top #808E99;	
+	height:342px;
+	margin-top:8px;
+	padding-top:9px;
+	
+}
+#contacto .bottom .ocho80{
+	position:relative;
+}
+
+#contacto .bottom form{
+	width:525px;
+	margin-top:10px
+}
+
+#contacto .bottom label{
+	color:#fff;
+	font-size:1.15em;
+	font-weight:bold;
+}
+
+#contacto .bottom input {
+	border: 1px solid #455560;
+	width:240px;
+	padding:4px;
+	margin:6px 0;
+}
+
+#contacto .bottom textarea{
+	width:440px;
+}
+
+#contacto #enviarusuario {
+	width:15px;
+}
+
+#contacto .bottom #enviar{
+	width:80px;
+	color:#fff;
+	background:#455560;
+	position:absolute;
+	top:253px;
+	left:460px;
+}
+
+#contacto .bottom span{
+	color:#455560;
+	font-size:.70em;
+}
+
+/*----- MENU INFERIOR ------*/
+#menu2{
+	font-size:.9em;
+	color:#b5bcf7;
+	text-align:center;
+	background:#455560;
+}
+
+#menu2 li {
+	height: 15px;
+	width: 156px;
+	float:left;
+	margin:3px 7px;
+}
+
+#menu2 li a{
+	color:#f1f1f1;
+	height: 12px;
+	width: 156px;
+	display:block;
+	padding:4px 0;
+	background:#808C97;
+}
+
+#menu2 li a:hover{
+	background:#A1BA77;
+}
+
+/*----- CLASES -----*/
+.ocho80 {
+	width: 880px;
+	margin: 0 auto;
+}
+
+.clearfix {
+	clear: both;
+}
+
+.azulclaro{background:#b5bfc7;}
+.azulmedio{background:#808C97;}
+.azuloscuro{background:#455560;}
+.bordeazulclaro{border:1px solid #b5bfc7;}
+.bordeazulmedio{border:1px solid #808C97;}
+.bordeazuloscuro{border:1px solid #455560;}
+.colorazulclaro{color:#b5bfc7;}
+.colorazulmedio{color:#808C97;}
+.colorazuloscuro{color:#455560;}
+
+.verdemedio{background:#769D2E;}
+.verdeclaro {background:#A1BA77;}
+.colorverdemedio{color:#769D2E;}
+.colorverdeclaro {color:#A1BA77;}
+.bordeverdemedio{border:1px solid #769D2E;}
+
+
+.wrapper {width:100%; overflow:hidden;}
+
+.forma3 label{
+	color:#fff;
+	font-size:1.15em;
+	font-weight:bold;
+}
+
+.forma3 input {
+	border: 1px solid #455560;
+	width:240px;
+	padding:4px;
+	margin:6px 0;
+}
+
+.forma3 textarea{
+	width:340px;
+}
+
+#contacto #enviarusuario {
+	width:15px;
+}
+
+.forma3 #enviar{
+	width:80px;
+	color:#fff;
+	background:#808d98;
+	
+}
+.curso-columna-2{
+position: absolute;
+margin-left: 330px;
+margin-top: -2261px;
+}
+.curso2 a{
+	width:60px;
+	background:#A1BA77;
+	border-bottom:2px #769D2E solid;
+	border-top:1px #FFF solid;
+	padding:10px 20px;
+	color:#FFF;
+	position:absolute;
+	right:35px;
+	
+	
+}
+.curso3{
+	/*background: #455560;*/
+	width: 260px;
+	margin: 10px 0 20px 0px;
+	padding: 15px 25px 50px;
+}
+.curso3 h2{
+	color:#455560;
+	font-size:1.5em;
+	margin-bottom:10px;
+}
+.curso3 span{
+	color:#808C97;
+	font-size:1em;
+	
+}
+.curso3 p{
+	margin-top:10px;
+	color:#B5BFC7;
+	font-size:14px;
+	line-height:130%;
+}
+.curso3 a{
+	width:60px;
+	background:#A1BA77;
+	border-bottom:2px #769D2E solid;
+	border-top:1px #FFF solid;
+	padding: 10px 20px;
+	color:#FFF;
+	position:absolute;
+	right: 325px;
+	
+	
+	margin-top: 20px;
+	z-index: 10;
+}
