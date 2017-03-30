@@ -62,10 +62,14 @@ Route::get('conocimiento' , function(){
 Route::get('siem' , function(){
   return view('estatico.siem');
 });
-
 Route::get('capacitacion' , function(){
   return view('estatico.capacitacion');
 });
+
+
+
+
+
 
 
 Route::get('/admincnec/login', 'Auth\AdminLoginController@showLoginForm')->name('admincnec.login');

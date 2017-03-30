@@ -17,21 +17,10 @@
                     Hola Manuel :)
                 </div>
                 <div>
-  
+                        {{-- estaba el foreach de banner --}}
                 </div>
                 <div>
-                    <div>
-                        <!-- @foreach($noticias as $noticia)
-                            <div>
-                                <img src="{{$noticia->imagen}}" alt="">
-                                <div>{{ $noticia->titulo}}</div>
-                                <div>{{ $noticia->created_at->diffForHumans()}}</div>
-                            </div>
-                        @endforeach -->
-                    </div>
-                    <div>
-                        <a href="{{url('noticias')}}">Ver mas noticias</a>
-                    </div>
+                        {{-- estaba el foreach de noticias --}}
                 </div>
                 <div class="links">
                     <a href="https://laravel.com/docs">Documentation</a>
@@ -130,6 +119,7 @@
 
 
 
+
 <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 <!-- ///////////////////////////////////////////// S O C I A L ///////////////////////////////////////////////////// -->
 <div id="social" class="limpiar">
@@ -194,13 +184,13 @@
                   <h2>NOTICIAS</h2>
 
                   @foreach($noticias as $noticia)
-                            <div>
+                            <div class="articulo">
                                 <!-- <div>{{ $noticia->titulo}}</div> -->
                                 <h4>{{ $noticia->titulo}}</h4>
                                 <img src="{{$noticia->imagen}}" alt="" class="noticia" width="244" height="66">
                                 <p>{{substr(strip_tags($noticia->cuerpo),0,100)}}{{strlen(strip_tags($noticia->cuerpo)) > 100 ? "...":""}}</p>
                                 <div>{{ $noticia->created_at->diffForHumans()}}</div>
-                                
+                                <a href="{{route('noticias')}}"  title="Ver m&aacute;s de la noticia"><img src="{{asset('img/cruzmas.gif')}}" alt="mas" class="imgmas" /></a>
                             </div>
                   @endforeach
                   <a href="{{route('noticias')}}" title="Ver m&aacute;s de la noticia"><img class="btn_ver_noti" src="{{asset('img/btn-vermasn.png')}}"></a>
@@ -215,6 +205,26 @@
 <!--termina div social-->
 <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 <!-- //////////////////////////////////B A N N E R S   C O N T ////////////////////////////////////////////////////// -->
