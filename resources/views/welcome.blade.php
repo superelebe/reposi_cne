@@ -21,13 +21,13 @@
                 </div>
                 <div>
                     <div>
-                        @foreach($noticias as $noticia)
+                        <!-- @foreach($noticias as $noticia)
                             <div>
                                 <img src="{{$noticia->imagen}}" alt="">
                                 <div>{{ $noticia->titulo}}</div>
                                 <div>{{ $noticia->created_at->diffForHumans()}}</div>
                             </div>
-                        @endforeach
+                        @endforeach -->
                     </div>
                     <div>
                         <a href="{{url('noticias')}}">Ver mas noticias</a>
@@ -192,23 +192,20 @@
           <div id="noticias">
                 
                   <h2>NOTICIAS</h2>
+
+                  @foreach($noticias as $noticia)
+                            <div>
+                                <!-- <div>{{ $noticia->titulo}}</div> -->
+                                <h4>{{ $noticia->titulo}}</h4>
+                                <img src="{{$noticia->imagen}}" alt="" class="noticia" width="244" height="66">
+                                <p>{{substr(strip_tags($noticia->cuerpo),0,100)}}{{strlen(strip_tags($noticia->cuerpo)) > 100 ? "...":""}}</p>
+                                <div>{{ $noticia->created_at->diffForHumans()}}</div>
+                                
+                            </div>
+                  @endforeach
+                  <a href="{{route('noticias')}}" title="Ver m&aacute;s de la noticia"><img class="btn_ver_noti" src="{{asset('img/btn-vermasn.png')}}"></a>
                     
-                    <?
-            $s = 'Select idarticulos, titulo, texto, foto01 From articulos Order by fecha Desc LIMIT 2';
-            $q = mysql_query($s) or die (mysql_error());
-              while ($r = mysql_fetch_array($q)){
-            ?>
-                    <div class="articulo">
-                      <h4><?= $r['titulo'] ?></h4>
-                        <img src="img/noticias/<?= $r['idarticulos'] ?>/<?= $r['foto01'] ?>" alt="<?= $r['titulo'] ?>"  class="noticia" width="244" height="66"/>
-                        <p><?= substr($r['texto'],0,100); ?>...</p>
-                         <a href="noticias/noticia.php?id=<?= $r['idarticulos'] ?>" title="Ver m&aacute;s de la noticia"><img src="img/cruzmas.gif" alt="mas" class="imgmas" /></a>
-                    </div>
-                    <?
-            }
-            ?>
                     
-            <div><a href="noticias.php" title="Enterate de lo que pasa en la CNEC"><img style="width:250px;height:49px; margin:-15px 0  0 55px; z-index:9999;"src="img/btn-vermasn.png" alt="Más Noticias" /></a></div>  
           </div>
         </div>
 
