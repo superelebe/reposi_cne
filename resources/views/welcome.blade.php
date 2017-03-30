@@ -17,11 +17,7 @@
                     Hola Manuel :)
                 </div>
                 <div>
-                    @foreach($banners as $banner)
-                        <div>
-                            <img src="{{$banner->imagen}}" alt="">
-                        </div>
-                    @endforeach
+  
                 </div>
                 <div>
                     <div>
@@ -34,7 +30,7 @@
                         @endforeach
                     </div>
                     <div>
-                        <a href="{{route('mostrar')}}">Ver mas noticias</a>
+                        <a href="{{url('noticias')}}">Ver mas noticias</a>
                     </div>
                 </div>
                 <div class="links">
@@ -51,6 +47,11 @@
 
 
 <div id="rotador-index">
+                  @foreach($otro_banner as $banner)
+                        <div title="{{$banner->titulo}}">
+                            <a href="{{$banner->link}}"><img src="{{$banner->imagen}}" alt=""></a>
+                        </div>
+                    @endforeach
     <div title="Semana de Cultura Laboral"> <a href="http://www.cnecgto.org/2014/pdf/Semana_de_Cultura_Laboral_CNEC.pdf"><img src="img/rot-banner-17.jpg" /></a> </div>
     
     <div title="Desarrollo de habilidades para supervisores y resindetes de obras"><a href="http://www.cnecgto.org/2016/curso/desarrollodehabilidades/" target="_blank"><img src="img/rot-banner-desarrollo.jpg" /></a></div> 
@@ -116,14 +117,132 @@
 <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 <!-- ///////////////////////////////////////////// S O C I A L ///////////////////////////////////////////////////// -->
+<div id="social" class="limpiar">
+  <div class="ocho80">
+      <div class="columna3">
+          
+            <div id="areas">
+              <h3 class="verdemedio">ÁREAS DE ESPECIALIDAD</h3>
+                <ul>
+                  <li>Economía, Inversión y Finanzas</li>
+                  <li>Administración y Gestión</li>
+                  <li>Planeación y  Diseño</li>
+                  <li>Administración de Obras</li>
+                    <li>Servicios Tecnológicos Profesionales</li>
+                </ul>
+                <span class="vermas verdemedio"><a href="areas.html">Ver Más</a></span>
+            </div>
+      <div id="twitter">
+              <h2>TWITTER <span style=" margin-left:10px; position:absolute;"><a  href="https://twitter.com/CNEC_GTO" class="twitter-follow-button" data-show-count="false" data-lang="es">Seguir a @CNEC_GTO</a></span></h2>       
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        <div class="tweet"></div>   
+            </div>
+        </div>
+        
+      <div class="columna3">
+    <div id="calendario">
+              <h3 class="verdeclaro">CALENDARIO</h3>
+                <ul>
+                  
+                  <li class="fecha"> <span>09 - Mayo - 2016</span> Curso Lean Construction</li>  
+
+                  <li class="fecha"> <span>05 y 06 - Mayo - 2016</span> Ortografía y Redacción</li>  
+
+
+                <li class="fecha"> <span>15 y 16 - Abril - 2016</span>Desarrollo de habilidades para supervisores y residentes de obras<a href="http://www.cnecgto.org/2014/curso/desarrollohabilidades/" target="_blank" title="Ver más información"></a></li>  
+
+                <li class="fecha"> <span>12 y 13 - Abril - 2016</span>Taller Formación de Consultores<a href="http://www.cnecgto.org/2016/curso/formaciondeconsultores/" target="_blank" title="Ver más información"></a></li>  
+
+                <li class="fecha"> <span> 07 - Abril - 2016</span>  Curso Actualización DENUE</li>  
+
+
+                <li class="fecha"> <span>04 y 05 - Abril - 2016</span> Curso Ingreso al Uso de Drones</li>  
+
+
+                <li class="fecha"> <span>04 y 05 - Abril - 2016</span> Curso Ingreso al Uso de Drones</li>  
+
+                  <li class="fecha"> <span>30 - Marzo - 2016</span>Platica Creación de Proyectos exitosos para obtener Recursos de Gobierno</li>                   
+
+                  
+                  
+                </ul>
+                <span class="vermas verdeclaro"><a href="calendario.html">Ver Más</a></span>
+            </div>
+          <div id="facebook">
+      <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2FCNECGTO&amp;width=292&amp;height=200&amp;colorscheme=light&amp;show_faces=true&amp;stream=false&amp;header=false&amp;appId=245687622216193" scrolling="yes" frameborder="0" style="border:none; overflow:hidden; width:292px; height:200px;" allowTransparency="true"></iframe>
+            </div>
+        </div>
+        
+        <div class="columna3">
+          <div id="noticias">
+                
+                  <h2>NOTICIAS</h2>
+                    
+                    <?
+            $s = 'Select idarticulos, titulo, texto, foto01 From articulos Order by fecha Desc LIMIT 2';
+            $q = mysql_query($s) or die (mysql_error());
+              while ($r = mysql_fetch_array($q)){
+            ?>
+                    <div class="articulo">
+                      <h4><?= $r['titulo'] ?></h4>
+                        <img src="img/noticias/<?= $r['idarticulos'] ?>/<?= $r['foto01'] ?>" alt="<?= $r['titulo'] ?>"  class="noticia" width="244" height="66"/>
+                        <p><?= substr($r['texto'],0,100); ?>...</p>
+                         <a href="noticias/noticia.php?id=<?= $r['idarticulos'] ?>" title="Ver m&aacute;s de la noticia"><img src="img/cruzmas.gif" alt="mas" class="imgmas" /></a>
+                    </div>
+                    <?
+            }
+            ?>
+                    
+            <div><a href="noticias.php" title="Enterate de lo que pasa en la CNEC"><img style="width:250px;height:49px; margin:-15px 0  0 55px; z-index:9999;"src="img/btn-vermasn.png" alt="Más Noticias" /></a></div>  
+          </div>
+        </div>
+
+
+    </div>
+</div>
+>>>>>>> origin/master
 <!--termina div social-->
 <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
 
 
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> origin/master
 <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 <!-- //////////////////////////////////B A N N E R S   C O N T ////////////////////////////////////////////////////// -->
 

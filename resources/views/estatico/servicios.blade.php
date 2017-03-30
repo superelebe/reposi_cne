@@ -46,6 +46,8 @@
 		        	<img src="img/serv-7.png" alt="servicios cnec" />
 	                <h5>PRECIÓS PREFERENCIALES <br /><span>EN CURSOS, TALLERES O</span> CAPACITACIONES.</h5>
 	                <span class="vermas azulmedio"><a href="{{ url('/capacitaciones') }}">VER MÁS</a></span>
+	                <span class="vermas azulmedio"><a href="{{ url('/capacitacion') }}">VER MÁS</a></span>
+
 		        </div>
 				<div class="icoservicio">
 		        	<img src="img/serv-8.png" alt="servicios cnec" />

@@ -47,7 +47,7 @@ Route::get('adiestramiento' , function(){
 Route::get('afiliadas' , function(){
   return view('estatico.afiliadas');
 });
-Route::get('capacitaciones' , function(){
+Route::get('capacitacion' , function(){
   return view('estatico.capacitaciones');
 });
 Route::get('publicaciones' , function(){
@@ -63,17 +63,9 @@ Route::get('siem' , function(){
   return view('estatico.siem');
 });
 
-
 Route::get('capacitacion' , function(){
   return view('estatico.capacitacion');
 });
-
-
-
-
-
-
-
 
 
 Route::get('/admincnec/login', 'Auth\AdminLoginController@showLoginForm')->name('admincnec.login');
@@ -130,7 +122,7 @@ Route::get('event/{id}', 'EventController@show');
 
 Route::get('capacitaciones/{id}','CapacitacionController@show');
 Route::get('capacitaciones','CapacitacionController@capacitaciones');
-Route::get('mostrar', 'ArticleController@mostrar')->name('mostrar');
+Route::get('noticias', 'ArticleController@noticias')->name('noticias');
 Route::get('noticia/{id}', 'ArticleController@noticia');
 Route::get('eventos', 'EventController@eventos');
 Route::get('bolsa_trabajo_cnec/{id}','BolsaTrabajoController@show')->name('bolsa_trabajo_cnec');

@@ -153,6 +153,9 @@ $(document).ready( function(){
                 <li><a href="{{ url('/contacto') }}">CONTACTO</a></li>
                 <li><a href="{{ url('/capacitacion') }}">CAPACITACIÓN</a></li>
                 <li><a href="{{ url('/register') }}">AF&Iacute;LIATE</a></li>
+                <li><a href="{{ url('/capacitaciones') }}">CAPACITACIÓN</a></li>
+                <li><a href="{{ url('/') }}">AF&Iacute;LIATE</a></li>
+
             </ul>
         </div>
         <div id="logos">
@@ -311,7 +314,11 @@ $(document).ready( function(){
             <li><a href="{{ url('/afiliados') }}">AFILIADOS</a></li>
             <li><a href="{{ url('/contacto') }}">CONTACTO</a></li>
             <li><a href="{{ url('/capacitacion') }}">CAPACITACIÓN</a></li>
+<<<<<<< HEAD
             <li><a href="{{ url('/register') }}">AFILIATE</a></li>
+=======
+            <li><a href="{{ url('/') }}">AFILIATE</a></li>
+>>>>>>> origin/master
         </ul>
     </div>
 </div>
