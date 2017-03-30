@@ -11,7 +11,7 @@ use Carbon\Carbon;
 class WelcomeController extends Controller{
    public function index(){
    	$otro_banner = Banner::Activo();
-   	$noticias = Article::orderBy('id','desc')->take(5)->get();
+   	$noticias = Article::orderBy('id','asc')->take(2)->get();
    	return view('welcome',compact('otro_banner','noticias'));
    	
    }
