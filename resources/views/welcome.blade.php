@@ -20,7 +20,6 @@
                         {{-- estaba el foreach de banner --}}
                 </div>
                 <div>
-                        {{-- estaba el foreach de noticias --}}
                 </div>
                 <div class="links">
                     <a href="https://laravel.com/docs">Documentation</a>
@@ -185,7 +184,6 @@
 
                   @foreach($noticias as $noticia)
                             <div class="articulo">
-                                <!-- <div>{{ $noticia->titulo}}</div> -->
                                 <h4>{{ $noticia->titulo}}</h4>
                                 <img src="{{$noticia->imagen}}" alt="" class="noticia" width="244" height="66">
                                 <p>{{substr(strip_tags($noticia->cuerpo),0,100)}}{{strlen(strip_tags($noticia->cuerpo)) > 100 ? "...":""}}</p>
