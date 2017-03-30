@@ -20,7 +20,10 @@ Route::get('usuarios/editar', 'HomeController@editar')->name('editar-afiliado');
 Route::post('usuarios/{id}/update', 'HomeController@update');
 
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
-Route::get('logout', 'Auth\LoginController@getLogout')->name('logout');
+Route::post('logout', 'Auth\LoginController@getLogout')->name('logout');
+
+Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
+
 
 
 Route::get('cnec' , function(){
@@ -67,7 +70,6 @@ Route::get('capacitacion' , function(){
   return view('estatico.capacitacion');
 });
 
-
 Route::get('/admincnec/login', 'Auth\AdminLoginController@showLoginForm')->name('admincnec.login');
 
 Route::post('/admincnec/login', 'Auth\AdminLoginController@login')->name('admincnec.login.submit');
@@ -75,7 +77,6 @@ Route::post('/admincnec/login', 'Auth\AdminLoginController@login')->name('adminc
 Route::get('/admincnec', 'AdminController@index');
 
 Route::get('/admincnec/dashboard', 'AdminController@index')->name('admincnec.dashboard');
-;
 
 Route::post('/admincnec/dashboard', 'AdminController@index')->name('admincnec.dashboard');
 
@@ -118,7 +119,6 @@ Route::group(['middleware'=> 'auth:admin'],function(){
 });
 
 Route::get('event/{id}', 'EventController@show');
-
 
 Route::get('capacitaciones/{id}','CapacitacionController@show');
 Route::get('cursos','CapacitacionController@capacitaciones');

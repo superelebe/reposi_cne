@@ -154,7 +154,7 @@ $(document).ready( function(){
                 <li><a href="{{ url('/capacitacion') }}">CAPACITACIÓN</a></li>
                 <li><a href="{{ url('/register') }}">AF&Iacute;LIATE</a></li>
                 <li><a href="{{ url('/capacitaciones') }}">CAPACITACIÓN</a></li>
-                <li><a href="{{ url('/') }}">AF&Iacute;LIATE</a></li>
+                <li><a href="{{ route('register') }}">AF&Iacute;LIATE</a></li>
 
             </ul>
         </div>
@@ -210,7 +210,7 @@ $(document).ready( function(){
                         <!-- Authentication Links -->
                         @if (Auth::guest())
                             <li><a href="{{ route('login') }}">Login</a></li>
-                            <li><a href="{{ url('/') }}">Register</a></li>
+                            <li><a href="{{ route('register') }}">Register</a></li>
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -222,7 +222,7 @@ $(document).ready( function(){
                                         <a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                            Logout
+                                            Logout asdasd
                                         </a>
 
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

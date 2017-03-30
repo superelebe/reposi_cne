@@ -21,15 +21,6 @@
                 </div>
                 <div>
                     <div>
-                        <!-- @foreach($noticias as $noticia)
-                            <div>
-                                <img src="{{$noticia->imagen}}" alt="">
-                                <div>{{ $noticia->titulo}}</div>
-                                <div>{{ $noticia->created_at->diffForHumans()}}</div>
-                            </div>
-                        @endforeach -->
-                    </div>
-                    <div>
                         <a href="{{url('noticias')}}">Ver mas noticias</a>
                     </div>
                 </div>
@@ -195,7 +186,6 @@
 
                   @foreach($noticias as $noticia)
                             <div>
-                                <!-- <div>{{ $noticia->titulo}}</div> -->
                                 <h4>{{ $noticia->titulo}}</h4>
                                 <img src="{{$noticia->imagen}}" alt="" class="noticia" width="244" height="66">
                                 <p>{{substr(strip_tags($noticia->cuerpo),0,100)}}{{strlen(strip_tags($noticia->cuerpo)) > 100 ? "...":""}}</p>
