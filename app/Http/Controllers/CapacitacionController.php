@@ -15,7 +15,9 @@ class CapacitacionController extends Controller
      */
     public function index()
     {
-        //
+        $title = 'Index - Capacitacion';
+        $capacitaciones = Capacitacion::paginate(6);
+        return view('capacitacion.index',compact('capacitaciones','title'));
     }
 
     /**

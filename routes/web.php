@@ -121,7 +121,7 @@ Route::get('event/{id}', 'EventController@show');
 
 
 Route::get('capacitaciones/{id}','CapacitacionController@show');
-Route::get('capacitaciones','CapacitacionController@capacitaciones');
+Route::get('cursos','CapacitacionController@capacitaciones');
 Route::get('noticias', 'ArticleController@noticias')->name('noticias');
 Route::get('noticia/{id}', 'ArticleController@noticia');
 Route::get('eventos', 'EventController@eventos');
