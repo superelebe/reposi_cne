@@ -33,6 +33,12 @@ AZULGRISOSCURO : #455560;
     font-style: normal;
 
 }
+.btn_ver_noti{
+	width:250px;
+	height:49px; 
+	margin:-15px 0  0 55px; 
+	z-index:9999;
+}
 /*----- ESTILOS GENERALES -----*/
 body {
 	font-family: Cabin, Verdana, Arial, sans-serif;
