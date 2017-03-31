@@ -1,0 +1,22 @@
+@extends('layouts.app')
+@section('content')
+	<section>
+		<div>
+			<div>
+				Empresa
+				{{$afiliado->empresa}}
+			</div>
+			<div>
+				Telefono
+				{{$afiliado->telefono}}
+			</div>
+			<div>
+				Direccion
+				{{$afiliado->direccion}}
+			</div>
+			<div>
+				{{$afiliado->email}}
+			</div>
+		</div>
+	</section>
+@endsection

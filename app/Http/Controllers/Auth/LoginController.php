@@ -37,22 +37,10 @@ class LoginController extends Controller
     {
         return 'usuarios/home';
     }
-    public function __construct()
-    {
+    public function __construct(){
         $this->middleware('guest', ['except' => 'logout']);
     }
     public function showLoginForm(){
         return view('auth.login');
-    }
-    public function getLogout()
-    {
-        if (Auth::guard('admin')){
-            Auth::guard('admin')->logout();
-            return view('auth.admin-login');
-        }else{ 
-            Auth::logout();
-            return view('auth.login');
-
-        }
     }
 }

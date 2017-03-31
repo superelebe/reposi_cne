@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-
+use Illuminate\Database\Eloquent\Model;
 
 class User extends Authenticatable
 {
@@ -25,6 +25,13 @@ class User extends Authenticatable
         'created' => Events\NewUser::class
     ];
 
+    public function scopeNoAfiliados($query){
+        return $query->where('estatus','=','espera')->orderBy('created_at','desc');
+    }
+
+    public function scopeAfiliados($query){
+        return $query->where('estatus','=','afiliado')->orderBy('created_at','desc');
+    }
     /**
      * The attributes that should be hidden for arrays.
      *

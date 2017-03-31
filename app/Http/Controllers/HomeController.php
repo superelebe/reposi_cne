@@ -27,7 +27,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('usuarios.home');
+        $usuario = Auth::user();
+        return view('usuarios.home',compact('usuario'));
     }
     public function editar(Request $request){
         $title = 'Editar - Datos Afiliado';

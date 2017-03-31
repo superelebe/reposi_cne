@@ -20,11 +20,17 @@ Route::get('usuarios/editar', 'HomeController@editar')->name('editar-afiliado');
 Route::post('usuarios/{id}/update', 'HomeController@update');
 
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
-Route::post('logout', 'Auth\LoginController@getLogout')->name('logout');
+Route::post('login', 'Auth\LoginController@login');
+Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 
 Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
+Route::post('register', 'Auth\RegisterController@register');
 
+Route::get('ver_usuario/{id}', 'AdminController@estatusUsuario');
+Route::post('ver_usuario/{id}/update', 'AdminController@updateEstatusUsuario');
 
+Route::get('afiliados', 'WelcomeController@afiliados');
+Route::get('detalle_afiliado/{id}', 'WelcomeController@detalleAfiliado');
 
 Route::get('cnec' , function(){
   return view('estatico.cnec');
