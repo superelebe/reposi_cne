@@ -1109,9 +1109,21 @@ ESTILOS POR SECIONES DEL SITIO
 	color: #FFF;
 	font-size:15px;
 }
-.noticia img{
+.con_img_noti{
+	width: 94%;
+	display: block;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
 	border:5px #455560 solid;
-	margin:5px 0 10px -4px;
+	overflow: hidden;
+	height: 80px;
+}
+.noticia img{
+	width: 100%;
+	display: block;
+	margin-top: -57px;
+
 }
 .noticia p{
 	font-size:.85em;

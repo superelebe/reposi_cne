@@ -17,7 +17,7 @@
             'csrfToken' => csrf_token(),
         ]) !!};
     </script>
-<script type="text/javascript" src="{{asset('app.js')}}" ></script>s
+<script type="text/javascript" src="{{asset('app.js')}}" ></script>
 <script type="text/javascript" src="{{asset('js/jquery.tools.min.js')}}" ></script><!--estos son temporales--> 
 <script type="text/javascript" src="{{asset('js/jquery.jshowoff.min.js')}}" ></script><!--estos son temporales--> 
 <script src="{{asset('js/jqFancyTransitions.1.8.js')}}" type="text/javascript"></script>
@@ -159,22 +159,22 @@ $(document).ready( function(){
             </ul>
         </div>
         <div id="logos">
-            <a href="#"><img src="img/logo-concamin.gif" alt="logos" /></a>
-            <a href="#"><img src="img/logo-fidic.gif" alt="logos" /></a>
-            <a href="#"><img src="img/logo-fepac.gif" alt="logos" /></a>
-            <a href="#"><img src="img/logo-acec.gif" alt="logos" /></a>
-            <a href="#"><img src="img/logo-acec2.gif" alt="logos" /></a>
+            <a href="#"><img src="{{ asset('img/logo-concamin.gif') }}" alt="logos" /></a>
+            <a href="#"><img src="{{ asset('img/logo-fidic.gif') }}"  alt="logos" /></a>
+            <a href="#"><img src="{{ asset('img/logo-fepac.gif') }}" alt="logos" /></a>
+            <a href="#"><img src="{{ asset('img/logo-acec.gif') }}" alt="logos" /></a>
+            <a href="#"><img src="{{ asset('img/logo-acec2.gif') }}" alt="logos" /></a>
         </div>
     </div>
 </div>
 
 <div id="rotador" class="limpiar">
     <div class="ocho80">
-        <a href="index.php"><img src="img/logo-cnec-cuadro.png" alt="logo cnec" /></a>
-        <div id="slides"><!-----------------------------SlideShow Ini-->
-            <img src='img/rot-header-1.png' alt="img1"   />
-            <img src='img/rot-header-2.png' alt="img2" />
-            <img src='img/rot-header-3.png' alt="img3" />
+        <a href="index.php"><img src="{{ asset('img/logo-cnec-cuadro.png') }}"  alt="logo cnec" /></a>
+        <div id="slides"><!---SlideShow Ini-->
+            <img src="{{ asset('img/rot-header-1.png') }}" alt="img1"   />
+            <img src="{{ asset('img/rot-header-2.png') }}" alt="img2" />
+            <img src="{{ asset('img/rot-header-3.png') }}" alt="img3" />
         </div>
     </div>
 </div><!--termina div rotador-->
@@ -333,10 +333,10 @@ $(document).ready( function(){
         <div id="telefonos">
             <span class="tel">TEL: +52 01 (477) 711 21 68</span>
             <span class="fax">FAX: +52 01 (477) 711 04 63</span>
-            <span class="contactanos">CONTÁCTANOS</span><a href="contacto.php" title="Escribir un correo a la CNEC"><img src="img/correo-img.gif" alt="img correo" class="sobre" /></a>
+            <span class="contactanos">CONTÁCTANOS</span><a href="contacto.php" title="Escribir un correo a la CNEC"><img src="{{ asset('img/correo-img.gif') }}" alt="img correo" class="sobre" /></a>
         </div>
         <div id="logofooter">
-            <a href="index.php" title="Ir al Inicio"><img src="img/cnec-logo-footer.png" alt="cnec logo" /></a>
+            <a href="index.php" title="Ir al Inicio"><img src="{{ asset('img/cnec-logo-footer.png') }}" alt="cnec logo" /></a>
         </div>
         
         <div id="derechos" class="clearfix">
