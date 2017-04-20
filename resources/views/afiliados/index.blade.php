@@ -2,12 +2,9 @@
 @section('content')
 	<section class="content">
 	    <h1>
-	        Noticia Index
+	        Afiliados
 	    </h1>
-	    <form class = 'col s3' method = 'get' action = '{!!url("article")!!}/create'>
-	        <button class = 'btn btn-primary' type = 'submit'>Crear Nueva Noticia</button>
-	    </form>
-	    <br>
+
 	    <br>
 	    <table class = "table table-striped table-bordered table-hover" style = 'background:#fff'>
 	        <thead>
