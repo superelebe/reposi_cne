@@ -50,7 +50,6 @@ class HomeController extends Controller
                     $constraint->aspectRatio();
                     $constraint->upsize();
                 })->save($path_imagen);
-                
 
                 $usuario->imagenes = $path_imagen;
                 
