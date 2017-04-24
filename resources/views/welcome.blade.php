@@ -32,13 +32,7 @@
         </div>
 
 
-<div>
-  @if($errors->has())
-      @foreach ($errors->all() as $error)
-          <div>{{ $error }}</div>
-      @endforeach
-  @endif
-</div>
+
 
 <div id="rotador-index">
                   @foreach($otro_banner as $banner)

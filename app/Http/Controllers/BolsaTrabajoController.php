@@ -35,6 +35,11 @@ class BolsaTrabajoController extends Controller
         return view('bolsa_trabajo.create');
     }
 
+    public function superValidador(){
+        return[
+            'titulo'=>'',
+        ];
+    }
     /**
      * Store a newly created resource in storage.
      *
@@ -43,6 +48,13 @@ class BolsaTrabajoController extends Controller
      */
     public function store(Request $request)
     {
+            $this->validate(request(),[
+                'titulo'        => 'required| min: 5',
+                'start'         => 'required',
+                'descripcion'   => 'required| min:10',
+                'empresa'       => 'required | min:2'
+            ]); 
+
             $vacante = new BolsaTrabajo();
             if ($request->hasFile('imagen')) {
                 $imagen = $request->file('imagen');
