@@ -751,6 +751,7 @@ ESTILOS POR SECIONES DEL SITIO
 }
 
 /*----- AFILIADOS -----*/
+
 #empresas{
 	background:url(../img/banner-afiliados.png) no-repeat center top;
 	padding-top:1px;
@@ -787,7 +788,7 @@ ESTILOS POR SECIONES DEL SITIO
 #empresas table thead{
 	background:#808E99;
 	color:#fff;
-	font-size:1.2em;
+	font-size: 19px;
 	padding:5px;
 }
 
@@ -840,9 +841,301 @@ ESTILOS POR SECIONES DEL SITIO
 #empresas #direccion{
 	color:#455560;
 	font-size:16px;
-	margin-top:5px;
-		
+	margin-top:5px;	
 }
+.div_sobrecito{
+	width:35px; 
+	height:27px; 
+	background:url(../img/sobre.gif) no-repeat; 
+	float:left; 
+	z-index:10000; 
+	position:relative;
+}
+
+
+/*----- BOLSA DE TRABAJO -----*/
+
+#trabajo{
+	background:url(../img/banner-bolsa.png) no-repeat center top;
+	padding-top:1px;
+}
+
+#trabajo #selects{
+	margin-top:228px;
+	height:20px;
+}
+
+#trabajo #selects select{
+  font-size: 12px;
+  color: #455560;
+  background-color:#FFF;
+}
+#trabajo #selects option {
+	background-color: #B5BFC7;
+}
+
+#trabajo #selects a{
+	background:url(../img/btn-regresar-flip.png) no-repeat top left;
+	display:block;
+	height:65px;
+	margin:-10x -20px 0 0;
+	overflow:hidden;
+	text-indent:-500px;
+	width:330px;
+}
+#trabajo table{
+	margin:50px 0 0 0;
+	font-size:.85em;
+}
+
+#trabajo table thead{
+	background:#808E99;
+	color:#fff;
+	font-size: 19px;
+	padding:5px;
+}
+
+#trabajo table tr{
+	padding:15px 0;
+}
+
+#trabajo table td{
+	border-bottom:#769D2E solid 1px;
+	padding:10px 15px;
+}
+
+#trabajo table td a{
+	background:#A1BA77;
+	color:#FFF;
+	font-size:12px;
+	padding: 9px 17px;
+}
+
+#trabajo #nombre{
+	color:#455560; 
+	text-transform:uppercase;
+	font-weight:600;
+	font-size:1.5em;
+	margin-bottom:10px;	
+}
+
+#trabajo #subarea{
+	font-size:1.2em;
+		color:#808C97;
+		margin-bottom:10px;
+}
+#trabajo #certificacion{
+	color:#455560; 
+	font-size:16px; 
+	margin-bottom:15px;
+}
+#trabajo #tel{
+	color:#455560; 
+	text-transform:uppercase;
+	font-weight:600;
+	font-size:2em;
+	margin-bottom:10px;	
+}
+#trabajo #email{
+	margin-bottom:10px;	
+}
+#trabajo #direccion{
+	color:#455560;
+	font-size:16px;
+	margin-top:5px;	
+}
+
+
+/*Estilo boton nuevo*/
+.sub-main {
+    float: left;
+    margin-top: 50px;
+    width: 150px;
+    margin-bottom: 20px;
+}
+.button-two{
+  text-align: center;
+  cursor: pointer;
+  font-size:24px;
+  margin: 0px;
+}
+.button-two {
+    background-color: #87bc70;
+    border: medium none;
+    border-radius: 4px;
+    padding: 7px;
+    transition: all 0.5s ease 0s;
+    width: 300px;
+}
+.button-two span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button-two span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button-two:hover span {
+  padding-right: 25px;
+}
+
+.button-two:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.texto_blanco{
+	color: white;
+}
+
+/*Estilo boton crear*/
+.sub-main_crear {
+    float: right;
+    margin-top: 50px;
+    width: 150px;
+    margin-bottom: 20px;
+}
+.button-two_crear{
+  text-align: center;
+  cursor: pointer;
+  font-size:24px;
+  margin: 0px;
+}
+.button-two_crear {
+    background-color: #87bc70;
+    border: medium none;
+    border-radius: 4px;
+    padding: 7px;
+    transition: all 0.5s ease 0s;
+    width: 150px;
+}
+.button-two_crear span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button-two_crear span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button-two_crear:hover span {
+  padding-right: 25px;
+}
+
+.button-two_crear:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.texto_blanco{
+	color: white;
+}
+
+/*----- CREAR VACANTE -----*/
+
+#crear_vacante{
+	background:url(../img/banner-vaca.png) no-repeat center top;
+	padding-top:1px;
+}
+
+#crear_vacante #selects{
+	margin-top:228px;
+	height:20px;
+}
+
+#crear_vacante #selects select{
+  font-size: 12px;
+  color: #455560;
+  background-color:#FFF;
+}
+#crear_vacante #selects option {
+	background-color: #B5BFC7;
+}
+
+#crear_vacante #selects a{
+	background:url(../img/btn-regresar-flip.png) no-repeat top left;
+	display:block;
+	height:65px;
+	margin:-10x -20px 0 0;
+	overflow:hidden;
+	text-indent:-500px;
+	width:330px;
+}
+#crear_vacante table{
+	margin:50px 0 0 0;
+    font-size: 15px;
+}
+
+#crear_vacante table thead{
+	background:#808E99;
+	color:#fff;
+	font-size: 19px;
+	padding:5px;
+}
+
+#crear_vacante table tr{
+	padding:15px 0;
+}
+
+#crear_vacante table td{
+	border-bottom:#769D2E solid 1px;
+	padding:10px 15px;
+}
+
+#crear_vacante table td a{
+	background:#A1BA77;
+	color:#FFF;
+	font-size:12px;
+	padding: 9px 17px;
+}
+
+#crear_vacante #nombre{
+	color:#455560; 
+	text-transform:uppercase;
+	font-weight:600;
+	font-size:1.5em;
+	margin-bottom:10px;	
+}
+
+#crear_vacante #subarea{
+	font-size:1.2em;
+		color:#808C97;
+		margin-bottom:10px;
+}
+#crear_vacante #certificacion{
+	color:#455560; 
+	font-size:16px; 
+	margin-bottom:15px;
+}
+#crear_vacante #tel{
+	color:#455560; 
+	text-transform:uppercase;
+	font-weight:600;
+	font-size:2em;
+	margin-bottom:10px;	
+}
+#crear_vacante #email{
+	margin-bottom:10px;	
+}
+#crear_vacante #direccion{
+	color:#455560;
+	font-size:16px;
+	margin-top:5px;	
+}
+
 
 /*-----  AFILIATE  -----*/
 #afiliate{
