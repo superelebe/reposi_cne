@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddImagenToArticles extends Migration
+class AddUrlToCalendar extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class AddImagenToArticles extends Migration
      */
     public function up()
     {
-        Schema::table('articles', function (Blueprint $table) {
-            $table->string('imagen');
+        Schema::table('calendar', function (Blueprint $table) {
+            $table->string('url')->nullable(); 
         });
     }
 
@@ -25,8 +25,8 @@ class AddImagenToArticles extends Migration
      */
     public function down()
     {
-        Schema::table('articles', function (Blueprint $table) {
-            $table->string('imagen');
+        Schema::table('calendar', function (Blueprint $table) {
+            $table->dropColumn('url');
         });
     }
 }

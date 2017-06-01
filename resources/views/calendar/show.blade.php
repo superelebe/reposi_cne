@@ -15,43 +15,43 @@
                 <td>
                     <b><i>title : </i></b>
                 </td>
-                <td>{!!$event->title!!}</td>
+                <td>{!!$calendario->title!!}</td>
             </tr>
             <tr>
                 <td>
                     <b><i>start : </i></b>
                 </td>
-                <td>{!!$event->start->format('d \- F \- Y')!!}</td>
+                <td>{!!$calendario->start->format('d \- F \- Y')!!}</td>
             </tr>
             <tr>
                 <td>
                     <b><i>end : </i></b>
                 </td>
-                <td>{!!$event->end->format('d \- F \- Y')!!}</td>
+                <td>{!!$calendario->end->format('d \- F \- Y')!!}</td>
             </tr>
             <tr>
                 <td>
                     <b><i>imagen : </i></b>
                 </td>
-                <td> <img src="{!!$event->imagen!!}" alt=""></td>
+                <td> <img src="{!!$calendario->imagen!!}" alt=""></td>
             </tr>
             <tr>
                 <td>
                     <b><i>color : </i></b>
                 </td>
-                <td>{!!$event->color!!}</td>
+                <td>{!!$calendario->color!!}</td>
             </tr>
             <tr>
                 <td>
                     <b><i>subtitulo : </i></b>
                 </td>
-                <td>{!!$event->subtitulo!!}</td>
+                <td>{!!$calendario->subtitulo!!}</td>
             </tr>
             <tr>
                 <td>
                     <b><i>descripcion : </i></b>
                 </td>
-                <td>{!!$event->descripcion!!}</td>
+                <td>{!!$calendario->descripcion!!}</td>
             </tr>
         </tbody>
     </table>

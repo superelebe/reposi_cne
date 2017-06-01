@@ -22,3 +22,18 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'remember_token' => str_random(10),
     ];
 });
+
+$factory->define(App\Calendar::class, function (Faker\Generator $faker) {
+    static $password;
+
+    return [
+        'titulo' => $faker->sentence(4),
+        'subtitulo' => $faker->sentence(4),
+        'subtitulo' => $faker->sentence(4),
+        'descripcion' => $faker->sentence(4),
+        'imagen' => $faker->imageUrl($width = 640, $height = 480),
+        'start' => $faker->dateTimeThisMonth(),
+        'end'	=> $faker->dateTimeThisMonth(),
+        'color'	=> $faker->hexColor()
+    ];
+});

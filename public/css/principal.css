@@ -33,6 +33,11 @@ AZULGRISOSCURO : #455560;
     font-style: normal;
 
 }
+* {
+  -webkit-border-radius: 0 !important;
+     -moz-border-radius: 0 !important;
+          border-radius: 0 !important;
+}
 
 /*----- ESTILOS GENERALES -----*/
 body {
@@ -80,7 +85,7 @@ h3{
 	height: 12px;
 	width: 162px;
 	display:block;
-	padding-top:3px;
+	padding-bottom: 15px;
 	background:#808C97;
 }
 #header #menu li a:hover{
@@ -101,6 +106,9 @@ h3{
 	margin-left:-5px;
 }
 
+.poster img{
+	width:100%;
+}
 
 /*----- ENLACES DE INTERES -----*/
 #interes {
@@ -152,6 +160,7 @@ h3{
 	line-height:120%;
 	text-align:left;
 }
+
 
 
 /*----- FOOTER -----*/
@@ -1157,12 +1166,12 @@ ESTILOS POR SECIONES DEL SITIO
 
 #pendon{
 	background:url(../img/pendon.png) no-repeat;
-	height:351px;
+	height:623px;
 	position:absolute;
 	top:430px;
 	padding:275px 10px 0 10px;
 	left:630px;
-	width:183px;
+	width:203px;
 }
 #pendon span {
 	padding-left:40px;
@@ -1205,7 +1214,7 @@ ESTILOS POR SECIONES DEL SITIO
 #formulario #enviar{
 	background:#455560;	
 	color:#fff;
-	margin:-9px 0 0 497px;
+	margin:-9px 0 0 362px
 }
 
 #telefono, #email{
@@ -1931,4 +1940,16 @@ margin-top: -2261px;
 	
 	margin-top: 20px;
 	z-index: 10;
+}
+
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-4px;
 }

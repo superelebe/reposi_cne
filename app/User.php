@@ -10,7 +10,13 @@ class User extends Authenticatable
 {
     use Notifiable;
 
+    public function ciudad(){
+        return $this->belongsTo(Ciudad::class);
+    }
 
+    public function servicios(){
+        return $this->belongsTo(Service::class);
+    }
     /**
      * The attributes that are mass assignable.
      *
@@ -18,7 +24,7 @@ class User extends Authenticatable
      */
     protected $table = 'register_users';
     protected $fillable = [
-        'empresa', 'email', 'password','representante','direccion','telefono','rfc','ciudad_id','servicio_id', 'certificados', 'estatus'
+        'empresa', 'email', 'password','representante','direccion','telefono','rfc','ciudad_id','servicio_id', 'certificados', 'estatus', 'email_token',
     ];
 
     protected   $events = [
@@ -31,6 +37,12 @@ class User extends Authenticatable
 
     public function scopeAfiliados($query){
         return $query->where('estatus','=','afiliado')->orderBy('created_at','desc');
+    }
+    public function verified()
+    {
+        $this->verified = 1;
+        $this->email_token = null;
+        $this->save();
     }
     /**
      * The attributes that should be hidden for arrays.

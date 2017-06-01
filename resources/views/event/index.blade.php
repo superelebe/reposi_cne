@@ -22,7 +22,7 @@
             <th>actions</th>
         </thead>
         <tbody>
-            @foreach($events as $event) 
+            @foreach($events as $event)                                                                                             
             <tr>
                 <td>{!!$event->title!!}</td>
                 <td>{!!$event->start!!}</td>

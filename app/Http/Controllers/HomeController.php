@@ -8,6 +8,7 @@ use App\User;
 use App\Service;
 use App\Ciudad;
 use Image;
+
 class HomeController extends Controller
 {
     /**
@@ -30,6 +31,7 @@ class HomeController extends Controller
         $usuario = Auth::user();
         return view('usuarios.home',compact('usuario'));
     }
+
     public function editar(Request $request){
         $title = 'Editar - Datos Afiliado';
         $servicios = Service::all();

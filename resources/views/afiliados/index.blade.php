@@ -61,8 +61,8 @@
 				            @foreach($afiliados as $afiliado) 
 				            <tr>
 				                <td>{{$afiliado->empresa}}</td>
-				                <td>{{$afiliado->ciudad_id}}</td>
-				                <td>{{$afiliado->servicio_id }}</td>
+				                <td>{{$afiliado->ciudad->nombre}}</td>
+				                <td>{{$afiliado->servicios->nombre }}</td>
 				                <td>{{$afiliado->certificados }}</td>
 				                <td><a href="/detalle_afiliado/{{$afiliado->id}}">Ver detalle</a></td>
 				            </tr>
