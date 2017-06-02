@@ -1,6 +1,15 @@
 @extends('layouts.app')
 @section('content')
 
+
+    <div class="contenedor">
+        <div class="row row-centered">
+            <div class="col-md-12 col-centered img_centrada">
+                <img src="{{asset('img/banner-cal.png')}}" alt="">
+            </div>
+        </div>
+    </div>
+
 <section class="content">
     <h1>
         Show event

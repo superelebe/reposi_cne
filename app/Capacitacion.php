@@ -10,10 +10,10 @@ class Capacitacion extends Model
 	protected $table = 'capacitaciones';
 	protected $dates = ['start','end'];
     protected $fillable = [
-        'titulo','start','end ','url','color','pdf'
+        'title','start','end ','url','color','pdf'
     ];
     public function scopeFechaActivo($query){
     	$now = Carbon::today('America/Mexico_City');
-    	return $query->where('end', '>=',$now)->orderBy('start')->paginate(5);
+    	return $query->where('end', '>=',$now)->orderBy('start')->limit(10);
     }
 }

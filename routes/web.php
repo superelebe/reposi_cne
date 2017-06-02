@@ -124,12 +124,25 @@ Route::group(['middleware'=> 'auth:admin'],function(){
   Route::get('calendario/{id}/deleteMsg','CalendarController@DeleteMsg');
 });
 
+
+Route::group(['middleware'=> 'auth:admin'],function(){
+  Route::resource('cursos','CapacitacionController', ['only' => ['create', 'store', 'index', 'edit']]);
+  Route::post('cursos/{id}/update','CapacitacionController@update');
+  Route::get('cursos/{id}/delete','CapacitacionController@destroy');
+  Route::get('cursos/{id}/deleteMsg','CapacitacionController@DeleteMsg');
+});
+
 Route::get('event/{id}', 'EventController@show');
 
 Route::get('calendario/{id}','CalendarController@show');
+
 Route::get('cargadorFecha', 'CalendarController@cargadoFechas');
 
+Route::get('cursos','CapacitacionController@capacitaciones');
+Route::get('cursos/{id}','CapacitacionController@show');
+
 Route::get('eventos','CalendarController@calendario');
+
 Route::get('noticias', 'ArticleController@noticias')->name('noticias');
 Route::get('noticia/{id}', 'ArticleController@noticia');
 Route::get('bolsa_trabajo_cnec/{id}','BolsaTrabajoController@show')->name('bolsa_trabajo_cnec');

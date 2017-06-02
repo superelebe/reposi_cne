@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Calendar;
 use Illuminate\Http\Request;
 use Image;
+use App\Capacitacion;
 
 class CalendarController extends Controller
 {
@@ -155,11 +156,16 @@ class CalendarController extends Controller
     public function calendario(){
         // $data = Calendar::all();
         // return Response()->json($data);
-        $dias = Calendar::CalendarActivo()->get(['title','start', 'end']);
-        return view('calendar.calendario', compact('dias'));
+        $dias = Calendar::CalendarActivo()->get(['title','start', 'url'])->toArray();
+        $cursos = Capacitacion::FechaActivo()->get(['title','start','url'])->toArray();
+
+        $eventos = array_merge($cursos, $dias);
+        return view('calendar.calendario', compact('eventos'));
     }
     public function cargadoFechas(){
-        $fecha = Calendar::CalendarActivo()->get(['title','start', 'url']);
-        return Response()->json($fecha);
+        $capacitaciones = Capacitacion::FechaActivo()->get(['title','start','url'])->toArray();
+        $fecha = Calendar::CalendarActivo()->get(['title','start', 'url'])->toArray();
+        $chalan = array_merge($capacitaciones, $fecha);
+        return Response()->json($chalan);
     }
 }
