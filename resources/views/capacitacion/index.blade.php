@@ -6,7 +6,7 @@
         Capacitaciones Index
     </h1>
     <form class = 'col s3' method = 'get' action = '{!!url("capacitaciones")!!}/create'>
-        <button class = 'btn btn-primary' type = 'submit'>Crear Nuevo Trabajo</button>
+        <button class = 'btn btn-primary' type = 'submit'>Crear Nuevo Capacitacion</button>
     </form>
     <br>
     <br>
@@ -23,7 +23,7 @@
             @foreach($capacitaciones as $capa) 
             <tr>
                 <td>{!!$capa->titulo!!}</td>
-                <td>{!!$capa->start->format('')!!}</td>
+                <td>{!!$capa->start!!}</td>
                 <td>{!!$capa->end!!}</td>
                 <td>{!!$capa->url!!}</td>
                 <td>{!!$capa->pdf!!}</td>

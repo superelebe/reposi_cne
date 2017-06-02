@@ -27,7 +27,7 @@ class CapacitacionController extends Controller
      */
     public function create()
     {
-        //
+        return view('capacitacion.create');
     }
 
     /**
@@ -36,9 +36,31 @@ class CapacitacionController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
-        //
+    public function store(Request $request) {
+            $cursos = new Capacitacion();
+            if ($request->hasFile('imagen')) {
+                $imagen = $request->file('imagen');
+                $filename = time().'.'.$imagen->getClientOriginalExtension();
+                $path = public_path('uploads/cursos/' . $filename);
+                Image::make($imagen)->resize(null, 400, function ($constraint) {
+                    $constraint->aspectRatio();
+                    $constraint->upsize();
+                })->save($path);
+
+                $cursos->imagen = '/uploads/cursos/'.$filename;
+            }
+
+                $cursos->title = $request->titulo;
+                
+                $cursos->start = $request->start;
+                
+                $cursos->end = $request->end;
+
+                $cursos->save();
+
+                Capacitacion::where('id', $cursos->id)->update(['url' => 'cursos/'.$cursos->id]);
+
+                return redirect('cursos');
     }
 
     /**
@@ -47,9 +69,9 @@ class CapacitacionController extends Controller
      * @param  \App\Capacitacion  $capacitacion
      * @return \Illuminate\Http\Response
      */
-    public function show(Capacitacion $capacitacion)
-    {
-        //
+    public function show($id,Request $request){
+        $cursos = Capacitacion::findOrfail($id);
+        return view('capacitacion.show',compact('cursos'));
     }
 
     /**
@@ -58,9 +80,9 @@ class CapacitacionController extends Controller
      * @param  \App\Capacitacion  $capacitacion
      * @return \Illuminate\Http\Response
      */
-    public function edit(Capacitacion $capacitacion)
-    {
-        //
+    public function edit($id,Request $request){
+        $cursos = Capacitacion::findOrfail($id);
+        return view('capacitacion.edit',compact('cursos'));
     }
 
     /**
@@ -86,7 +108,7 @@ class CapacitacionController extends Controller
         //
     }
     public function capacitaciones(){
-        $capacitaciones = Capacitacion::FechaActivo();
+        $capacitaciones = Capacitacion::all();
         return view('capacitacion.capacitaciones', compact('capacitaciones'));
     }
 }

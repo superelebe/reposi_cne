@@ -3,12 +3,12 @@
 
 <section class="content">
     <h1>
-        Noticia Index
+        Vacantes
     </h1>
-
-    <div>
+ 
+    <div class='row row-centered'>
             @foreach($vacante as $vacantes) 
-            <div>
+            <div class='col-xs-12 col-md-4'>
                 <div>
                     <div>
                         <img src="{!!url($vacantes->imagen)!!}" alt="">

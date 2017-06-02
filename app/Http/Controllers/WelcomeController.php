@@ -6,17 +6,30 @@ use Illuminate\Http\Request;
 use App\Banner;
 use App\Article;
 use App\User;
+use App\Capacitacion;
 use Carbon\Carbon;
+use Mail;
+use App\Mail\CorreoContactoAfiliado;
 
 
 class WelcomeController extends Controller{
    public function index(){
    	$otro_banner = Banner::Activo();
    	$noticias = Article::orderBy('id','asc')->take(2)->get();
-   	return view('welcome',compact('otro_banner','noticias'));
+      $calendario = Capacitacion::FechaActivo()->take(5);
+   	return view('welcome',compact('otro_banner','noticias', 'calendario'));
    	
    }
+   public function enviarCorreoAfiliado(Request $request){
+      $this->validate($request,[
+         'mensaje'   => 'required| min:5',
+         'email'     => 'required| email',
+         'nombre'    => 'required| min:5'
+      ]);
+      Mail::to($request->emailemp)->send(new CorreoContactoAfiliado());
+      return redirect('afiliados/detalle_afiliado');
 
+   }
    public function afiliados(){
    		$afiliados = User::Afiliados()->paginate(6);
    		return view('afiliados.index', compact('afiliados'));

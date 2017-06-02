@@ -1,38 +1,10 @@
 @extends('layouts.app')
 @section('content')
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @if (Auth::check())
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ url('/login') }}">Login</a>
-                        <a href="{{ url('/register') }}">Register</a>
-                    @endif
-                </div>
-            @endif
 
-            <div class="content">
-                <div class="title m-b-md">
-                    Hola Manuel :)
-                </div>
-                <div>
-                        {{-- estaba el foreach de banner --}}
-                </div>
-                <div>
-                </div>
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-            </div>
-        </div>
+<<<<<<< HEAD
 
-
-
+=======
+>>>>>>> origin/master
 
 <div id="rotador-index">
                   @foreach($otro_banner as $banner)
@@ -105,20 +77,6 @@
 <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 <!-- ///////////////////////////////////////////// S O C I A L ///////////////////////////////////////////////////// -->
 <div id="social" class="limpiar">
@@ -132,7 +90,7 @@
                   <li>Administración y Gestión</li>
                   <li>Planeación y  Diseño</li>
                   <li>Administración de Obras</li>
-                    <li>Servicios Tecnológicos Profesionales</li>
+                  <li>Servicios Tecnológicos Profesionales</li>
                 </ul>
                 <span class="vermas verdemedio"><a href="areas.html">Ver Más</a></span>
             </div>
@@ -147,30 +105,11 @@
     <div id="calendario">
               <h3 class="verdeclaro">CALENDARIO</h3>
                 <ul>
-                  
-                  <li class="fecha"> <span>09 - Mayo - 2016</span> Curso Lean Construction</li>  
-
-                  <li class="fecha"> <span>05 y 06 - Mayo - 2016</span> Ortografía y Redacción</li>  
-
-
-                <li class="fecha"> <span>15 y 16 - Abril - 2016</span>Desarrollo de habilidades para supervisores y residentes de obras<a href="http://www.cnecgto.org/2014/curso/desarrollohabilidades/" target="_blank" title="Ver más información"></a></li>  
-
-                <li class="fecha"> <span>12 y 13 - Abril - 2016</span>Taller Formación de Consultores<a href="http://www.cnecgto.org/2016/curso/formaciondeconsultores/" target="_blank" title="Ver más información"></a></li>  
-
-                <li class="fecha"> <span> 07 - Abril - 2016</span>  Curso Actualización DENUE</li>  
-
-
-                <li class="fecha"> <span>04 y 05 - Abril - 2016</span> Curso Ingreso al Uso de Drones</li>  
-
-
-                <li class="fecha"> <span>04 y 05 - Abril - 2016</span> Curso Ingreso al Uso de Drones</li>  
-
-                  <li class="fecha"> <span>30 - Marzo - 2016</span>Platica Creación de Proyectos exitosos para obtener Recursos de Gobierno</li>                   
-
-                  
-                  
+                  @foreach($calendario as $curso)
+                    <li class="fecha"><span>{{$curso->start->format('d \- F \- Y')}}</span> {{$curso->titulo}}<a href="event/{{$curso->id}}" target="_blank" title="Ver más información"></a></li>
+                  @endforeach     
                 </ul>
-                <span class="vermas verdeclaro"><a href="calendario.html">Ver Más</a></span>
+                <span class="vermas verdeclaro"><a href="{{url('eventos')}}">Ver Más</a></span>
             </div>
           <div id="facebook">
       <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2FCNECGTO&amp;width=292&amp;height=200&amp;colorscheme=light&amp;show_faces=true&amp;stream=false&amp;header=false&amp;appId=245687622216193" scrolling="yes" frameborder="0" style="border:none; overflow:hidden; width:292px; height:200px;" allowTransparency="true"></iframe>
@@ -203,25 +142,6 @@
 <!--termina div social-->
 <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->

@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers\Auth;
 
+use DB;
+use Mail;
 use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use App\Mail\EmailVerification;
 
 class RegisterController extends Controller
 {
@@ -75,7 +78,51 @@ class RegisterController extends Controller
             'ciudad_id' => $data['ciudad'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
+            'email_token' => base64_encode($data[‘email’]),
         ]);
 
+    }
+    /**
+* Handle a registration request for the application.
+*
+* @param \Illuminate\Http\Request $request
+* @return \Illuminate\Http\Response
+*/
+    public function register(Request $request)
+    {
+        // Laravel validation
+        $validator = $this->validator($request->all());
+        if ($validator->fails()) 
+        {
+            $this->throwValidationException($request, $validator);
+        }
+        // Using database transactions is useful here because stuff happening is actually a transaction
+        // I don't know what I said in the last line! Weird!
+        DB::beginTransaction();
+        try
+        {
+            $user = $this->create($request->all());
+            // After creating the user send an email with the random token generated in the create method above
+            $email = new EmailVerification(new User(['email_token' => $user->email_token, 'name' => $user->name]));
+            Mail::to($user->email)->send($email);
+            DB::commit();
+            return back();
+        }
+        catch(Exception $e)
+        {
+            DB::rollback(); 
+            return back();
+        }
+    }
+    /**
+    * Handle a registration request for the application.
+    *
+    * @param $token
+    * @return \Illuminate\Http\Response
+    */
+    public function verify($token)
+    {
+        User::where('email_token',$token)->firstOrFail()->verified();
+        return redirect('login');
     }
 }

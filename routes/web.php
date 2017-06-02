@@ -118,19 +118,36 @@ Route::group(['middleware'=> 'auth:admin'],function(){
 });
 
 Route::group(['middleware'=> 'auth:admin'],function(){
-  Route::resource('capacitaciones','CapacitacionController', ['only' => ['create', 'store', 'index', 'edit']]);
-  Route::post('capacitaciones/{id}/update','CapacitacionController@update');
-  Route::get('capacitaciones/{id}/delete','CapacitacionController@destroy');
-  Route::get('capacitaciones/{id}/deleteMsg','CapacitacionController@DeleteMsg');
+  Route::resource('calendario','CalendarController', ['only' => ['create', 'store', 'index', 'edit']]);
+  Route::post('calendario/{id}/update','CalendarController@update');
+  Route::get('calendario/{id}/delete','CalendarController@destroy');
+  Route::get('calendario/{id}/deleteMsg','CalendarController@DeleteMsg');
+});
+
+
+Route::group(['middleware'=> 'auth:admin'],function(){
+  Route::resource('cursos','CapacitacionController', ['only' => ['create', 'store', 'index', 'edit']]);
+  Route::post('cursos/{id}/update','CapacitacionController@update');
+  Route::get('cursos/{id}/delete','CapacitacionController@destroy');
+  Route::get('cursos/{id}/deleteMsg','CapacitacionController@DeleteMsg');
 });
 
 Route::get('event/{id}', 'EventController@show');
 
-Route::get('capacitaciones/{id}','CapacitacionController@show');
+Route::get('calendario/{id}','CalendarController@show');
+
+Route::get('cargadorFecha', 'CalendarController@cargadoFechas');
+
 Route::get('cursos','CapacitacionController@capacitaciones');
+Route::get('cursos/{id}','CapacitacionController@show');
+
+Route::get('eventos','CalendarController@calendario');
+
 Route::get('noticias', 'ArticleController@noticias')->name('noticias');
 Route::get('noticia/{id}', 'ArticleController@noticia');
-Route::get('eventos', 'EventController@eventos');
 Route::get('bolsa_trabajo_cnec/{id}','BolsaTrabajoController@show')->name('bolsa_trabajo_cnec');
 Route::get('todas_las_vacantes','BolsaTrabajoController@todasVacantes')->name('todas_las_vacantes');
 Route::post('enviar_correo_vacante','BolsaTrabajoController@enviarCorreo')->name('enviar_correo_vacante');
+Route::post('
+  ','WelcomeController@enviarCorreoAfiliado')->name('enviarCorreoAfiliado');
+Route::get('register/verify/{token}', 'Auth\RegisterController@verify');

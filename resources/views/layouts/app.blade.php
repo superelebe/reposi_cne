@@ -10,122 +10,32 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/reset-limpiar.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/rotator.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/jquery.tweet.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/overlay.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/jquery-ui.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/fullcalendar.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/principal.css') }}" rel="stylesheet">
+ 
 
+    <script type="text/javascript" src="{{asset('js/jquery.tools.min.js')}}" ></script><!--estos son temporales--> 
+    <script type="text/javascript" src="{{asset('js/jquery.jshowoff.min.js')}}" ></script><!--estos son temporales-->
+    <script src="{{asset('js/jquery.tweet.js')}}" type="text/javascript"></script>
+    <script src="{{asset('js/jqFancyTransitions.1.8.js')}}" type="text/javascript"></script>
+    <script src="{{ asset('js/jquery-ui.min.js') }}"></script>
+
+    <script src="{{ asset('js/moment.js') }}"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.js"></script>
+    <script src="{{ asset('js/main.js') }}"></script>
     <!-- Scripts -->
     <script>
         window.Laravel = {!! json_encode([
             'csrfToken' => csrf_token(),
         ]) !!};
     </script>
-<script type="text/javascript" src="{{asset('app.js')}}" ></script>
-<script type="text/javascript" src="{{asset('js/jquery.tools.min.js')}}" ></script><!--estos son temporales--> 
-<script type="text/javascript" src="{{asset('js/jquery.jshowoff.min.js')}}" ></script><!--estos son temporales--> 
-<script src="{{asset('js/jqFancyTransitions.1.8.js')}}" type="text/javascript"></script>
-<script language="javascript" src="{{asset('js/jquery.tweet.js')}}" type="text/javascript"></script>
-<script src="{{asset('js/jqFancyTransitions.1.8.js')}}" type="text/javascript"></script>
-<script>
-
-$(document).ready( function(){
-        
-       $('#slides').jqFancyTransitions({ width:530, height:300, delay:3000, titleOpacity:0, position:'top', direction:'fountain' });
-        
-});
-</script>
-
-<script  type="text/javascript">
-$(document).ready( function(){
-        
-        $('#rotador-index').jshowoff({ speed:7000, links: true,
-                    cssClass: 'thumbFeatures',
-                    //effect: 'slideLeft'
-        });
-        
-    $(".tweet").tweet({ // aca es donde se le indica donde poner los tweets, le pondremos un div vacio con clase .tweets
-            username:"CNEC_GTO", // el usuario
-            avatar_size: 32, // Ponle 0 si no quieres avatares
-            page: 1,
-            count: 6, // Numero de tweets
-            loading_text: "Cargando..."
-        }).bind("loaded", function() {
-          var ul = $(this).find(".tweet_list");
-          var ticker = function() {
-            setTimeout(function() {
-              ul.find('li:first').animate( {marginTop: '-4em'}, 500,function() {
-                $(this).detach().appendTo(ul).removeAttr('style');
-              });
-              ticker();
-            }, 5000);
-          };
-          ticker();
-        });
-    
-      
-     if ($.browser.msie){
-        if ($.browser.version>=7){  
-        
-        $("span[rel]").overlay({
-                
-                mask: {
-                color:'#455560',
-                loadSpeed: 200,
-                opacity: 0.9
-                },
-     
-              closeOnClick: true
-        });
-    }; 
-                 
-    } else {
-     //alert('Non IE8');
-   // positions for each overlay
-    var cargarfondos= function()
-    {
-        var cromatica = [
-            ['#B5BFC7'],
-            ['#808C97' ],
-            ['#455560' ],
-            ['#769D2E' ]
-        ];
-        
-        // setup triggers
-        $("span[rel]").each(function(i) {
-     
-            $(this).overlay
-            ({
-                
-                mask:
-                {
-                color:cromatica[i],
-                loadSpeed: 200,
-                opacity: 0.9
-                },
-     
-              closeOnClick: true
-     
-            });
- 
-        });
-    }();
-    
-    }
-    /*
-    */
-    
-    var cargafooter = function(){
-        $('#footconten').hide().load('footer.html', function(){
-            $(this).fadeIn(300);});
-        }();
-    
-        var cargaheader = function(){
-        $('#headconten').hide().load('header.html', function(){
-            $(this).fadeIn(300);});
-        }();
-    
-        
-});
-</script>
-
-
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
@@ -147,14 +57,12 @@ $(document).ready( function(){
     <div class="ocho80 limpiar">
         <div id="menu">
             <ul>
-                <li><a href="{{ url('/cnec') }}">¿QU&Eacute; ES LA CNEC?</a></li>
+                <li><a href="{{ url('/cnec') }}">¿QUÉ ES LA CNEC?</a></li>
                 <li><a href="{{ url('/servicios') }}">SERVICIOS</a></li>
                 <li><a href="{{ url('/afiliados') }}">AFILIADOS</a></li>
                 <li><a href="{{ url('/contacto') }}">CONTACTO</a></li>
                 <li><a href="{{ url('/capacitacion') }}">CAPACITACIÓN</a></li>
-                <li><a href="{{ url('/register') }}">AF&Iacute;LIATE</a></li>
-                <li><a href="{{ url('/capacitaciones') }}">CAPACITACIÓN</a></li>
-                <li><a href="{{ route('register') }}">AF&Iacute;LIATE</a></li>
+                <li><a href="{{ url('/register') }}">AFÍLIATE</a></li>
 
             </ul>
         </div>
@@ -170,7 +78,7 @@ $(document).ready( function(){
 
 <div id="rotador" class="limpiar">
     <div class="ocho80">
-        <a href="index.php"><img src="{{ asset('img/logo-cnec-cuadro.png') }}"  alt="logo cnec" /></a>
+        <a href='{{url('/')}}'><img src="{{ asset('img/logo-cnec-cuadro.png') }}"  alt="logo cnec" /></a>
         <div id="slides"><!---SlideShow Ini-->
             <img src="{{ asset('img/rot-header-1.png') }}" alt="img1"   />
             <img src="{{ asset('img/rot-header-2.png') }}" alt="img2" />
@@ -181,64 +89,13 @@ $(document).ready( function(){
 
 
     <div id="app">
-        <nav class="navbar navbar-default navbar-static-top">
-            <div class="container">
-                <div class="navbar-header">
-
-                    <!-- Collapsed Hamburger -->
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
-                        <span class="sr-only">Toggle Navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-
-                    <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
-                    </a>
-                </div>
-
-                <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="nav navbar-nav">
-                        &nbsp;
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="nav navbar-nav navbar-right">
-                        <!-- Authentication Links -->
-                        @if (Auth::guest())
-                            <li><a href="{{ route('login') }}">Login</a></li>
-                            <li><a href="{{ route('register') }}">Register</a></li>
-                        @else
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
-
-                                <ul class="dropdown-menu" role="menu">
-                                    <li>
-                                        <a href="{{ route('logout') }}"
-                                            onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                            Logout asdasd
-                                        </a>
-
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                            {{ csrf_field() }}
-                                        </form>
-                                    </li>
-                                </ul>
-                            </li>
-                        @endif
-                    </ul>
-                </div>
-            </div>
-        </nav>
 
         <div>
+<<<<<<< HEAD
             @if(count($errors)> 0)
+=======
+            @if($errors->has(''))
+>>>>>>> origin/master
                 <ul>
                 @foreach ($errors->all() as $error)
                     <li>{{ $error }}</li>
@@ -364,14 +221,6 @@ $(document).ready( function(){
     </div>
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/principal.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/reset-limpiar.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/rotator.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/jquery.tweet.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/overlay.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/jquery-ui.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/fullcalendar.min.css') }}" rel="stylesheet">
 
     
     <!-- Scripts -->

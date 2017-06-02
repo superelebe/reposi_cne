@@ -21,13 +21,13 @@
                 <td>
                     <b><i>start : </i></b>
                 </td>
-                <td>{!!$event->start!!}</td>
+                <td>{!!$event->start->format('d \- F \- Y')!!}</td>
             </tr>
             <tr>
                 <td>
                     <b><i>end : </i></b>
                 </td>
-                <td>{!!$event->end!!}</td>
+                <td>{!!$event->end->format('d \- F \- Y')!!}</td>
             </tr>
             <tr>
                 <td>

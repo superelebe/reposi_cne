@@ -33,6 +33,11 @@ AZULGRISOSCURO : #455560;
     font-style: normal;
 
 }
+* {
+  -webkit-border-radius: 0 !important;
+     -moz-border-radius: 0 !important;
+          border-radius: 0 !important;
+}
 
 /*----- ESTILOS GENERALES -----*/
 body {
@@ -80,7 +85,7 @@ h3{
 	height: 12px;
 	width: 162px;
 	display:block;
-	padding-top:3px;
+	padding-bottom: 15px;
 	background:#808C97;
 }
 #header #menu li a:hover{
@@ -101,6 +106,9 @@ h3{
 	margin-left:-5px;
 }
 
+.poster img{
+	width:100%;
+}
 
 /*----- ENLACES DE INTERES -----*/
 #interes {
@@ -154,6 +162,7 @@ h3{
 }
 
 
+
 /*----- FOOTER -----*/
 #footconten{
 	margin-top:50px;
@@ -162,7 +171,6 @@ h3{
 	padding:28px 0 10px 0;
 	/*background-color: #808c97;*/
 	background-color: #f1f1f1;
-	height:186px;
 	border-top:6px solid #455560;
 	color:#fff;
 }
@@ -411,8 +419,9 @@ ESTILOS POR SECIONES DEL SITIO
 
 #calendario {
 	position:relative;
-	height:274px;
 	background-color:#FFF;
+	margin-top: 30px;
+	margin-bottom:30px;
 }
 
 #calendario  li{
@@ -1142,6 +1151,7 @@ ESTILOS POR SECIONES DEL SITIO
 	background:url(../img/afiliate-a-la-cenec-banner.png) no-repeat center top;
 }
 
+
 #afiliate h2, #documentos h2{
 	font-size:2.7em;
 	color:#808C97;
@@ -1157,12 +1167,12 @@ ESTILOS POR SECIONES DEL SITIO
 
 #pendon{
 	background:url(../img/pendon.png) no-repeat;
-	height:351px;
+	height:623px;
 	position:absolute;
 	top:430px;
 	padding:275px 10px 0 10px;
 	left:630px;
-	width:183px;
+	width:203px;
 }
 #pendon span {
 	padding-left:40px;
@@ -1205,7 +1215,7 @@ ESTILOS POR SECIONES DEL SITIO
 #formulario #enviar{
 	background:#455560;	
 	color:#fff;
-	margin:-9px 0 0 497px;
+	margin:-9px 0 0 362px
 }
 
 #telefono, #email{
@@ -1515,9 +1525,8 @@ ESTILOS POR SECIONES DEL SITIO
 }
 .evento a{
 	background:url(../img/cruzmas.gif) no-repeat top left;
-	padding:30px 13px;
-	margin:-15px 5px;
-	right:0px;
+	padding:30px 13px;    
+	right: 40px;
 	position:absolute;
 }
 .evento span{
@@ -1931,4 +1940,93 @@ margin-top: -2261px;
 	
 	margin-top: 20px;
 	z-index: 10;
+}
+
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    float: none;
+    margin: 0 auto;
+}
+
+.img_centrada img{
+	width: 100%;
+}
+
+.contenedor{
+	width: 100%;
+	max-width: 1100px;
+	margin: 0 auto;
+}
+
+
+.titulo_seccion{
+    font-size: 2.7em;
+    color: #808C97;
+    border-bottom: 2px solid #769D2E;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.formularios label{
+	color: #455560;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: left;
+	padding-left: 15px;
+	width:100%;
+}
+
+.formularios input{
+	border: 1px solid #455560;
+    margin: 8px 0;
+    padding: 5px;
+}
+
+.btn_cnec{
+    color: #fff;
+    background-color: #455560;
+    border-color: #455560;
+}
+
+.fc-toolbar.fc-header-toolbar h2{
+	font-size: 36px;
+    text-align: center;
+    color: #455560;
+    width: 505px;
+    padding: 10px 0;
+    background: #A1BA77;
+    margin-bottom: 10px;
+}
+
+.fc-day-header.ui-widget-header{
+    background: #A1BA77;
+	padding: 10px;
+	color: #455560;
+}
+
+.fc-time{
+   display : none;
+}
+
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight{
+    background: #edeeef;
+}
+
+
+.titulo_eventos_calendario{
+	color: #fff;
+    font-size: 2em;
+    padding: 8px 0;
+    border-bottom: 1px solid #fff;
+    border-top: 1px solid #455560;
+}
+
+.eventos_calendario{
+	background-color: #455560;
+	margin-top: 40px;
+	margin-bottom: 40px;
+    padding: 10px 30px 10px 20px;
+    text-align: left;
 }
