@@ -91,11 +91,7 @@
     <div id="app">
 
         <div>
-<<<<<<< HEAD
             @if(count($errors)> 0)
-=======
-            @if($errors->has(''))
->>>>>>> origin/master
                 <ul>
                 @foreach ($errors->all() as $error)
                     <li>{{ $error }}</li>

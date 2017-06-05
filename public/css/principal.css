@@ -502,6 +502,11 @@ ESTILOS POR SECIONES DEL SITIO
 	left:227px;
 	top:50px;
 }
+.largo_imagenes{
+	width:100%;
+	max-width: 300px;
+}
+
 /*.imgmas{
 	position:absolute;
 	left:227px;
@@ -658,6 +663,16 @@ ESTILOS POR SECIONES DEL SITIO
 	font-size:1.2em;
 }
 
+
+.crear_admin div{
+	padding:15px;
+	margin: 5px;
+	background: #b5bfc7;
+}
+
+.crear_admin a{
+	color: #455560;
+}
 
 
 /*----- SERVICIOS CNEC -----*/

@@ -1,4 +1,4 @@
-@extends('layouts.app')
+    @extends('layouts.app')
 @section('content')
 
 <section class="content">
@@ -6,7 +6,7 @@
         Calendario Index
     </h1>
     <form class = 'col s3' method = 'get' action = '{!!url("calendario")!!}/create'>
-        <button class = 'btn btn-primary' type = 'submit'>Crear nuevo Evento</button>
+        <button class = 'btn btn-primary' type = 'submit'>Nuevo Evento</button>
     </form>
     <br>
     <br>
@@ -16,7 +16,6 @@
             <th>start</th>
             <th>end</th>
             <th>imagen</th>
-            <th>color</th>
             <th>subtitulo</th>
             <th>descripcion</th>
             <th>actions</th>
@@ -24,11 +23,10 @@
         <tbody>
             @foreach($dias as $evento)                                                                                             
             <tr>
-                <td>{!!$evento->titulo!!}</td>
-                <td>{!!$evento->start!!}</td>
-                <td>{!!$evento->end!!}</td>
-                <td>{!!$evento->imagen!!}</td>
-                <td>{!!$evento->color!!}</td>
+                <td>{!!$evento->title!!}</td>
+                <td>{!!$evento->start->format('d - m - Y')!!}</td>
+                <td>{!!$evento->end->format('d - m - Y')!!}</td>
+                <td> <img class='largo_imagenes' src="{!!$evento->imagen!!}" alt=""> </td>
                 <td>{!!$evento->subtitulo!!}</td>
                 <td>{!!$evento->descripcion!!}</td>
                 <td>

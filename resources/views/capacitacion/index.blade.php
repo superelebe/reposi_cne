@@ -5,7 +5,7 @@
     <h1>
         Capacitaciones Index
     </h1>
-    <form class = 'col s3' method = 'get' action = '{!!url("capacitaciones")!!}/create'>
+    <form class = 'col s3' method = 'get' action = '{!!url("curso")!!}/create'>
         <button class = 'btn btn-primary' type = 'submit'>Crear Nuevo Capacitacion</button>
     </form>
     <br>

@@ -107,7 +107,7 @@ class CapacitacionController extends Controller
     {
         //
     }
-    public function capacitaciones(){
+    public function cursos(){
         $capacitaciones = Capacitacion::all();
         return view('capacitacion.capacitaciones', compact('capacitaciones'));
     }

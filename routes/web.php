@@ -126,10 +126,10 @@ Route::group(['middleware'=> 'auth:admin'],function(){
 
 
 Route::group(['middleware'=> 'auth:admin'],function(){
-  Route::resource('cursos','CapacitacionController', ['only' => ['create', 'store', 'index', 'edit']]);
-  Route::post('cursos/{id}/update','CapacitacionController@update');
-  Route::get('cursos/{id}/delete','CapacitacionController@destroy');
-  Route::get('cursos/{id}/deleteMsg','CapacitacionController@DeleteMsg');
+  Route::resource('curso','CapacitacionController', ['only' => ['create', 'store', 'index', 'edit']]);
+  Route::post('curso/{id}/update','CapacitacionController@update');
+  Route::get('curso/{id}/delete','CapacitacionController@destroy');
+  Route::get('curso/{id}/deleteMsg','CapacitacionController@DeleteMsg');
 });
 
 Route::get('event/{id}', 'EventController@show');
@@ -138,7 +138,7 @@ Route::get('calendario/{id}','CalendarController@show');
 
 Route::get('cargadorFecha', 'CalendarController@cargadoFechas');
 
-Route::get('cursos','CapacitacionController@capacitaciones');
+Route::get('cursos','CapacitacionController@cursos');
 Route::get('cursos/{id}','CapacitacionController@show');
 
 Route::get('eventos','CalendarController@calendario');

@@ -1,17 +1,19 @@
 @extends('layouts.app')
 @section('content')
 
-<section class="container">
+<section class="contenedor">
     <section class="row row-centered">
-        <div class="col-md-12 col-centered">
-            <h1>
-                Crear Calendario
-            </h1>
+        <div class="col-md-8 col-xs-12 col-centered">
             <form method = 'get' action = '{!!url("cursos")!!}'>
-                <button class = 'btn btn-danger'>Curso Index</button>
+                <button class = 'btn btn-danger'>Ver todos los cursos</button>
             </form>
         </div>
-        <div class="col-md-12 col-centered">
+        <div class="col-md-8 col-xs-12 col-centered">
+            <div class='titulo_seccion'>
+                Crear Curso
+            </div class='titulo_seccion'>
+        </div>
+        <div class="col-xs-12 col-md-8 col-centered formularios">
             <form method = 'POST' action = '{!!url("cursos")!!}' enctype="multipart/form-data">
                 <input type = 'hidden' name = '_token' value = '{{Session::token()}}'>
                 <div class="form-group">
