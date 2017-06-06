@@ -1,11 +1,6 @@
 @extends('layouts.app')
 @section('content')
 
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/master
-
 <div id="rotador-index">
                   @foreach($otro_banner as $banner)
                         <div title="{{$banner->titulo}}">
@@ -105,9 +100,9 @@
     <div id="calendario">
               <h3 class="verdeclaro">CALENDARIO</h3>
                 <ul>
-                  @foreach($calendario as $curso)
-                    <li class="fecha"><span>{{$curso->start->format('d \- F \- Y')}}</span> {{$curso->titulo}}<a href="event/{{$curso->id}}" target="_blank" title="Ver más información"></a></li>
-                  @endforeach     
+                  @foreach($fechas as $fecha)
+                    <li class="fecha"><span>{{date("d - m - Y", strtotime($fecha['start']))}}</span> {{$fecha['title']}}<a href="{{$fecha['url']}}" target="_blank" title="Ver más información"></a></li>
+                  @endforeach
                 </ul>
                 <span class="vermas verdeclaro"><a href="{{url('eventos')}}">Ver Más</a></span>
             </div>

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Banner;
 use App\Article;
 use App\User;
+use App\Calendar;
 use App\Capacitacion;
 use Carbon\Carbon;
 use Mail;
@@ -14,10 +15,13 @@ use App\Mail\CorreoContactoAfiliado;
 
 class WelcomeController extends Controller{
    public function index(){
-   	$otro_banner = Banner::Activo();
-   	$noticias = Article::orderBy('id','asc')->take(2)->get();
-      $calendario = Capacitacion::FechaActivo()->take(5);
-   	return view('welcome',compact('otro_banner','noticias', 'calendario'));
+   	$otro_banner     = Banner::Activo();
+   	$noticias        = Article::orderBy('id','asc')->take(2)->get();
+      $calendarios     = Calendar::CalendarActivo()->get(['title','start','url','id'])->toArray();
+      $cursos          = Capacitacion::FechaActivo()->get(['title','start','url','id'])->toArray();
+      $fechas         = array_merge($calendarios, $cursos);
+
+   	return view('welcome',compact('otro_banner','noticias', 'fechas'));
    	
    }
    public function enviarCorreoAfiliado(Request $request){
@@ -38,4 +42,5 @@ class WelcomeController extends Controller{
       $afiliado = User::findOrfail($id);
       return view('afiliados.detalle_afiliado', compact('afiliado'));
    }
+
 }
