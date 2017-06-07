@@ -94,6 +94,13 @@ Route::group(['middleware'=> 'auth:admin'],function(){
   Route::get('article/{id}/deleteMsg','\App\Http\Controllers\ArticleController@DeleteMsg');
 });
 
+Route::group(['middleware'=> 'auth:admin'],function(){
+  Route::resource('subarea','SubareaController', ['only' => ['create', 'store', 'index', 'edit']]);
+  Route::post('subarea/{id}/update','\App\Http\Controllers\SubareaController@update');
+  Route::get('subarea/{id}/delete','\App\Http\Controllers\SubareaController@destroy');
+  Route::get('subarea/{id}/deleteMsg','\App\Http\Controllers\SubareaController@DeleteMsg');
+});
+
 //banner Routes
 Route::group(['middleware'=> 'auth:admin'],function(){
   Route::resource('banner','\App\Http\Controllers\BannerController', ['only' => ['create', 'store', 'index', 'edit']]);

@@ -1443,23 +1443,31 @@ ESTILOS POR SECIONES DEL SITIO
 	margin-top: -57px;
 
 }
-.noticia p{
+
+.alineado_derecha{
+    text-align: right;
+}
+
+
+.noticia p, .vacante p{
+	text-align: left;
 	font-size:.85em;
 	color:#455560;
 	line-height:120%;
 }
-.noticia a{
-	bottom:15px;
+.noticia a, .vacante a{
 	display:inline-block;
 	width:100px;
 	padding:10px;
 	text-align:center;
 	background-color:#A1BA77;
-	position:absolute;
-	right:15px;
 	color:#FFF;
 	border-bottom:2px #769D2E solid;
 	border-top:1px #fff solid;
+}
+
+.margin_30{
+	margin: 30px 0 30px 0;
 }
 
 /*----- SECION DE CALENDARIO-----*/
@@ -1983,6 +1991,15 @@ margin-top: -2261px;
     margin-bottom: 10px;
     text-align: left;
 }
+
+.subtitulo_seccion{
+    color: #455560;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    text-align: left;
+	border-bottom:1px solid #769D2E;
+}
+
 
 .formularios label{
 	color: #455560;

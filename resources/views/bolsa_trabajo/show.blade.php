@@ -38,7 +38,7 @@
                 <td>
                     <b><i>Descripcion : </i></b>
                 </td>
-                <td>{!!$vacante->descripcion!!}</td>
+                <td>{{substr(strip_tags($vacante->descripcion),0,100)}}{{strlen(strip_tags($vacante->descripcion)) > 100 ? "...":""}}</td>
             </tr>
             <tr>
                 <td>
