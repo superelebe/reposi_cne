@@ -1,4 +1,6 @@
 @extends('layouts.app')
+    <script src="//cloud.tinymce.com/stable/tinymce.min.js"></script>
+    <script>tinymce.init({ selector:'textarea',plugins: "lists" });</script>
 @section('content')
 
 <section class="contenedor">
@@ -37,7 +39,7 @@
                     <input id="imagen" name = "imagen" type="file" class="form-control">
                 </div>
                 <div class="form-group">
-                    <label for="descripcion">descripcion</label>
+                    <label for="descripcion">Descripcion</label>
                     <textarea rows="5"  id="descripcion" name = "descripcion" class="form-control"></textarea>
                 </div>
                 <button class = 'btn btn-primary' type ='submit'>Crear</button>

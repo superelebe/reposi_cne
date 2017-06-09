@@ -8,6 +8,7 @@ use App\BolsaTrabajo;
 use App\Article;
 use App\Event;
 use App\Capacitacion;
+use App\Calendar;
 use App\User;
 
 class AdminController extends Controller
@@ -28,8 +29,13 @@ class AdminController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(){
+        $noticias = Article::orderBy('id', 'desc')->take(5)->get();
+        $vacantes = BolsaTrabajo::orderBy('id', 'desc')->take(5)->get();
+        $eventos = Calendar::CalendarActivo()->orderBy('id', 'desc')->take(5)->get();
+        $capacitaciones = Capacitacion::FechaActivo()->orderBy('id', 'desc')->take(5)->get();
+        $banners = Banner::orderBy('id', 'desc')->take(5)->get();
         $noAfiliados = User::NoAfiliados()->take(3)->get();
-        return view('admincnec.dashboard', compact('noAfiliados'));
+        return view('admincnec.dashboard', compact('noAfiliados','noticias','vacantes','eventos', 'capacitaciones', 'banners'));
     }
     
     public function estatusUsuario($id, Request $request){

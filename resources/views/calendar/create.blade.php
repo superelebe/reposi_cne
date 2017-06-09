@@ -1,16 +1,18 @@
 @extends('layouts.app')
+<script src="//cloud.tinymce.com/stable/tinymce.min.js"></script>
+  <script>tinymce.init({ selector:'textarea',plugins: "lists" });</script>
 @section('content')
 
 <section class="contenedor">
     <section class="row row-centered">
         <div class="col-md-8 col-xs-12 col-centered">
             <form method = 'get' action = '{!!url("calendario")!!}'>
-                <button class = 'btn btn-danger'>Ver Todas las Noticias</button>
+                <button class = 'btn btn-danger'>Ver todos los Eventos</button>
             </form>
         </div>
         <div class="col-xs-12 col-md-8 col-centered">
             <div class='titulo_seccion'>
-                Crear Noticia
+                Crear Evento
             </div class='titulo_seccion'>
         </div>
         <div class="col-xs-12 col-md-8 col-centered formularios">
@@ -38,9 +40,11 @@
                 </div>
                 <div class="form-group">
                     <label for="descripcion">Descripcion</label>
-                    <textarea rows="5"  id="descripcion" name = "descripcion" class="form-control"></textarea>
+                    <textarea  id="descripcion" name = "descripcion" type="text" class="form-control"></textarea>
                 </div>
-                <button class = 'btn btn-primary' type ='submit'>Crear</button>
+                <div class="sub-main_crear">
+                  <button class="button-two_crear" type = 'submit'><span class="texto_blanco">Crear</span></button>
+                </div>
             </form>
         </div>
 

@@ -110,6 +110,50 @@ h3{
 	width:100%;
 }
 
+.caja_administrador{
+	width: 31%;
+	margin: 5px;
+	border: 1px solid;
+	text-align: justify;
+	font-size: 13px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.padding_15{
+	padding: 15px;    
+}
+
+.caja_verde{
+	border-color: #769D2E;
+}
+
+.crear_nuevo{
+	padding: 8px 15px;
+}
+
+.fondo_verde{
+	background-color: #769D2E;
+	text-align: center;
+}
+
+.fondo_verde a{
+	color: white;
+	font-size: 19px;
+}
+
+.titulo_crear{
+    padding: 12px 0;
+	color: #fff;
+    text-align: center;
+    font-size: 1.3em;
+}
+
+.crear_border_abajo{
+    border-bottom: 1px solid #8e8e8e;
+    padding: 15px 6px;
+}
+
 /*----- ENLACES DE INTERES -----*/
 #interes {
 	background-color: #b5bfc7;

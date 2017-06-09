@@ -110,10 +110,9 @@ class ArticleController extends Controller
         {
             return URL::to('article/'. $id . '/edit');
         }
-
         
         $article = Article::findOrfail($id);
-        return view('article.edit',compact('title','article'  ));
+        return view('article.edit',compact('title','article'));
     }
 
     /**
