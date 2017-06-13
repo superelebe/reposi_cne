@@ -3,7 +3,7 @@
 
 <section class="content">
     <h1>
-        Edit article
+        Editar Vacante
     </h1>
     <form method = 'get' action = '{!!url("article")!!}'>
         <button class = 'btn btn-danger'>article Index</button>

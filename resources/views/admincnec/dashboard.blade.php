@@ -17,7 +17,7 @@
 
     <div class="row row-centered">
         <div class='col-xs-12 col-md-11 col-centered'>  
-            <div class='caja_administrador caja_verde'>
+            <div class='caja_administrador caja_gris'>
                 <div class='crear_nuevo fondo_verde titulo_crear'>
                     NOTICIAS
                 </div>
@@ -132,20 +132,15 @@
     </div>
 
     <div class="row row-centered">
-            <div class='col-md-8 col-centered'>
-                <div class='titulo_seccion'>Ultimas Solicitudes para Afiliación</div>
-                <div>
+            <div class='col-md-8 col-centered '>
+                <div class='titulo_seccion'>Solicitudes para Afiliación</div>
+                <div class='col-md-12 col-centered'>
                     @foreach($noAfiliados as $noAfiliado )
-                        <div>
-                            <div>
-                                Empresa
-                            </div>
-                            <div>
+                        <div class='col-md-12'>
+                            <div class='empresas_afiliadas alineados_usuario'>
                                 {{$noAfiliado->empresa}}
+                                <a  class='alineado_derecha' href="{{url('ver_usuario',$noAfiliado->id)}}"> Ver Perfil</a>
                             </div>
-                        </div>
-                        <div>
-                            <a href="{{url('ver_usuario',$noAfiliado->id)}}"> Ver Perfil</a>
                         </div>
                     @endforeach
                 </div>

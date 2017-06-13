@@ -16,7 +16,7 @@ Route::get('/', 'WelcomeController@index');
 
 Route::get('usuarios/home', 'HomeController@index')->name('home');
 
-Route::get('usuarios/editar', 'HomeController@editar')->name('editar-afiliado');
+Route::get('editarusuario', 'HomeController@editar')->name('editar-afiliado');
 Route::post('usuarios/{id}/update', 'HomeController@update');
 
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
@@ -150,6 +150,8 @@ Route::get('cursos/{id}','CapacitacionController@show');
 
 Route::get('eventos','CalendarController@calendario');
 
+Route::get('ajaxSubarea/{id}', 'SubareaController@obtenerSuabreas');
+
 Route::get('noticias', 'ArticleController@noticias')->name('noticias');
 Route::get('noticia/{id}', 'ArticleController@noticia');
 Route::get('bolsa_trabajo_cnec/{id}','BolsaTrabajoController@show')->name('bolsa_trabajo_cnec');
@@ -157,4 +159,4 @@ Route::get('todas_las_vacantes','BolsaTrabajoController@todasVacantes')->name('t
 Route::post('enviar_correo_vacante','BolsaTrabajoController@enviarCorreo')->name('enviar_correo_vacante');
 Route::post('
   ','WelcomeController@enviarCorreoAfiliado')->name('enviarCorreoAfiliado');
-Route::get('register/verify/{token}', 'Auth\RegisterController@verify');
+Route::get('verificacion/{token}', 'Auth\RegisterController@verificado')->name('verificacion');

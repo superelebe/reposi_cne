@@ -8,6 +8,7 @@ use App\User;
 use App\Service;
 use App\Ciudad;
 use Image;
+use App\Subarea;
 
 class HomeController extends Controller
 {
@@ -33,11 +34,14 @@ class HomeController extends Controller
     }
 
     public function editar(Request $request){
+
         $title = 'Editar - Datos Afiliado';
         $servicios = Service::all();
+
+        $subareas = Subarea::all();
         $ciudades = Ciudad::all();
         $usuario = Auth::user();
-        return view('usuarios.editar',compact('usuario','title', 'servicios', 'ciudades' ));  
+        return view('usuarios.editar',compact('usuario','title', 'servicios', 'ciudades', 'subareas' ));  
     }
 
     public function update($id,Request $request){
@@ -58,13 +62,13 @@ class HomeController extends Controller
             }
             if ($request->hasFile('cvs')) {
                 $cvs = $request->file('cvs');
-                $md5Name = md5_file(time().$cvs->getRealPath());
-                $filename_imagen = str_slug(pathinfo($cvs->getClientOriginalName(), PATHINFO_FILENAME)).'_'.$md5Name.'.'.$cvs->getClientOriginalExtension();
+                $md5Name = md5_file($cvs->getRealPath());
+                $fileName = str_slug(pathinfo($cvs->getClientOriginalName(), PATHINFO_FILENAME)).'_'.$md5Name.'.'.$cvs->getClientOriginalExtension();
                 $path = base_path() .'/storage/app/afiliados/cv/';
                 $cvs->move($path , $fileName);
                 
 
-                $usuario->cvs = $path.$filename;
+                $usuario->cvs = $path.$fileName;
                 
             }
                 
@@ -74,15 +78,14 @@ class HomeController extends Controller
                 
         $usuario->direccion = $request->direccion;
         $usuario->rfc = $request->rfc;
-        $usuario->servicio_id = $request->servicio_id;
+        $usuario->servicios_id = $request->servicio_id;
+        $usuario->subarea_id = $request->subarea_id;
         $usuario->certificados = $request->certificados;
         $usuario->email = $request->email;
         $usuario->direccion = $request->direccion;
 
-        dd($usuario);
-
         $usuario->save();
 
-        return redirect('article');
+        return redirect('home');
     }
 }

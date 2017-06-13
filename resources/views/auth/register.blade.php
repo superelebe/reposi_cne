@@ -90,7 +90,7 @@
                                         </div>
                                     </div>
                                     <div class='row'>
-                                        <div class="col-md-6">
+                                        <div class="col-md-12">
                                             <?php $ciudad = App\Ciudad::all(); ?>
                                             <div class="form-group{{ $errors->has('rfc') ? ' has-error' : '' }}">
                                                 <label for="rfc" class="col-md-4 control-label">ciudad</label>
@@ -103,6 +103,27 @@
                                             </div>  
                                         </div>
                                         <div class="col-md-6">
+                                            <?php $serivios = App\Service::all(); ?>
+                                            <div class="form-group{{ $errors->has('rfc') ? ' has-error' : '' }}">
+                                                <label for="rfc" class="col-md-4 control-label">Servicios</label>
+                                                    <select name="servicios" class="form-control" id='cat'>
+                                                        <option value="" selected disabled style="display:none">Servicios</option>
+                                                        @foreach ($serivios as $service)
+                                                            <option value="{{ $service->id }}">{{ $service->nombre }}</option>
+                                                        @endforeach
+                                                    </select>
+                                            </div>  
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group{{ $errors->has('subarea') ? ' has-error' : '' }}">
+                                                <label for="subarea" class="col-md-4 control-label">Sub Area</label>
+                                                    <select name="subarea" class="form-control" id='subarea'>
+                                                        <option value="" selected disabled style="display:none">Subareas</option>
+                                                    </select>
+                                            </div>  
+                                        </div>
+
+                                        <div class="col-md-12">
                                             <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }} row">
                                                 <label for="email" class="col-md-12 control-label">Correo Electronico</label>
 
@@ -162,5 +183,20 @@
     
     </div>
 </div>
+
+<script>
+    $('#cat').on('change',function(e){
+        var potato = e.target.value;
+        
+        console.log(potato);
+        $.get('ajaxSubarea/'+ potato+'', function(data){
+            $('#subarea').empty();
+            $.each(data, function(index, subareaObj){
+                $('#subarea').append('<option value="'+ subareaObj.id+'">'+ subareaObj.nombre +'</option>');
+            });
+        });
+    });
+
+</script>
 
 @endsection

@@ -97,4 +97,11 @@ class SubareaController extends Controller
     {
         //
     }
+
+    public function obtenerSuabreas(Request $request, $id){
+        if($request->ajax()){
+            $subarea = Subarea::obtenerSuabreasRegistro($id);
+            return response()->json($subarea);
+        }
+    }
 }

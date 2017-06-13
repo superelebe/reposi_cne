@@ -110,6 +110,70 @@ h3{
 	width:100%;
 }
 
+.con_display{
+	display: inline-block;
+	vertical-align: top;
+}
+
+.empresas_afiliadas{
+    font-size: 1.1em;
+    color: #455560;
+    text-align: left;
+    padding: 12px 0 5px;
+    border-bottom: 1px solid #769d2e;
+    margin:30px;
+}
+
+.datos_usuarios{
+	text-align: left;
+    color: #455560;
+    margin-bottom: 10px;
+}
+
+.datos_usuarios>div{
+    margin: 10px 0;
+}
+
+.nombre_usuario{
+    font-size: 1.5em;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.correo_usuario{
+    background: #A1BA77;
+    color: #FFF;
+    padding: 5px 15px;
+    font-size: 16px;
+}
+
+.telefono_usuario{
+    color: #455560;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.servicios_subarea{
+    font-size: 1.2em;
+    color: #808C97;
+}
+
+
+.direcciones_usuarios{
+	border-bottom: 1px solid #769d2e;
+    padding: 10px 0;
+}
+
+.empresas_afiliadas a{
+    background: #A1BA77;
+    border-bottom: 2px #769D2E solid;
+    border-top: 1px #FFF solid;
+    padding: 5px 20px;
+    color: #FFF;
+}
+
 .caja_administrador{
 	width: 31%;
 	margin: 5px;
@@ -126,6 +190,10 @@ h3{
 
 .caja_verde{
 	border-color: #769D2E;
+}
+
+.caja_gris{
+	border-color: #808C97;
 }
 
 .crear_nuevo{
@@ -1111,6 +1179,16 @@ ESTILOS POR SECIONES DEL SITIO
 .texto_blanco{
 	color: white;
 }
+.contenedor_estatus{
+	border: 1px solid #455560;
+	padding: 10px;
+}
+
+.estatus_usuario{
+	font-size: 20px;
+	background-color: #455560;
+	color: white;
+}
 
 /*----- CREAR VACANTE -----*/
 
@@ -1488,6 +1566,8 @@ ESTILOS POR SECIONES DEL SITIO
 
 }
 
+
+
 .alineado_derecha{
     text-align: right;
 }
@@ -1512,6 +1592,11 @@ ESTILOS POR SECIONES DEL SITIO
 
 .margin_30{
 	margin: 30px 0 30px 0;
+}
+
+.alineados_usuario {
+    display: flex;
+    justify-content: space-between;
 }
 
 /*----- SECION DE CALENDARIO-----*/

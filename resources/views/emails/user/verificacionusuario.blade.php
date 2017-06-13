@@ -1,28 +1,16 @@
-@component('mail::message')
-# Gracias {{ $user->empresa }} por registrarse a la CNEC Guanajuato
+Gracias {{ $empresa }} por registrarse a la CNEC Guanajuato
 
 Gracias por suscribirte a nuestro **plan de afiliados**.
 
-@component('mail::panel')
-	El correo con el que se registro es:
-	{{url(‘/verifyemail/’.$email_token)}}
+	<p>De click en el link para tener acceso:</p>
+	<a href="{{route('verificacion',$email_token)}}"> Link</a>
 
-@endcomponent()
+<p>De momento estamos revisando la informacion enviada para darlo
+de alta en nuestro sistema</p>.
 
-De momento estamos revisando la informacion enviada para darlo
-de alta en nuestro sistema.
+<p>Te informaremos cuando tu cuenta sea dada de alta.</p>
 
-Te informaremos cuando tu cuenta sea dada de alta.
+<p>Si tienes dudas, llamenos al (477) 711 21 68 o 
+escribanos al correo informes@cnecgto.org</p>
 
-Si tienes dudas, llamenos al **(477) 711 21 68** o 
-escribanos al correo _informes@cnecgto.org_
-
-Con gusto le atenderemos.
-
-@component('mail::button', ['url' => '/'])
-Ir a cnec gto
-@endcomponent
-
-Gracias,<br>
-{{ config('app.name') }}
-@endcomponent
+<p>Con gusto le atenderemos.</p>

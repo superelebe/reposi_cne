@@ -9,6 +9,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use App\Mail\EmailVerification;
+use Illuminate\Http\Request;
 
 class RegisterController extends Controller
 {
@@ -76,9 +77,11 @@ class RegisterController extends Controller
             'telefono' => $data['telefono'],
             'rfc' => $data['rfc'],
             'ciudad_id' => $data['ciudad'],
+            'servicios_id' => $data['servicios'],
+            'subarea_id' => $data['subarea'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
-            'email_token' => base64_encode($data[‘email’]),
+            'email_token' => base64_encode($data['email']),
         ]);
 
     }
@@ -91,28 +94,46 @@ class RegisterController extends Controller
     public function register(Request $request)
     {
         // Laravel validation
-        $validator = $this->validator($request->all());
+
+        $input = $request->all();
+        $validator = $this->validator($input);
+
         if ($validator->fails()) 
         {
             $this->throwValidationException($request, $validator);
         }
+
+        if($validator->passes()){
+            $data = $this->create($input)->toArray();
+            $data['email_token'] = str_random(25);
+
+            $user = User::find($data['id']);
+            $user->email_token = $data['email_token'];
+            $user->save();
+            Mail::send('emails.user.verificacionusuario', $data, function($message) use($data){
+                $message->to($data['email']);
+                $message->subject('Confimacion de Registro');
+            });
+            return redirect(route('login'))->with('status', 'Se ha enviado una confirmacion al correo, favor de verificarlo');
+        }
+        return redirect(route('login'))->width('status', $validator->errors);
         // Using database transactions is useful here because stuff happening is actually a transaction
         // I don't know what I said in the last line! Weird!
-        DB::beginTransaction();
-        try
-        {
-            $user = $this->create($request->all());
-            // After creating the user send an email with the random token generated in the create method above
-            $email = new EmailVerification(new User(['email_token' => $user->email_token, 'name' => $user->name]));
-            Mail::to($user->email)->send($email);
-            DB::commit();
-            return back();
-        }
-        catch(Exception $e)
-        {
-            DB::rollback(); 
-            return back();
-        }
+        // DB::beginTransaction();
+        // try
+        // {
+        //     $user = $this->create($request->all());
+        //     // After creating the user send an email with the random token generated in the create method above
+        //     $email = new EmailVerification(new User(['email_token' => $user->email_token, 'name' => $user->name]));
+        //     Mail::to($user->email)->send($email);
+        //     DB::commit();
+        //     return back();
+        // }
+        // catch(Exception $e)
+        // {
+        //     DB::rollback(); 
+        //     return back();
+        // }
     }
     /**
     * Handle a registration request for the application.
@@ -120,9 +141,16 @@ class RegisterController extends Controller
     * @param $token
     * @return \Illuminate\Http\Response
     */
-    public function verify($token)
+    public function verificado($token)
     {
-        User::where('email_token',$token)->firstOrFail()->verified();
-        return redirect('login');
+        $user = User::where('email_token',$token)->firstOrFail();
+
+        if(!is_null($user)){
+            $user->verified = 1;
+            $user->email_token = '';
+            $user->save();
+            return redirect(route('login'))->with('status', 'La activacion exitosa.');
+        }
+        return redirect('login')->with('status', 'Algo ha salido mal, intenta mas tarde.');
     }
 }

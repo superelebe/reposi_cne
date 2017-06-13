@@ -24,6 +24,18 @@ class WelcomeController extends Controller{
    	return view('welcome',compact('otro_banner','noticias', 'fechas'));
    	
    }
+
+    public function edit($id,Request $request){
+        $users = User::findOrfail($id);
+        
+        return view('capacitacion.edit',compact('users'));
+    }
+
+
+   public function update(){
+
+   }
+
    public function enviarCorreoAfiliado(Request $request){
       $this->validate($request,[
          'mensaje'   => 'required| min:5',

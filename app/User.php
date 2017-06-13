@@ -17,6 +17,9 @@ class User extends Authenticatable
     public function servicios(){
         return $this->belongsTo(Service::class);
     }
+    public function subarea(){
+        return $this->belongsTo(Subarea::class);
+    }
     /**
      * The attributes that are mass assignable.
      *
@@ -24,7 +27,7 @@ class User extends Authenticatable
      */
     protected $table = 'register_users';
     protected $fillable = [
-        'empresa', 'email', 'password','representante','direccion','telefono','rfc','ciudad_id','servicio_id', 'certificados', 'estatus', 'email_token',
+        'empresa', 'email', 'password','representante','direccion','telefono','rfc','ciudad_id','servicio_id', 'certificados', 'estatus', 'verified' , 'email_token','subarea_id'
     ];
 
     protected   $events = [
