@@ -134,8 +134,7 @@ class CalendarController extends Controller
         $calendario->subtitulo = $request->subtitulo;
         
         $calendario->descripcion = $request->descripcion;
-        
-        
+ 
         $calendario->save();
 
         return redirect('calendario');

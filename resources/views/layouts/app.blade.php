@@ -62,7 +62,18 @@
                 <li><a href="{{ url('/afiliados') }}">AFILIADOS</a></li>
                 <li><a href="{{ url('/contacto') }}">CONTACTO</a></li>
                 <li><a href="{{ url('/capacitacion') }}">CAPACITACIÓN</a></li>
-                <li><a href="{{ url('/register') }}">AFÍLIATE</a></li>
+                @if (Auth::guard('web')->check())
+                    <li><a href="{{ url('/logout') }}" onclick="event.preventDefault();
+                                                 document.getElementById('logout-form').submit();">
+                                        SALIR
+                                    </a>
+
+                                    <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                                        {{ csrf_field() }}
+                                    </form>>SALIR</a></li>
+                @else
+                    <li><a href="{{ url('/register') }}">AFÍLIATE</a></li>
+                @endif
 
             </ul>
         </div>
@@ -90,15 +101,7 @@
 
     <div id="app">
 
-        <div>
-            @if(count($errors)> 0)
-                <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-                </ul>
-            @endif
-        </div>
+
 
         @yield('content')
         <!-- <div class="hola">HOOOLA</div>  -->

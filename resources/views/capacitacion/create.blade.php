@@ -16,27 +16,35 @@
             </div class='titulo_seccion'>
         </div>
         <div class="col-xs-12 col-md-8 col-centered formularios">
-            <form method = 'POST' action = '{!!url("cursos")!!}' enctype="multipart/form-data">
+            <form method = 'POST' action = '{!!url("curso")!!}' enctype="multipart/form-data">
                 <input type = 'hidden' name = '_token' value = '{{Session::token()}}'>
                 <div class="form-group">
                     <label for="title">Titulo</label>
                     <input id="title" name = "title" type="text" class="form-control">
                 </div>
                 <div class="form-group">
-                    <label for="subtitulo">subtitulo</label>
-                    <input id="subtitulo" name = "subtitulo" type="text" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label for="start">start</label>
+                    <label for="start">Inicia</label>
                     <input id="start" name = "start" type="text" class="form-control">
                 </div>
                 <div class="form-group">
-                    <label for="end">end</label>
+                    <label for="end">Termina</label>
                     <input id="end" name = "end" type="text" class="form-control">
                 </div>
                 <div class="form-group">
-                    <label for="imagen">imagen</label>
-                    <input id="imagen" name = "imagen" type="file" class="form-control">
+                    <label for="horarios">Horario</label>
+                    <input id="horarios" name = "horarios" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="end">Inversion</label>
+                    <input id="end" name = "inversion" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="imagen">Imagen</label>
+                    <input id="imagen" name = "pdf" type="file" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="lugar">Lugar</label>
+                    <input id="lugar" name = "lugar" type="text" class="form-control">
                 </div>
                 <div class="form-group">
                     <label for="descripcion">Descripcion</label>

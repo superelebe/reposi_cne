@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Capacitacion;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
+use Image;
 
 class CapacitacionController extends Controller
 {
@@ -38,8 +39,8 @@ class CapacitacionController extends Controller
      */
     public function store(Request $request) {
             $cursos = new Capacitacion();
-            if ($request->hasFile('imagen')) {
-                $imagen = $request->file('imagen');
+            if ($request->hasFile('pdf')) {
+                $imagen = $request->file('pdf');
                 $filename = time().'.'.$imagen->getClientOriginalExtension();
                 $path = public_path('uploads/cursos/' . $filename);
                 Image::make($imagen)->resize(null, 400, function ($constraint) {
@@ -47,12 +48,20 @@ class CapacitacionController extends Controller
                     $constraint->upsize();
                 })->save($path);
 
-                $cursos->imagen = '/uploads/cursos/'.$filename;
+                $cursos->pdf = '/uploads/cursos/'.$filename;
             }
 
-                $cursos->title = $request->titulo;
+                $cursos->title = $request->title;
                 
                 $cursos->start = $request->start;
+        
+                $cursos->horarios = $request->horarios;
+
+                $cursos->inversion = $request->inversion;
+                
+                $cursos->descripcion = $request->descripcion;
+
+                $cursos->lugar = $request->lugar;
                 
                 $cursos->end = $request->end;
 
@@ -60,7 +69,7 @@ class CapacitacionController extends Controller
 
                 Capacitacion::where('id', $cursos->id)->update(['url' => 'cursos/'.$cursos->id]);
 
-                return redirect('cursos');
+                return redirect('curso');
     }
 
     /**

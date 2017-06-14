@@ -93,7 +93,7 @@
                                         <div class="col-md-12">
                                             <?php $ciudad = App\Ciudad::all(); ?>
                                             <div class="form-group{{ $errors->has('rfc') ? ' has-error' : '' }}">
-                                                <label for="rfc" class="col-md-4 control-label">ciudad</label>
+                                                <label for="rfc" class="col-md-4 control-label">Ciudad</label>
                                                     <select name="ciudad" class="form-control">
                                                         <option value="" selected disabled style="display:none">Ciudad</option>
                                                         @foreach ($ciudad as $ciudad)
@@ -105,7 +105,7 @@
                                         <div class="col-md-6">
                                             <?php $serivios = App\Service::all(); ?>
                                             <div class="form-group{{ $errors->has('rfc') ? ' has-error' : '' }}">
-                                                <label for="rfc" class="col-md-4 control-label">Servicios</label>
+                                                <label for="rfc" class="col-md-12 control-label">Servicios</label>
                                                     <select name="servicios" class="form-control" id='cat'>
                                                         <option value="" selected disabled style="display:none">Servicios</option>
                                                         @foreach ($serivios as $service)
@@ -116,7 +116,7 @@
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group{{ $errors->has('subarea') ? ' has-error' : '' }}">
-                                                <label for="subarea" class="col-md-4 control-label">Sub Area</label>
+                                                <label for="subarea" class="col-md-12 control-label">Sub Area</label>
                                                     <select name="subarea" class="form-control" id='subarea'>
                                                         <option value="" selected disabled style="display:none">Subareas</option>
                                                     </select>

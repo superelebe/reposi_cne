@@ -2,10 +2,6 @@
 @section('content')
 
 <section class="content">
-    <h1>
-        Noticia Index
-    </h1>
-
     <div id="notilist" class="limpiar clearfix"> 
         <div class="ocho80">
             <div id="notilistconten">
@@ -16,9 +12,9 @@
                                 @foreach($noticia as $noticias) 
                                     <div class="noticia">
                                         <h3>{{$noticias->titulo}}</h3>
-                                        <span>{{$noticias->created_at->format('d F Y')}}</span>
+                                        <span>{{ $noticias->created_at->toFormattedDateString() }}</span>
                                         <div class="con_img_noti">
-                                            <img src="{!!($noticias->imagen)!!}" alt="">
+                                            <img src="{{($noticias->imagen)}}" alt="">
                                         </div>
                                         <p>{{substr(strip_tags($noticias->cuerpo),0,100)}}{{strlen(strip_tags($noticias->cuerpo)) > 100 ? "...":""}}</p>
                                         <a href="/noticia/{{$noticias->id}}">Ver mas</a>

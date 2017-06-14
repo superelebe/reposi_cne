@@ -5,10 +5,12 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Database\Eloquent\Model;
+use App\DatesTranslator;
+
 
 class User extends Authenticatable
 {
-    use Notifiable;
+    use Notifiable, DatesTranslator;
 
     public function ciudad(){
         return $this->belongsTo(Ciudad::class);
@@ -47,6 +49,7 @@ class User extends Authenticatable
         $this->email_token = null;
         $this->save();
     }
+
     /**
      * The attributes that should be hidden for arrays.
      *

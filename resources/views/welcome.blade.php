@@ -118,10 +118,9 @@
 
                   @foreach($noticias as $noticia)
                             <div class="articulo">
-                                <h4>{{ $noticia->titulo}}</h4>
+                                <h5>{{ $noticia->titulo}}</h5>
                                 <img src="{{$noticia->imagen}}" alt="" class="noticia" width="244" height="66">
-                                <p>{{substr(strip_tags($noticia->cuerpo),0,100)}}{{strlen(strip_tags($noticia->cuerpo)) > 100 ? "...":""}}</p>
-                                <div>{{ $noticia->created_at->diffForHumans()}}</div>
+                                <p>{{substr(strip_tags($noticia->cuerpo),0,80)}}{{strlen(strip_tags($noticia->cuerpo)) > 80 ? "...":""}}</p>
                                 <a href="{{route('noticias')}}"  title="Ver m&aacute;s de la noticia"><img src="{{asset('img/cruzmas.gif')}}" alt="mas" class="imgmas" /></a>
                             </div>
                   @endforeach
@@ -139,22 +138,7 @@
 <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
 
-<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-<!-- //////////////////////////////////B A N N E R S   C O N T ////////////////////////////////////////////////////// -->
 
-    <div class="contenedor" style="width: 880px; margin: 0 auto; padding-top: 10px;">
-        <!-- div Ley fed. del trabajo -->
-        <a href="http://www.cnecgto.org/leydecondominio.html" style=" float: left; margin-left: 5px;"><img src="img/banner_LFC.jpg" alt="ley de condominio"/></a>
-        <!-- div Ley fed. del condominio -->
-        <a href="http://www.cnecgto.org/leydetrabajo.html" style=" float: left; margin-left: 5px;"><img src="img/BANNER_LFT.jpg" alt="ley de trabajo" /></a>
-        <div class="clear" style=" clear: both;"></div>
-    </div>
-    <!-- div convenios-->
-    <div id="convenios" class="clearfix">
-        <a href="convenios.html"><img src="img/convenios.png" style=" margin-top: -15px;" /></a>
-    </div>
-<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-<!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
 <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 <!-- //////////////////////////////////////C O N T E N I D O   I-F R A M E/////////////////////////////////////////// -->
@@ -221,6 +205,27 @@ clientes.</p>
     <img src="img/details-consulting-4.jpg" />
  </div>
  <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- //////////////////////////////////B A N N E R S   C O N T ////////////////////////////////////////////////////// -->
+
+    <div class="contenedor" style="width: 880px; margin: 0 auto; padding-top: 10px;">
+        <!-- div Ley fed. del trabajo -->
+        <a href="{{url('/login')}}" style=" float: left; margin-left: 5px;     padding: 5px 0;"><img src="{{asset('img/banner_iniciar_sesion_1.png')}}" alt="ley de condominio"/></a>
+        <!-- div Ley fed. del condominio -->
+        <a href="{{url('/register')}}" style=" float: left; margin-left: 5px;     padding: 5px 0;"><img src="{{asset('img/banner_registro_afiliados_1.png')}}" alt="ley de trabajo" /></a>
+        <!-- div Ley fed. del trabajo -->
+        <a href="http://www.cnecgto.org/leydecondominio.html" style=" float: left; margin-left: 5px;     padding: 5px 0;"><img src="img/banner_LFC.jpg" alt="ley de condominio"/></a>
+        <!-- div Ley fed. del condominio -->
+        <a href="http://www.cnecgto.org/leydetrabajo.html" style=" float: left; margin-left: 5px;     padding: 5px 0;"><img src="img/BANNER_LFT.jpg" alt="ley de trabajo" /></a>
+        <div class="clear" style=" clear: both;"></div>
+    </div>
+    <!-- div convenios-->
+    <div id="convenios" class="clearfix">
+        <a href="convenios.html"><img src="img/convenios.png" style=" margin-top: -15px;" /></a>
+    </div>
+<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 @endsection
 @extends('layouts.js')

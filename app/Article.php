@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Cviebrock\EloquentSluggable\Sluggable;
-
+use App\DatesTranslator;
 /**
  * Class Article.
  *
@@ -14,10 +14,10 @@ use Cviebrock\EloquentSluggable\Sluggable;
  */
 class Article extends Model
 {
-	use Sluggable;
+	use Sluggable, DatesTranslator;
 	
 	use SoftDeletes;
-
+    
 	protected $dates = ['deleted_at'];
 	
     protected $table = 'articles';

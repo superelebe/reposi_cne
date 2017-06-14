@@ -222,6 +222,11 @@ h3{
     padding: 15px 6px;
 }
 
+
+.form-control{
+	border: 1px solid #455560;
+}
+
 /*----- ENLACES DE INTERES -----*/
 #interes {
 	background-color: #b5bfc7;
@@ -532,8 +537,7 @@ ESTILOS POR SECIONES DEL SITIO
 #calendario {
 	position:relative;
 	background-color:#FFF;
-	margin-top: 30px;
-	margin-bottom:30px;
+	padding-bottom: 40px;
 }
 
 #calendario  li{
@@ -599,7 +603,6 @@ ESTILOS POR SECIONES DEL SITIO
 	margin: 10px 0 12px 10px;
 	border-bottom:1px solid #fff;
 	color:#fff;
-	padding:0 0 17px;
 	position:relative;
 }
 
@@ -628,6 +631,7 @@ ESTILOS POR SECIONES DEL SITIO
 	color:#455560;
 	font-size:14px;
 	width:220px;
+	line-height: 1.2;
 	
 }
 /*----- convenios -----*/

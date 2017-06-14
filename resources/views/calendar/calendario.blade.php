@@ -69,7 +69,10 @@
 		});
 		
 	});
-
+	$.getJSON(miurl + "/cargadorFecha", function(data) {
+	console.log(data);
+    //data is the JSON string
+});
 	</script>
 </script>
 @endsection
