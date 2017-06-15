@@ -8,6 +8,7 @@ use URL;
 use Image;
 use Mail;
 use App\Mail\CorreoVacante;
+use App\Mail\SolicitudVacante;
 use Storage;
 
 class BolsaTrabajoController extends Controller
@@ -170,7 +171,8 @@ class BolsaTrabajoController extends Controller
               'vacante' => $request->nombreVacante,
               'empresa' => $request->empresaVacante
         ];
-        Mail::to($request->correo)->cc('hola@cnecgot.org')->send(new CorreoVacante($data));
+        Mail::to($request->correo)->send(new CorreoVacante($data));
+        Mail::to('emmanegr@gmail.com')->send(new SolicitudVacante($data));
         return redirect('todas_las_vacantes');
     }
 

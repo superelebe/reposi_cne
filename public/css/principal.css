@@ -617,8 +617,11 @@ ESTILOS POR SECIONES DEL SITIO
 	left:227px;
 	top:50px;
 }
-.largo_imagenes{
+.largo_imagenes, .largo_imagenes_cursos{
 	width:100%;
+}
+
+.largo_imagenes{
 	max-width: 300px;
 }
 
@@ -892,26 +895,27 @@ ESTILOS POR SECIONES DEL SITIO
 
 /*----- AFILIADOS -----*/
 
+
 #empresas{
 	background:url(../img/banner-afiliados.png) no-repeat center top;
 	padding-top:1px;
 }
 
-#empresas #selects{
+.empresas #selects{
 	margin-top:228px;
 	height:20px;
 }
 
-#empresas #selects select{
+.empresas #selects select{
   font-size: 12px;
   color: #455560;
   background-color:#FFF;
 }
-#empresas #selects option {
+.empresas #selects option {
 	background-color: #B5BFC7;
 }
 
-#empresas #selects a{
+.empresas #selects a{
 	background:url(../img/btn-regresar-flip.png) no-repeat top left;
 	display:block;
 	height:65px;
@@ -920,28 +924,29 @@ ESTILOS POR SECIONES DEL SITIO
 	text-indent:-500px;
 	width:330px;
 }
-#empresas table{
+.empresas table{
 	margin:50px 0 0 0;
 	font-size:.85em;
 }
 
-#empresas table thead{
+.empresas table thead{
 	background:#808E99;
 	color:#fff;
 	font-size: 19px;
 	padding:5px;
 }
 
-#empresas table tr{
+.empresas table tr{
 	padding:15px 0;
 }
 
-#empresas table td{
+.empresas table td{
 	border-bottom:#769D2E solid 1px;
 	padding:10px 15px;
+	width:50%;
 }
 
-#empresas table td a{
+.empresas table td a{
 	background:#A1BA77;
 	color:#FFF;
 	font-size:12px;
@@ -950,7 +955,7 @@ ESTILOS POR SECIONES DEL SITIO
 	
 }
 
-#empresas #nombre{
+.empresas #nombre{
 	color:#455560; 
 	text-transform:uppercase;
 	font-weight:600;
@@ -958,27 +963,27 @@ ESTILOS POR SECIONES DEL SITIO
 	margin-bottom:10px;	
 }
 
-#empresas #subarea{
+.empresas #subarea{
 	font-size:1.2em;
 		color:#808C97;
 		margin-bottom:10px;
 }
-#empresas #certificacion{
+.empresas #certificacion{\
 	color:#455560; 
 	font-size:16px; 
 	margin-bottom:15px;
 }
-#empresas #tel{
+.empresas #tel{
 	color:#455560; 
 	text-transform:uppercase;
 	font-weight:600;
 	font-size:2em;
 	margin-bottom:10px;	
 }
-#empresas #email{
+.empresas #email{
 	margin-bottom:10px;	
 }
-#empresas #direccion{
+.empresas #direccion{
 	color:#455560;
 	font-size:16px;
 	margin-top:5px;	
@@ -1576,6 +1581,21 @@ ESTILOS POR SECIONES DEL SITIO
     text-align: right;
 }
 
+.alineado_izq{
+	text-align: left;
+}
+
+.descripcion_bolsa{
+	padding:10px 0;
+	text-align: justify;
+}
+.descripcion_bolsa h3, .preline, .descripcion_bolsa ul, .descripcion_bolsa li{
+	padding:10px !important;
+}
+
+.descripcion_bolsa li{
+	list-style-type: circle;
+}
 
 .noticia p, .vacante p{
 	text-align: left;

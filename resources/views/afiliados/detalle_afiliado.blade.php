@@ -18,7 +18,7 @@
 				{{$afiliado->email}}
 			</div>
 		</div> --}}
-		<div id="empresas">
+		<div id="empresas" class='empresas'>
 		<div class="ocho80">
 			<div id="selects">
 {{-- 				<a href="afiliados.php">Regresar a búsqueda </a> --}}

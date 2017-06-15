@@ -9,7 +9,7 @@ use App\DatesTranslator;
 
 class Calendar extends Model
 {
-	use Sluggable, DatesTranslator;
+	use Sluggable;
 
 	protected $dates = ['deleted_at','start', 'end'];
 

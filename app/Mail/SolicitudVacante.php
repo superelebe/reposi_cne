@@ -7,7 +7,7 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class CorreoVacante extends Mailable
+class SolicitudVacante extends Mailable
 {
     use Queueable, SerializesModels;
     public $data;
@@ -20,7 +20,6 @@ class CorreoVacante extends Mailable
     {
         $this->data = $data;
     }
-
     /**
      * Build the message.
      *
@@ -28,6 +27,13 @@ class CorreoVacante extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails.vacantes.mensajevacante')->with(['data', $this->data]);
+        if(empty($this->data['urlcv'])){
+            return $this->markdown('emails.vacantes.solicitudvacante')->with(['data', $this->data]);
+        }else{
+            return $this->markdown('emails.vacantes.solicitudvacante')->with(['data', $this->data])->attach($this->data['mipath'],[
+                    'as' => $this->data['urlcv'],
+                    'mime' => 'application/docx',
+                ]);
+        }
     }
 }

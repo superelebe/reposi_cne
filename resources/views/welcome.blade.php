@@ -211,6 +211,7 @@ clientes.</p>
 <!-- //////////////////////////////////B A N N E R S   C O N T ////////////////////////////////////////////////////// -->
 
     <div class="contenedor" style="width: 880px; margin: 0 auto; padding-top: 10px;">
+        <a href="{{url('/todas_las_vacantes')}}" style=" float: left; margin-left: 5px;     padding: 5px 0;"><img src="{{asset('img/bolsa_de_trabajo_index.png')}}" alt="ley de condominio"/></a>
         <!-- div Ley fed. del trabajo -->
         <a href="{{url('/login')}}" style=" float: left; margin-left: 5px;     padding: 5px 0;"><img src="{{asset('img/banner_iniciar_sesion_1.png')}}" alt="ley de condominio"/></a>
         <!-- div Ley fed. del condominio -->

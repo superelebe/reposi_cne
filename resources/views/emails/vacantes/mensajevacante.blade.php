@@ -7,10 +7,6 @@
 	{{ $data['correo'] }}
 @endcomponent()
 
-Estaremos analizando su perfil.
-
-Te informaremos cuando tu cuenta sea dada de alta.
-
 Si tienes dudas, llamenos al **(477) 711 21 68** o 
 escribanos al correo _informes@cnecgto.org_
 

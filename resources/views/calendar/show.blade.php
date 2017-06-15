@@ -9,60 +9,35 @@
             </div>
         </div>
     </div>
+<div class="empresas">
+    <div class="ocho80">
+        <table width="882" style="margin:45px 0 -25px;">
+            <thead>
+                <tr>
+                    <td>EVENTO</td>
+                    <td> </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <div id="nombre">{!!$calendario->title!!}</div>
+                        <div id="subarea">{!!$calendario->start->format('d \- F \- Y')!!}</div>
+                        <div id="direccion" class='descripcion_bolsa'>
+                            <p>Horarios: {!!$calendario->horarios!!}</p>
+                            <p>Inversion: {!!$calendario->inversion!!}</p>
+                            {!!$calendario->descripcion!!}
+                            <p>Lugar: {{$calendario->lugar}}</p>
+                        </div>
+                    </td>
+                    <td bgcolor="#455560">
+                        <img class='largo_imagenes_cursos' src="{{$calendario->imagen}}" alt="">
+                    </td>
+                </tr>
+            </tbody>
+        </table>   
+    </div> 
+</div>
 
-<section class="content">
-    <h1>
-        Show event
-    </h1>
-    <table class = 'table table-bordered'>
-        <thead>
-            <th>Key</th>
-            <th>Value</th>
-        </thead>
-        <tbody>
-            <tr>
-                <td>
-                    <b><i>title : </i></b>
-                </td>
-                <td>{!!$calendario->title!!}</td>
-            </tr>
-            <tr>
-                <td>
-                    <b><i>start : </i></b>
-                </td>
-                <td>{!!$calendario->start->format('d \- F \- Y')!!}</td>
-            </tr>
-            <tr>
-                <td>
-                    <b><i>end : </i></b>
-                </td>
-                <td>{!!$calendario->end->format('d \- F \- Y')!!}</td>
-            </tr>
-            <tr>
-                <td>
-                    <b><i>imagen : </i></b>
-                </td>
-                <td> <img src="{!!$calendario->imagen!!}" alt=""></td>
-            </tr>
-            <tr>
-                <td>
-                    <b><i>color : </i></b>
-                </td>
-                <td>{!!$calendario->color!!}</td>
-            </tr>
-            <tr>
-                <td>
-                    <b><i>subtitulo : </i></b>
-                </td>
-                <td>{!!$calendario->subtitulo!!}</td>
-            </tr>
-            <tr>
-                <td>
-                    <b><i>descripcion : </i></b>
-                </td>
-                <td>{!!$calendario->descripcion!!}</td>
-            </tr>
-        </tbody>
-    </table>
 </section>
 @endsection

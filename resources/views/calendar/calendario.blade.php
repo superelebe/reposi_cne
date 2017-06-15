@@ -46,7 +46,7 @@
 			header: {
 				left: 'prev,next today',
 				center: 'title',
-				right: ''
+				right: 'month,basicWeek,basicDay'
 			},
 			timeFormat: {
 				agendaDay: 'h(:mm)t{ - h(:mm)t}',

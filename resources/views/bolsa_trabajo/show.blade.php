@@ -1,86 +1,75 @@
 @extends('layouts.app')
 @section('content')
 
-<section class="content">
-    <h1>
-        Mostrar Noticia
-    </h1>
-    <br>
-    <form method = 'get' action = '{!!route("todas_las_vacantes")!!}'>
-        <button class = 'btn btn-primary'>Regresar</button>
-    </form>
-    <br>
-    <table class = 'table table-bordered'>
-        <thead>
-            <th>Key</th>
-            <th>Value</th>
-        </thead>
-        <tbody>
-            <tr>
-                <td>
-                    <b><i>titulo : </i></b>
-                </td>
-                <td>{!!$vacante->titulo!!}</td>
-            </tr>
-            <tr>
-                <td>
-                    <b><i>sueldo : </i></b>
-                </td>
-                <td>{!!$vacante->sueldo!!}</td>
-            </tr>
-            <tr>
-                <td>
-                    <b><i>empresa : </i></b>
-                </td>
-                <td>{!!$vacante->empresa!!}</td>
-            </tr>
-            <tr>
-                <td>
-                    <b><i>Descripcion : </i></b>
-                </td>
-                <td>{{substr(strip_tags($vacante->descripcion),0,100)}}{{strlen(strip_tags($vacante->descripcion)) > 100 ? "...":""}}</td>
-            </tr>
-            <tr>
-                <td>
-                    <b><i>Logo : </i></b>
-                </td>
-                <td><img src="{!!url($vacante->imagen)!!}" alt=""></td>
-            </tr>
-            <tr>
-                <td>
-                    <b><i>cuerpo : </i></b>
-                </td>
-                <td>{!!$vacante->cuerpo!!}</td>
-            </tr>
-        </tbody>
-    </table>
-    <form method="POST" action="{{route('enviar_correo_vacante')}}" enctype="multipart/form-data">
-        <input type = 'hidden' name = '_token' value = '{{Session::token()}}'>
-        <input type = 'hidden' name = 'nombreVacante' value = '{{$vacante->titulo}}'>
-        <input type = 'hidden' name = 'empresaVacante' value = '{{$vacante->empresa}}'>
-        <div class="form-group">
-            <label for="nombre">Nombre</label>
-            <input id='nombre' type="text" name='nombre'  class="form-control">
+    <div class="contenedor">
+        <div class="row row-centered">
+            <div class="col-md-12 col-centered img_centrada">
+                <img src="{{asset('img/banner-vacante.png')}}" alt="">
+            </div>
         </div>
-        <div class="form-group">
-            <label for="correo">Email</label>
-            <input id='correo' type="text" name='correo'  class="form-control">
-        </div>
-        <div class="form-group">
-            <label for="telefono">Telefono</label>
-            <input id='telefono' type="text" name='telefono'  class="form-control">
-        </div>
-        <div class="form-group">
-            <label for="comentarios">Comentarios</label>
-            <input id='comentarios' type="text" name='comentarios'  class="form-control">
-        </div>
-        <div class="form-group">
-            <label for="cv">Curriculum</label>
-            <input id='cv' type="file" name='cv'  class="form-control">
-        </div>
-        <div class="form-group">
-            <button class = 'btn btn-primary' type ='submit'>Crear</button>
-        </div>
-    </form>
-</section>
+    </div>
+<div class="empresas">
+    <div class="ocho80">
+        <table style="margin:45px 0 -25px;" width="882">
+                        <thead>
+                            <tr>
+                                <td>VACANTE</td>
+                                <td>POSTULARME</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="row row-centered">
+                                        <div class="col-md-4 col-centered">
+                                            <img class='largo_imagenes' src="{{$vacante->imagen}}" alt="">
+                                        </div>
+                                        <div class='col-md-8 col-centered alineado_izq'>
+                                            <div id="nombre">{{$vacante->titulo}}</div>
+                                            <div id="subarea">{{$vacante->empresa}}</div>
+                                            <div id="subarea">Publicado: {{$vacante->created_at->diffForHumans()}}</div>
+                                        </div>
+                                    </div>
+                                    <div id="direccion" class='descripcion_bolsa'>
+                                        {!!$vacante->descripcion!!}
+                                        <h3>Sueldo</h3>
+                                        <p>{!!$vacante->sueldo!!}</p>
+                                    </div
+                                </td>
+                                <td bgcolor="#455560">
+                                    <form class="forma3" method="POST" action="{{route('enviar_correo_vacante')}}" enctype="multipart/form-data">
+                                        <input type = 'hidden' name = '_token' value = '{{Session::token()}}'>
+                                        <input type = 'hidden' name = 'nombreVacante' value = '{{$vacante->titulo}}'>
+                                        <input type = 'hidden' name = 'empresaVacante' value = '{{$vacante->empresa}}'>
+                                        <div class="form-group">
+                                            <label for="nombre">Nombre</label>
+                                            <input id='nombre' type="text" name='nombre' required="required"  class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="correo">Email</label>
+                                            <input id='correo' type="text" name='correo' required="required"  class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="telefono">Telefono</label>
+                                            <input id='telefono' type="text" name='telefono' required="required"  class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="comentarios">Comentarios</label>
+                                            <input id='comentarios' type="text" name='comentarios' required="required"  class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="cv">Curriculum</label>
+                                            <input id='cv' type="file" name='cv' required="required"  class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <button class = 'button-two_crear' type ='submit'> <span class="texto_blanco">Postularme</span></button>
+                                        </div>
+                                    </form>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>   
+    </div> 
+</div>
+
 @endsection
