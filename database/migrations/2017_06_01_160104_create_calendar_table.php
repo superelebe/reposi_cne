@@ -15,7 +15,7 @@ class CreateCalendarTable extends Migration
     {
         Schema::create('calendar', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('titulo');
+            $table->string('title');
             $table->date('start');
             $table->date('end');
             $table->string('color')->default('#A1BA77');
