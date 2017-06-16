@@ -9,8 +9,7 @@
         <button class = 'btn btn-danger'>event Index</button>
     </form>
     <br>
-    <form method = 'POST' action = '{!! url("calendario")!!}/{!!$dia->
-        id!!}/update' enctype="multipart/form-data" > 
+    <form method = 'POST' action = '{!! url("calendario")!!}/{!!$dia->id!!}/update' enctype="multipart/form-data" > 
         <input type = 'hidden' name = '_token' value = '{{Session::token()}}'>
         <div class="form-group">
             <label for="title">Titulo</label>

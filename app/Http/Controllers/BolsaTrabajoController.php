@@ -124,6 +124,7 @@ class BolsaTrabajoController extends Controller
      */
     public function update($id, Request $request)
     {
+            $vacante = BolsaTrabajo::findOrfail($id);
             $this->validate(request(),[
                 'titulo'        => 'required| min: 5',
                 'start'         => 'required',
@@ -131,18 +132,18 @@ class BolsaTrabajoController extends Controller
                 'empresa'       => 'required | min:2'
             ]); 
 
-            $vacante = new BolsaTrabajo();
+            
             if ($request->hasFile('imagen')) {
                 $imagen = $request->file('imagen');
                 $filename = time().'.'.$imagen->getClientOriginalExtension();
-                $path = public_path('uploads/empresa/' . $filename);
+                $path = public_path('img/' . $filename);
                 Image::make($imagen)->resize(null, 400, function ($constraint) {
                     $constraint->aspectRatio();
                     $constraint->upsize();
                 })->save($path);
                 
 
-                $vacante->imagen = '/uploads/empresa/'.$filename;
+                $vacante->imagen = 'img/'.$filename;
                 
             }
 
