@@ -15,8 +15,8 @@ class AddInversionLugarHorarioToCalendar extends Migration
     {
         Schema::table('calendar', function (Blueprint $table) {
             $table->string('lugar')->nullable();
-            $table->string('horarios');
-            $table->string('inversion');
+            $table->string('horarios')->nullable();
+            $table->string('inversion')->nullable();
         });
     }
 
@@ -29,8 +29,8 @@ class AddInversionLugarHorarioToCalendar extends Migration
     {
         Schema::table('calendar', function (Blueprint $table) {
             $table->string('lugar')->nullable(); 
-            $table->string('horarios');
-            $table->string('inversion');
+            $table->string('horarios')->nullable();
+            $table->string('inversion')->nullable();
         });
     }
 }
