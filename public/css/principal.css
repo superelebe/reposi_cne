@@ -1758,6 +1758,11 @@ ESTILOS POR SECIONES DEL SITIO
 #pendondgray span p{
 	margin-left:5px;
 }
+
+#pendondgray img{
+	width: 70px;
+}
+
 .curso{
 	/*background:#455560;*/
 	width:540px;

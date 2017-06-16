@@ -109,9 +109,10 @@ class BolsaTrabajoController extends Controller
      * @param  \App\BolsaTrabajo  $bolsaTrabajo
      * @return \Illuminate\Http\Response
      */
-    public function edit(BolsaTrabajo $bolsaTrabajo)
+    public function edit($id, Request $request)
     {
-        //
+        $vacante = BolsaTrabajo::findOrfail($id);
+        return view('bolsa_trabajo.edit',compact('title','vacante'));
     }
 
     /**
@@ -121,9 +122,47 @@ class BolsaTrabajoController extends Controller
      * @param  \App\BolsaTrabajo  $bolsaTrabajo
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, BolsaTrabajo $bolsaTrabajo)
+    public function update($id, Request $request)
     {
-        //
+            $this->validate(request(),[
+                'titulo'        => 'required| min: 5',
+                'start'         => 'required',
+                'descripcion'   => 'required| min:10',
+                'empresa'       => 'required | min:2'
+            ]); 
+
+            $vacante = new BolsaTrabajo();
+            if ($request->hasFile('imagen')) {
+                $imagen = $request->file('imagen');
+                $filename = time().'.'.$imagen->getClientOriginalExtension();
+                $path = public_path('uploads/empresa/' . $filename);
+                Image::make($imagen)->resize(null, 400, function ($constraint) {
+                    $constraint->aspectRatio();
+                    $constraint->upsize();
+                })->save($path);
+                
+
+                $vacante->imagen = '/uploads/empresa/'.$filename;
+                
+            }
+
+                $vacante->titulo = $request->titulo;
+                
+                $vacante->start = $request->start;
+                
+                $vacante->end = $request->end;
+                
+                $vacante->activo = $request->activo;
+                
+                $vacante->sueldo = $request->sueldo;
+                
+                $vacante->descripcion = $request->descripcion;
+                
+                $vacante->empresa = $request->empresa;
+
+                $vacante->save();
+
+                return redirect('bolsa_trabajo');
     }
 
     /**

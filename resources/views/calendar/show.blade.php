@@ -22,12 +22,12 @@
                 <tr>
                     <td>
                         <div id="nombre">{!!$calendario->title!!}</div>
-                        <div id="subarea">{!!$calendario->start->format('d \- F \- Y')!!}</div>
+                        <div id="subarea">Inicia: {!!$calendario->start->format('d \- F \- Y')!!}</div>
                         <div id="direccion" class='descripcion_bolsa'>
                             <p>Horarios: {!!$calendario->horarios!!}</p>
                             <p>Inversion: {!!$calendario->inversion!!}</p>
-                            {!!$calendario->descripcion!!}
                             <p>Lugar: {{$calendario->lugar}}</p>
+                            {!!$calendario->descripcion!!}
                         </div>
                     </td>
                     <td bgcolor="#455560">

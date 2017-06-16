@@ -6,7 +6,7 @@
 <section class="contenedor">
     <section class="row row-centered">
         <div class="col-md-8 col-xs-12 col-centered">
-            <form method = 'get' action = '{!!url("todas_las_vacantes")!!}'>
+            <form method = 'get' action = '{!!url("bolsa_trabajo")!!}'>
                 <button class = 'btn btn-danger'>Ver Todas las Vacantes</button>
             </form>
         </div>
