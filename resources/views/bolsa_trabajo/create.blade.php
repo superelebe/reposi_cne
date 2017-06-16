@@ -36,7 +36,7 @@
                 </div>
                 <div class="form-group">
                     <label for="imagen">Ciudad</label>
-                    <input id="imagen" name = "ciudad" type="file" class="form-control">
+                    <input id="imagen" name = "ciudad" type="text" class="form-control">
                 </div>
                 <div class="form-group">
                     <label for="start">Inicio vacante</label>
