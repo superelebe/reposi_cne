@@ -42,19 +42,25 @@ class CalendarController extends Controller
             if ($request->hasFile('imagen')) {
                 $imagen = $request->file('imagen');
                 $filename = time().'.'.$imagen->getClientOriginalExtension();
-                $path = public_path('uploads/calendario/' . $filename);
+                $path = public_path('img/' . $filename);
                 Image::make($imagen)->resize(null, 400, function ($constraint) {
                     $constraint->aspectRatio();
                     $constraint->upsize();
                 })->save($path);
 
-                $calendario->imagen = '/uploads/calendario/'.$filename;
+                $calendario->imagen = 'img/'.$filename;
                 
             }
 
                 $calendario->title = $request->titulo;
                 
                 $calendario->start = $request->start;
+
+                $calendario->lugar = $request->lugar;
+
+                $calendario->horarios = $request->horarios;
+
+                $calendario->inversion = $request->inversion;
                 
                 $calendario->end = $request->end;
                 
