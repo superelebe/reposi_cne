@@ -20,7 +20,7 @@
                 <input type = 'hidden' name = '_token' value = '{{Session::token()}}'>
                 <div class="form-group">
                     <label for="title">Titulo</label>
-                    <input id="title" name = "titulo" type="text" class="form-control">
+                    <input id="title" name = "title" type="text" class="form-control">
                 </div>
                 <div class="form-group">
                     <label for="subtitulo">Subtitulo</label>
@@ -37,6 +37,18 @@
                 <div class="form-group">
                     <label for="imagen">Imagen</label>
                     <input id="imagen" name = "imagen" type="file" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="descripcion">Lugar</label>
+                    <input  id="lugar" name = "lugar" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="descripcion">Inversion</label>
+                    <input  id="inversion" name = "inversion" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="descripcion">Horario</label>
+                    <input  id="horarios" name = "horarios" type="text" class="form-control">
                 </div>
                 <div class="form-group">
                     <label for="descripcion">Descripcion</label>

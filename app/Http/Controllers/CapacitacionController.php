@@ -42,13 +42,13 @@ class CapacitacionController extends Controller
             if ($request->hasFile('pdf')) {
                 $imagen = $request->file('pdf');
                 $filename = time().'.'.$imagen->getClientOriginalExtension();
-                $path = public_path('uploads/cursos/' . $filename);
+                $path = public_path('img/' . $filename);
                 Image::make($imagen)->resize(null, 400, function ($constraint) {
                     $constraint->aspectRatio();
                     $constraint->upsize();
                 })->save($path);
 
-                $cursos->pdf = '/uploads/cursos/'.$filename;
+                $cursos->pdf = 'img/'.$filename;
             }
 
                 $cursos->title = $request->title;

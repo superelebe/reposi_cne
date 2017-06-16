@@ -52,7 +52,7 @@ class CalendarController extends Controller
                 
             }
 
-                $calendario->title = $request->titulo;
+                $calendario->title = $request->title;
                 
                 $calendario->start = $request->start;
 
@@ -131,10 +131,16 @@ class CalendarController extends Controller
 
         $calendario = Calendar::findOrfail($id);
         
-        $calendario->title = $request->titulo;
+        $calendario->title = $request->title;
         
         $calendario->start = $request->start;
-        
+
+        $calendario->lugar = $request->lugar;
+
+        $calendario->horarios = $request->horarios;
+
+        $calendario->inversion = $request->inversion;
+
         $calendario->end = $request->end;
         
         $calendario->subtitulo = $request->subtitulo;

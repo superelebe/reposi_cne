@@ -31,7 +31,7 @@ class AdminController extends Controller
     public function index(){
         $noticias = Article::orderBy('id', 'desc')->take(5)->get();
         $vacantes = BolsaTrabajo::orderBy('id', 'desc')->take(5)->get();
-        $eventos = Calendar::CalendarActivo()->orderBy('id', 'desc')->take(5)->get();
+        $eventos = Calendar::CalendarActivo()->orderBy('id', 'desc')->take(10)->get();
         $capacitaciones = Capacitacion::FechaActivo()->orderBy('id', 'desc')->take(5)->get();
         $banners = Banner::orderBy('id', 'desc')->take(5)->get();
         $noAfiliados = User::NoAfiliados()->take(3)->get();

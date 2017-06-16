@@ -31,7 +31,7 @@
                         </div>
                     </td>
                     <td bgcolor="#455560">
-                        <img class='largo_imagenes_cursos' src="{{$calendario->imagen}}" alt="">
+                        <img class='largo_imagenes_cursos' src="{{asset($calendario->imagen)}}" alt="">
                     </td>
                 </tr>
             </tbody>

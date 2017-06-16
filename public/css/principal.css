@@ -365,6 +365,7 @@ ESTILOS POR SECIONES DEL SITIO
 	line-height:1.25em;
 	color:#455560;
 	padding:10px 5px;
+	margin-top: 90px;
 }
 
 #mensajes .consultores li{
@@ -422,6 +423,7 @@ ESTILOS POR SECIONES DEL SITIO
 
 #mensajes #mensaje_director p {
 	padding:6px 5px;
+	margin-top: -30px;
 }
 
 #mensajes #mensaje_director .vermas {
