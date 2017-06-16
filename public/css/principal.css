@@ -1737,7 +1737,6 @@ ESTILOS POR SECIONES DEL SITIO
 }
 #pendondgray{
 	background:url(../img/pendon-dg.png) no-repeat;
-	height:351px;
 	left:50px;
 	padding:333px 10px 0 10px;
 	position:absolute;
@@ -1779,18 +1778,7 @@ ESTILOS POR SECIONES DEL SITIO
 	font-size:14px;
 	line-height:130%;
 }
-.curso a{
-	width:60px;
-	background:#A1BA77;
-	border-bottom:2px #769D2E solid;
-	border-top:1px #FFF solid;
-	padding:10px 20px;
-	color:#FFF;
-	position:absolute;
-	right:35px;
-	
-	
-}
+
 
 
 /*
@@ -1818,9 +1806,15 @@ AZULGRISOSCURO : #455560;
 
 .curso{
 	/*background: #455560;*/
-	width: 260px;
-	margin: 10px 0 20px 270px;
-	padding: 15px 25px 50px;
+    /* background: #455560; */
+    text-align: left;
+    /* width: 260px; */
+    margin: 10px 0 20px 270px;
+    /* padding: 15px 25px 50px; */
+}
+
+.margin-top-20{
+	margin-top:20px;
 }
 .curso h2{
 	color:#455560;
@@ -1839,18 +1833,16 @@ AZULGRISOSCURO : #455560;
 	line-height:130%;
 }
 .curso a{
-	width:60px;
+	width: 60px;
 	background:#A1BA77;
-	border-bottom:2px #769D2E solid;
-	border-top:1px #FFF solid;
-	padding: 10px 20px;
-	color:#FFF;
-	position:absolute;
-	right: 325px;
-	
-	
-	margin-top: 20px;
-	z-index: 10;
+    border-bottom: 2px #769D2E solid;
+    border-top: 1px #FFF solid;
+    padding: 10px 20px;
+    color: #FFF;
+    /* position: absolute; */
+    /* right: 325px; */
+    margin-top: 20px;
+    /* z-index: 10; */
 }
 
 .columna-2{

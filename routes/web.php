@@ -71,9 +71,9 @@ Route::get('conocimiento' , function(){
 Route::get('siem' , function(){
   return view('estatico.siem');
 });
-Route::get('capacitacion' , function(){
-  return view('estatico.capacitacion');
-});
+// Route::get('capacitacion' , function(){
+//   return view('estatico.capacitacion');
+// });
 
 
 Route::get('/admincnec/login', 'Auth\AdminLoginController@showLoginForm')->name('admincnec.login');
@@ -145,7 +145,7 @@ Route::get('calendario/{id}','CalendarController@show');
 
 Route::get('cargadorFecha', 'CalendarController@cargadoFechas');
 
-Route::get('cursos','CapacitacionController@cursos');
+Route::get('capacitacion','CapacitacionController@cursos');
 Route::get('cursos/{id}','CapacitacionController@show');
 
 Route::get('eventos','CalendarController@calendario');
