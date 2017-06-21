@@ -1112,7 +1112,6 @@ ESTILOS POR SECIONES DEL SITIO
     border-radius: 4px;
     padding: 7px;
     transition: all 0.5s ease 0s;
-    width: 300px;
 }
 .button-two span {
   cursor: pointer;

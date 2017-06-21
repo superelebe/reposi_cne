@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCalendarTable extends Migration
+class CreateOrganigramaTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,10 @@ class CreateCalendarTable extends Migration
      */
     public function up()
     {
-        Schema::create('calendar', function (Blueprint $table) {
+        Schema::create('organigrama', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('title');
-            $table->date('start');
-            $table->date('end');
-            $table->string('color')->default('#A1BA77');
-            $table->string('subtitulo');
-            $table->text('imagen');
-            $table->longText('descripcion');
+            $table->string('nombre');
+            $table->string('imagen');
             $table->timestamps();
         });
     }
@@ -33,6 +28,6 @@ class CreateCalendarTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('calendar');
+        Schema::dropIfExists('organigrama');
     }
 }

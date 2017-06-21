@@ -65,7 +65,7 @@
                     </table>    
                 </div>    
             </div>
-            {!! $trabajos->render() !!}
+            {!! $trabajos->link() !!}
         </div>
 
     </div>

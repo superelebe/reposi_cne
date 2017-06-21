@@ -122,6 +122,48 @@
                    <a href="{{route('banner.create')}}">Crear Banner</a>
                 </div>
             </div>
+
+            <div class='caja_administrador caja_verde'>
+                <div class='crear_nuevo fondo_verde titulo_crear'>
+                    ORGANIGRAMA
+                </div>
+                <div class='padding_15'>
+                    @foreach($organigramas as $organigrama)
+                        <div class='crear_border_abajo'>
+                            <div>
+                                <div>Nombre: {{$organigrama->nombre}}</div>
+                                <div>Puesto: {{$organigrama->puesto->titulo}}</div>
+                            </div>
+                            <div>
+                                <a href="../organigrama/{{$organigrama->id}}/edit"> EDITAR</a>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+                <div class='crear_nuevo fondo_verde'>
+                   <a href="{{route('organigrama.create')}}">Agregar al Organigrama</a>
+                </div>
+            </div>
+            <div class='caja_administrador caja_verde'>
+                <div class='crear_nuevo fondo_verde titulo_crear'>
+                    PUESTO ORGANIGRAMA
+                </div>
+                <div class='padding_15'>
+                    @foreach($puestos as $superpuesto)
+                        <div class='crear_border_abajo'>
+                            <div>
+                                <div>Nombre: {{$superpuesto->titulo}}</div>
+                            </div>
+                            <div>
+                                <a href="../puesto/{{$superpuesto->id}}/edit"> EDITAR</a>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+                <div class='crear_nuevo fondo_verde'>
+                   <a href="{{route('puesto.create')}}">Agregar al Puesto Organigrama</a>
+                </div>
+            </div>
         </div>
     </div>
 

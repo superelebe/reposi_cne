@@ -10,6 +10,8 @@ use App\Event;
 use App\Capacitacion;
 use App\Calendar;
 use App\User;
+use App\Organigrama;
+use App\Puesto;
 
 class AdminController extends Controller
 {
@@ -34,8 +36,10 @@ class AdminController extends Controller
         $eventos = Calendar::CalendarActivo()->orderBy('id', 'desc')->take(10)->get();
         $capacitaciones = Capacitacion::FechaActivo()->orderBy('id', 'desc')->take(5)->get();
         $banners = Banner::orderBy('id', 'desc')->take(5)->get();
+        $organigramas = Organigrama::orderBy('id', 'desc')->get();
+        $puestos = Puesto::orderBy('id', 'desc')->get();
         $noAfiliados = User::NoAfiliados()->take(3)->get();
-        return view('admincnec.dashboard', compact('noAfiliados','noticias','vacantes','eventos', 'capacitaciones', 'banners'));
+        return view('admincnec.dashboard', compact('noAfiliados','noticias','vacantes','eventos', 'capacitaciones', 'banners', 'organigramas', 'puestos'));
     }
     
     public function estatusUsuario($id, Request $request){

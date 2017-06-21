@@ -141,6 +141,9 @@ class EventController extends Controller
      */
     public function update($id,Request $request)
     {
+        
+
+        $event = Event::findOrfail($id);
         if ($request->hasFile('imagen')) {
             $imagen = $request->file('imagen');
             $filename = time().'.'.$imagen->getClientOriginalExtension();
@@ -153,8 +156,6 @@ class EventController extends Controller
         
             $event->imagen = '/uploads/evento/'.$filename;
         }
-
-        $event = Event::findOrfail($id);
     	
         $event->title = $request->title;
         

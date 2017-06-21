@@ -1,4 +1,6 @@
 @extends('layouts.app')
+    <script src="//cloud.tinymce.com/stable/tinymce.min.js"></script>
+    <script>tinymce.init({ selector:'textarea',plugins: "lists" });</script>
 @section('content')
 
 
@@ -6,7 +8,7 @@
 <script src="//cloud.tinymce.com/stable/tinymce.min.js"></script>
   <script>tinymce.init({ selector:'textarea',plugins: "lists" });</script>
 @section('content')
-
+ 
 <section class="contenedor">
     <section class="row row-centered">
         <div class="col-md-8 col-xs-12 col-centered">

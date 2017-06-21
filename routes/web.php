@@ -95,6 +95,13 @@ Route::group(['middleware'=> 'auth:admin'],function(){
 });
 
 Route::group(['middleware'=> 'auth:admin'],function(){
+  Route::resource('organigrama','OrganiController', ['only' => ['create', 'store', 'index', 'edit']]);
+  Route::post('organigrama/{id}/update','\App\Http\Controllers\OrganiController@update');
+  Route::get('organigrama/{id}/delete','\App\Http\Controllers\OrganiController@destroy');
+  Route::get('organigrama/{id}/deleteMsg','\App\Http\Controllers\OrganiController@DeleteMsg');
+});
+
+Route::group(['middleware'=> 'auth:admin'],function(){
   Route::resource('subarea','SubareaController', ['only' => ['create', 'store', 'index', 'edit']]);
   Route::post('subarea/{id}/update','\App\Http\Controllers\SubareaController@update');
   Route::get('subarea/{id}/delete','\App\Http\Controllers\SubareaController@destroy');
@@ -108,6 +115,14 @@ Route::group(['middleware'=> 'auth:admin'],function(){
   Route::get('banner/{id}/delete','\App\Http\Controllers\BannerController@destroy');
   Route::get('banner/{id}/deleteMsg','\App\Http\Controllers\BannerController@DeleteMsg');
 });
+
+Route::group(['middleware'=> 'auth:admin'],function(){
+  Route::resource('puesto','\App\Http\Controllers\PuestoController', ['only' => ['create', 'store', 'index', 'edit']]);
+  Route::post('puesto/{id}/update','\App\Http\Controllers\PuestoController@update');
+  Route::get('puesto/{id}/delete','\App\Http\Controllers\PuestoController@destroy');
+  Route::get('puesto/{id}/deleteMsg','\App\Http\Controllers\PuestoController@DeleteMsg');
+});
+
 
 //event Routes
 Route::group(['middleware'=> 'auth:admin'],function(){
