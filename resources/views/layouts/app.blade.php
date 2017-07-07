@@ -74,6 +74,7 @@
                 @else
                     <li><a href="{{ url('/register') }}">AFÍLIATE</a></li>
                 @endif
+                <li><a href="{{ url('/capacitacion') }}">CAPACITACIÓN</a></li>
 
             </ul>
         </div>
