@@ -22,6 +22,25 @@ AZULGRISOSCURO : #455560;
     font-style: normal;
 
 }
+
+@font-face {
+    font-family: 'Myrad';
+	src: url('../fonts/MyriadPro-Bold.otf');
+    font-weight: bold;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'Awesome';
+	src: url('../fonts/FontAwesome.otf');
+    src: url('../fonts/fontawesome-webfont.svg');
+    src: url('../fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/fontawesome-webfont.woff') format('woff'),
+         url('../fonts/fontawesome-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
 @font-face {
     font-family: 'Cabin';
 	src: url('../fonts/Cabin-Bold.otf');
@@ -33,6 +52,7 @@ AZULGRISOSCURO : #455560;
     font-style: normal;
 
 }
+
 * {
   -webkit-border-radius: 0 !important;
      -moz-border-radius: 0 !important;
@@ -61,7 +81,6 @@ h3{
 
 /*----- HEADER -----*/
 #header {
-	height: 60px;
 	background-color: #808c97;
 }
 #header #menu {
@@ -69,7 +88,6 @@ h3{
 	font-size: .71em;
 	background: #F1F1F1;
 	float:left;
-	height:60px;
 	padding-left:3px;
 	text-align:center;
 }
@@ -94,7 +112,8 @@ h3{
 
 #header #logos{
 	float:left;
-	width:530px;
+	width:100%;
+	margin: 10px 0;
 }
 #header #logos img{
 	margin:5px 0 0 27px;
@@ -231,7 +250,6 @@ h3{
 #interes {
 	background-color: #b5bfc7;
 	margin-top:10px;
-	padding:20px;
 }
 
 #interes h3 {
@@ -239,10 +257,8 @@ h3{
 	border-top: 1px solid #455560;
 	color:#fff;
 	margin-top:0px;
-	padding:3px 0;
 	text-align:center;
-	width: 880px;
-	
+	max-width: 880px;
 }
 
 #interes .enlace{
@@ -2008,8 +2024,9 @@ AZULGRISOSCURO : #455560;
 
 /*----- CLASES -----*/
 .ocho80 {
-	width: 880px;
-	margin: 0 auto;
+    max-width: 880px;
+    min-width: 400px;
+    margin: 0 auto;
 }
 
 .clearfix {
@@ -2213,3 +2230,178 @@ margin-top: -2261px;
     padding: 10px 30px 10px 20px;
     text-align: left;
 }
+
+.icono_azul{ 
+	color: #465663;
+    text-shadow: 1px 1px 1px #ccc;
+    font-size: 4em;
+}
+
+.titulo_lineas_cnec{
+    width: 70%;
+    display: inline-block;
+    vertical-align: bottom;
+    margin-top: 4px;
+}
+
+.iconos_cnec{
+	width: 100px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.titulo_cnec_med{
+	font-family: Myrad;
+	font-weight: bold;
+	font-size: 2em;
+	line-height: 30px;
+	color:#465663;
+}
+
+.color_azul_clarito span{
+	color:#8195A5;
+}
+
+.color_azul_verde span{
+	color:#668E00;
+}
+
+.franja_cnec_bottom img{
+    max-width: 550px;
+    width: 100%;
+}
+
+.listado_que_es_cnec div{
+	margin: 10px 0;
+}
+
+.margen_40{
+	margin:40px 0;
+}
+
+.margen_40_todo{
+	margin: 40px;
+}
+
+.margen_60{
+	margin: 60px 30px;
+}
+
+.margin_abajo_10{
+	margin-bottom: 10px;
+}
+
+.margen_10{
+	margin: 10px;
+}
+
+
+
+.fondo_uno{
+	background-image: url("../img/fondo_que_es_1.png");
+	background-repeat: no-repeat;
+    background-position: 60% 4%;
+    background-size: 1000px;
+}
+
+.justificado{
+	text-align: justify;
+}
+.border_verde{
+    border-top: 3px solid #668E00;
+}
+
+.areas_especialidades{
+    width: 85%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.ver_areas_especiali{
+    width: 70%;
+    margin-right: 0px;
+    margin-left: auto;
+    padding: 5px 10px;
+    background: #668E00;
+    color: white;
+}
+
+
+.hexagono_cnec{
+	margin-top: 80px;
+    margin-left: 20px;
+}
+
+.hexagono_cnec img{
+	width: 100%;
+}
+
+
+.rectangulito{
+	width: 40px;
+	height: 3px;
+	margin: 10px 0;
+}
+
+.fondo_verde{
+	background-color: #A6C36F;
+}
+
+.fondo_azul{
+	background-color: #465663;
+}
+
+.margen_especial_cnec{
+	margin: 230px 40px 60px 40px;
+}
+
+.fondo_2{
+	background-image: url('../img/fondo_que_es_la_cnec-2.png');
+	background-repeat: no-repeat;
+    background-position: 60% 4%;
+    background-size: 1000px;
+}
+
+.margin_organigrama{
+	margin: 100px 0 0 60px;
+}
+
+@media (min-width:600px)  {
+	.pading_izq_80{
+		padding-left: 80px;
+	}
+	.titulo_lineas_cnec{
+		width: 60%;
+	}
+	.margen_40_todo{
+		margin: 0px;
+	}
+	.fondo_uno{
+	    background-position: center 10%;
+    	background-size: auto;
+	}
+	.margen_top_350{
+		margin-top:350px;
+	}
+	.fondo_uno{
+	    background-position: 60% 10%;
+	}
+	.margen_60, .margen_especial_cnec{
+		margin: 60px 0;
+	}
+	.areas_especialidades {
+	    width: 55%;
+	    margin-right: 0px;
+	    margin-left: auto;
+	}
+	.titulo_cnec_med{
+		font-size: 2.5em;
+	}
+	#interes{
+		padding: 20px;
+	}
+	#header #logos{
+		width:530px;
+	}
+}
+
