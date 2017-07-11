@@ -142,7 +142,8 @@
                             <div class='alineado_izq titulo_cnec_med color_azul_verde'>
                                 ÁREAS PRINCIPALES <br><span>DE PARTICIPACIÓN:</span>
                             </div>
-                            <div class="franja_cnec_bottom alineado_izq margin_abajo_10"><img src="{{asset('img/linea_verde_1.png')}}" alt=""></div>    
+                            <div class="franja_cnec_bottom alineado_izq margin_abajo_10"><img src="{{asset('img/linea_verde_1.png')}}" alt="">
+                            </div>    
                         </div>
                     </div>
 
@@ -208,7 +209,7 @@
                     </div>
                     <div class="col-sm-5 col-xs-6 margen_arriba_200">
                         <p>Desde el año 2002 cuando se instituyó el Premio Nacional de Ética y Valores en la Industria por la CONCAMIN</p>
-                        <p><span>CNEC</span> ha sido galardonada en 12 ocasiones y 7 veces consecutivas.</p>
+                        <p class='galardonado borde_verde_delgado'><span>CNEC</span> ha sido galardonada en 12 ocasiones y 7 veces consecutivas.</p>
                     </div>
                 </div>
             </div>
@@ -218,7 +219,7 @@
                 </div>
             </div>
             <div class='col-md-12'>
-                <div class="centrado organigrama">
+                <div class="centrado organigrama paddign_80">
                     <img src="{{asset('img/mapita-2.png')}}" alt="">
                 </div>
             </div>

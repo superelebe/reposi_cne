@@ -110,104 +110,107 @@
 <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 <!-- //////////////////////////////////////F O O T E R////////////////////////////////////////////////////////////// -->
 
-<div id="interes" class="limpiar">
-    <div class="ocho80">
-        <h3>ENLACES DE INTERÉS</h3>
-        <div class="enlace">
-            <a target="_blank" title="Ir a la Página de la CNEC México" href="http://cnec.org.mx">
-                <h5>CNEC <br />México</h5>
-            </a>
+<div class='fondo_4'>
+    <div id="interes" class="limpiar">
+        <div class="ocho80">
+            <h3>ENLACES DE INTERÉS</h3>
+            <div class="enlace">
+                <a target="_blank" title="Ir a la Página de la CNEC México" href="http://cnec.org.mx">
+                    <h5>CNEC <br />México</h5>
+                </a>
+            </div>
+            
+            <div class="enlace">
+                <a target="_blank" title="Ir a la Página de la SOP Estado de Guanajuato" href="http://obrapublica.guanajuato.gob.mx">
+                    <h5>SOP<br />Guanajuato</h5>
+                </a>
+            </div>
+            
+            <div class="enlace">
+                <a target="_blank" title="Ir al enlace" href="http://www.economia.gob.mx/"> 
+                    <h5>Secretaría<br />de Economía</h5>
+                </a>    
+            </div>
+            
+             <div class="enlace">
+                <a target="_blank" title="Ir a la Página de la Secretaría de Desarrollo Económico Sustentable del Estado de Guanajuato" href="http://sde.guanajuato.gob.mx/">       
+                    <h5>SDES<br />Guanajuato</h5>
+                </a>
+            </div>
+            
+             <div class="enlace" style="margin-left:0px;">
+                <a target="_blank" title="Ir a la Página de la Secretaría de Trabajo y Previsión Social" href="http://www.stps.gob.mx/bp/index.html">       
+                    <h5>STPS <br />México</h5>
+                </a>
+            </div>
+            
+             <div class="enlace">
+                <a target="_blank" title="Ir a la Página de la Secretaría de la Función Pública" href="http://www.funcionpublica.gob.mx/">      
+                    <h5>Función<br />Pública</h5>
+                </a>
+            </div>
+            
+             <div class="enlace">
+                <a target="_blank" title="Ir a la Página de la Dirección General de Obra Pública de la ciudad de León Guanajuato" href="http://www.leon.gob.mx/obrapublica/">       
+                    <h5>Obra Pública<br />de León Gto.</h5>
+                </a>
+            </div>
+            
+             <div class="enlace">
+                <a target="_blank" title="Ir a la Página de la Presidencia Municipal de León" href="http://www.leon.gob.mx/">       
+                    <h5>Presidencia<br /> de León</h5>
+                </a>
+            </div>
+            
+             <div class="enlace">
+                <a target="_blank" title="Ir a la Página del Instituto Mexicano de Seguridad Social" href="http://www.imss.gob.mx/Pages/default.aspx">      
+                    <h5>IMSS <br /> México</h5>
+                </a>
+            </div>
+            
         </div>
-        
-        <div class="enlace">
-            <a target="_blank" title="Ir a la Página de la SOP Estado de Guanajuato" href="http://obrapublica.guanajuato.gob.mx">
-                <h5>SOP<br />Guanajuato</h5>
-            </a>
-        </div>
-        
-        <div class="enlace">
-            <a target="_blank" title="Ir al enlace" href="http://www.economia.gob.mx/"> 
-                <h5>Secretaría<br />de Economía</h5>
-            </a>    
-        </div>
-        
-         <div class="enlace">
-            <a target="_blank" title="Ir a la Página de la Secretaría de Desarrollo Económico Sustentable del Estado de Guanajuato" href="http://sde.guanajuato.gob.mx/">       
-                <h5>SDES<br />Guanajuato</h5>
-            </a>
-        </div>
-        
-         <div class="enlace" style="margin-left:0px;">
-            <a target="_blank" title="Ir a la Página de la Secretaría de Trabajo y Previsión Social" href="http://www.stps.gob.mx/bp/index.html">       
-                <h5>STPS <br />México</h5>
-            </a>
-        </div>
-        
-         <div class="enlace">
-            <a target="_blank" title="Ir a la Página de la Secretaría de la Función Pública" href="http://www.funcionpublica.gob.mx/">      
-                <h5>Función<br />Pública</h5>
-            </a>
-        </div>
-        
-         <div class="enlace">
-            <a target="_blank" title="Ir a la Página de la Dirección General de Obra Pública de la ciudad de León Guanajuato" href="http://www.leon.gob.mx/obrapublica/">       
-                <h5>Obra Pública<br />de León Gto.</h5>
-            </a>
-        </div>
-        
-         <div class="enlace">
-            <a target="_blank" title="Ir a la Página de la Presidencia Municipal de León" href="http://www.leon.gob.mx/">       
-                <h5>Presidencia<br /> de León</h5>
-            </a>
-        </div>
-        
-         <div class="enlace">
-            <a target="_blank" title="Ir a la Página del Instituto Mexicano de Seguridad Social" href="http://www.imss.gob.mx/Pages/default.aspx">      
-                <h5>IMSS <br /> México</h5>
-            </a>
-        </div>
-        
     </div>
-</div>
 
 
-<div id="menu2" class="clearfix">
-    <div class="ocho80 limpiar">
-        <ul>
-            <li><a href="{{ url('/servicios') }}">SERVICIOS</a></li>
-            <li><a href="{{ url('/afiliados') }}">AFILIADOS</a></li>
-            <li><a href="{{ url('/contacto') }}">CONTACTO</a></li>
-            <li><a href="{{ url('/capacitacion') }}">CAPACITACIÓN</a></li>
-            <li><a href="{{ url('/') }}">AFILIATE</a></li>
-        </ul>
-    </div>
-</div>
-
-<div id="footer" class="limpiar">
-    <div class="ocho80">
-        <div id="direccion">
+    <div id="menu2" class="clearfix">
+        <div class="ocho80 limpiar">
             <ul>
-                <li>Blvd. Mariano Escobedo</li>
-                <li>No. 4502</li>
-                <li>Local 32. Col. San Isidro</li>
-                <li>León Gto. México</li>
-                <li>informes@cnecgto.org</li>
+                <li><a href="{{ url('/servicios') }}">SERVICIOS</a></li>
+                <li><a href="{{ url('/afiliados') }}">AFILIADOS</a></li>
+                <li><a href="{{ url('/contacto') }}">CONTACTO</a></li>
+                <li><a href="{{ url('/capacitacion') }}">CAPACITACIÓN</a></li>
+                <li><a href="{{ url('/') }}">AFILIATE</a></li>
             </ul>
         </div>
-        <div id="telefonos">
-            <span class="tel">TEL: +52 01 (477) 711 21 68</span>
-            <span class="fax">FAX: +52 01 (477) 711 04 63</span>
-            <span class="contactanos">CONTÁCTANOS</span><a href="contacto.php" title="Escribir un correo a la CNEC"><img src="{{ asset('img/correo-img.gif') }}" alt="img correo" class="sobre" /></a>
-        </div>
-        <div id="logofooter">
-            <a href="index.php" title="Ir al Inicio"><img src="{{ asset('img/cnec-logo-footer.png') }}" alt="cnec logo" /></a>
-        </div>
-        
-        <div id="derechos" class="clearfix">
-            <p>www.cnecgto.org :: Todos los derechos reservados :: 2012 :: <span> Sitio Web desarollado por <a href="http://www.elebegraph.com">eLeBegraph</a></span></p>
-        </div>
     </div>
+
+    <div id="footer" class="limpiar">
+        <div class="ocho80">
+            <div id="direccion">
+                <ul>
+                    <li>Blvd. Mariano Escobedo</li>
+                    <li>No. 4502</li>
+                    <li>Local 32. Col. San Isidro</li>
+                    <li>León Gto. México</li>
+                    <li>informes@cnecgto.org</li>
+                </ul>
+            </div>
+            <div id="telefonos">
+                <span class="tel">TEL: +52 01 (477) 711 21 68</span>
+                <span class="fax">FAX: +52 01 (477) 711 04 63</span>
+                <span class="contactanos">CONTÁCTANOS</span><a href="contacto.php" title="Escribir un correo a la CNEC"><img src="{{ asset('img/correo-img.gif') }}" alt="img correo" class="sobre" /></a>
+            </div>
+            <div id="logofooter">
+                <a href="index.php" title="Ir al Inicio"><img src="{{ asset('img/cnec-logo-footer.png') }}" alt="cnec logo" /></a>
+            </div>
+            
+            <div id="derechos" class="clearfix">
+                <p>www.cnecgto.org :: Todos los derechos reservados :: 2012 :: <span> Sitio Web desarollado por <a href="http://www.elebegraph.com">eLeBegraph</a></span></p>
+            </div>
+        </div>
+    </div>    
 </div>
+
 <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
