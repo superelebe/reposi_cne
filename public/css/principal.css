@@ -537,7 +537,8 @@ ESTILOS POR SECIONES DEL SITIO
 #calendario {
 	position:relative;
 	background-color:#FFF;
-	padding-bottom: 40px;
+	margin-top: 30px;
+	margin-bottom:30px;
 }
 
 #calendario  li{
