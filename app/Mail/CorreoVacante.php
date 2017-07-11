@@ -28,13 +28,6 @@ class CorreoVacante extends Mailable
      */
     public function build()
     {
-        if(empty($this->data['urlcv'])){
-            return $this->markdown('emails.vacantes.mensajevacante')->with(['data', $this->data]);
-        }else{
-            return $this->markdown('emails.vacantes.mensajevacante')->with(['data', $this->data])->attach($this->data['mipath'],[
-                    'as' => 'algo',
-                    'mime' => 'application/docx',
-                ]);
-        }
+        return $this->markdown('emails.vacantes.mensajevacante')->with(['data', $this->data]);
     }
 }

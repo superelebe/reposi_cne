@@ -8,8 +8,6 @@ use App\DatesTranslator;
 
 class Capacitacion extends Model
 {
-
-	use DatesTranslator;
 	protected $table = 'capacitaciones';
 	protected $dates = ['start','end'];
     protected $fillable = [

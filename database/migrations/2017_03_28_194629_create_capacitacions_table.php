@@ -15,7 +15,7 @@ class CreateCapacitacionsTable extends Migration
     {
         Schema::create('capacitaciones', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('titulo');
+            $table->string('title');
             $table->date('start');
             $table->date('end');
             $table->string('url');

@@ -9,21 +9,21 @@ use App\DatesTranslator;
 
 class Calendar extends Model
 {
-	use Sluggable, DatesTranslator;
+	use Sluggable;
 
 	protected $dates = ['deleted_at','start', 'end'];
 
     public function scopeCalendarActivo($query){
         $now = Carbon::today('America/Mexico_City');
-        return $query->where('end', '>=',$now)->orderBy('start')->limit(10);
+        return $query->where('end', '>=',$now)->orderBy('start');
     }
     protected $table = 'calendar';
-    protected $fillable = ['titulo', 'url','start', 'end', 'imagen', 'color','subtitulo','descripcion'];
+    protected $fillable = ['title', 'url','start', 'end', 'imagen', 'color','subtitulo','descripcion' , 'lugar', 'horarios' , 'inversion'];
     public function sluggable()
     {
         return [
             'slug' => [
-                'source' => 'titulo'
+                'source' => 'title'
             ]
         ];
     }

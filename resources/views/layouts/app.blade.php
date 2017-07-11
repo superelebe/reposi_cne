@@ -18,8 +18,8 @@
     <link href="{{ asset('css/jquery-ui.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/fullcalendar.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/principal.css') }}" rel="stylesheet">
- 
+    <link rel="stylesheet" href="{{asset('css/font-awesome.min.css')}}">
+    <link href="{{ asset('css/principal.css') }}" rel="stylesheet" rel="stylesheet">
 
     <script type="text/javascript" src="{{asset('js/jquery.tools.min.js')}}" ></script><!--estos son temporales--> 
     <script type="text/javascript" src="{{asset('js/jquery.jshowoff.min.js')}}" ></script><!--estos son temporales-->
@@ -74,6 +74,7 @@
                 @else
                     <li><a href="{{ url('/register') }}">AFÍLIATE</a></li>
                 @endif
+                <li><a href="{{ url('/capacitacion') }}">CAPACITACIÓN</a></li>
 
             </ul>
         </div>

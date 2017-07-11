@@ -11,6 +11,6 @@ class CalendarioSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Calendar::class)->times(20)->create();
+        factory(App\Calendar::class)->times(10)->create();
     }
 }

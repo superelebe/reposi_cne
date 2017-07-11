@@ -8,6 +8,7 @@ use URL;
 use Image;
 use Mail;
 use App\Mail\CorreoVacante;
+use App\Mail\SolicitudVacante;
 use Storage;
 
 class BolsaTrabajoController extends Controller
@@ -108,9 +109,10 @@ class BolsaTrabajoController extends Controller
      * @param  \App\BolsaTrabajo  $bolsaTrabajo
      * @return \Illuminate\Http\Response
      */
-    public function edit(BolsaTrabajo $bolsaTrabajo)
+    public function edit($id, Request $request)
     {
-        //
+        $vacante = BolsaTrabajo::findOrfail($id);
+        return view('bolsa_trabajo.edit',compact('title','vacante'));
     }
 
     /**
@@ -120,9 +122,48 @@ class BolsaTrabajoController extends Controller
      * @param  \App\BolsaTrabajo  $bolsaTrabajo
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, BolsaTrabajo $bolsaTrabajo)
+    public function update($id, Request $request)
     {
-        //
+            $vacante = BolsaTrabajo::findOrfail($id);
+            $this->validate(request(),[
+                'titulo'        => 'required| min: 5',
+                'start'         => 'required',
+                'descripcion'   => 'required| min:10',
+                'empresa'       => 'required | min:2'
+            ]); 
+
+            
+            if ($request->hasFile('imagen')) {
+                $imagen = $request->file('imagen');
+                $filename = time().'.'.$imagen->getClientOriginalExtension();
+                $path = public_path('img/' . $filename);
+                Image::make($imagen)->resize(null, 400, function ($constraint) {
+                    $constraint->aspectRatio();
+                    $constraint->upsize();
+                })->save($path);
+                
+
+                $vacante->imagen = 'img/'.$filename;
+                
+            }
+
+                $vacante->titulo = $request->titulo;
+                
+                $vacante->start = $request->start;
+                
+                $vacante->end = $request->end;
+                
+                $vacante->activo = $request->activo;
+                
+                $vacante->sueldo = $request->sueldo;
+                
+                $vacante->descripcion = $request->descripcion;
+                
+                $vacante->empresa = $request->empresa;
+
+                $vacante->save();
+
+                return redirect('bolsa_trabajo');
     }
 
     /**
@@ -170,7 +211,8 @@ class BolsaTrabajoController extends Controller
               'vacante' => $request->nombreVacante,
               'empresa' => $request->empresaVacante
         ];
-        Mail::to($request->correo)->cc('hola@cnecgot.org')->send(new CorreoVacante($data));
+        Mail::to($request->correo)->send(new CorreoVacante($data));
+        Mail::to('emmanegr@gmail.com')->send(new SolicitudVacante($data));
         return redirect('todas_las_vacantes');
     }
 

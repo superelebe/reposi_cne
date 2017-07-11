@@ -22,6 +22,25 @@ AZULGRISOSCURO : #455560;
     font-style: normal;
 
 }
+
+@font-face {
+    font-family: 'Myrad';
+	src: url('../fonts/MyriadPro-Bold.otf');
+    font-weight: bold;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'Awesome';
+	src: url('../fonts/FontAwesome.otf');
+    src: url('../fonts/fontawesome-webfont.svg');
+    src: url('../fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/fontawesome-webfont.woff') format('woff'),
+         url('../fonts/fontawesome-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
 @font-face {
     font-family: 'Cabin';
 	src: url('../fonts/Cabin-Bold.otf');
@@ -33,6 +52,7 @@ AZULGRISOSCURO : #455560;
     font-style: normal;
 
 }
+
 * {
   -webkit-border-radius: 0 !important;
      -moz-border-radius: 0 !important;
@@ -61,7 +81,6 @@ h3{
 
 /*----- HEADER -----*/
 #header {
-	height: 60px;
 	background-color: #808c97;
 }
 #header #menu {
@@ -69,7 +88,6 @@ h3{
 	font-size: .71em;
 	background: #F1F1F1;
 	float:left;
-	height:60px;
 	padding-left:3px;
 	text-align:center;
 }
@@ -94,7 +112,8 @@ h3{
 
 #header #logos{
 	float:left;
-	width:530px;
+	width:100%;
+	margin: 10px 0;
 }
 #header #logos img{
 	margin:5px 0 0 27px;
@@ -231,7 +250,6 @@ h3{
 #interes {
 	background-color: #b5bfc7;
 	margin-top:10px;
-	padding:20px;
 }
 
 #interes h3 {
@@ -239,10 +257,8 @@ h3{
 	border-top: 1px solid #455560;
 	color:#fff;
 	margin-top:0px;
-	padding:3px 0;
 	text-align:center;
-	width: 880px;
-	
+	max-width: 880px;
 }
 
 #interes .enlace{
@@ -365,6 +381,7 @@ ESTILOS POR SECIONES DEL SITIO
 	line-height:1.25em;
 	color:#455560;
 	padding:10px 5px;
+	margin-top: 90px;
 }
 
 #mensajes .consultores li{
@@ -422,6 +439,7 @@ ESTILOS POR SECIONES DEL SITIO
 
 #mensajes #mensaje_director p {
 	padding:6px 5px;
+	margin-top: -30px;
 }
 
 #mensajes #mensaje_director .vermas {
@@ -618,8 +636,11 @@ ESTILOS POR SECIONES DEL SITIO
 	left:227px;
 	top:50px;
 }
-.largo_imagenes{
+.largo_imagenes, .largo_imagenes_cursos{
 	width:100%;
+}
+
+.largo_imagenes{
 	max-width: 300px;
 }
 
@@ -893,26 +914,27 @@ ESTILOS POR SECIONES DEL SITIO
 
 /*----- AFILIADOS -----*/
 
+
 #empresas{
 	background:url(../img/banner-afiliados.png) no-repeat center top;
 	padding-top:1px;
 }
 
-#empresas #selects{
+.empresas #selects{
 	margin-top:228px;
 	height:20px;
 }
 
-#empresas #selects select{
+.empresas #selects select{
   font-size: 12px;
   color: #455560;
   background-color:#FFF;
 }
-#empresas #selects option {
+.empresas #selects option {
 	background-color: #B5BFC7;
 }
 
-#empresas #selects a{
+.empresas #selects a{
 	background:url(../img/btn-regresar-flip.png) no-repeat top left;
 	display:block;
 	height:65px;
@@ -921,28 +943,29 @@ ESTILOS POR SECIONES DEL SITIO
 	text-indent:-500px;
 	width:330px;
 }
-#empresas table{
+.empresas table{
 	margin:50px 0 0 0;
 	font-size:.85em;
 }
 
-#empresas table thead{
+.empresas table thead{
 	background:#808E99;
 	color:#fff;
 	font-size: 19px;
 	padding:5px;
 }
 
-#empresas table tr{
+.empresas table tr{
 	padding:15px 0;
 }
 
-#empresas table td{
+.empresas table td{
 	border-bottom:#769D2E solid 1px;
 	padding:10px 15px;
+	width:50%;
 }
 
-#empresas table td a{
+.empresas table td a{
 	background:#A1BA77;
 	color:#FFF;
 	font-size:12px;
@@ -951,7 +974,7 @@ ESTILOS POR SECIONES DEL SITIO
 	
 }
 
-#empresas #nombre{
+.empresas #nombre{
 	color:#455560; 
 	text-transform:uppercase;
 	font-weight:600;
@@ -959,27 +982,27 @@ ESTILOS POR SECIONES DEL SITIO
 	margin-bottom:10px;	
 }
 
-#empresas #subarea{
+.empresas #subarea{
 	font-size:1.2em;
 		color:#808C97;
 		margin-bottom:10px;
 }
-#empresas #certificacion{
+.empresas #certificacion{\
 	color:#455560; 
 	font-size:16px; 
 	margin-bottom:15px;
 }
-#empresas #tel{
+.empresas #tel{
 	color:#455560; 
 	text-transform:uppercase;
 	font-weight:600;
 	font-size:2em;
 	margin-bottom:10px;	
 }
-#empresas #email{
+.empresas #email{
 	margin-bottom:10px;	
 }
-#empresas #direccion{
+.empresas #direccion{
 	color:#455560;
 	font-size:16px;
 	margin-top:5px;	
@@ -1106,7 +1129,6 @@ ESTILOS POR SECIONES DEL SITIO
     border-radius: 4px;
     padding: 7px;
     transition: all 0.5s ease 0s;
-    width: 300px;
 }
 .button-two span {
   cursor: pointer;
@@ -1577,6 +1599,21 @@ ESTILOS POR SECIONES DEL SITIO
     text-align: right;
 }
 
+.alineado_izq{
+	text-align: left;
+}
+
+.descripcion_bolsa{
+	padding:10px 0;
+	text-align: justify;
+}
+.descripcion_bolsa h3, .preline, .descripcion_bolsa ul, .descripcion_bolsa li{
+	padding:10px !important;
+}
+
+.descripcion_bolsa li{
+	list-style-type: circle;
+}
 
 .noticia p, .vacante p{
 	text-align: left;
@@ -1718,7 +1755,6 @@ ESTILOS POR SECIONES DEL SITIO
 }
 #pendondgray{
 	background:url(../img/pendon-dg.png) no-repeat;
-	height:351px;
 	left:50px;
 	padding:333px 10px 0 10px;
 	position:absolute;
@@ -1738,6 +1774,11 @@ ESTILOS POR SECIONES DEL SITIO
 #pendondgray span p{
 	margin-left:5px;
 }
+
+#pendondgray img{
+	width: 70px;
+}
+
 .curso{
 	/*background:#455560;*/
 	width:540px;
@@ -1760,18 +1801,7 @@ ESTILOS POR SECIONES DEL SITIO
 	font-size:14px;
 	line-height:130%;
 }
-.curso a{
-	width:60px;
-	background:#A1BA77;
-	border-bottom:2px #769D2E solid;
-	border-top:1px #FFF solid;
-	padding:10px 20px;
-	color:#FFF;
-	position:absolute;
-	right:35px;
-	
-	
-}
+
 
 
 /*
@@ -1799,9 +1829,15 @@ AZULGRISOSCURO : #455560;
 
 .curso{
 	/*background: #455560;*/
-	width: 260px;
-	margin: 10px 0 20px 270px;
-	padding: 15px 25px 50px;
+    /* background: #455560; */
+    text-align: left;
+    /* width: 260px; */
+    margin: 10px 0 20px 270px;
+    /* padding: 15px 25px 50px; */
+}
+
+.margin-top-20{
+	margin-top:20px;
 }
 .curso h2{
 	color:#455560;
@@ -1820,18 +1856,16 @@ AZULGRISOSCURO : #455560;
 	line-height:130%;
 }
 .curso a{
-	width:60px;
+	width: 60px;
 	background:#A1BA77;
-	border-bottom:2px #769D2E solid;
-	border-top:1px #FFF solid;
-	padding: 10px 20px;
-	color:#FFF;
-	position:absolute;
-	right: 325px;
-	
-	
-	margin-top: 20px;
-	z-index: 10;
+    border-bottom: 2px #769D2E solid;
+    border-top: 1px #FFF solid;
+    padding: 10px 20px;
+    color: #FFF;
+    /* position: absolute; */
+    /* right: 325px; */
+    margin-top: 20px;
+    /* z-index: 10; */
 }
 
 .columna-2{
@@ -1991,8 +2025,9 @@ AZULGRISOSCURO : #455560;
 
 /*----- CLASES -----*/
 .ocho80 {
-	width: 880px;
-	margin: 0 auto;
+    max-width: 880px;
+    min-width: 400px;
+    margin: 0 auto;
 }
 
 .clearfix {
@@ -2196,3 +2231,202 @@ margin-top: -2261px;
     padding: 10px 30px 10px 20px;
     text-align: left;
 }
+
+.icono_azul{ 
+	color: #465663;
+    text-shadow: 1px 1px 1px #ccc;
+    font-size: 4em;
+}
+
+.titulo_lineas_cnec{
+    width: 70%;
+    display: inline-block;
+    vertical-align: bottom;
+    margin-top: 4px;
+}
+
+.iconos_cnec{
+	width: 100px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.titulo_cnec_med{
+	font-family: Myrad;
+	font-weight: bold;
+	font-size: 2em;
+	line-height: 30px;
+	color:#465663;
+}
+
+.color_azul_clarito span{
+	color:#8195A5;
+}
+
+.color_azul_verde span{
+	color:#668E00;
+}
+
+.franja_cnec_bottom img{
+    max-width: 550px;
+    width: 100%;
+}
+
+.listado_que_es_cnec div{
+	margin: 10px 0;
+}
+
+.margen_40{
+	margin:40px 0;
+}
+
+.margen_40_todo{
+	margin: 40px;
+}
+
+.margen_60{
+	margin: 60px 30px;
+}
+
+.margin_abajo_10{
+	margin-bottom: 10px;
+}
+
+.margen_10{
+	margin: 10px;
+}
+
+
+
+.fondo_uno{
+	background-image: url("../img/fondo_que_es_1.png");
+	background-repeat: no-repeat;
+    background-position: 60% 4%;
+    background-size: 1000px;
+}
+
+.justificado{
+	text-align: justify;
+}
+.border_verde{
+    border-top: 3px solid #668E00;
+}
+
+.areas_especialidades{
+    width: 85%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.ver_areas_especiali{
+    width: 70%;
+    margin-right: 0px;
+    margin-left: auto;
+    padding: 5px 10px;
+    background: #668E00;
+    color: white;
+}
+
+
+.hexagono_cnec{
+	margin-top: 80px;
+    margin-left: 20px;
+}
+
+.hexagono_cnec img{
+	width: 100%;
+}
+
+
+.rectangulito{
+	width: 40px;
+	height: 3px;
+	margin: 10px 0;
+}
+
+.fondo_verde{
+	background-color: #A6C36F;
+}
+
+.fondo_azul{
+	background-color: #465663;
+}
+
+.margen_especial_cnec{
+	margin: 230px 40px 60px 40px;
+}
+
+.fondo_2{
+	background-image: url('../img/fondo_que_es_la_cnec-2.png');
+	background-repeat: no-repeat;
+    background-position: 60% 4%;
+    background-size: 1000px;
+}
+.fondo_3{
+	background-image: url('../img/fondo_que_es_la_cnec-3.png');
+	background-repeat: no-repeat;
+	background-position: 40% 4%;
+    background-size: 1000px;
+}
+
+.padding_organigrama{
+	padding: 100px 0 60px 0;
+}
+
+.borde_verde_delgado{
+	border-bottom: 1px solid #668e00;
+	display: inline-block;
+}
+
+.centrado{
+	margin: 0 auto;
+}
+
+.organigrama img{
+	max-width: 600px;
+	width: 100%;
+}
+
+.margen_arriba_200{
+	margin-top: 200px;
+}
+
+@media (min-width:600px)  {
+	.pading_izq_80{
+		padding-left: 80px;
+	}
+	.titulo_lineas_cnec{
+		width: 60%;
+	}
+	.margen_40_todo{
+		margin: 0px;
+	}
+	.fondo_uno{
+	    background-position: center 10%;
+    	background-size: auto;
+	}
+	.margen_top_350{
+		margin-top:350px;
+	}
+	.fondo_uno{
+	    background-position: 60% 10%;
+	}
+	.margen_60, .margen_especial_cnec{
+		margin: 60px 0;
+	}
+	.areas_especialidades {
+	    width: 55%;
+	    margin-right: 0px;
+	    margin-left: auto;
+	}
+	.titulo_cnec_med{
+		font-size: 2.5em;
+	}
+	#interes{
+		padding: 20px;
+	}
+	#header #logos{
+		width:530px;
+	}
+}
+

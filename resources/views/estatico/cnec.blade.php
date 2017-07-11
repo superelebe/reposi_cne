@@ -1,104 +1,233 @@
 @extends('layouts.app')
 @section('content')
 
-<div id="cnec">
-	<div id="bloque1">
-    	<div class="ocho80">
-			
-			<a class="" href="areas.html">VER TODAS LAS ÁREAS ></a>
-			   <div id="textocnec">
-        		<p style="font-size:1.35em;  line-height:1.5em; padding-bottom:15px; border-bottom:1px solid #fff;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;La <span style="font-size:2em;">CNEC</span> es un órgano multidisciplinario, formado por empresas sólidas que prestan servicios con calidad e integridad; líder de opinión y centro de información de la Consultoría mexicana, con presencia nacional e internacional, que desarrolla y promueve oportunidades de trabajo.</p>
-                
-                <h3>MISIÓN</h3>
-				<p style="padding-bottom:20px; border-bottom:1px solid #fff;">Representar a la consultoría mexicana; ser su voz, presencia y opinión; promover oportunidades de negocios para sus afiliados y fortalecer su competitividad y desarrollo en un ámbito de responsabilidad social empresarial.</p>
-                <h3>VISIÓN</h3>
-				<p>Ser reconocidos como un organismo que explora, desarrolla y promueve oportunidades de trabajo para la consultoría, con un sistema nacional participativo y responsable, institucional y actualizado, que promueve la mejora continua en la atención a sus socios.</p>
-			</div>
-        </div><!--termina ocho80-->
-    </div><!--termina bloque 1-->
-    <div id="objetivos">
-    	<div class="ocho80">
-    		<h2>NUESTROS <br /><span class="colorverdemedio">OBJETIVOS:</span></h2>
-    	</div>
-    </div>
-    <div id="bloque2">
-    	<div class="ocho80 limpiar">
-            <ul id="ulizq">
-            	<li>Representar los intereses de la consultoría nacional.</li>
-				<li>Impulsar la creación de organismos para el desarrollo de esta actividad.</li>
-				<li>Detectar oportunidades de trabajo para sus afiliados.</li>
-				<li>Coadyuvar en el desarrollo tecnológico y la Infraestructura del país.</li>
-				<li>Ser órgano de consulta del estado.</li>
-				<li>Ser el órgano encargado de operar el registro del sector consultoría en el Sistema de Información Empresarial Mexicano SIEM.</li>
-            </ul>
-            
-            <div id="derecha">
-                <div id="oportunidad" class="limpiar">
-	            	<h2 class="verdeclaro">ÁREAS DE <br /><span class="colorverdemedio">OPORTUNIDAD:</span></h2>
-	                <ul>
-	                	<li>Propuestas para el desarrollo sustentable del Estado y sus Municipios.</li>
-						<li>Apoyo en el Fortalecimiento y Desarrollo Institucional de dependencias.</li>
-	                </ul>
-                    <ul>
-	                	<li>Acceso a profesionistas capacitados.</li>
-						<li>Asesoría especializada, sectorizada y/o integral.</li>
-						<li>Capacitación Profesional.</li>
-	                </ul>
-	            </div>
-                <div id="participacion" class="limpiar">
-	            	<h2 class="azuloscuro colorazulmedio">ÁREAS PRINCIPALES<br /><span class="colorazulclaro">DE PARTICIPACIÓN:</span></h2>
-	                <ul>
-	                	<li>Secretaria de Obra Pública.</li>
-						<li>Secretaria de Desarrollo Social y Humano.</li>
-						<li>Secretaría de Desarrollo Económico Sustentable.</li>
-						<li>Secretaría de Gestión Pública.</li>
-						<li>Instituto de Planeación (IPLANEG).</li>
-	                </ul>
-                    <ul>
-                    	<li>Instituto de Ecología.</li>
-						<li>Procuraduría de Protección al Ambiente (PROPAEG).</li>
-						<li>Comisión Estatal del Agua.</li>
-						<li>Comisión de Vivienda.</li>
-						<li>Instituto Estatal de Capacitación.</li>
-                    </ul>
-	            </div>
-            </div><!--termina bloque der-->
-            
-        </div><!--termina ocho80-->
-    </div><!--termina bloque 2-->
+<div class='fondo_uno'>
+    <div class="ocho80">
+        <div class="margen_40">
+            <img src="{{asset('img/que_es_la_cnec_1.png')}}" alt="">
+        </div>
+        <div class='fondo1'>
+            <div class="row row-centered">
+                <div class="col-sm-4  col-xs-12 justificado">
+                    <div class='margen_especial_cnec'>
+                        La <span>CNEC</span> es un órgano multidisciplinario, formado por empresas sólidas que prestan servicios con calidad e integridad; líder de opinión y centro de información de la Consultoría mexicana, con presencia nacional e internacional, que desarrolla y promueve oportunidades de trabajo.
+                    </div>
+                    <div class='margen_60'>
+                        <div class='titulo_cnec_med alineado_derecha margen_10'>MISIÓN</div>
+                        <div>
+                            Representar a la consultoría mexicana; ser su voz, presencia y opinión; promover oportunidades de negocios para sus afiliados y fortalecer su competitividad y desarrollo en un ámbito de responsabilidad social empresarial.
+                        </div>
+                    </div>
+                    <div class='margen_60'>
+                        <div class='titulo_cnec_med alineado_derecha margen_10'>
+                            VISIÓN
+                        </div>
+                        <div>
+                            Ser reconocidos como un organismo que explora, desarrolla y promueve oportunidades de trabajo para la consultoría, con un sistema nacional participativo y responsable, institucional y actualizado, que promueve la mejora continua en la atención a sus socios.
+
+                        </div>
+                    </div>
+                </div>
+                <div class='col-sm-7 col-xs-12'>
+                    <div class='margen_top_350 areas_especialidades'>
+                        <div class='titulo_cnec_med justificado'>
+                            ÁREAS DE <br> ESPECIALIDAD
+                        </div>
+                        <div class='border_verde'>
+                        </div>
+
+                        <div class='ver_areas_especiali'>
+                            VER TODAS LAS  ÁREAS
+                        </div>
+                    </div>
+
+                    <div class='hexagono_cnec'>
+                        <img src="{{asset('img/hexagono.png')}}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section>
+            <div class='row row-centered'>
+                <div class='col-md-12 col-centered margen_40'>
+                    <div>
+                        <div class='iconos_cnec'>
+                            <img src="{{asset('img/target_1.png')}}" alt="">
+                        </div>
+                        <div class='titulo_lineas_cnec'>
+                            <div class='alineado_izq alineado_izq titulo_cnec_med color_azul'>
+                                NUESTROS <br>OBJETIVOS
+                            </div>
+                            <div class="franja_cnec_bottom alineado_izq margin_abajo_10"><img src="{{asset('img/linea_verde_1.png')}}" alt=""></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class='col-md-8 col-sm-8 col-xs-2 col-centered pading_izq_80'>
+                            <div class="row alineado_izq listado_que_es_cnec margen_40_todo">
+                                <div class="col-md-6">
+                                    Representar los intereses de la consultoría nacional.
+                                    <div class='rectangulito fondo_verde'></div>
+                                </div>
+                                <div class="col-md-6">
+                                    Detectar oportunidades de trabajo para sus afiliados.
+                                    <div class='rectangulito fondo_verde'></div>
+                                </div>
+                                <div class="col-md-6">
+                                    Impulsar la creación de organismos para el desarrollo de esta actividad.
+                                    <div class='rectangulito fondo_verde'></div>
+                                </div>
+                                <div class="col-md-6">
+                                    Coadyuvar en el desarrollo tecnológico y la Infraestructura del país.
+                                    <div class='rectangulito fondo_verde'></div>
+                                </div>
+                                <div class="col-md-6">Ser el órgano encargado de operar el registro del sector consultoría en el Sistema de Información Empresarial Mexicano SIEM.
+                                    <div class='rectangulito fondo_verde'></div>
+                                </div>
+                                <div class="col-md-6">
+                                    Ser órgano de consulta del estado.
+                                    <div class='rectangulito fondo_verde'></div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class='col-md-12 col-centered margen_40'>
+                    <div>
+                        <div class='iconos_cnec'>
+                            <i class="fa fa-area-chart icono_azul" aria-hidden="true"></i>
+                        </div>
+                        <div class='titulo_lineas_cnec'>
+                            <div class="alineado_izq alineado_izq titulo_cnec_med color_azul_clarito">
+                                ÁREAS DE <br><span>OPORTUNIDAD:</span>
+                            </div>
+                            <div class="franja_cnec_bottom alineado_izq margin_abajo_10"><img src="{{asset('img/linea_azul_1.png')}}" alt=""></div>
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class="col-md-8 col-sm-8 col-xs-2 col-centered pading_izq_80">
+                            <div class="row alineado_izq listado_que_es_cnec margen_40_todo">
+                                <div class="col-md-6">
+                                    Acceso a profesionistas capacitados.
+                                    <div class='rectangulito fondo_azul'></div>
+                                </div>
+                                <div class="col-md-6">
+                                    Capacitación Profesional.
+                                    <div class='rectangulito fondo_azul'></div>
+                                </div>
+                                <div class="col-md-6">
+                                    Asesoría especializada, sectorizada y/o integral.
+                                    <div class='rectangulito fondo_azul'></div>
+                                </div>
+                                <div class="col-md-6">
+                                    Apoyo en el Fortalecimiento y Desarrollo Institucional de dependencias.
+                                    <div class='rectangulito fondo_azul'></div>
+                                </div>
+                                <div class="col-md-6">
+                                    Propuestas para el desarrollo sustentable del Estado y sus Municipios.
+                                    <div class='rectangulito fondo_azul'></div>
+                                </div>    
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class='col-md-12 col-centered margen_40'>
+                    <div>
+                        <div class='iconos_cnec'>
+                            <i class="fa fa-users icono_azul" aria-hidden="true"></i>
+                        </div>
+                        <div  class='titulo_lineas_cnec'>
+                            <div class='alineado_izq titulo_cnec_med color_azul_verde'>
+                                ÁREAS PRINCIPALES <br><span>DE PARTICIPACIÓN:</span>
+                            </div>
+                            <div class="franja_cnec_bottom alineado_izq margin_abajo_10"><img src="{{asset('img/linea_verde_1.png')}}" alt=""></div>    
+                        </div>
+                    </div>
+
+                    <div class='row'>
+                        <div class="col-md-8 col-sm-8 col-xs-2 col-centered pading_izq_80">
+                            <div class="row alineado_izq listado_que_es_cnec margen_40_todo">
+                                <div class="col-md-6">
+                                    Secretaria de Obra Pública.
+                                    <div class='rectangulito fondo_verde'></div>
+                                </div>
+                                <div class="col-md-6">
+                                    Comisión de Vivienda.
+                                    <div class='rectangulito fondo_verde'></div>
+                                </div>
+                                <div class="col-md-6">
+                                    Comisión Estatal del Agua.
+                                    <div class='rectangulito fondo_verde'></div>
+                                </div>
+                                <div class="col-md-6">
+                                    Instituto Estatal de Capacitación.
+                                    <div class='rectangulito fondo_verde'></div>
+                                </div>
+                                <div class="col-md-6">
+                                    Procuraduría de Protección al Ambiente (PROPAEG).
+                                    <div class='rectangulito fondo_verde'></div>
+                                </div>
+                                <div class="col-md-6">
+                                    Instituto de Ecología
+                                    <div class='rectangulito fondo_verde'></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    
+            </div>
+        </section>
+    </div> 
 </div>
-<!--termina div de la CNEC-->
-
-<div id="organigrama" class="clearfix">
-	<div id="titulo-org" style="height:101px; background: url(img/fondo-tit-organigrama.gif) repeat-x; padding-top:10px;">
-    	<div class="ocho80">
-    		<h1 class="colorazuloscuro">ORGANIGRAMA<br /> <span class="colorazulmedio">CONSEJO DIRECTIVO 2014-2015:</span></h1>
-        </div>
+<div class='fondo_2'>
+    <div class="ocho80">
+        <section class="row row-centered padding_organigrama ">
+            <div class='col-md-12 alineado_izq'>
+                <div class='titulo_cnec_med color_azul_clarito borde_verde_delgado'>
+                    <span>ORGANIGRAMA</span> <br>CONSEJO DIRECTIVO 2017-2018: 
+                </div>
+            </div>
+            <div class='col-md-12'>
+                <div class="centrado organigrama">
+                    <img src="{{asset('img/organigrama_nuevo_1.png')}}" alt="">
+                </div>
+            </div>
+        </section>  
     </div>
-    <div id="mapa">
-    	<div class="ocho80">
-        </div>
-    </div>
-    <div id="pie">
-    	<div class="ocho80">
-        	<p>Desde el año 2002 cuando se instituyó el Premio Nacional de Ética y Valores en la Industria por la CONCAMIN la CNEC ha sido galardonada en  9 ocasiones y 7 veces consecutivas.</p>
-        </div>
+</div>
+<div class='fondo_3'>
+    <div class="ocho80">
+        <section class="row row-centered padding_organigrama ">
+            <div class="col-md-12 alineado_izq">
+                <div class="row">
+                    <div class="col-sm-4 col-xs-6">
+                        
+                    </div>
+                    <div class="col-sm-5 col-xs-6 margen_arriba_200">
+                        <p>Desde el año 2002 cuando se instituyó el Premio Nacional de Ética y Valores en la Industria por la CONCAMIN</p>
+                        <p><span>CNEC</span> ha sido galardonada en 12 ocasiones y 7 veces consecutivas.</p>
+                    </div>
+                </div>
+            </div>
+            <div class='col-md-12 alineado_izq'>
+                <div class='titulo_cnec_med color_azul_clarito borde_verde_delgado margen_arriba_200'>
+                    REPRESENTANTES MUNICIPALES <br><span>DIRECTORIO DE CONSEJO DIRECTIVO</span> 
+                </div>
+            </div>
+            <div class='col-md-12'>
+                <div class="centrado organigrama">
+                    <img src="{{asset('img/mapita-2.png')}}" alt="">
+                </div>
+            </div>
+        </section>  
     </div>
 </div>
 
-<!--termina div del organigrama-->
 
-<!--incia div de Mapa-->
 
-<div id="mapa">
-	 <div id="titulos-org" style="height:101px; background: url(img/fondo-tit-organigrama.gif) repeat-x; padding-top:10px;">
-    	<div class="ocho80">
-    		<h1 class="colorazuloscuro">REPRESENTANTES MUNICIPALES<br /> <span class="colorazulmedio">DIRECTORIO DE CONSEJO DIRECTIVO</span></h1>
-        </div>
-    </div>
-    <div id="lugares" style="width: 755px; height:550px; margin: 0 auto; background:url(img/mapita-2.png) no-repeat;" />
-   
-</div><!--termina el div Mapa-->
 
 @endsection
 @extends('layouts.js')

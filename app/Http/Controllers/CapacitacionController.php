@@ -42,13 +42,13 @@ class CapacitacionController extends Controller
             if ($request->hasFile('pdf')) {
                 $imagen = $request->file('pdf');
                 $filename = time().'.'.$imagen->getClientOriginalExtension();
-                $path = public_path('uploads/cursos/' . $filename);
+                $path = public_path('img/' . $filename);
                 Image::make($imagen)->resize(null, 400, function ($constraint) {
                     $constraint->aspectRatio();
                     $constraint->upsize();
                 })->save($path);
 
-                $cursos->pdf = '/uploads/cursos/'.$filename;
+                $cursos->pdf = 'img/'.$filename;
             }
 
                 $cursos->title = $request->title;
@@ -101,9 +101,39 @@ class CapacitacionController extends Controller
      * @param  \App\Capacitacion  $capacitacion
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Capacitacion $capacitacion)
+    public function update($id, Request $request)
     {
-        //
+            if ($request->hasFile('pdf')) {
+                $imagen = $request->file('pdf');
+                $filename = time().'.'.$imagen->getClientOriginalExtension();
+                $path = public_path('img/' . $filename);
+                Image::make($imagen)->resize(null, 400, function ($constraint) {
+                    $constraint->aspectRatio();
+                    $constraint->upsize();
+                })->save($path);
+
+                $cursos->pdf = 'img/'.$filename;
+            }
+
+                $cursos = Capacitacion::findOrfail($id);
+
+                $cursos->title = $request->title;
+                
+                $cursos->start = $request->start;
+        
+                $cursos->horarios = $request->horarios;
+
+                $cursos->inversion = $request->inversion;
+                
+                $cursos->descripcion = $request->descripcion;
+
+                $cursos->lugar = $request->lugar;
+                
+                $cursos->end = $request->end;
+
+                $cursos->save();
+
+                return redirect('curso');
     }
 
     /**

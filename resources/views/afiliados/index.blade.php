@@ -30,7 +30,7 @@
 	    <br>
 	 
 
-	    <div id="empresas">
+	    <div id="empresas" class='empresas'>
 	    	<div class="ocho80">
 	    		<div id="selects">
 	    			<form name="form1" method="post" action="">

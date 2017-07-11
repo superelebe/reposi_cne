@@ -123,8 +123,28 @@ class ArticleController extends Controller
      */
     public function update($id,Request $request)
     {
-        $article = Article::findOrfail($request->all());
-        
+        $article = Article::findOrfail($id);
+
+        if ($request->hasFile('imagen')) {
+            $imagen = $request->file('imagen');
+            $filename = time().'.'.$imagen->getClientOriginalExtension();
+            $path = public_path('uploads/noticias/' . $filename);
+            Image::make($imagen)->resize(null, 400, function ($constraint) {
+                $constraint->aspectRatio();
+                $constraint->upsize();
+            })->save($path);
+
+
+            $article->imagen = '/uploads/noticias/'.$filename;
+
+        }
+                
+        $article->titulo = $request->titulo;
+                
+        $article->subtitulo = $request->subtitulo;
+                
+        $article->cuerpo = $request->cuerpo;
+
         $article->save();
 
         return redirect('article');

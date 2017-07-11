@@ -15,13 +15,13 @@ class CreateCalendarTable extends Migration
     {
         Schema::create('calendar', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('titulo');
+            $table->string('title');
             $table->date('start');
             $table->date('end');
             $table->string('color')->default('#A1BA77');
             $table->string('subtitulo');
             $table->text('imagen');
-            $table->text('descripcion');
+            $table->longText('descripcion');
             $table->timestamps();
         });
     }
