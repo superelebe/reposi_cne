@@ -319,10 +319,8 @@ h3{
 }
 
 #footer #telefonos{
-	width:378px;
-	float:left;
-	font-size:1.9em;
-	padding:0px 60px 0 75px;
+	font-size:1.4em;
+	text-align: left;
 }
 #footer #telefonos .tel{
 	color:#B5BFC7;
@@ -1601,6 +1599,10 @@ ESTILOS POR SECIONES DEL SITIO
 	text-align: left;
 }
 
+.alineado_centro{
+	text-align: center;
+}
+
 .descripcion_bolsa{
 	padding:10px 0;
 	text-align: justify;
@@ -2230,9 +2232,24 @@ margin-top: -2261px;
 
 .icono_azul{ 
 	color: #465663;
-    text-shadow: 1px 1px 1px #ccc;
     font-size: 4em;
 }
+
+.icono_azul_inicio{ 
+	color: #465663;
+    font-size: 5em;
+}
+
+.icono_azul_lupa{ 
+	color: #465663;
+    font-size: 4em;
+}
+
+.icono_verde{
+	color: #668E00;
+    font-size: 4em;	
+}
+
 
 .titulo_lineas_cnec{
     width: 70%;
@@ -2247,12 +2264,20 @@ margin-top: -2261px;
 	vertical-align: top;
 }
 
-.titulo_cnec_med{
+.titulo_cnec_mediano{
 	font-family: Myrad;
 	font-weight: bold;
-	font-size: 2em;
-	line-height: 30px;
 	color:#465663;
+}
+
+.titulo_cnec_med{
+	font-size: 25px;
+	line-height: 30px;
+}
+
+.titulo_cnec_med_inicio{
+	font-size: 20px;
+	line-height: 25px;
 }
 
 .color_azul_clarito span{
@@ -2268,6 +2293,14 @@ margin-top: -2261px;
     width: 100%;
 }
 
+
+.franja_inicio_bottom{
+	margin-top: -100px;
+} 
+
+.franja_inicio_bottom img{
+    width: 100%;
+}
 .listado_que_es_cnec div{
 	margin: 10px 0;
 }
@@ -2348,6 +2381,10 @@ margin-top: -2261px;
 	background-color: #465663;
 }
 
+.fondo_azul_claro{
+	background-color: :#808C97;
+}
+
 .margen_especial_cnec{
 	margin: 230px 40px 60px 40px;
 }
@@ -2405,11 +2442,74 @@ margin-top: -2261px;
 	margin-top: 200px;
 }
 
+.paddign_40{
+	padding: 40px 0 ;
+}
+
 .paddign_80{
     padding: 80px 0;
 }
+	.imagen_ques_es{
+	    margin-left: 7%;
+	}
+
+
+.bullet_verde li { 
+    padding-left: 16px; 
+}
+
+.imagen_al_100{
+	width:100%;
+}
+
+.bullet_verde li:before {
+	content: "•";
+    padding-right: 8px;
+    font-size: 30px;
+    color: #A6C36F;
+}
+
+.vermas_blanco, .vermas_blanco a{
+    padding: 5px 0;
+    color: white;
+}
+
+.overflow_hidden{
+	width:100%;
+	overflow: hidden;
+	height: 200px;
+}
+
+.overflow_hidden img{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.nombre_presidente{
+	font-family: Myrad;
+	color: white;
+	font-weight: bold;
+}
+
+.margen_30{
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.texto_verde{
+	color: #668E00;
+}
+
+
+.pestana_vermas{
+	margin-top: 20px;
+}
 
 @media (min-width:600px)  {
+	.imagen_ques_es{
+	    margin-left: 7%;
+	}
 	.pading_izq_80{
 		padding-left: 80px;
 	}
@@ -2429,7 +2529,10 @@ margin-top: -2261px;
 	.fondo_uno{
 	    background-position: 60% 10%;
 	}
-	.margen_60, .margen_especial_cnec{
+	.margen_especial_cnec{
+		margin: -200px 0 60px 0;
+	}
+	.margen_60{
 		margin: 60px 0;
 	}
 	.areas_especialidades {
@@ -2438,7 +2541,11 @@ margin-top: -2261px;
 	    margin-left: auto;
 	}
 	.titulo_cnec_med{
-		font-size: 2.5em;
+		font-size: 35px;
+	}
+
+	.titulo_cnec_med_inicio{
+		font-size: 25px;
 	}
 	#interes{
 		padding: 20px;

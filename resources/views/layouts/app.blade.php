@@ -186,22 +186,30 @@
 
     <div id="footer" class="limpiar">
         <div class="ocho80">
-            <div id="direccion">
-                <ul>
-                    <li>Blvd. Mariano Escobedo</li>
-                    <li>No. 4502</li>
-                    <li>Local 32. Col. San Isidro</li>
-                    <li>León Gto. México</li>
-                    <li>informes@cnecgto.org</li>
-                </ul>
-            </div>
-            <div id="telefonos">
-                <span class="tel">TEL: +52 01 (477) 711 21 68</span>
-                <span class="fax">FAX: +52 01 (477) 711 04 63</span>
-                <span class="contactanos">CONTÁCTANOS</span><a href="contacto.php" title="Escribir un correo a la CNEC"><img src="{{ asset('img/correo-img.gif') }}" alt="img correo" class="sobre" /></a>
-            </div>
-            <div id="logofooter">
-                <a href="index.php" title="Ir al Inicio"><img src="{{ asset('img/cnec-logo-footer.png') }}" alt="cnec logo" /></a>
+            <div class="row row-centered">
+                <div class="col-md-3">
+                    <div id="direccion">
+                        <ul>
+                            <li>Blvd. Mariano Escobedo</li>
+                            <li>No. 4502</li>
+                            <li>Local 32. Col. San Isidro</li>
+                            <li>León Gto. México</li>
+                            <li>informes@cnecgto.org</li>
+                        </ul>
+                    </div>  
+                </div>
+                <div class="col-md-6">
+                    <div id="telefonos">
+                        <span class="tel">TEL: +52 01 (477) 711 21 68</span> <br>
+                        <span class="fax">FAX: +52 01 (477) 711 04 63</span><br>
+                        <span class="contactanos">CONTÁCTANOS</span><a href="contacto.php" title="Escribir un correo a la CNEC"><img src="{{ asset('img/correo-img.gif') }}" alt="img correo" class="sobre" /></a>
+                    </div>   
+                </div>
+                <div class='col-md-3'>
+                    <div id="logofooter">
+                        <a href="index.php" title="Ir al Inicio"><img src="{{ asset('img/cnec-logo-footer.png') }}" alt="cnec logo" /></a>
+                    </div>    
+                </div>
             </div>
             
             <div id="derechos" class="clearfix">

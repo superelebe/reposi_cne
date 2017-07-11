@@ -4,7 +4,12 @@
 <div class='fondo_uno'>
     <div class="ocho80">
         <div class="margen_40">
-            <img src="{{asset('img/que_es_la_cnec_1.png')}}" alt="">
+            <div class="row">
+                <div class="col-md-4 col-sm-4"></div>
+                <div class="col-md-6 col-sm-6">
+                    <img class='imagen_ques_es' src="{{asset('img/que_es_la_cnec_1.png')}}" alt="">
+                </div>
+            </div>
         </div>
         <div class='fondo1'>
             <div class="row row-centered">
@@ -13,13 +18,13 @@
                         La <span>CNEC</span> es un órgano multidisciplinario, formado por empresas sólidas que prestan servicios con calidad e integridad; líder de opinión y centro de información de la Consultoría mexicana, con presencia nacional e internacional, que desarrolla y promueve oportunidades de trabajo.
                     </div>
                     <div class='margen_60'>
-                        <div class='titulo_cnec_med alineado_derecha margen_10'>MISIÓN</div>
+                        <div class='titulo_cnec_med titulo_cnec_mediano alineado_derecha margen_10'>MISIÓN</div>
                         <div>
                             Representar a la consultoría mexicana; ser su voz, presencia y opinión; promover oportunidades de negocios para sus afiliados y fortalecer su competitividad y desarrollo en un ámbito de responsabilidad social empresarial.
                         </div>
                     </div>
                     <div class='margen_60'>
-                        <div class='titulo_cnec_med alineado_derecha margen_10'>
+                        <div class='titulo_cnec_med titulo_cnec_mediano alineado_derecha margen_10'>
                             VISIÓN
                         </div>
                         <div>
@@ -30,7 +35,7 @@
                 </div>
                 <div class='col-sm-7 col-xs-12'>
                     <div class='margen_top_350 areas_especialidades'>
-                        <div class='titulo_cnec_med justificado'>
+                        <div class='titulo_cnec_med titulo_cnec_mediano justificado'>
                             ÁREAS DE <br> ESPECIALIDAD
                         </div>
                         <div class='border_verde'>
@@ -55,7 +60,7 @@
                             <img src="{{asset('img/target_1.png')}}" alt="">
                         </div>
                         <div class='titulo_lineas_cnec'>
-                            <div class='alineado_izq alineado_izq titulo_cnec_med color_azul'>
+                            <div class='alineado_izq alineado_izq titulo_cnec_med titulo_cnec_mediano color_azul'>
                                 NUESTROS <br>OBJETIVOS
                             </div>
                             <div class="franja_cnec_bottom alineado_izq margin_abajo_10"><img src="{{asset('img/linea_verde_1.png')}}" alt=""></div>
@@ -98,7 +103,7 @@
                             <i class="fa fa-area-chart icono_azul" aria-hidden="true"></i>
                         </div>
                         <div class='titulo_lineas_cnec'>
-                            <div class="alineado_izq alineado_izq titulo_cnec_med color_azul_clarito">
+                            <div class="alineado_izq alineado_izq titulo_cnec_med titulo_cnec_mediano color_azul_clarito">
                                 ÁREAS DE <br><span>OPORTUNIDAD:</span>
                             </div>
                             <div class="franja_cnec_bottom alineado_izq margin_abajo_10"><img src="{{asset('img/linea_azul_1.png')}}" alt=""></div>
@@ -139,7 +144,7 @@
                             <i class="fa fa-users icono_azul" aria-hidden="true"></i>
                         </div>
                         <div  class='titulo_lineas_cnec'>
-                            <div class='alineado_izq titulo_cnec_med color_azul_verde'>
+                            <div class='alineado_izq titulo_cnec_med titulo_cnec_mediano color_azul_verde'>
                                 ÁREAS PRINCIPALES <br><span>DE PARTICIPACIÓN:</span>
                             </div>
                             <div class="franja_cnec_bottom alineado_izq margin_abajo_10"><img src="{{asset('img/linea_verde_1.png')}}" alt="">
@@ -187,7 +192,7 @@
     <div class="ocho80">
         <section class="row row-centered padding_organigrama ">
             <div class='col-md-12 alineado_izq'>
-                <div class='titulo_cnec_med color_azul_clarito borde_verde_delgado'>
+                <div class='titulo_cnec_med titulo_cnec_mediano color_azul_clarito borde_verde_delgado'>
                     <span>ORGANIGRAMA</span> <br>CONSEJO DIRECTIVO 2017-2018: 
                 </div>
             </div>
@@ -214,7 +219,7 @@
                 </div>
             </div>
             <div class='col-md-12 alineado_izq'>
-                <div class='titulo_cnec_med color_azul_clarito borde_verde_delgado margen_arriba_200'>
+                <div class='titulo_cnec_med titulo_cnec_mediano color_azul_clarito borde_verde_delgado margen_arriba_200'>
                     REPRESENTANTES MUNICIPALES <br><span>DIRECTORIO DE CONSEJO DIRECTIVO</span> 
                 </div>
             </div>

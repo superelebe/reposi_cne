@@ -48,7 +48,7 @@ class CapacitacionController extends Controller
                     $constraint->upsize();
                 })->save($path);
 
-                $cursos->pdf = 'img/'.$filename;
+                $cursos->imagen = 'img/'.$filename;
             }
 
                 $cursos->title = $request->title;

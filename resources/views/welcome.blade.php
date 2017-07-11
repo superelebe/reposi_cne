@@ -1,7 +1,237 @@
 @extends('layouts.app')
 @section('content')
 
-<div id="rotador-index">
+<div class='inicio_1'>
+  <div class="ocho80">
+  <div id="rotador-index">
+                    @foreach($otro_banner as $banner)
+                          <div title="{{$banner->titulo}}">
+                              <a href="{{$banner->link}}"><img src="{{$banner->imagen}}" alt=""></a>
+                          </div>
+                      @endforeach
+        <div title="Semana de Cultura Laboral"> <a href="http://www.cnecgto.org/2014/pdf/Semana_de_Cultura_Laboral_CNEC.pdf"><img src="img/rot-banner-17.jpg" /></a> </div>
+        
+        <div title="Desarrollo de habilidades para supervisores y resindetes de obras"><a href="http://www.cnecgto.org/2016/curso/desarrollodehabilidades/" target="_blank"><img src="img/rot-banner-desarrollo.jpg" /></a></div> 
+
+        <div title="Formación de consultores"><a href="http://www.cnecgto.org/2016/curso/formaciondeconsultores/" target="_blank"><img src="img/rot-banner-formacion.jpg" /></a></div>
+
+    <!--     <div title="Finanzas para no financieros "><a href="http://www.cnecgto.org/2016/curso/finanzasparanofinancieros/" target="_blank"><img src="img/rot-banner-01.jpg" /></a></div> 
+     -->
+        <div title="Certificación documental 2015"><img src="img/rot-banner-02.jpg" /></div>  
+
+        <div title="XXXII Asamblea General Mensual"><img src="img/rot-banner-03.jpg" /></div>  
+
+    <!--     <div title="Clausura-Transferencia-de-Conocimientos"><img src="img/rot-banner-04.jpg" /></div>  -->
+        
+        <div title="Aviso de Privacidad"><a href="http://www.cnecgto.org/avisoprivacidad"><img src="img/rot-banner-05.jpg" /></a></div> 
+        
+  </div>
+    <div class='row row-centered'>
+      <div class='col-sm-5 col-centered alineado_izq margen_30'>
+        <div>
+          <div class='iconos_cnec alineado_centro'>
+            <i class="fa fa-lightbulb-o icono_azul_inicio" aria-hidden="true"></i>
+          </div>
+          <div  class='titulo_lineas_cnec titulo_cnec_med_inicio'>
+            <div class='alineado_izq alineado_izq titulo_cnec_mediano titulo_cnec_med_inicio color_azul'>
+              Y TÚ,<br>
+              ¿ERES <br>
+              CONSULTOR?
+            </div>
+          </div>
+          <div class="franja_cnec_bottom alineado_izq margin_abajo_10"><img src="{{asset('img/linea_azul_verde.png')}}" alt="">
+          </div>
+        </div>
+        <div>
+          <div>
+            <img class="imagen_al_100" src="{{asset('img/eres_consultor.png')}}" alt="">
+          </div>
+          <ul class='bullet_verde'>
+            <li>Un consultor o una empresa consultora, son aliados y consejeros de alta confiabilidad para los ...</li>
+          </ul>
+        </div>
+        <div class='fondo_azul vermas_blanco alineado_centro'>
+          VER MÁS
+        </div>
+      </div>
+
+      <div class='col-sm-5 col-centered alineado_izq'>
+        <div class='margen_30'>
+          <div>
+            <div class='iconos_cnec alineado_centro'>
+              <i class="fa fa-search icono_azul_lupa" aria-hidden="true"></i>
+            </div>
+            <div  class='titulo_lineas_cnec titulo_cnec_med_inicio'>
+              <div class='alineado_izq titulo_cnec_mediano titulo_cnec_med_inicio color_azul'>
+                ¿DÓNDE<br>
+                ESTÁN LOS <br>
+                CONSULTORES?
+              </div>
+            </div>
+            <div class="franja_cnec_bottom alineado_izq margin_abajo_10"><img src="{{asset('img/linea_azul_verde.png')}}" alt="">
+            </div>
+          </div>
+          <div>
+            <div>
+              <img class='imagen_al_100' src="{{asset('img/donde_estan.png')}}" alt="">
+            </div>
+            <ul class='bullet_verde'>
+              <li>Un consultor o una empresa consultora, son aliados y consejeros de alta confiabilidad para los ...</li>
+            </ul>
+          </div>
+          <div class='fondo_azul vermas_blanco alineado_centro'>
+            VER MÁS
+          </div>  
+        </div>
+      </div>
+
+
+      <div class='col-sm-5 col-centered alineado_izq'>
+        <div class="row row-centered">
+          <div class="col-md-12 margen_30">
+            <div>
+              <div class='iconos_cnec alineado_centro'>
+                <i class="fa fa-line-chart icono_azul_lupa" aria-hidden="true"></i>
+              </div>
+              <div  class='titulo_lineas_cnec'>
+                <div class='alineado_izq alineado_izq titulo_cnec_mediano titulo_cnec_med_inicio color_azul'>
+                  BENEFICIOS DE <br>FORMAR PARTE <br>DE LA CNEC
+                </div>
+              </div>
+              <div class="franja_cnec_bottom alineado_izq margin_abajo_10"><img src="{{asset('img/linea_azul_verde.png')}}" alt="">
+              </div>
+            </div>
+            <div>
+              <div>
+                <img class='imagen_al_100' src="{{asset('img/beneficios_cnec.png')}}" alt="">
+              </div>
+              <ul class='bullet_verde'>
+                <li>Un consultor o una empresa consultora, son aliados y consejeros de alta confiabilidad para los ...</li>
+              </ul>
+            </div>
+            <div class='fondo_azul vermas_blanco alineado_centro'>
+              VER MÁS
+            </div>  
+          </div>
+          <div class="col-md-12 margen_30">
+            <div>
+              <div class='iconos_cnec'>
+                <img src="{{asset('img/target_1.png')}}" alt="">
+              </div>
+              <div  class='titulo_lineas_cnec'>
+                <div class='alineado_izq alineado_izq titulo_cnec_mediano titulo_cnec_med_inicio color_azul'>
+                  ÁREAS DE ESPECIALIDAD
+                  </div>
+              </div>
+              <div class="franja_cnec_bottom alineado_izq margin_abajo_10"><img src="{{asset('img/linea_azul_verde.png')}}" alt="">
+              </div>
+            </div>
+            <div>
+              <ul class='bullet_verde alineado_izq'>
+                <li>Economía, Inversión y Finanzas</li>
+                <li>Administración y Gestión</li>
+                <li>Planeación y Diseño</li>
+                <li>Administración de Obras</li>
+                <li>Servicios Tecnológicos Profesionales</li>
+              </ul>
+            </div>
+            <div class='fondo_azul vermas_blanco alineado_centro'>
+              VER MÁS
+            </div>          
+          </div>
+        </div>
+      </div>
+      
+      <div class='col-sm-5 col-centered alineado_izq margen_30'>
+        <div>
+          <div class='iconos_cnec'>
+            <i class="fa fa-user-circle icono_azul_lupa" aria-hidden="true"></i>
+          </div>
+          <div  class='titulo_lineas_cnec'>
+            <div class='alineado_izq alineado_izq titulo_cnec_mediano titulo_cnec_med_inicio color_azul'>
+              MENSAJE <br>
+              DEL PRESIDENTE <br>
+              DE LA CNEC
+              </div>
+          </div>
+          <div class="franja_cnec_bottom alineado_izq margin_abajo_10"><img src="{{asset('img/linea_azul_verde.png')}}" alt="">
+          </div>
+        </div>
+        <div>
+          <img class='imagen_al_100' src="{{asset('img/foto_presidente.png')}}" alt="">
+        </div>
+        <div class='fondo_azul alineado_centro paddign_40 nombre_presidente'>
+          Arq. Francisco Javier <br> Schwichtenberg Aguado
+        </div>
+        <div class='margen_10'>
+            "La Consultoría es la óptima utilización de conocimientos técnicos de excelencia sustentados en experiencia, la integridad moral y un alto sentido de responsabilidad, para lograr la máxima eficiencia en la definición conceptual, el financiamiento, el...
+        </div>
+        <div class='fondo_azul vermas_blanco alineado_centro'>
+          VER MÁS
+        </div> 
+      </div>
+      
+    </div> 
+  </div>
+
+</div>
+
+<section class='inicioc_2'>
+  <div class="ocho80">
+    <div class="row row-centered">
+      <div class='col-md-12'>
+        <div class='row row-centered'>
+            <div class='col-sm-6'>
+              <div class='iconos_cnec'>
+                <i class="fa fa-calendar-check-o icono_verde" aria-hidden="true"></i>
+              </div>
+              <div  class='titulo_lineas_cnec'>
+                <div class='alineado_izq alineado_izq titulo_cnec_mediano titulo_cnec_med_inicio texto_verde'>
+                  CALENDARIO
+                </div>
+              </div>   
+            </div>
+
+            <div class='col-sm-6 '>
+              <div class='alineado_derecha pestana_vermas'>
+                <img src="{{asset('img/ver_mas_cursos.png')}}" alt="">
+              </div>
+            </div>
+        </div>
+
+        <div class="franja_inicio_bottom alineado_izq margin_abajo_10">
+          <img src="{{asset('img/linea_verde_gd.png')}}" alt="">
+        </div>
+      </div>
+      
+      <div class="col-sm-12">
+        <div class="row row-centered">
+            @foreach($fechas as $fecha)
+              <div class="col-md-6">
+                <div class='overflow_hidden'>
+                  <img src="https://www.w3schools.com/bootstrap/la.jpg" alt="">
+                  <!-- <img src="{{asset($fecha['imagen'])}}" alt=""> -->
+                </div>
+                <div class="fecha">
+                  <span>{{date("d - m - Y", strtotime($fecha['start']))}}</span> 
+                  <a href="{{$fecha['url']}}" target="_blank" title="Ver más información"></a>
+                </div>
+                <div class=''>
+                  {{$fecha['title']}}
+                </div>
+                <div class='fondo_azul vermas_blanco alineado_centro'>
+                  <a href="{{$fecha['url']}}" target="_blank" title="Ver más información">VER MAS</a>
+                </div> 
+              </div>
+            @endforeach
+        </div> 
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- <div id="rotador-index">
                   @foreach($otro_banner as $banner)
                         <div title="{{$banner->titulo}}">
                             <a href="{{$banner->link}}"><img src="{{$banner->imagen}}" alt=""></a>
@@ -13,17 +243,16 @@
 
     <div title="Formación de consultores"><a href="http://www.cnecgto.org/2016/curso/formaciondeconsultores/" target="_blank"><img src="img/rot-banner-formacion.jpg" /></a></div>
 
-<!--     <div title="Finanzas para no financieros "><a href="http://www.cnecgto.org/2016/curso/finanzasparanofinancieros/" target="_blank"><img src="img/rot-banner-01.jpg" /></a></div> 
- -->
+<div title="Finanzas para no financieros "><a href="http://www.cnecgto.org/2016/curso/finanzasparanofinancieros/" target="_blank"><img src="img/rot-banner-01.jpg" /></a></div>
     <div title="Certificación documental 2015"><img src="img/rot-banner-02.jpg" /></div>  
 
     <div title="XXXII Asamblea General Mensual"><img src="img/rot-banner-03.jpg" /></div>  
 
-<!--     <div title="Clausura-Transferencia-de-Conocimientos"><img src="img/rot-banner-04.jpg" /></div>  -->
+<div title="Clausura-Transferencia-de-Conocimientos"><img src="img/rot-banner-04.jpg" /></div>
     
     <div title="Aviso de Privacidad"><a href="http://www.cnecgto.org/avisoprivacidad"><img src="img/rot-banner-05.jpg" /></a></div> 
     
-</div><!--termina div rotador-index-->
+</div> --><!--termina div rotador-index-->
 <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
