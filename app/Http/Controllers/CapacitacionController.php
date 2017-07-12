@@ -65,6 +65,8 @@ class CapacitacionController extends Controller
                 
                 $cursos->end = $request->end;
 
+                $cursos->url = "cursos/10";
+
                 $cursos->save();
 
                 Capacitacion::where('id', $cursos->id)->update(['url' => 'cursos/'.$cursos->id]);

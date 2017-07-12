@@ -27,8 +27,8 @@ class AddRegisterUsersTable extends Migration
     public function down()
     {
         Schema::table('register_users', function (Blueprint $table) {
-            $table->tinyInteger('verified')->default(0);
-            $table->string('email_token')->nullable();
+            $table->dropColumn('verified');
+            $table->dropColumn('email_token');
         });
     }
 }

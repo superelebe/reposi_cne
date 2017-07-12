@@ -27,8 +27,8 @@ class AddHorariosEInversionToCapacitacion extends Migration
     public function down()
     {
         Schema::table('capacitaciones', function (Blueprint $table) {
-            $table->string('horarios');
-            $table->string('inversion');
+            $table->dropColumn('horarios');
+            $table->dropColumn('inversion');
         });
     }
 }

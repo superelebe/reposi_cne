@@ -26,7 +26,7 @@ class AddActivoToBannersTable extends Migration
     public function down()
     {
         Schema::table('banners', function (Blueprint $table) {
-            $table->tinyInteger('activo')->default(1);
+            $table->dropColumn('activo');
         });
     }
 }

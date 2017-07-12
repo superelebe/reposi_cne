@@ -27,8 +27,8 @@ class AddLugarDescripcionToCapacitacion extends Migration
     public function down()
     {
         Schema::table('capacitaciones', function (Blueprint $table) {
-            $table->string('descripcion');
-            $table->string('lugar');
+            $table->dropColumn('descripcion');
+            $table->dropColumn('lugar');
         });
     }
 }

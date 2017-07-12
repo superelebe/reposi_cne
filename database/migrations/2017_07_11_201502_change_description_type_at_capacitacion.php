@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddImagenToRegisterUsers extends Migration
+class ChangeDescriptionTypeAtCapacitacion extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,8 @@ class AddImagenToRegisterUsers extends Migration
      */
     public function up()
     {
-        Schema::table('register_users', function (Blueprint $table) {
-            $table->string('imagen');
-            $table->string('cv');
+        Schema::table('capacitaciones', function (Blueprint $table) {
+            $table->longText('descripcion')->change();
         });
     }
 
@@ -26,9 +25,8 @@ class AddImagenToRegisterUsers extends Migration
      */
     public function down()
     {
-        Schema::table('register_users', function (Blueprint $table) {
-            $table->dropColumn('imagen');
-            $table->dropColumn('cv');
+        Schema::table('capacitaciones', function (Blueprint $table) {
+            $table->dropColumn('descripcion');
         });
     }
 }

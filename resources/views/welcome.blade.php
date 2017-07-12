@@ -1,6 +1,13 @@
 @extends('layouts.app')
 @section('content')
-
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.9&appId=1972989829593261";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 <div class='inicio_1'>
   <div class="ocho80">
   <div id="rotador-index">
@@ -144,7 +151,7 @@
       
       <div class='col-sm-5 col-centered alineado_izq margen_30'>
         <div>
-          <div class='iconos_cnec'>
+          <div class='iconos_cnec alineado_centro'>
             <i class="fa fa-user-circle icono_azul_lupa" aria-hidden="true"></i>
           </div>
           <div  class='titulo_lineas_cnec'>
@@ -176,14 +183,14 @@
 
 </div>
 
-<section class='inicioc_2'>
+<section class='inicio_2'>
   <div class="ocho80">
-    <div class="row row-centered">
+    <div class="row row-centered margen_50">
       <div class='col-md-12'>
         <div class='row row-centered'>
             <div class='col-sm-6'>
               <div class='iconos_cnec'>
-                <i class="fa fa-calendar-check-o icono_verde" aria-hidden="true"></i>
+                <i class="fa fa-calendar-check-o icono_inicio texto_verde" aria-hidden="true"></i>
               </div>
               <div  class='titulo_lineas_cnec'>
                 <div class='alineado_izq alineado_izq titulo_cnec_mediano titulo_cnec_med_inicio texto_verde'>
@@ -194,7 +201,7 @@
 
             <div class='col-sm-6 '>
               <div class='alineado_derecha pestana_vermas'>
-                <img src="{{asset('img/ver_mas_cursos.png')}}" alt="">
+                <a href="{{url('eventos')}}"><img src="{{asset('img/ver_mas_cursos.png')}}" alt=""></a>
               </div>
             </div>
         </div>
@@ -204,20 +211,22 @@
         </div>
       </div>
       
-      <div class="col-sm-12">
+      <div class="col-sm-12 paddign_40">
         <div class="row row-centered">
             @foreach($fechas as $fecha)
-              <div class="col-md-6">
+              <div class="col-sm-5 col-centered alineado_izq">
                 <div class='overflow_hidden'>
-                  <img src="https://www.w3schools.com/bootstrap/la.jpg" alt="">
-                  <!-- <img src="{{asset($fecha['imagen'])}}" alt=""> -->
+                  <img src="{{asset($fecha['imagen'])}}" alt="">
                 </div>
-                <div class="fecha">
+                <div class="fecha_inicio margen_10">
                   <span>{{date("d - m - Y", strtotime($fecha['start']))}}</span> 
                   <a href="{{$fecha['url']}}" target="_blank" title="Ver más información"></a>
                 </div>
-                <div class=''>
+                <div class='titulo_curso_inicio '>
                   {{$fecha['title']}}
+                </div>
+                <div class='margen_10'>
+                  {{substr(strip_tags($fecha['descripcion']),0,100)}}{{strlen(strip_tags($fecha['descripcion'])) > 100 ? "...":""}}
                 </div>
                 <div class='fondo_azul vermas_blanco alineado_centro'>
                   <a href="{{$fecha['url']}}" target="_blank" title="Ver más información">VER MAS</a>
@@ -227,6 +236,106 @@
         </div> 
       </div>
 
+    </div>
+  </div>
+</section>
+
+
+<section class='inicio_3'>
+  <div class="ocho80">
+    <div class="row row-centered margen_50">
+      <div class='col-md-12'>
+        <div class='row row-centered'>
+            <div class='col-sm-6'>
+              <div class='iconos_cnec'>
+                <i class="fa fa-newspaper-o icono_inicio texto_azul" aria-hidden="true"></i>
+              </div>
+              <div  class='titulo_lineas_cnec'>
+                <div class='alineado_izq alineado_izq titulo_cnec_mediano titulo_cnec_med_inicio texto_azul'>
+                  NOTICIAS
+                </div>
+              </div>   
+            </div>
+
+            <div class='col-sm-6 '>
+              <div class='alineado_derecha pestana_vermas'>
+                <a href="{{route('noticias')}}"><img src="{{asset('img/ver_mas_noticias.png')}}" alt=""></a>
+              </div>
+            </div>
+        </div>
+
+        <div class="franja_inicio_bottom alineado_izq margin_abajo_10">
+          <img src="{{asset('img/linea_verde_gd.png')}}" alt="">
+        </div>
+      </div>
+      
+      <div class="col-sm-11 col-centered paddign_40">
+
+            @foreach($noticias as $noticia)
+            <div class='margen_20'>
+              <div class="row row-centered">
+                <div class="col-sm-7 alineado_izq">
+                  <div class='overflow_hidden'>
+                    <img src="{{asset($noticia->imagen)}}" alt="">
+                  </div>
+
+                </div>
+                <div class="col-sm-5 alineado_izq">
+                  <div class="fecha_inicio margen_10">
+                    <span>{{date("d - m - Y", strtotime($noticia->start))}}</span> 
+                    <a href="{{$noticia->url}}" target="_blank" title="Ver más información"></a>
+                  </div>
+                  <div class='titulo_curso_inicio '>
+                    {{$noticia->titulo}}
+                  </div>
+                  <div class='margen_10'>
+                    {{substr(strip_tags($noticia->cuerpo),0,150)}}{{strlen(strip_tags($noticia->cuerpo)) > 150 ? "...":""}}
+                  </div>
+                  <div class='fondo_azul vermas_blanco alineado_centro'>
+                    <a href="noticia/{{$noticia->id}}" target="_blank" title="Ver más información">LEER MÁS</a>
+                  </div>
+                </div>
+              </div>  
+            </div>
+            @endforeach
+
+      </div>
+
+    </div>
+  </div>
+  <div class="redes_sociales">
+    <div class="row row-centered">
+      <div class="col-sm-10 col-centered">
+        <div class="row">
+          <div class="col-sm-6 col-centered">
+            <div class="col-sm-10 col-centered alineado_izq borde_social">
+              <div class='iconos_cnec'>
+                <i class="fa fa-facebook icono_inicio_sociales texto_azul" aria-hidden="true"></i>
+              </div>
+              <div class="titulo_lineas_cnec">
+                FACEBOOK
+              </div>
+            </div>
+            <div class="margen_50">
+              <div class="fb-page" data-href="https://www.facebook.com/CNECGTO/" data-tabs="timeline" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true"><blockquote cite="https://www.facebook.com/CNECGTO/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/CNECGTO/">CNEC Delegación Guanajuato</a></blockquote></div> 
+            </div>
+             
+          </div>
+          <div class="col-sm-6 col-centered">
+            <div class="col-sm-10 col-centered alineado_izq borde_social">
+              <div class='iconos_cnec'>
+                <i class="fa fa-twitter icono_inicio_sociales texto_azul" aria-hidden="true"></i>
+              </div>
+              <div class="titulo_lineas_cnec">
+                TWITTER
+              </div>
+            </div>
+            <div class="margen_50"> 
+              <a class="twitter-timeline" data-width="400" data-height="500" href="https://twitter.com/CNEC_GTO">CNEC_GTO</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>  
+            </div>
+          </div> 
+        </div>
+      </div>
     </div>
   </div>
 </section>

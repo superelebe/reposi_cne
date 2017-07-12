@@ -38,7 +38,7 @@
                     </td>
                     <td valign="top" bgcolor="#455560">
                         <div class="col-md-12 col-centered">
-                            <img class='largo_imagenes_cursos' src="{{$cursos->pdf}}" alt="">
+                            <img class='largo_imagenes_cursos' src="{{asset($cursos->imagen)}}" alt="">
                         </div>
                     </td>
                 </tr>

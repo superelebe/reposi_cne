@@ -26,7 +26,7 @@ class AddUrlToEventtable extends Migration
     public function down()
     {
         Schema::table('events', function (Blueprint $table) {
-            $table->string('url'); 
+            $table->dropColumn('url');
         });
     }
 }

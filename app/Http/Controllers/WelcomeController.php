@@ -17,8 +17,8 @@ class WelcomeController extends Controller{
    public function index(){
    	$otro_banner      = Banner::Activo();
    	$noticias         = Article::orderBy('id','asc')->take(2)->get();
-    $calendarios      = Calendar::CalendarActivo()->get(['title','start', 'imagen','url','id'])->toArray();
-    $capacitaciones   = Capacitacion::FechaActivo()->get(['title','start','imagen', 'url','id'])->toArray();
+    $calendarios      = Calendar::CalendarActivo()->get(['title','start', 'imagen', 'descripcion','url','id'])->toArray();
+    $capacitaciones   = Capacitacion::FechaActivo()->get(['title','start','imagen', 'descripcion', 'url','id'])->toArray();
     $fechas           = array_merge($calendarios, $capacitaciones);
 
    	return view('welcome',compact('otro_banner','noticias', 'fechas'));
