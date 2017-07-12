@@ -302,42 +302,43 @@
       </div>
 
     </div>
-  </div>
-  <div class="redes_sociales">
-    <div class="row row-centered">
-      <div class="col-sm-10 col-centered">
-        <div class="row">
-          <div class="col-sm-6 col-centered">
-            <div class="col-sm-10 col-centered alineado_izq borde_social">
-              <div class='iconos_cnec'>
-                <i class="fa fa-facebook icono_inicio_sociales texto_azul" aria-hidden="true"></i>
+    <div class="redes_sociales">
+      <div class="row row-centered">
+        <div class="col-sm-10 col-centered">
+          <div class="row">
+            <div class="col-sm-6 col-centered">
+              <div class="col-sm-10 col-centered alineado_izq borde_social">
+                <div class='iconos_cnec'>
+                  <i class="fa fa-facebook icono_inicio_sociales texto_azul" aria-hidden="true"></i>
+                </div>
+                <div class="titulo_lineas_cnec">
+                  FACEBOOK
+                </div>
               </div>
-              <div class="titulo_lineas_cnec">
-                FACEBOOK
+              <div class="margen_50">
+                <div class="fb-page" data-href="https://www.facebook.com/CNECGTO/" data-tabs="timeline" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true"><blockquote cite="https://www.facebook.com/CNECGTO/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/CNECGTO/">CNEC Delegación Guanajuato</a></blockquote></div> 
               </div>
+               
             </div>
-            <div class="margen_50">
-              <div class="fb-page" data-href="https://www.facebook.com/CNECGTO/" data-tabs="timeline" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true"><blockquote cite="https://www.facebook.com/CNECGTO/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/CNECGTO/">CNEC Delegación Guanajuato</a></blockquote></div> 
-            </div>
-             
+            <div class="col-sm-6 col-centered">
+              <div class="col-sm-10 col-centered alineado_izq borde_social">
+                <div class='iconos_cnec'>
+                  <i class="fa fa-twitter icono_inicio_sociales texto_azul" aria-hidden="true"></i>
+                </div>
+                <div class="titulo_lineas_cnec">
+                  TWITTER
+                </div>
+              </div>
+              <div class="margen_50"> 
+                <a class="twitter-timeline" data-width="400" data-height="500" href="https://twitter.com/CNEC_GTO">CNEC_GTO</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>  
+              </div>
+            </div> 
           </div>
-          <div class="col-sm-6 col-centered">
-            <div class="col-sm-10 col-centered alineado_izq borde_social">
-              <div class='iconos_cnec'>
-                <i class="fa fa-twitter icono_inicio_sociales texto_azul" aria-hidden="true"></i>
-              </div>
-              <div class="titulo_lineas_cnec">
-                TWITTER
-              </div>
-            </div>
-            <div class="margen_50"> 
-              <a class="twitter-timeline" data-width="400" data-height="500" href="https://twitter.com/CNEC_GTO">CNEC_GTO</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>  
-            </div>
-          </div> 
         </div>
       </div>
     </div>
   </div>
+
 </section>
 
 <!-- <div id="rotador-index">
