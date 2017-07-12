@@ -826,11 +826,10 @@ ESTILOS POR SECIONES DEL SITIO
 
 /*----- SERVICIOS CNEC -----*/
 #servicios{
-	background:url(../img/fondo-servicios-2.png) no-repeat center top;
-	padding-top:1px;
-	background-position-x: 100px;
+background: url(../img/fondo-servicios-2.png) no-repeat;
+    padding-top: 1px;
     margin-top: -90px;
-    margin-bottom: 90px;
+    background-position: 60% 10%;
 }
 
 #servicios #contenedorserv{
@@ -1328,7 +1327,6 @@ ESTILOS POR SECIONES DEL SITIO
 /*-----  AFILIATE  -----*/
 #afiliate{
 	background:url(../img/afiliate-a-la-cenec-banner2.png) no-repeat center top;
-	background-position-x: -100px;
 }
 
 
@@ -1338,6 +1336,8 @@ ESTILOS POR SECIONES DEL SITIO
 	border-bottom:2px solid #769D2E;
 	margin-bottom:10px;
 }
+
+
 
 #afiliate .ocho80{
 	position:relative;
@@ -2600,6 +2600,12 @@ margin-top: -2261px;
 
 .pdf_registro{
 	margin-top: 427px;
+}
+
+.fondo_capacitacion{
+	background-image: url('../img/fondo-capacitacion2.png');
+	background-position: 50% 10%;
+    background-repeat: no-repeat;
 }
 
 @media (min-width:600px)  {

@@ -8,7 +8,7 @@
                 <div class="row">
                     <div class="col-sm-4  col-centered ">
                         <div class="row">
-                            <div class="col-sm-12  col-centered ">
+                            <div class="col-sm-10">
                                 <div class='pdf_registro'>
                                     <a href="descargas/Documento-SIEM-2014.xlsx" title="Da clíck para descargar los formatos"><img src="img/pdf-icon.jpg" alt="pdf"></a>
                                 </div>
