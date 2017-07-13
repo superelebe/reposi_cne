@@ -4,27 +4,44 @@
 	<div class="ocho80">
         <div class="row row-centered">
             <div class="col-sm-12">
-                <div>
-                    <div></div>
+                <div class='padding_700'>
+                    <div class='row row-centered'>
+                            <div class="col-sm-8 col-centered">
+                                <div><img class='imagen_al_100' src="{{asset($elprimero->imagen)}}" alt=""></div>
+                            </div>
+                            <div class="col-sm-4 col-centered">
+                                <div class="alineado_izq">
+                                    <div>
+                                        {{$elprimero->start->format('d / m / y')}}
+                                    </div>
+                                    <div> <h2>{{$elprimero->title}}</h2></div>
+                                    <div class='margin-top-20'><a href="{{$elprimero->url}}">Ver Mas</a></div>                                    
+                                </div>
+                            </div>
+                    </div>
                 </div>
             </div>
             <div class="col-sm-12">
                 <div class="row row-centered">
-                    @foreach($capacitaciones as $capacitacion)
-                        <div class="col-md-3">
-                                <div><img src="{{asset('$capacitacion->imagen')}}" alt=""></div>
-                                <div> <h2>{{$capacitacion->title}}</h2></div>
+                    @foreach($collection as $potato)
+                        <div class="col-md-4 margen_30">
+                            <div>
+                                <img class='imagen_al_100' src="{{asset($potato->imagen)}}" alt="">
+                            </div>
+                            <div class='alineado_izq'>
                                 <div>
-                                    Inicio: {{$capacitacion->start->format('d / m / y')}}
+                                    {{$potato->title}}
                                 </div>
-                                <div>Finaliza: {{$capacitacion->end->format('d / m / y')}}</div>
-                                <div class='margin-top-20'><a href="{{$capacitacion->url}}">Ver Mas</a></div>
+                                <div>
+                                    {{substr(strip_tags($potato->descripcion),0,100)}}{{strlen(strip_tags($potato->descripcion)) > 100 ? "...":""}}
+                                </div>
+                            </div>
                         </div>
                     @endforeach
                 </div>
             </div>
         </div>
-<!--         <div id="capaconten" class="limpiar clearfix">
+<!--         <div id="capaconten" class="limpiar clearfix">p
     <div id="pendondgray">
         <span><a href="descargas/formato_Inscripcion_cursos_software.xlsx"><img src="img/pdficon-dg.jpg" alt="pdf" /><p>Formato de Inscripción para cursos de software</p></a></span>
         <span><a href="descargas/formato_Inscripcion_cursos_generales.xlsx"><img src="img/pdficon-dg.jpg" alt="pdf" /><p>Formato de Inscripción para cursos generales</p></a></span>

@@ -149,7 +149,9 @@ class CapacitacionController extends Controller
         //
     }
     public function cursos(){
-        $capacitaciones = Capacitacion::all();
-        return view('capacitacion.capacitaciones', compact('capacitaciones'));
+        $elprimero = Capacitacion::orderBy('id', 'desc')->first();
+        $collection = Capacitacion::all();
+        $collection->pop();
+        return view('capacitacion.capacitaciones', compact('collection', 'elprimero'));
     }
 }
