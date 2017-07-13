@@ -90,11 +90,17 @@
 
 <div id="rotador" class="limpiar">
     <div class="ocho80">
-        <a href='{{url('/')}}'><img src="{{ asset('img/logo-cnec-cuadro.png') }}"  alt="logo cnec" /></a>
-        <div id="slides"><!---SlideShow Ini-->
-            <img src="{{ asset('img/rot-header-1.png') }}" alt="img1"   />
-            <img src="{{ asset('img/rot-header-2.png') }}" alt="img2" />
-            <img src="{{ asset('img/rot-header-3.png') }}" alt="img3" />
+        <div class="row row-centered">
+            <div class="col-sm-5 col-centered">
+                <a href='{{url('/')}}'><img src="{{ asset('img/logo-cnec-cuadro.png') }}"  alt="logo cnec" /></a>
+            </div>
+            <div class="col-sm-7 col-centered">
+                <div id="slides"><!---SlideShow Ini-->
+                    <img src="{{ asset('img/rot-header-1.png') }}" alt="img1"   />
+                    <img src="{{ asset('img/rot-header-2.png') }}" alt="img2" />
+                    <img src="{{ asset('img/rot-header-3.png') }}" alt="img3" />
+                </div>
+            </div>
         </div>
     </div>
 </div><!--termina div rotador-->

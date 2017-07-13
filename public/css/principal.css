@@ -2316,8 +2316,12 @@ margin-top: -2261px;
 	color:#668E00;
 }
 
+.franja_cnec_bottom {
+    margin-top: -10px;
+    margin-left: -10px;
+}
 .franja_cnec_bottom img{
-    max-width: 550px;
+    max-width: 350px;
     width: 100%;
 }
 
@@ -2402,7 +2406,7 @@ margin-top: -2261px;
 
 
 .hexagono_cnec{
-	margin-top: 80px;
+	margin-top: 50px;
     margin-left: 20px;
 }
 
@@ -2421,6 +2425,10 @@ margin-top: -2261px;
 	background-color: #A6C36F;
 }
 
+.fondo_verde_obs{
+	background-color: #668E00;
+}
+
 .fondo_azul{
 	background-color: #465663;
 }
@@ -2430,20 +2438,17 @@ margin-top: -2261px;
 }
 
 .margen_especial_cnec{
-	margin: 230px 40px 60px 40px;
+	margin: 380px 40px 60px 40px;
 }
 
 .fondo_2{
-	background-image: url('../img/fondo_que_es_la_cnec-2.png');
-	background-repeat: no-repeat;
-    background-position: 60% 4%;
-    background-size: 1000px;
+
 }
 .fondo_3{
 	background-image: url('../img/fondo_que_es_la_cnec-3.png');
 	background-repeat: no-repeat;
-	background-position: 40% 4%;
-    background-size: 1000px;
+	background-position: 25% 0%;
+	background-size: 1311px ;
 }
 
 .galardonado{
@@ -2465,7 +2470,7 @@ margin-top: -2261px;
 }
 
 .padding_organigrama{
-	padding: 100px 0 60px 0;
+	padding: 100px 0 0 0;
 }
 
 .borde_verde_delgado{
@@ -2486,6 +2491,10 @@ margin-top: -2261px;
 	margin-top: 200px;
 }
 
+.margen_arriba_100{
+	margin-top: 100px;
+}
+
 .paddign_40{
 	padding: 40px 0 ;
 }
@@ -2497,10 +2506,14 @@ margin-top: -2261px;
 	    margin-left: 7%;
 	}
 
-.padding_700{
-    padding-top: 700px;
+.padding_100{
+    padding-top: 100px;
 }
 
+
+.margen_350{
+    margin-top: 330px;
+}
 
 .bullet_verde li { 
     padding-left: 16px; 
@@ -2606,21 +2619,51 @@ margin-top: -2261px;
 	margin-top: 427px;
 }
 
+.img_sec_curso{
+	width: 100%;
+    height: 150px;
+    overflow: hidden;
+}
+
+.img_principal_curso{
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
 .fondo_capacitacion{
 	background-image: url('../img/fondo-capacitacion2.png');
-	background-position: 50% 10%;
+	background-position: 50% 0%;
     background-repeat: no-repeat;
 }
 
-@media (min-width:600px)  {
+.texto_organigrama span{
+    font-size: 51px;
+    color: #8195A5;
+}
+
+.border_linea_verde{
+	border-bottom: 1px solid #668e00;
+}
+
+.background_organi{
+	background-color: #c6c8cb;
+}
+
+.franja_objetivos_cnec_bottom{
+    margin-top: -28px;
+} 
+
+
+@media (min-width:650px)  {
 	.imagen_ques_es{
 	    margin-left: 7%;
 	}
-	.pading_izq_80{
-		padding-left: 80px;
+	.pading_izq_20{
+		padding-left: 20px;
 	}
 	.titulo_lineas_cnec{
-		width: 60%;
+		width: 85%;
 	}
 	.margen_40_todo{
 		margin: 0px;
@@ -2629,14 +2672,24 @@ margin-top: -2261px;
 	    background-position: center 10%;
     	background-size: auto;
 	}
+	.hexagono_cnec {
+		margin-top: 450px;
+	}
+	.fondo_3{
+		background-position: 50% 0%;
+	}
+	.texto_organigrama span{
+	    font-size: 71px;
+	    color: #8195A5;
+	}
 	.margen_top_350{
-		margin-top:350px;
+		margin-top: 50px;
 	}
 	.fondo_uno{
-	    background-position: 60% 10%;
+	    background-position: 44% 10%;
 	}
 	.margen_especial_cnec{
-		margin: -200px 0 60px 0;
+		margin: 256px 0 60px 0;
 	}
 	.margen_60{
 		margin: 60px 0;
@@ -2655,6 +2708,9 @@ margin-top: -2261px;
 	}
 	#interes{
 		padding: 20px;
+	}
+	.franja_objetivos_cnec_bottom{
+		margin-top: -70px;
 	}
 	#header #logos{
 		width:530px;

@@ -7,7 +7,6 @@
             <div class="row">
                 <div class="col-md-4 col-sm-4"></div>
                 <div class="col-md-6 col-sm-6">
-                    <img class='imagen_ques_es' src="{{asset('img/que_es_la_cnec_1.png')}}" alt="">
                 </div>
             </div>
         </div>
@@ -18,13 +17,13 @@
                         La <span>CNEC</span> es un órgano multidisciplinario, formado por empresas sólidas que prestan servicios con calidad e integridad; líder de opinión y centro de información de la Consultoría mexicana, con presencia nacional e internacional, que desarrolla y promueve oportunidades de trabajo.
                     </div>
                     <div class='margen_60'>
-                        <div class='titulo_cnec_med titulo_cnec_mediano alineado_derecha margen_10'>MISIÓN</div>
+                        <div class='titulo_cnec_med titulo_cnec_mediano alineado_izq margen_10'>MISIÓN</div>
                         <div>
                             Representar a la consultoría mexicana; ser su voz, presencia y opinión; promover oportunidades de negocios para sus afiliados y fortalecer su competitividad y desarrollo en un ámbito de responsabilidad social empresarial.
                         </div>
                     </div>
                     <div class='margen_60'>
-                        <div class='titulo_cnec_med titulo_cnec_mediano alineado_derecha margen_10'>
+                        <div class='titulo_cnec_med titulo_cnec_mediano alineado_izq margen_10'>
                             VISIÓN
                         </div>
                         <div>
@@ -34,6 +33,9 @@
                     </div>
                 </div>
                 <div class='col-sm-7 col-xs-12'>
+                    <div class='hexagono_cnec'>
+                        <img src="{{asset('img/hexagono.png')}}" alt="">
+                    </div>
                     <div class='margen_top_350 areas_especialidades'>
                         <div class='titulo_cnec_med titulo_cnec_mediano justificado'>
                             ÁREAS DE <br> ESPECIALIDAD
@@ -46,9 +48,6 @@
                         </div>
                     </div>
 
-                    <div class='hexagono_cnec'>
-                        <img src="{{asset('img/hexagono.png')}}" alt="">
-                    </div>
                 </div>
             </div>
         </div>
@@ -63,7 +62,7 @@
                             <div class='alineado_izq alineado_izq titulo_cnec_med titulo_cnec_mediano color_azul'>
                                 NUESTROS <br>OBJETIVOS
                             </div>
-                            <div class="franja_cnec_bottom alineado_izq margin_abajo_10"><img src="{{asset('img/linea_verde_1.png')}}" alt=""></div>
+                            <div class="franja_objetivos_cnec_bottom alineado_izq margin_abajo_10"><img class='imagen_al_100' src="{{asset('img/linea_nuestros_objetivos.png')}}" alt=""></div>
                         </div>
                     </div>
                     <div class="row">
@@ -99,14 +98,12 @@
                 </div>
                 <div class='col-md-12 col-centered margen_40'>
                     <div>
-                        <div class='iconos_cnec'>
-                            <i class="fa fa-area-chart icono_azul" aria-hidden="true"></i>
-                        </div>
                         <div class='titulo_lineas_cnec'>
                             <div class="alineado_izq alineado_izq titulo_cnec_med titulo_cnec_mediano color_azul_clarito">
                                 ÁREAS DE <br><span>OPORTUNIDAD:</span>
                             </div>
-                            <div class="franja_cnec_bottom alineado_izq margin_abajo_10"><img src="{{asset('img/linea_azul_1.png')}}" alt=""></div>
+                            <div class="franja_cnec_bottom alineado_izq margin_abajo_10"><img src="{{asset('img/linea_verde_1.png')}}" alt="">
+                            </div>  
                         </div>
                     </div>
                     <div class='row'>
@@ -140,9 +137,6 @@
                 </div>
                 <div class='col-md-12 col-centered margen_40'>
                     <div>
-                        <div class='iconos_cnec'>
-                            <i class="fa fa-users icono_azul" aria-hidden="true"></i>
-                        </div>
                         <div  class='titulo_lineas_cnec'>
                             <div class='alineado_izq titulo_cnec_med titulo_cnec_mediano color_azul_verde'>
                                 ÁREAS PRINCIPALES <br><span>DE PARTICIPACIÓN:</span>
@@ -160,7 +154,7 @@
                                     <div class='rectangulito fondo_verde'></div>
                                 </div>
                                 <div class="col-md-6">
-                                    Comisión de Vivienda.
+                                    Instituto de Ecología
                                     <div class='rectangulito fondo_verde'></div>
                                 </div>
                                 <div class="col-md-6">
@@ -176,7 +170,7 @@
                                     <div class='rectangulito fondo_verde'></div>
                                 </div>
                                 <div class="col-md-6">
-                                    Instituto de Ecología
+                                    Comisión de Vivienda.
                                     <div class='rectangulito fondo_verde'></div>
                                 </div>
                             </div>
@@ -191,12 +185,12 @@
 <div class='fondo_2'>
     <div class="ocho80">
         <section class="row row-centered padding_organigrama ">
-            <div class='col-md-12 alineado_izq'>
-                <div class='titulo_cnec_med titulo_cnec_mediano color_azul_clarito borde_verde_delgado'>
+            <div class='col-md-12 border_linea_verde alineado_centrado'>
+                <div class='titulo_cnec_med titulo_cnec_mediano texto_organigrama'>
                     <span>ORGANIGRAMA</span> <br>CONSEJO DIRECTIVO 2017-2018: 
                 </div>
             </div>
-            <div class='col-md-12'>
+            <div class='col-md-12 background_organi'>
                 <div class="centrado organigrama">
                     <img src="{{asset('img/organigrama_nuevo_1.png')}}" alt="">
                 </div>
@@ -209,10 +203,10 @@
         <section class="row row-centered padding_organigrama ">
             <div class="col-md-12 alineado_izq">
                 <div class="row">
-                    <div class="col-sm-4 col-xs-6">
+                    <div class="col-sm-5 col-xs-6">
                         
                     </div>
-                    <div class="col-sm-5 col-xs-6 margen_arriba_200">
+                    <div class="col-sm-5 col-xs-6 margen_arriba_100">
                         <p>Desde el año 2002 cuando se instituyó el Premio Nacional de Ética y Valores en la Industria por la CONCAMIN</p>
                         <p class='galardonado borde_verde_delgado'><span>CNEC</span> ha sido galardonada en 12 ocasiones y 7 veces consecutivas.</p>
                     </div>
