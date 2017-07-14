@@ -111,9 +111,10 @@ class OrganiController extends Controller
 
 
    public function cnec(){
-    $puestos = Organigrama::all();
+    $puestos = Organigrama::orderBy('id', 'asc')->get();
     $elpresi = $puestos->shift();
     $puestos->all();
+
     return view('estatico.cnec', compact('puestos', 'elpresi'));
    }
 
