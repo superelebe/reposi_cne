@@ -194,7 +194,7 @@
                 <div class="centrado organigrama">
                     <div class='presi'>
                         <img src="{{$elpresi->imagen}}" alt="">
-                        {{$elpresi->nombre}}
+                        <div>{{$elpresi->nombre}}</div> 
                         <div class="pleca_titulo_organi">{{$elpresi->puesto->titulo}}</div>
                     </div>
                     @foreach ($puestos as $lalala)

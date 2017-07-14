@@ -29,7 +29,7 @@ class OrganiController extends Controller
     public function create()
     {
         $title = 'Crear Organigrama';
-        $alterado = Puesto::all();
+        $puestos = Puesto::all();
         return view('organigrama.create', compact('title', 'puestos'));
     }
 
