@@ -192,6 +192,17 @@
             </div>
             <div class='col-md-12 background_organi'>
                 <div class="centrado organigrama">
+                    @foreach ($puestos as $lalala)
+                        <div class="potato">
+                            <div class='row row-centered'>
+                                <div class="col-sm-12 col-centered">
+                                    <div><img class='imagen_al_100' src="{{$lalala->imagen}}" alt=""></div>
+                                </div>
+                                <div class="col-sm-12 col-centered">{{$lalala->nombre}}</div>
+                                <div class="col-sm-12 col-centered">{{$lalala->puesto->titulo}}</div>
+                            </div>
+                        </div>
+                    @endforeach
                     <img src="{{asset('img/organigrama_nuevo_1.png')}}" alt="">
                 </div>
             </div>

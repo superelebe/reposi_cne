@@ -7,6 +7,7 @@ use App\Banner;
 use App\Article;
 use App\User;
 use App\Calendar;
+use App\Organigrama;
 use App\Capacitacion;
 use Carbon\Carbon;
 use Mail;

@@ -108,6 +108,13 @@ class OrganiController extends Controller
      * @param  \App\Organigrama  $organigrama
      * @return \Illuminate\Http\Response
      */
+
+
+   public function cnec(){
+    $puestos = Organigrama::all();
+    return view('estatico.cnec', compact('puestos'));
+   }
+
     public function update($id, Request $request)
     {
         $organigrama = Organigrama::findOrfail($id);

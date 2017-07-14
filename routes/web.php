@@ -32,9 +32,8 @@ Route::post('ver_usuario/{id}/update', 'AdminController@updateEstatusUsuario');
 Route::get('afiliados', 'WelcomeController@afiliados');
 Route::get('detalle_afiliado/{id}', 'WelcomeController@detalleAfiliado');
 
-Route::get('cnec' , function(){
-  return view('estatico.cnec');
-});
+Route::get('cnec' , 'OrganiController@cnec');
+
 Route::get('servicios' , function(){
   return view('estatico.servicios');
 });
