@@ -2677,6 +2677,10 @@ margin-top: -2261px;
     color: white;
 }
 
+.margen_premio_cnec{
+	margin-top: 350px;
+}
+
 .presi{
 	width: 200px;
     margin: 20px auto;
@@ -2715,13 +2719,14 @@ margin-top: -2261px;
 		width: 85%;
 	}
 	.titulo_lineas_inicio{
-
 	    display: inline-block;
 	    vertical-align: bottom;
 	    margin-top: 4px;
 		width: 75%;
 	}
-
+	.margen_premio_cnec{
+		margin-top: 100px;
+	}
 
 	.margen_40_todo{
 		margin: 0px;

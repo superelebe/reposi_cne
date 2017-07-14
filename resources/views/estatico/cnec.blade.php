@@ -210,7 +210,6 @@
                             </div>
                         </div>
                     @endforeach
-                    <img src="{{asset('img/organigrama_nuevo_1.png')}}" alt="">
                 </div>
             </div>
         </section>  
