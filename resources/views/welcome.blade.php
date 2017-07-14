@@ -39,7 +39,7 @@
           <div class='iconos_cnec alineado_centro'>
             <i class="fa fa-lightbulb-o icono_azul_inicio" aria-hidden="true"></i>
           </div>
-          <div  class='titulo_lineas_cnec titulo_cnec_med_inicio'>
+          <div  class='titulo_lineas_inicio'>
             <div class='alineado_izq alineado_izq titulo_cnec_mediano titulo_cnec_med_inicio color_azul'>
               Y TÚ,<br>
               ¿ERES <br>
@@ -68,7 +68,7 @@
             <div class='iconos_cnec alineado_centro'>
               <i class="fa fa-search icono_azul_lupa" aria-hidden="true"></i>
             </div>
-            <div  class='titulo_lineas_cnec titulo_cnec_med_inicio'>
+            <div  class='titulo_lineas_inicio'>
               <div class='alineado_izq titulo_cnec_mediano titulo_cnec_med_inicio color_azul'>
                 ¿DÓNDE<br>
                 ESTÁN LOS <br>
@@ -100,7 +100,7 @@
               <div class='iconos_cnec alineado_centro'>
                 <i class="fa fa-line-chart icono_azul_lupa" aria-hidden="true"></i>
               </div>
-              <div  class='titulo_lineas_cnec'>
+              <div  class='titulo_lineas_inicio'>
                 <div class='alineado_izq alineado_izq titulo_cnec_mediano titulo_cnec_med_inicio color_azul'>
                   BENEFICIOS DE <br>FORMAR PARTE <br>DE LA CNEC
                 </div>
@@ -125,7 +125,7 @@
               <div class='iconos_cnec'>
                 <img src="{{asset('img/target_1.png')}}" alt="">
               </div>
-              <div  class='titulo_lineas_cnec'>
+              <div  class='titulo_lineas_inicio'>
                 <div class='alineado_izq alineado_izq titulo_cnec_mediano titulo_cnec_med_inicio color_azul'>
                   ÁREAS DE ESPECIALIDAD
                   </div>
@@ -192,7 +192,7 @@
               <div class='iconos_cnec'>
                 <i class="fa fa-calendar-check-o icono_inicio texto_verde" aria-hidden="true"></i>
               </div>
-              <div  class='titulo_lineas_cnec'>
+              <div  class='titulo_lineas_inicio'>
                 <div class='alineado_izq alineado_izq titulo_cnec_mediano titulo_cnec_med_inicio texto_verde'>
                   CALENDARIO
                 </div>
@@ -250,7 +250,7 @@
               <div class='iconos_cnec'>
                 <i class="fa fa-newspaper-o icono_inicio texto_azul" aria-hidden="true"></i>
               </div>
-              <div  class='titulo_lineas_cnec'>
+              <div  class='titulo_lineas_inicio'>
                 <div class='alineado_izq alineado_izq titulo_cnec_mediano titulo_cnec_med_inicio texto_azul'>
                   NOTICIAS
                 </div>

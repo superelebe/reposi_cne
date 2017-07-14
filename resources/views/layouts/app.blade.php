@@ -119,74 +119,87 @@
 <div class='fondo_4'>
     <div id="interes" class="limpiar">
         <div class="ocho80">
-            <h3>ENLACES DE INTERÉS</h3>
-            <div class="enlace">
-                <a target="_blank" title="Ir a la Página de la CNEC México" href="http://cnec.org.mx">
-                    <h5>CNEC <br />México</h5>
-                </a>
+            <div class="row row-centered">
+                <div class='col-12'>
+                    <h3>ENLACES DE INTERÉS</h3>
+                </div>
+                <div class="enlace">
+                    <a target="_blank" title="Ir a la Página de la CNEC México" href="http://cnec.org.mx">
+                        <h5>CNEC <br />México</h5>
+                    </a>
+                </div>
+                
+                <div class="enlace">
+                    <a target="_blank" title="Ir a la Página de la SOP Estado de Guanajuato" href="http://obrapublica.guanajuato.gob.mx">
+                        <h5>SOP<br />Guanajuato</h5>
+                    </a>
+                </div>
+                
+                <div class="enlace">
+                    <a target="_blank" title="Ir al enlace" href="http://www.economia.gob.mx/"> 
+                        <h5>Secretaría<br />de Economía</h5>
+                    </a>    
+                </div>
+                
+                 <div class="enlace">
+                    <a target="_blank" title="Ir a la Página de la Secretaría de Desarrollo Económico Sustentable del Estado de Guanajuato" href="http://sde.guanajuato.gob.mx/">       
+                        <h5>SDES<br />Guanajuato</h5>
+                    </a>
+                </div>
+                
+                 <div class="enlace" style="margin-left:0px;">
+                    <a target="_blank" title="Ir a la Página de la Secretaría de Trabajo y Previsión Social" href="http://www.stps.gob.mx/bp/index.html">       
+                        <h5>STPS <br />México</h5>
+                    </a>
+                </div>
+                
+                 <div class="enlace">
+                    <a target="_blank" title="Ir a la Página de la Secretaría de la Función Pública" href="http://www.funcionpublica.gob.mx/">      
+                        <h5>Función<br />Pública</h5>
+                    </a>
+                </div>
+                
+                 <div class="enlace">
+                    <a target="_blank" title="Ir a la Página de la Dirección General de Obra Pública de la ciudad de León Guanajuato" href="http://www.leon.gob.mx/obrapublica/">       
+                        <h5>Obra Pública<br />de León Gto.</h5>
+                    </a>
+                </div>
+                
+                 <div class="enlace">
+                    <a target="_blank" title="Ir a la Página de la Presidencia Municipal de León" href="http://www.leon.gob.mx/">       
+                        <h5>Presidencia<br /> de León</h5>
+                    </a>
+                </div>
+                
+                 <div class="enlace">
+                    <a target="_blank" title="Ir a la Página del Instituto Mexicano de Seguridad Social" href="http://www.imss.gob.mx/Pages/default.aspx">      
+                        <h5>IMSS <br /> México</h5>
+                    </a>
+                </div>     
             </div>
-            
-            <div class="enlace">
-                <a target="_blank" title="Ir a la Página de la SOP Estado de Guanajuato" href="http://obrapublica.guanajuato.gob.mx">
-                    <h5>SOP<br />Guanajuato</h5>
-                </a>
-            </div>
-            
-            <div class="enlace">
-                <a target="_blank" title="Ir al enlace" href="http://www.economia.gob.mx/"> 
-                    <h5>Secretaría<br />de Economía</h5>
-                </a>    
-            </div>
-            
-             <div class="enlace">
-                <a target="_blank" title="Ir a la Página de la Secretaría de Desarrollo Económico Sustentable del Estado de Guanajuato" href="http://sde.guanajuato.gob.mx/">       
-                    <h5>SDES<br />Guanajuato</h5>
-                </a>
-            </div>
-            
-             <div class="enlace" style="margin-left:0px;">
-                <a target="_blank" title="Ir a la Página de la Secretaría de Trabajo y Previsión Social" href="http://www.stps.gob.mx/bp/index.html">       
-                    <h5>STPS <br />México</h5>
-                </a>
-            </div>
-            
-             <div class="enlace">
-                <a target="_blank" title="Ir a la Página de la Secretaría de la Función Pública" href="http://www.funcionpublica.gob.mx/">      
-                    <h5>Función<br />Pública</h5>
-                </a>
-            </div>
-            
-             <div class="enlace">
-                <a target="_blank" title="Ir a la Página de la Dirección General de Obra Pública de la ciudad de León Guanajuato" href="http://www.leon.gob.mx/obrapublica/">       
-                    <h5>Obra Pública<br />de León Gto.</h5>
-                </a>
-            </div>
-            
-             <div class="enlace">
-                <a target="_blank" title="Ir a la Página de la Presidencia Municipal de León" href="http://www.leon.gob.mx/">       
-                    <h5>Presidencia<br /> de León</h5>
-                </a>
-            </div>
-            
-             <div class="enlace">
-                <a target="_blank" title="Ir a la Página del Instituto Mexicano de Seguridad Social" href="http://www.imss.gob.mx/Pages/default.aspx">      
-                    <h5>IMSS <br /> México</h5>
-                </a>
-            </div>
-            
         </div>
     </div>
 
 
-    <div id="menu2" class="clearfix">
-        <div class="ocho80 limpiar">
-            <ul>
-                <li><a href="{{ url('/servicios') }}">SERVICIOS</a></li>
-                <li><a href="{{ url('/afiliados') }}">AFILIADOS</a></li>
-                <li><a href="{{ url('/contacto') }}">CONTACTO</a></li>
-                <li><a href="{{ url('/capacitacion') }}">CAPACITACIÓN</a></li>
-                <li><a href="{{ url('/') }}">AFILIATE</a></li>
-            </ul>
+    <div id="menu2">
+        <div class="ocho80">
+            <div class="content_flex">
+                <div class="item_flex">
+                    <a class='link_menu2' href="{{ url('/servicios') }}">SERVICIOS</a>
+                </div>
+                <div class="item_flex">
+                    <a class='link_menu2' href="{{ url('/afiliados') }}">AFILIADOS</a>
+                </div>
+                <div class="item_flex">
+                    <a class='link_menu2' href="{{ url('/contacto') }}">CONTACTO</a>
+                </div>
+                <div class="item_flex">
+                    <a class='link_menu2' href="{{ url('/capacitacion') }}">CAPACITACIÓN</a>
+                </div>
+                <div class="item_flex">
+                    <a class='link_menu2' href="{{ url('/servicios') }}">SERVICIOS</a>
+                </div>         
+            </div>      
         </div>
     </div>
 
@@ -204,16 +217,16 @@
                         </ul>
                     </div>  
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 alineado_centro">
                     <div id="telefonos">
-                        <span class="tel">TEL: +52 01 (477) 711 21 68</span> <br>
+                        <span class="tel">TEL: +52 01 (477) 711 21 68</span><br>
                         <span class="fax">FAX: +52 01 (477) 711 04 63</span><br>
                         <span class="contactanos">CONTÁCTANOS</span><a href="contacto.php" title="Escribir un correo a la CNEC"><img src="{{ asset('img/correo-img.gif') }}" alt="img correo" class="sobre" /></a>
                     </div>   
                 </div>
-                <div class='col-md-3'>
+                <div class='col-md-3 col-7 col-centered'>
                     <div id="logofooter">
-                        <a href="index.php" title="Ir al Inicio"><img src="{{ asset('img/cnec-logo-footer.png') }}" alt="cnec logo" /></a>
+                        <a href="index.php" title="Ir al Inicio"><img src="{{ asset('img/cnec-logo-footer.gif') }}" alt="cnec logo" /></a>
                     </div>    
                 </div>
             </div>

@@ -262,10 +262,9 @@ h3{
 }
 
 #interes .enlace{
-	float:left;
-	margin-left:20px;
-	padding-top:10px;
-	position:relative;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
 }
 
 #interes .enlace a{
@@ -307,11 +306,9 @@ h3{
 }
 
 #footer #direccion{
-	width:175px;
-	float:left;
-	text-align:right;
-	font-size:.8em;
-	color: #455560;
+    font-size: .8em;
+    color: #455560;
+    margin-bottom: 30px;
 }
 
 #footer #direccion li{
@@ -320,7 +317,6 @@ h3{
 
 #footer #telefonos{
 	font-size:1.4em;
-	text-align: left;
 }
 #footer #telefonos .tel{
 	color:#B5BFC7;
@@ -335,13 +331,13 @@ h3{
 }
 
 #footer #telefonos .sobre{
-	margin: 5px 0 0 7px;
+	margin: -10px 10px 0 7px;
+	width: 30px;
 }
 
 
 #footer #logofooter{
-	width: 180px;
-	float: left;
+	margin: 50px 0 10px 0;
 }
 #footer #logofooter img{
 	width: 100%;
@@ -2044,7 +2040,7 @@ AZULGRISOSCURO : #455560;
 /*----- CLASES -----*/
 .ocho80 {
     max-width: 880px;
-    min-width: 400px;
+    min-width: 375px;
     margin: 0 auto;
 }
 
@@ -2654,8 +2650,61 @@ margin-top: -2261px;
     margin-top: -28px;
 } 
 
+.link_menu2{
+    background-color: #6f8495;
+    color: white;
+    padding: 10px 20px;
+}
+
+.item_flex{
+    margin: 20px;
+}
+
+.content_flex{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+}
+
+.imagen_organi{
+	width: 150px;
+    margin: 0 auto;
+}
+
+.pleca_titulo_organi{
+	background-color: #a6c470;
+    padding: 2px 30px;
+    color: white;
+}
+
+.presi{
+	width: 200px;
+    margin: 0 auto;
+}
+
+.potato{
+	max-width: 280px;
+    margin: 0 auto;
+    width: 80%;
+    display: inline-block;
+}
 
 @media (min-width:650px)  {
+	#footer #direccion{
+		width:175px;
+		float:left;
+		text-align:right;
+		font-size:.8em;
+		color: #455560;
+	}
+	#interes .enlace {
+	    margin-left: 8px;
+	    margin-right: 8px;
+	    margin-top: 10px;
+	}
+	#footer #logofooter{
+		margin: 0 auto;
+	}
 	.imagen_ques_es{
 	    margin-left: 7%;
 	}
@@ -2665,6 +2714,15 @@ margin-top: -2261px;
 	.titulo_lineas_cnec{
 		width: 85%;
 	}
+	.titulo_lineas_inicio{
+
+	    display: inline-block;
+	    vertical-align: bottom;
+	    margin-top: 4px;
+		width: 75%;
+	}
+
+
 	.margen_40_todo{
 		margin: 0px;
 	}

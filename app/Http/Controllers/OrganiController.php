@@ -29,7 +29,7 @@ class OrganiController extends Controller
     public function create()
     {
         $title = 'Crear Organigrama';
-        $puestos = Puesto::all();
+        $alterado = Puesto::all();
         return view('organigrama.create', compact('title', 'puestos'));
     }
 
@@ -112,7 +112,9 @@ class OrganiController extends Controller
 
    public function cnec(){
     $puestos = Organigrama::all();
-    return view('estatico.cnec', compact('puestos'));
+    $elpresi = $puestos->shift();
+    $puestos->all();
+    return view('estatico.cnec', compact('puestos', 'elpresi'));
    }
 
     public function update($id, Request $request)
