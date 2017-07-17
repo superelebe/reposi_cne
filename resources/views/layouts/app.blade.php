@@ -52,39 +52,66 @@
 </head>
 <body><!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 <!-- ////////////////////////////////////////////// H E A D E R ///////////////////////////////////////////////////// -->
-
-<div id="header">
-    <div class="ocho80 limpiar">
         <div id="menu">
-            <ul>
-                <li><a href="{{ url('/cnec') }}">¿QUÉ ES LA CNEC?</a></li>
-                <li><a href="{{ url('/servicios') }}">SERVICIOS</a></li>
-                <li><a href="{{ url('/afiliados') }}">AFILIADOS</a></li>
-                <li><a href="{{ url('/contacto') }}">CONTACTO</a></li>
-                <li><a href="{{ url('/capacitacion') }}">CAPACITACIÓN</a></li>
-                @if (Auth::guard('web')->check())
-                    <li><a href="{{ url('/logout') }}" onclick="event.preventDefault();
-                                                 document.getElementById('logout-form').submit();">
-                                        SALIR
-                                    </a>
+                <ul>
+                    <li><a href="{{url('/')}}">HOME</a></li>
+                    <li><a href="{{ url('/cnec') }}">ORGANIGRAMA</a></li>
+                    <li><a href="{{ url('/cnec') }}">¿QUÉ ES LA CNEC?</a></li>
+                    <li><a href="{{ url('/capacitacion') }}">CERTIFICACIÓN</a></li>
+                    <li><a href="{{ url('/afiliados') }}">AFILIADOS</a></li>
 
-                                    <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
-                                        {{ csrf_field() }}
-                                    </form>>SALIR</a></li>
+                    <li><a href="{{ url('/capacitacion') }}">CERTIFICACIÓN</a></li>
+                    <li><a href="{{ url('/capacitacion') }}">CAPACITACIÓN</a></li>
+                    <li><a href="{{ url('/capacitacion') }}">BOLSA DE TRABAJO</a></li>
+                    <li><a href="{{ url('/servicios') }}">SERVICIOS</a></li>
+                    <li><a href="{{ url('/convenios') }}">CONVENIOS</a></li>
+                    @if (Auth::guard('web')->check())
+                    <li><a href="{{ url('/logout') }}" onclick="event.preventDefault();
+                       document.getElementById('logout-form').submit();">
+                       SALIR
+                   </a>
+
+                   <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                    {{ csrf_field() }}
+                </form>>SALIR</a></li>
                 @else
-                    <li><a href="{{ url('/register') }}">AFÍLIATE</a></li>
+                <li><a href="{{ url('/register') }}">AFÍLIATE</a></li>
                 @endif
-                <li><a href="{{ url('/capacitacion') }}">CAPACITACIÓN</a></li>
+                <li><a href="{{ url('/capacitacion') }}">CONTACTO</a></li>
 
             </ul>
-        </div>
-        <div id="logos">
-            <a href="#"><img src="{{ asset('img/logo-concamin.gif') }}" alt="logos" /></a>
-            <a href="#"><img src="{{ asset('img/logo-fidic.gif') }}"  alt="logos" /></a>
-            <a href="#"><img src="{{ asset('img/logo-fepac.gif') }}" alt="logos" /></a>
-            <a href="#"><img src="{{ asset('img/logo-acec.gif') }}" alt="logos" /></a>
-            <a href="#"><img src="{{ asset('img/logo-acec2.gif') }}" alt="logos" /></a>
-        </div>
+        </div>  
+<div id="header">
+    <div class='header_movil'>
+        
+    
+        <div class="row row-centered">
+            <div class="col-12 col-md-4 col-centered">              
+            </div>
+            <div class="col-12 col-md-7 col-centered">
+                <div id="logos">
+                    <div class='img_logos'>
+                        <img src="{{ asset('img/logo-concamin.gif') }}" alt="logos" />
+                    </div>
+                    <div class='img_logos'>
+                        <img src="{{ asset('img/logo-fidic.gif') }}"  alt="logos" />
+                    </div>
+                    <div class='img_logos'>
+                        <img src="{{ asset('img/logo-fepac.gif') }}" alt="logos" />
+                    </div>
+                    <div class='img_logos'>
+                        <img src="{{ asset('img/logo-acec.gif') }}" alt="logos" />
+                    </div>
+                    <div class='img_logos'>
+                        <img src="{{ asset('img/logo-acec2.gif') }}" alt="logos" />
+                    </div>
+                </div>
+                
+            </div>
+        </div>  
+    </div>
+
+    <div class="ocho80 limpiar">
     </div>
 </div>
 

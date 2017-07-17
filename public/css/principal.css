@@ -83,40 +83,59 @@ h3{
 #header {
 	background-color: #808c97;
 }
-#header #menu {
-	width: 347px;
-	font-size: .71em;
-	background: #F1F1F1;
-	float:left;
-	padding-left:3px;
-	text-align:center;
+#menu {
+    position: fixed;
+    width: 347px;
+    left: 200px;
+    font-size: .71em;
+    background: #F1F1F1;
+    padding-left: 3px;
+    margin: 0 auto;
+    text-align: center;
+    z-index: 999;
 }
-#header #menu li {
-	height: 15px;
-	width: 162px;
-	float:left;
-	margin:3px 5px;
-}
+	#menu li {
+	    height: 15px;
+	    width: 46%;
+	    display: inline-block;
+	    margin: 3px 5px;
+	    text-align: left;
+	}
 
-#header #menu li a{
-	color:#f1f1f1;
-	height: 12px;
-	width: 162px;
-	display:block;
-	padding-bottom: 15px;
-	background:#808C97;
+#menu li a{
+	color: #f1f1f1;
+    height: 12px;
+    display: block;
+    padding-bottom: 15px;
+    background: #808C97;
+    padding-left: 5px;
 }
-#header #menu li a:hover{
+#menu li a:hover{
 	background:#A1BA77;
 }
 
 #header #logos{
-	float:left;
 	width:100%;
+	display: inline-block;
 	margin: 10px 0;
 }
+
+#header #logos a{
+	width: 25%;
+}
+
+.img_logos{
+	width: 30%;
+	display: inline-block;
+	text-align: center;
+}
+
+.header_movil{
+	width:100%;
+}
+
 #header #logos img{
-	margin:5px 0 0 27px;
+	margin:5px 0;
 }
 
 /*----- ROTADOR -----*/
@@ -2727,7 +2746,10 @@ margin-top: -2261px;
 	.margen_premio_cnec{
 		margin-top: 100px;
 	}
-
+	.img_logos{
+		width: 18%;
+		display: inline-block;
+	}
 	.margen_40_todo{
 		margin: 0px;
 	}
@@ -2776,7 +2798,8 @@ margin-top: -2261px;
 		margin-top: -70px;
 	}
 	#header #logos{
-		width:530px;
+		max-width:530px;
 	}
+
 }
 
