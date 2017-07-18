@@ -12,6 +12,7 @@ use App\Capacitacion;
 use Carbon\Carbon;
 use Mail;
 use App\Mail\CorreoContactoAfiliado;
+use App\Mail\NuevoCorreoContacto;
 
 
 class WelcomeController extends Controller{
@@ -33,6 +34,25 @@ class WelcomeController extends Controller{
     }
 
 
+
+    public function enviarcontacto(Request $request){
+        $this->validate($request,[
+            'correo'        =>  'required|email|min:5',
+            'nombre'        =>  'required|min:3',
+            'mensaje'   =>  'required|min:3',
+            'telefono'      =>  'required',
+            'asunto'        =>  'required',
+        ]);
+        $data = [
+              'nombre' => $request->nombre,
+              'correo' => $request->correo,
+              'mensaje' => $request->mensaje,
+              'telefono' => $request->telefono,
+              'asunto' => $request->asunto
+        ];
+        Mail::to('webmaster@elebegraph.com')->send(new NuevoCorreoContacto($data));
+        return redirect('/');
+    }
    public function update(){
 
    }

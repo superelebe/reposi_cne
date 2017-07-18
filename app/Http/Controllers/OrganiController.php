@@ -46,7 +46,7 @@ class OrganiController extends Controller
             if ($request->hasFile('imagen')) {
                 $imagen = $request->file('imagen');
                 $filename = time().'.'.$imagen->getClientOriginalExtension();
-                $path = public_path('img/' . $filename);
+                $path = 'img/'.$filename;
                 Image::make($imagen)->resize(null, 400, function ($constraint) {
                     $constraint->aspectRatio();
                     $constraint->upsize();
@@ -124,7 +124,7 @@ class OrganiController extends Controller
         if ($request->hasFile('imagen')) {
             $imagen = $request->file('imagen');
             $filename = time().'.'.$imagen->getClientOriginalExtension();
-            $path = public_path('img/' . $filename);
+            $path = 'img/'.$filename;
             Image::make($imagen)->resize(null, 400, function ($constraint) {
                     $constraint->aspectRatio();
                     $constraint->upsize();

@@ -189,7 +189,7 @@
                 <div class='titulo_cnec_med titulo_cnec_mediano texto_organigrama'>
                     <span>ORGANIGRAMA</span> <br>CONSEJO DIRECTIVO 2017-2018: 
                 </div>
-            </div>
+            </div> 
             <div class='col-md-12 background_organi'>
                 <div class="centrado organigrama">
                     <div class='presi'>
@@ -223,7 +223,7 @@
                     <div class="col-sm-5 col-xs-6">
                         
                     </div>
-                    <div class="col-sm-5 col-xs-6 margen_arriba_100">
+                    <div class="col-sm-5 col-xs-6 texto_estrellas">
                         <p>Desde el año 2002 cuando se instituyó el Premio Nacional de Ética y Valores en la Industria por la CONCAMIN</p>
                         <p class='galardonado borde_verde_delgado'><span>CNEC</span> ha sido galardonada en 12 ocasiones y 7 veces consecutivas.</p>
                     </div>

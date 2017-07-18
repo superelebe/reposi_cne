@@ -4,7 +4,7 @@ $( function() {
 
 $(document).ready(function() {
 
-    $('#slides').jqFancyTransitions({ width:530, height:300, delay:3000, titleOpacity:0, position:'top', direction:'fountain' });
+    $('#slides').jqFancyTransitions({ width:400, height:300, delay:3000, titleOpacity:0, position:'top', direction:'fountain' });
 
 	$("#start").datepicker({ dateFormat: 'yy-mm-dd', minDate: new Date });
         $("#end").datepicker({ dateFormat: 'yy-mm-dd' }).bind("change",function(){

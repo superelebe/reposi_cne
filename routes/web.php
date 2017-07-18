@@ -16,6 +16,12 @@ Route::get('/', 'WelcomeController@index');
 
 Route::get('usuarios/home', 'HomeController@index')->name('home');
 
+Route::get('contacto' , function(){
+  return view('estatico.contacto');
+});
+
+Route::post('enviar_correo_contacto', 'WelcomeController@enviarcontacto')->name('enviar_correo_contacto');
+
 Route::get('editarusuario', 'HomeController@editar')->name('editar-afiliado');
 Route::post('usuarios/{id}/update', 'HomeController@update');
 

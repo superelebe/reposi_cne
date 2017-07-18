@@ -41,7 +41,7 @@ class HomeController extends Controller
         $subareas = Subarea::all();
         $ciudades = Ciudad::all();
         $usuario = Auth::user();
-        return view('usuarios.editar',compact('usuario','title', 'servicios', 'ciudades', 'subareas' ));  
+        return view('usuarios.editar',compact('usuario','title', 'servicios', 'ciudades', 'subareas' ));
     }
 
     public function update($id,Request $request){

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Puesto;
 use Illuminate\Http\Request;
+use App\Organigrama;
 
 class PuestoController extends Controller
 {
@@ -80,9 +81,8 @@ class PuestoController extends Controller
             return URL::to('puesto/'. $id . '/edit');
         }
 
-        
         $puesto = Puesto::findOrfail($id);
-        return view('event.edit',compact('title','puesto'  ));
+        return view('puesto.edit',compact('title','puesto' ));
     }
 
     /**
