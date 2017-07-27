@@ -13,6 +13,7 @@ use Carbon\Carbon;
 use Mail;
 use App\Mail\CorreoContactoAfiliado;
 use App\Mail\NuevoCorreoContacto;
+use App\Mail\SolicitudAfiliarse;
 
 
 class WelcomeController extends Controller{
@@ -50,7 +51,7 @@ class WelcomeController extends Controller{
               'telefono' => $request->telefono,
               'asunto' => $request->asunto
         ];
-        Mail::to('webmaster@elebegraph.com')->send(new NuevoCorreoContacto($data));
+        Mail::to('emmanegr@gmail.com')->send(new NuevoCorreoContacto($data));
         return redirect('/');
     }
    public function update(){
@@ -71,9 +72,35 @@ class WelcomeController extends Controller{
    		$afiliados = User::Afiliados()->paginate(6);
    		return view('afiliados.index', compact('afiliados'));
    }
+
+   public function afiliarse(){
+      return view('estatico.afiliarse');
+   }
+
    public function detalleAfiliado($id, Request $request){
       $afiliado = User::findOrfail($id);
       return view('afiliados.detalle_afiliado', compact('afiliado'));
+   }
+
+   public function enviarCorreoAfiliarse(Request $request){
+        $this->validate($request,[
+            'email'                =>  'required|email|min:5',
+            'empresa'               =>  'required|min:3',
+            'telefono'              =>  'required|min:3',
+            'representante'         =>  'required|min:3'
+        ]);
+        $data = [
+              'email' => $request->email,
+              'empresa' => $request->empresa,
+              'telefono' => $request->telefono,
+              'representante' => $request->representante,
+              'direccion' => $request->direccion,
+              'rfc' => $request->rfc,
+              'ciudad' => $request->ciudad,
+              'servicios' => $request->servicios
+        ];
+        Mail::to('emmanegr@gmail.com')->send(new SolicitudAfiliarse($data));
+        return redirect('/');
    }
 
 }

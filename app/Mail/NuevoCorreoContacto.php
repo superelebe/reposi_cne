@@ -28,6 +28,7 @@ class NuevoCorreoContacto extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails.contacto.correoContacto')->with(['data', $this->data]);
+        $subject = 'Correo Contacto CNEC';
+        return $this->markdown('emails.contacto.correoContacto')->with(['data', $this->data])->subject($subject);
     }
 }

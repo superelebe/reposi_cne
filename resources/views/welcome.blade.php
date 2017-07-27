@@ -9,7 +9,6 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 <div class='inicio_1'>
-  <div class="ocho80">
   <div id="rotador-index">
                     @foreach($otro_banner as $banner)
                           <div title="{{$banner->titulo}}">
@@ -33,6 +32,7 @@
         <div title="Aviso de Privacidad"><a href="http://www.cnecgto.org/avisoprivacidad"><img src="img/rot-banner-05.jpg" /></a></div> 
         
   </div>
+  <div class="ocho80">
     <div class='row row-centered'>
       <div class='col-sm-5 col-centered alineado_izq margen_30'>
         <div>
@@ -353,13 +353,19 @@
             <a href="{{url('')}}"><img class='largo_imagenes_cursos' src="{{asset('img/banner_iniciar_sesion.png')}}" alt=""></a>
           </div>
           <div class="col-sm-6 margen_10">
-            <a href="{{url('')}}"><img class='largo_imagenes_cursos' src="{{asset('img/banner_registro_afiliados.png')}}" alt=""></a>
+            <a href="{{url('register')}}"><img class='largo_imagenes_cursos' src="{{asset('img/banner_registro_afiliados.png')}}" alt=""></a>
           </div>
           <div class="col-sm-6 margen_10">
-            <a href="{{url('')}}"><img class='largo_imagenes_cursos' src="{{asset('img/banner_ley_federal.png')}}" alt=""></a>
+            <a href="http://www.cnecgto.org/leydecondominio.html"><img class='largo_imagenes_cursos' src="{{asset('img/banner_ley_federal.png')}}" alt=""></a>
           </div>
           <div class="col-sm-6 margen_10">
-            <a href="{{url('')}}"><img class='largo_imagenes_cursos' src="{{asset('img/banner_ley_trabajo.png')}}" alt=""></a>
+            <a href="http://www.cnecgto.org/leydetrabajo.html"><img class='largo_imagenes_cursos' src="{{asset('img/banner_ley_trabajo.png')}}" alt=""></a>
+          </div>
+          <div class="col-sm-6 margen_10">
+            <a href="http://www.cnecgto.org/avisoprivacidad/CNEC_GTO_Aviso_de_Privacidad.pdf"><img class='largo_imagenes_cursos' src="{{asset('img/banner_aviso_privacidad.png')}}" alt=""></a>
+          </div>
+          <div class="col-sm-6 margen_10">
+            <a href="http://www.cnecgto.org/reglasoperatividad/reglas_de_operacion.pdf"><img class='largo_imagenes_cursos' src="{{asset('img/banner_reglas_opertatividad.png')}}" alt=""></a>
           </div>
           <div class="col-sm-12 margen_10">
             <a href="{{url('')}}"><img class='largo_imagenes_cursos' src="{{asset('img/banner_convenios.png')}}" alt=""></a>

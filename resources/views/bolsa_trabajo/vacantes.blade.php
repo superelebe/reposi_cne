@@ -19,7 +19,7 @@
                             <p>{{date("d M", strtotime($vacantes->start))}}</p>
                             <p>{{substr(strip_tags($vacantes->descripcion),0,50)}}{{strlen(strip_tags($vacantes->descripcion)) > 50 ? "...":""}}</p>
                         </div>
-                        <div class='alineado_derecha'><a  href="/bolsa_trabajo_cnec/{{$vacantes->id}}">Ver mas</a></div>
+                        <div class='alineado_derecha'><a  href="bolsa_trabajo_cnec/{{$vacantes->id}}">Ver mas</a></div>
                     </div>
                     @endforeach 
             </div>       

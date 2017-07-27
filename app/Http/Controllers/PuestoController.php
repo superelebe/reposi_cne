@@ -15,7 +15,7 @@ class PuestoController extends Controller
      */
     public function index()
     {
-        $puestos = Puesto::paginate(6);
+        $puestos = Puesto::paginate(15);
         return view('puesto.index',compact('puestos'));
     }
 

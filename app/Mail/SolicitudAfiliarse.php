@@ -7,10 +7,11 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class CorreoVacante extends Mailable
+class SolicitudAfiliarse extends Mailable
 {
     use Queueable, SerializesModels;
     public $data;
+
     /**
      * Create a new message instance.
      *
@@ -27,8 +28,7 @@ class CorreoVacante extends Mailable
      * @return $this
      */
     public function build()
-    {   
-        $
-        return $this->markdown('emails.vacantes.mensajevacante')->with(['data', $this->data]);
+    {
+        return $this->markdown('emails.afiliado.correoafiliarse')->with(['data', $this->data]);
     }
 }

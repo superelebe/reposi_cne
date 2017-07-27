@@ -38,7 +38,7 @@
                                 </td>
                                 <td bgcolor="#455560">
                                     <form class="forma3" method="POST" action="{{route('enviar_correo_vacante')}}" enctype="multipart/form-data">
-                                        <input type = 'hidden' name = '_token' value = '{{Session::token()}}'>
+                                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                         <input type = 'hidden' name = 'nombreVacante' value = '{{$vacante->titulo}}'>
                                         <input type = 'hidden' name = 'empresaVacante' value = '{{$vacante->empresa}}'>
                                         <div class="form-group">

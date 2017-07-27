@@ -14,8 +14,8 @@ class Capacitacion extends Model
         'title','start','end ','url','color','pdf', 'horarios', 'inversion', 'descripcion', 'lugar'
     ];
     public function scopeFechaActivo($query){
-    	$now = Carbon::today('America/Mexico_City');
-    	return $query->where('end', '>=',$now)->orderBy('start')->limit(10);
+    	$now = Carbon::today('America/Mexico_City')->year;
+    	return $query->where('end', '>=',$now)->orderBy('start')->limit(2);
     }
 
 }

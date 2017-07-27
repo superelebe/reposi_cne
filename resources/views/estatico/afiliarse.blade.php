@@ -22,7 +22,7 @@
                                         </div>
                                     </div>
                                     <div class="col-sm-12  col-centered ">
-                                        <form id="form_afiliate" class="form-horizontal alineado_izq" role="form" method="POST" action="{{ route('register') }}">
+                                        <form id="form_afiliate" class="form-horizontal alineado_izq" role="form" method="POST" action="{{ route('enviar_correo_afiliarse') }}">
                                             {{ csrf_field() }}
 
                                             <div class="form-group{{ $errors->has('empresa') ? ' has-error' : '' }} row">
@@ -94,11 +94,11 @@
                                             </div>
                                             <?php $ciudad = App\Ciudad::all(); ?>
                                             <div class="form-group{{ $errors->has('rfc') ? ' has-error' : '' }}">
-                                                <label for="rfc" class="col-md-4 control-label">Ciudad</label>
+                                                <label for="ciudad" class="col-md-4 control-label">Ciudad</label>
                                                 <select name="ciudad" class="form-control">
                                                     <option value="" selected disabled style="display:none">Ciudad</option>
                                                     @foreach ($ciudad as $ciudad)
-                                                    <option value="{{ $ciudad->id }}">{{ $ciudad->nombre }}</option>
+                                                    <option value="{{ $ciudad->nombre }}">{{ $ciudad->nombre }}</option>
                                                     @endforeach
                                                 </select>
                                             </div>
@@ -108,16 +108,16 @@
                                                 <select name="servicios" class="form-control" id='cat'>
                                                     <option value="" selected disabled style="display:none">Servicios</option>
                                                     @foreach ($serivios as $service)
-                                                    <option value="{{ $service->id }}">{{ $service->nombre }}</option>
+                                                    <option value="{{ $service->nombre }}">{{ $service->nombre }}</option>
                                                     @endforeach
                                                 </select>
-                                            </div>
+                                            </div><!-- 
                                             <div class="form-group{{ $errors->has('subarea') ? ' has-error' : '' }}">
                                                 <label for="subarea" class="col-md-12 control-label">Sub Area</label>
                                                 <select name="subarea" class="form-control" id='subarea'>
                                                     <option value="" selected disabled style="display:none">Subareas</option>
                                                 </select>
-                                            </div>
+                                            </div> -->
                                             <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }} row">
                                                 <label for="email" class="col-md-12 control-label">Correo Electronico</label>
 
@@ -129,26 +129,6 @@
                                                         <strong>{{ $errors->first('email') }}</strong>
                                                     </span>
                                                     @endif
-                                                </div>
-                                            </div>
-                                            <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }} row">
-                                                <label for="password" class="col-md-12 control-label">Password</label>
-
-                                                <div class="col-md-12">
-                                                    <input id="password" type="password" class="form-control" name="password" required>
-
-                                                    @if ($errors->has('password'))
-                                                    <span class="help-block">
-                                                        <strong>{{ $errors->first('password') }}</strong>
-                                                    </span>
-                                                    @endif
-                                                </div>
-                                            </div>
-                                            <div class="form-group row">
-                                                <label for="password-confirm" class="col-md-12 control-label">Confirmar Password</label>
-
-                                                <div class="col-md-12">
-                                                    <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
                                                 </div>
                                             </div>
 

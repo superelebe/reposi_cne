@@ -7,6 +7,24 @@
 			<div class="tiraservicio limpiar">
 				<div class="icoservicio"> </div>
 				<div class="icoservicio">
+		        	<img src="img/serv-13.png" alt="servicios cnec" />
+	                <h5>CERTIFICACIÓN <span>DOCUMENTAL</span></h5>
+	                <span class="vermas azulmedio"><a href="{{ url('/') }}">VER MÁS</a></span>
+		        </div>
+				<div class="icoservicio">
+		        	<img src="img/serv-14.png" alt="servicios cnec" />
+	                <h5>CERTIFICACIÓN  DE  <span>COMPETENCIAS</span></h5>
+	                <span class="vermas azulclaro"><a href="{{ url('/') }}">VER MÁS</a></span>
+		        </div>
+			</div>
+
+		    <div class="tiraservicio limpiar">
+				<div class="icoservicio">
+		        	<img src="img/serv-12.png" alt="servicios cnec" />
+	                <h5>BOLSA DE <span>TRABAJO</span></h5>
+	                <span class="vermas azuloscuro"><a href="{{ url('/todas_las_vacantes') }}">VER MÁS</a></span>
+		        </div>
+				<div class="icoservicio">
 		        	<img src="img/serv-1.png" alt="servicios cnec" />
 	                <h5>REPORTES DE <span>LICITACIONES</span> PÚBLICAS (SIVA)</h5>
 	                <span class="vermas azulmedio"><a href="{{ url('/licitaciones') }}">VER MÁS</a></span>
@@ -17,7 +35,7 @@
 	                <span class="vermas azulclaro"><a href="{{ url('/monitoreo') }}">VER MÁS</a></span>
 		        </div>
 			</div>
-		    
+
 		    <div class="tiraservicio limpiar">
 				<div class="icoservicio">
 		        	<img src="img/serv-3.png" alt="servicios cnec" />

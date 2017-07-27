@@ -65,7 +65,7 @@
                     </table>    
                 </div>    
             </div>
-            {!! $trabajos->link() !!}
+            {!! $trabajos->links() !!}
         </div>
 
     </div>

@@ -52,76 +52,77 @@
 </head>
 <body><!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 <!-- ////////////////////////////////////////////// H E A D E R ///////////////////////////////////////////////////// -->
-<div>
-    <div id="menu">
-        <ul>
-            <li><a href="{{url('/')}}">HOME</a></li>
-            <li><a href="{{ url('/cnec') }}">ORGANIGRAMA</a></li>
-            <li><a href="{{ url('/cnec') }}">¿QUÉ ES LA CNEC?</a></li>
-            <li><a href="{{ url('/capacitacion') }}">CERTIFICACIÓN</a></li>
-            <li><a href="{{ url('/afiliados') }}">AFILIADOS</a></li>
-
-            <li><a href="{{ url('/capacitacion') }}">CERTIFICACIÓN</a></li>
-            <li><a href="{{ url('/capacitacion') }}">CAPACITACIÓN</a></li>
-            <li><a href="{{ url('/capacitacion') }}">BOLSA DE TRABAJO</a></li>
-            <li><a href="{{ url('/servicios') }}">SERVICIOS</a></li>
-            <li><a href="{{ url('/convenios') }}">CONVENIOS</a></li>
-            @if (Auth::guard('web')->check())
-            <li><a href="{{ url('/logout') }}" onclick="event.preventDefault();
-               document.getElementById('logout-form').submit();">
-               SALIR
-           </a>
-
-           <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
-            {{ csrf_field() }}
-        </form>>SALIR</a></li>
-        @else
-        <li><a href="{{ url('/register') }}">AFÍLIATE</a></li>
-        @endif
-        <li><a href="{{ url('/capacitacion') }}">CONTACTO</a></li>
-
-        </ul>
-    </div>  
-    <div id="header">
-        <div class='header_movil'>
-            
+<div class='bloque_menu'>
+    <div class='barra_navegador'>
         
-            <div class="row row-centered">
-                <div class="col-md-4 col-centered">              
-                </div>
-                <div class="col-12 col-md-7 col-centered">
-                    <div id="logos">
-                        <div class='img_logos'>
-                            <img src="{{ asset('img/logo-concamin.gif') }}" alt="logos" />
-                        </div>
-                        <div class='img_logos'>
-                            <img src="{{ asset('img/logo-fidic.gif') }}"  alt="logos" />
-                        </div>
-                        <div class='img_logos'>
-                            <img src="{{ asset('img/logo-fepac.gif') }}" alt="logos" />
-                        </div>
-                        <div class='img_logos'>
-                            <img src="{{ asset('img/logo-acec.gif') }}" alt="logos" />
-                        </div>
-                        <div class='img_logos'>
-                            <img src="{{ asset('img/logo-acec2.gif') }}" alt="logos" />
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>  
-        </div>
+    </div>
+    <div class='ocho80 menu_fixeado'>
+        <div id="menu">
+            <ul>
+                <li><a href="{{url('/')}}">HOME</a></li>
+                <li><a href="{{ url('/organigrama_cnec') }}">ORGANIGRAMA</a></li>
+                <li><a href="{{ url('/cnec') }}">¿QUÉ ES LA CNEC?</a></li>
+                <li><a href="{{ url('/capacitacion') }}">CERTIFICACIÓN</a></li>
+                <li><a href="{{ url('/afiliados') }}">AFILIADOS</a></li>
 
-        <div class="ocho80 limpiar">
-        </div>
-    </div>  
+                <li><a href="{{ url('/eventos') }}">CALENDARIO</a></li>
+                <li><a href="{{ url('/capacitacion') }}">CAPACITACIÓN</a></li>
+                <li><a href="{{ url('/todas_las_vacantes') }}">BOLSA DE TRABAJO</a></li>
+                <li><a href="{{ url('/servicios') }}">SERVICIOS</a></li>
+                <li><a href="{{ url('/convenios') }}">CONVENIOS</a></li>
+                @if (Auth::guard('web')->check())
+                <li><a href="{{ url('/logout') }}" onclick="event.preventDefault();
+                   document.getElementById('logout-form').submit();">
+                   SALIR
+               </a>
+
+               <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                {{ csrf_field() }}
+            </form>>SALIR</a></li>
+            @else
+            <li><a href="{{ url('/afiliarse') }}">AFÍLIATE</a></li>
+            @endif
+            <li><a href="{{ url('/contacto') }}">CONTACTO</a></li>
+
+            </ul>
+        </div>  
+        <div id="header">
+            <div class='header_movil'>
+                
+            
+                <div class="row row-centered">
+                    <div class="col-12 col-centered">
+                        <div id="logos">
+                            <div class='img_logos'>
+                                <img src="{{ asset('img/logo-concamin.gif') }}" alt="logos" />
+                            </div>
+                            <div class='img_logos logo_header'>
+                                <img src="{{ asset('img/logo-fidic.gif') }}"  alt="logos" />
+                            </div>
+                            <div class='img_logos'>
+                                <img src="{{ asset('img/logo-fepac.gif') }}" alt="logos" />
+                            </div>
+                            <div class='img_logos'>
+                                <img src="{{ asset('img/logo-acec.gif') }}" alt="logos" />
+                            </div>
+                            <div class='img_logos'>
+                                <img src="{{ asset('img/logo-acec2.gif') }}" alt="logos" />
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>  
+            </div>
+        </div>         
+    </div>
+
 </div>
 
 
-<div id="rotador" class="limpiar">
+<div id="rotador" class="limpiar margen_menu_top">
     <div class="ocho80">
         <div class="row row-centered">
-            <div class="col-sm-5 col-centered">
+            <div class="col-sm-5 col-centered logo_top">
                 <a href='{{url('/')}}'><img src="{{ asset('img/logo-cnec-cuadro.png') }}"  alt="logo cnec" /></a>
             </div>
             <div class="col-sm-7 col-centered">
@@ -178,13 +179,13 @@
                 </div>
                 
                  <div class="enlace" style="margin-left:0px;">
-                    <a target="_blank" title="Ir a la Página de la Secretaría de Trabajo y Previsión Social" href="http://www.stps.gob.mx/bp/index.html">       
+                    <a target="_blank" title="Ir a la Página de la Secretaría de Trabajo y Previsión Social" href="https://www.gob.mx/stps">       
                         <h5>STPS <br />México</h5>
                     </a>
                 </div>
                 
                  <div class="enlace">
-                    <a target="_blank" title="Ir a la Página de la Secretaría de la Función Pública" href="http://www.funcionpublica.gob.mx/">      
+                    <a target="_blank" title="Ir a la Página de la Secretaría de la Función Pública" href="http://https://www.gob.mx/sfp">      
                         <h5>Función<br />Pública</h5>
                     </a>
                 </div>
@@ -202,7 +203,7 @@
                 </div>
                 
                  <div class="enlace">
-                    <a target="_blank" title="Ir a la Página del Instituto Mexicano de Seguridad Social" href="http://www.imss.gob.mx/Pages/default.aspx">      
+                    <a target="_blank" title="Ir a la Página del Instituto Mexicano de Seguridad Social" href="http://www.imss.gob.mx/">      
                         <h5>IMSS <br /> México</h5>
                     </a>
                 </div>     
@@ -250,7 +251,7 @@
                 <div class="col-md-6 alineado_centro">
                     <div id="telefonos">
                         <span class="tel">TEL: +52 01 (477) 711 21 68</span><br>
-                        <span class="fax">FAX: +52 01 (477) 711 04 63</span><br>
+                        <span class="fax">FAX: +52 01 (477) 711 04 33</span><br>
                         <span class="contactanos">CONTÁCTANOS</span><a href="contacto.php" title="Escribir un correo a la CNEC"><img src="{{ asset('img/correo-img.gif') }}" alt="img correo" class="sobre" /></a>
                     </div>   
                 </div>

@@ -183,7 +183,7 @@
     </div> 
 </div>
 <div class='fondo_2'>
-    <div class="ocho80">
+    <div id="organigrama_cnec" class="ocho80">
         <section class="row row-centered padding_organigrama ">
             <div class='col-md-12 border_linea_verde alineado_centrado'>
                 <div class='titulo_cnec_med titulo_cnec_mediano texto_organigrama'>

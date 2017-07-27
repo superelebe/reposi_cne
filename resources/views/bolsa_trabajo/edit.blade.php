@@ -55,7 +55,7 @@
                 </div>
                 <div class="form-group">
                     <label for="color">Activo</label><br>
-                    <input type="radio" name="activo" value=1> Activo <br>
+                    <input type="radio" name="activo" value=1 checked> Activo <br>
                     <input type="radio" name="activo" value=0> Inactivo <br>
                 </div>
                 <div class="form-group">

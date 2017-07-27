@@ -2,10 +2,10 @@
 # Hola, tienes un **correo nuevo** de
 
 @component('mail::panel')
-	{{$data['correo']}}
-	{{$data['nombre']}}
-	{{$data['telefono']}}
-	{{$data['asunto']}}
+	{{$data['correo']}}<br>
+	{{$data['nombre']}}<br>
+	{{$data['telefono']}}<br>
+	{{$data['asunto']}}<br>
 	{{$data['mensaje']}}
 @endcomponent
 

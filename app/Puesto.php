@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Puesto extends Model
 {
-	public function organigrama(){
+	public function organo(){
 		return $this->hasMany(Organigrama::class);
 	}
 	protected $table = 'puesto';
