@@ -9,12 +9,12 @@
 				<div class="icoservicio">
 		        	<img src="img/serv-13.png" alt="servicios cnec" />
 	                <h5>CERTIFICACIÓN <span>DOCUMENTAL</span></h5>
-	                <span class="vermas azulmedio"><a href="{{ url('/') }}">VER MÁS</a></span>
+	                <span class="vermas azulmedio"><a href="{{ url('/certificados') }}">VER MÁS</a></span>
 		        </div>
 				<div class="icoservicio">
 		        	<img src="img/serv-14.png" alt="servicios cnec" />
 	                <h5>CERTIFICACIÓN  DE  <span>COMPETENCIAS</span></h5>
-	                <span class="vermas azulclaro"><a href="{{ url('/') }}">VER MÁS</a></span>
+	                <span class="vermas azulclaro"><a href="{{ url('/certificados') }}">VER MÁS</a></span>
 		        </div>
 			</div>
 

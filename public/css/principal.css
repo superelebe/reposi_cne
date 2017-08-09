@@ -127,6 +127,39 @@ h3{
     margin: 55px 0 10px 0;
 }
 
+
+
+.lista_certificado{
+	padding-left: 50px;
+}
+
+.contacto_certificaciones{
+	background-color: #414C52;
+	color: white;
+	width: 100%;
+	padding: 10px 0;
+	font-family: 'Myrad';
+	font-size: 25px;
+	margin: 20px 0;
+}
+
+.subtitulo_certificadoo_verde{
+	color:#668E00;
+	font-size: 30px;
+	text-align: left;
+	font-family: 'Myrad';
+}
+
+.proyectos_especiales{
+	font-size: 22px;
+}
+
+.lista_certificado ul li:before{
+  content: '\2014';
+  position: absolute;
+  margin-left: -20px;
+}
+
 #header #logos a{
 	width: 25%;
 }
@@ -1630,11 +1663,35 @@ background: url(../img/fondo-servicios-2.png) no-repeat;
 .noticia img{
 	width: 100%;
 	display: block;
-	margin-top: -57px;
+	margin-top: -27px;
 
 }
 
+.border_arriba_verde{
+	border-top: 1px solid green;
+}
 
+.regresar img{
+	width: 200px;
+}
+
+.titulo_certificado{
+	font-family: 'Myrad';
+	color: #495664;
+	text-align: right;
+	font-size: 40px;
+	line-height: 50px;
+}
+
+.titulo_certificado span{
+	font-family: #A6C36F;
+	font-size: 62px;
+}
+
+
+.color_azul_certificado{
+	color:#8195A5;
+}
 
 .alineado_derecha{
     text-align: right;
@@ -1642,6 +1699,13 @@ background: url(../img/fondo-servicios-2.png) no-repeat;
 
 .alineado_izq{
 	text-align: left;
+}
+
+.subtitulo_certificadoo{
+	color:#414C52;
+	font-size: 30px;
+	text-align: left;
+	font-family: 'Myrad';
 }
 
 .alieando_justificado{
@@ -2348,6 +2412,13 @@ margin-top: -2261px;
 .color_azul_verde span{
 	color:#668E00;
 }
+.color_azul_fuerte {
+	color:#495664;
+}
+
+.color_verde{
+	color:#A6C36F;
+}
 
 .franja_cnec_bottom {
     margin-top: -10px;
@@ -2407,11 +2478,16 @@ margin-top: -2261px;
     margin: 20px 0;
 }
 
+.fondo_generico{
+	background-image: url("../img/fondo_generico.png");
+	background-repeat: no-repeat;
+    background-position: 50% -20%;		
+}
 
 .fondo_noticias{
 	background-image: url("../img/fondo_noticias.png");
 	background-repeat: no-repeat;
-    background-position: 50% -20%;	
+    background-position: 50% -4%;	
 }
 
 .fondo_uno{
@@ -2829,6 +2905,14 @@ margin-top: -2261px;
     padding-top: 1px;
     margin-top: -90px;
     background-position: 60% 0%;
+}
+
+.fondo_certificaciones{
+	background: url(../img/fondo_generico.png) no-repeat;
+    padding-top: 1px;
+    margin-top: -90px;
+    background-position: 60% -12%;
+
 }
 
 @media (min-width:650px)  {

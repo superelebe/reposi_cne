@@ -60,6 +60,9 @@ Route::get('consultores' , function(){
 Route::get('adiestramiento' , function(){
   return view('estatico.adiestramiento');
 });
+Route::get('certificados' , function(){
+  return view('estatico.certificados');
+});
 Route::get('afiliadas' , function(){
   return view('estatico.afiliadas');
 });

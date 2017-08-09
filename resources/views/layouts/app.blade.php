@@ -62,9 +62,8 @@
                 <li><a href="{{url('/')}}">HOME</a></li>
                 <li><a href="{{ url('/organigrama_cnec') }}">ORGANIGRAMA</a></li>
                 <li><a href="{{ url('/cnec') }}">¿QUÉ ES LA CNEC?</a></li>
-                <li><a href="{{ url('/capacitacion') }}">CERTIFICACIÓN</a></li>
+                <li><a href="{{ url('/certificados') }}">CERTIFICACIÓN</a></li>
                 <li><a href="{{ url('/afiliados') }}">AFILIADOS</a></li>
-
                 <li><a href="{{ url('/eventos') }}">CALENDARIO</a></li>
                 <li><a href="{{ url('/capacitacion') }}">CAPACITACIÓN</a></li>
                 <li><a href="{{ url('/todas_las_vacantes') }}">BOLSA DE TRABAJO</a></li>
