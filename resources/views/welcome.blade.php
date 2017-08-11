@@ -122,8 +122,8 @@
           </div>
           <div class="col-md-12 margen_30">
             <div>
-              <div class='iconos_cnec'>
-                <img src="{{asset('img/target_1.png')}}" alt="">
+              <div class='iconos_cnec alineado_centro'>
+                <img class='img_target' src="{{asset('img/target_1.png')}}" alt="">
               </div>
               <div  class='titulo_lineas_inicio'>
                 <div class='alineado_izq alineado_izq titulo_cnec_mediano titulo_cnec_med_inicio color_azul'>
@@ -154,7 +154,7 @@
           <div class='iconos_cnec alineado_centro'>
             <i class="fa fa-user-circle icono_azul_lupa" aria-hidden="true"></i>
           </div>
-          <div  class='titulo_lineas_cnec'>
+          <div  class='titulo_lineas_inicio'>
             <div class='alineado_izq alineado_izq titulo_cnec_mediano titulo_cnec_med_inicio color_azul'>
               MENSAJE <br>
               DEL PRESIDENTE <br>
@@ -211,7 +211,7 @@
         </div>
       </div>
       
-      <div class="col-sm-12 paddign_40">
+      <div class="col-sm-12 paddign_60">
         <div class="row row-centered">
             @foreach($fechas as $fecha)
               <div class="col-sm-5 col-centered alineado_izq">

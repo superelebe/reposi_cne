@@ -231,7 +231,7 @@
             </div>
             <div class='col-md-12 alineado_izq'>
                 <div class='titulo_cnec_med titulo_cnec_mediano color_azul_clarito borde_verde_delgado margen_arriba_200'>
-                    REPRESENTANTES MUNICIPALES <br><span>DIRECTORIO DE CONSEJO DIRECTIVO</span> 
+                    REPRESENTANTES <br> MUNICIPALES <br><span>DIRECTORIO DE<br> CONSEJO DIRECTIVO</span> 
                 </div>
             </div>
             <div class='col-md-12'>

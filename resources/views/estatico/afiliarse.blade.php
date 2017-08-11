@@ -163,7 +163,7 @@
                                 Nosotros nos pondremos en contacto contigo para recopilar los formatos y llevarte paso a paso para que formes parte de la CNEC DELEGACIÓN GUANAJUATO.
                             </div>
                             <div class='texto_azul_2 margen_50'>
-                                <p>Si deseas una atención personalizada, comunicate con Laura olmos, títular de afiliación y atención a socios de la CNEC. <br>
+                                <p>Si deseas una atención personalizada, comunicate con Laura Olmos, títular de afiliación y atención a socios de la CNEC. <br>
                                 A los teléfonos: (477) 711 21 68 y 711 04 33 o <br>
                                 al correo: administracion@cnecgto.org</p>
                                 

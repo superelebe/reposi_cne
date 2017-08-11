@@ -2,7 +2,7 @@
 @section('content')
 
 <section class="fondo_noticias">
-    <div class="cinco50">
+    <div class="cuatro50 padding_100">
         <div class="row row-centered noticonten">
             <div class="col-12">
                 <img class='imagen_al_100' src="{!!url($article->imagen)!!}" alt="">

@@ -184,7 +184,7 @@
                 </div>
                 
                  <div class="enlace">
-                    <a target="_blank" title="Ir a la Página de la Secretaría de la Función Pública" href="http://https://www.gob.mx/sfp">      
+                    <a target="_blank" title="Ir a la Página de la Secretaría de la Función Pública" href="https://www.gob.mx/sfp">      
                         <h5>Función<br />Pública</h5>
                     </a>
                 </div>

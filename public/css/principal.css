@@ -371,6 +371,7 @@ h3{
     font-size: .8em;
     color: #455560;
     margin-bottom: 30px;
+	line-height: 16px;
 }
 
 #footer #direccion li{
@@ -1672,7 +1673,7 @@ background: url(../img/fondo-servicios-2.png) no-repeat;
 }
 
 .regresar img{
-	width: 200px;
+	width: 140px;
 }
 
 .titulo_certificado{
@@ -2559,8 +2560,27 @@ margin-top: -2261px;
 .fondo_2{
 
 }
+
+.cuatro50{
+	width: 400px;
+	min-width: 345px;
+    margin: 0 auto;
+}
+
+.padding_100{
+	padding-top: 100px;
+}
+
+.img_target{
+	width: 73px;
+}
+
+.paddign_60{
+	padding: 60px 0;
+}
+
 .fondo_3{
-	background-image: url('../img/fondo_que_es_la_cnec-3.png');
+	background-image: url('../img/fondo_que_es_la_cnec-31.png');
 	background-repeat: no-repeat;
 	background-position: 25% 0%;
 	background-size: 1311px ;
