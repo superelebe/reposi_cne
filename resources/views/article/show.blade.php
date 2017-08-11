@@ -6,9 +6,18 @@
         Mostrar Noticia
     </h1>
     <br>
-    <form method = 'get' action = '{!!url("article")!!}'>
-        <button class = 'btn btn-primary'>Noticia index</button>
-    </form>
+    <div class="row">
+        <div class="col-xs-6 col-centered">
+            <form  method = 'get' action = '{{url("/admincnec/dashboard")}}'>
+                <button class="button-two" type = 'submit'><span class="texto_blanco">ADMIN DASHBOARD</span></button>
+            </form>
+        </div>
+        <div class="col-xs-6 col-centered">
+            <form method = 'get' action = '{!!url("article")!!}'>
+                <button class = 'btn btn-primary'>Noticia index</button>
+            </form>
+        </div>  
+    </div>
     <br>
     <table class = 'table table-bordered'>
         <thead>

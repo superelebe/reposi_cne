@@ -42,13 +42,13 @@ class CapacitacionController extends Controller
             if ($request->hasFile('pdf')) {
                 $imagen = $request->file('pdf');
                 $filename = time().'.'.$imagen->getClientOriginalExtension();
-                $path = public_path('img/' . $filename);
+                $path = 'img/capacitacion/'.$filename;
                 Image::make($imagen)->resize(null, 400, function ($constraint) {
                     $constraint->aspectRatio();
                     $constraint->upsize();
                 })->save($path);
 
-                $cursos->imagen = 'img/'.$filename;
+                $cursos->imagen = 'img/capacitacion/'.$filename;
             }
 
                 $cursos->title = $request->title;
@@ -105,19 +105,19 @@ class CapacitacionController extends Controller
      */
     public function update($id, Request $request)
     {
-            if ($request->hasFile('pdf')) {
-                $imagen = $request->file('pdf');
+
+                $cursos = Capacitacion::findOrfail($id);
+            if ($request->hasFile('imagen')) {
+                $imagen = $request->file('imagen');
                 $filename = time().'.'.$imagen->getClientOriginalExtension();
-                $path = public_path('img/' . $filename);
+                $path = 'img/capacitacion/'.$filename;
                 Image::make($imagen)->resize(null, 400, function ($constraint) {
                     $constraint->aspectRatio();
                     $constraint->upsize();
                 })->save($path);
 
-                $cursos->pdf = 'img/'.$filename;
+                $cursos->imagen = 'img/capacitacion/'.$filename;
             }
-
-                $cursos = Capacitacion::findOrfail($id);
 
                 $cursos->title = $request->title;
                 

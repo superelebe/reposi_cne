@@ -12,9 +12,18 @@
 <section class="contenedor">
     <section class="row row-centered">
         <div class="col-md-8 col-xs-12 col-centered">
-            <form method = 'get' action = '{!!url("bolsa_trabajo")!!}'>
-                <button class = 'btn btn-danger'>Ver Todas las Vacantes</button>
-            </form>
+            <div class="row">
+                <div class="col-xs-6 col-centered">
+                    <form  method = 'get' action = '{{url("/admincnec/dashboard")}}'>
+                        <button class="button-two" type = 'submit'><span class="texto_blanco">ADMIN DASHBOARD</span></button>
+                    </form>
+                </div>
+                <div class="col-xs-6 col-centered">
+                    <form method = 'get' action = '{!!url("bolsa_trabajo")!!}'>
+                        <button class = 'btn btn-danger'>Ver Todas las Vacantes</button>
+                    </form>
+                </div>
+            </div>
         </div>
         <div class="col-xs-12 col-md-8 col-centered">
             <div class='titulo_seccion'>
@@ -55,7 +64,7 @@
                 </div>
                 <div class="form-group">
                     <label for="color">Activo</label><br>
-                    <input type="radio" name="activo" value=1> Activo <br>
+                    <input type="radio" name="activo" value=1 checked> Activo <br>
                     <input type="radio" name="activo" value=0> Inactivo <br>
                 </div>
                 <div class="form-group">

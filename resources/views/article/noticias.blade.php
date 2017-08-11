@@ -14,10 +14,10 @@
                                         <h3>{{$noticias->titulo}}</h3>
                                         <span>{{ $noticias->created_at->toFormattedDateString() }}</span>
                                         <div class="con_img_noti">
-                                            <img src="{{($noticias->imagen)}}" alt="">
+                                            <img src="{{asset($noticias->imagen)}}" alt="">
                                         </div>
                                         <p>{{substr(strip_tags($noticias->cuerpo),0,100)}}{{strlen(strip_tags($noticias->cuerpo)) > 100 ? "...":""}}</p>
-                                        <a href="/noticia/{{$noticias->id}}">Ver mas</a>
+                                        <a href="noticia/{{$noticias->id}}">Ver mas</a>
                                     </div>
                                 @endforeach 
                             </td>

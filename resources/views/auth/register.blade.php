@@ -184,10 +184,10 @@
                             </div>
                             <div class='texto_azul_2 margen_50'>
                                 <p>Si deseas una atención personalizada, comunicate con Laura olmos, títular de afiliación y atención a socios de la CNEC. <br>
-                                A los teléfonos: (477) 711 2168 y 711 0433 o <br>
-                                al correo: administración@cnecgto.org</p>
+                                A los teléfonos: (477) 711 21 68 y 711 04 33 o <br>
+                                al correo: administracion@cnecgto.org</p>
                                 
-                                <p>Laura olmos te dará todos los pormenores, para que de forma sencilla y rápida te afilies a nuestro organismo.</p>
+                                <p>Laura Olmos te dará todos los pormenores, para que de forma sencilla y rápida te afilies a la industria del conocimiento.</p>
                             </div>
                         </div>
                     </div>
@@ -219,9 +219,9 @@
                                     <br>
                                     <br>
 
-                                    Banco: HSBC <br>
-                                    Cuenta: 4012918835 <br>
-                                    Clabe Interbancaria: 021180040129188351
+                                    Banco: BBVA Bancomer  <br>
+                                    Cuenta: 0197904185  <br>
+                                    Clabe Interbancaria: 012180001979041858
                                 </div>
                             </div>
                         </div>

@@ -45,8 +45,8 @@
                 </div>
                 <div class="form-group">
                     <label for="imagen">imagen</label>
-                    <img src="{!! asset($cursos->pdf)!!}" alt="">
-                    <input id="imagen" name = "imagen" type="file" class="form-control" value="{!!$cursos->pdf!!}"> 
+                    <img src="{!! asset($cursos->imagen)!!}" alt="">
+                    <input id="imagen" name = "imagen" type="file" class="form-control" value="{!!$cursos->imagen!!}"> 
                 </div>
                 <div class="form-group">
                     <label for="color">color</label>

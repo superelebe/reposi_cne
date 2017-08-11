@@ -17,10 +17,19 @@
 
     <div class="row row-centered">
         <div class="col-md-8 col-xs-12 col-centered">
-            <div class="col-xs-12 col-centered">        
-                <form  method = 'get' action = '{!!url("bolsa_trabajo")!!}/create'>
-                      <button class="button-two" type = 'submit'><span class="texto_blanco">Crear Nuevo Trabajo</span></button>
-                </form>
+            <div class="col-xs-12 col-centered">
+                <div class="row">
+                    <div class="col-xs-6 col-centered">
+                        <form  method = 'get' action = '{{url("/admincnec/dashboard")}}'>
+                            <button class="button-two" type = 'submit'><span class="texto_blanco">ADMIN DASHBOARD</span></button>
+                        </form>
+                    </div>
+                    <div class="col-xs-6 col-centered">      
+                    <form  method = 'get' action = '{!!url("bolsa_trabajo")!!}/create'>
+                          <button class="button-two" type = 'submit'><span class="texto_blanco">Crear Nuevo Trabajo</span></button>
+                    </form>
+                    </div>
+                </div>
                 
             </div>
 
@@ -65,7 +74,7 @@
                     </table>    
                 </div>    
             </div>
-            {!! $trabajos->link() !!}
+            {!! $trabajos->links() !!}
         </div>
 
     </div>

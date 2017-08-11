@@ -60,7 +60,7 @@ class BolsaTrabajoController extends Controller
             if ($request->hasFile('imagen')) {
                 $imagen = $request->file('imagen');
                 $filename = time().'.'.$imagen->getClientOriginalExtension();
-                $path = public_path('uploads/empresa/' . $filename);
+                $path = 'img/'.$filename;
                 Image::make($imagen)->resize(null, 400, function ($constraint) {
                     $constraint->aspectRatio();
                     $constraint->upsize();
@@ -136,7 +136,7 @@ class BolsaTrabajoController extends Controller
             if ($request->hasFile('imagen')) {
                 $imagen = $request->file('imagen');
                 $filename = time().'.'.$imagen->getClientOriginalExtension();
-                $path = public_path('img/' . $filename);
+                $path = 'img/'.$filename;
                 Image::make($imagen)->resize(null, 400, function ($constraint) {
                     $constraint->aspectRatio();
                     $constraint->upsize();
@@ -182,6 +182,13 @@ class BolsaTrabajoController extends Controller
         return view('bolsa_trabajo.vacantes')->with('vacante',$potato);
     }
     public function enviarCorreo(Request $request){
+        $this->validate($request,[
+            'cv'            =>  'required|mimes:pdf,docx,doc',
+            'correo'        =>  'required|email|min:5',
+            'nombre'        =>  'required|min:3',
+            'comentarios'   =>  'required|min:3',
+            'telefono'      =>  'required'
+        ]);
         if($request->hasFile('cv')){
             $archivo = $request->file('cv');
             $md5Name = md5_file($archivo->getRealPath());
@@ -195,12 +202,6 @@ class BolsaTrabajoController extends Controller
         }else{
             $urlarchivo = '';
         }
-        $this->validate($request,[
-            'correo'        =>  'required|email|min:5',
-            'nombre'        =>  'required|min:3',
-            'comentarios'   =>  'required|min:3',
-            'telefono'      =>  'required'
-        ]);
         $data = [
               'nombre' => $request->nombre,
               'correo' => $request->correo,

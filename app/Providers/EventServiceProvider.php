@@ -16,6 +16,9 @@ class EventServiceProvider extends ServiceProvider
         'App\Events\NewUser' => [
             'App\Listeners\SendWelcomeEmail'
         ],
+        'App\Events\EnvioCorreo' =>[
+            'App\Listeners\SendCorreoContacto'
+        ],
     ];
 
     /**

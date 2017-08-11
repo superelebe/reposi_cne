@@ -17,7 +17,7 @@ class OrganiController extends Controller
     public function index()
     {
         $title = 'Index - event';
-        $organigramas = Organigrama::paginate(3);
+        $organigramas = Organigrama::paginate(10);
         return view('organigrama.index',compact('organigramas','title'));
     }
 
@@ -46,7 +46,7 @@ class OrganiController extends Controller
             if ($request->hasFile('imagen')) {
                 $imagen = $request->file('imagen');
                 $filename = time().'.'.$imagen->getClientOriginalExtension();
-                $path = public_path('img/' . $filename);
+                $path = 'img/'.$filename;
                 Image::make($imagen)->resize(null, 400, function ($constraint) {
                     $constraint->aspectRatio();
                     $constraint->upsize();
@@ -111,11 +111,25 @@ class OrganiController extends Controller
 
 
    public function cnec(){
-    $puestos = Organigrama::orderBy('id', 'asc')->get();
+    $puestos = Organigrama::orderBy('id', 'asc')->limit(4)->get();
     $elpresi = $puestos->shift();
     $puestos->all();
 
     return view('estatico.cnec', compact('puestos', 'elpresi'));
+   }
+
+   public function organi(){
+    $puestos = Organigrama::orderBy('id', 'asc')->limit(4)->get();
+    $elpresi = $puestos->shift();
+    $puestos->all();
+    $representantes = Puesto::join('organigrama','puesto.id','=','organigrama.puesto_id')->where('titulo', 'LIKE', '%Representante%')->get();
+    $vices = Puesto::join('organigrama','puesto.id','=','organigrama.puesto_id')->where('titulo', 'LIKE', '%Vice%')->get();
+
+    $vices->shift();
+
+    $vices->all();
+
+    return view('organigrama.organigrama', compact('puestos', 'elpresi', 'representantes', 'vices'));
    }
 
     public function update($id, Request $request)
@@ -124,7 +138,7 @@ class OrganiController extends Controller
         if ($request->hasFile('imagen')) {
             $imagen = $request->file('imagen');
             $filename = time().'.'.$imagen->getClientOriginalExtension();
-            $path = public_path('img/' . $filename);
+            $path = 'img/'.$filename;
             Image::make($imagen)->resize(null, 400, function ($constraint) {
                     $constraint->aspectRatio();
                     $constraint->upsize();

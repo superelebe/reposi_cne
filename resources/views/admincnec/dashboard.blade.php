@@ -4,7 +4,7 @@
 <div class="contenedor">
     <div class="row row-centered">
         <div class="col-md-12 col-centered img_centrada">
-            <img src="{{asset('img/banner-cal.png')}}" alt="">
+            <img src="{{asset('img/banner-admin.png')}}" alt="">
         </div>
     </div>
     <div class="row row-centered">

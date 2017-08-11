@@ -42,13 +42,13 @@ class CalendarController extends Controller
             if ($request->hasFile('imagen')) {
                 $imagen = $request->file('imagen');
                 $filename = time().'.'.$imagen->getClientOriginalExtension();
-                $path = public_path('img/' . $filename);
+                $path = 'img/calendario/'.$filename;
                 Image::make($imagen)->resize(null, 400, function ($constraint) {
                     $constraint->aspectRatio();
                     $constraint->upsize();
                 })->save($path);
 
-                $calendario->imagen = 'img/'.$filename;
+                $calendario->imagen = '/img/calendario/'.$filename;
                 
             }
 
@@ -119,14 +119,14 @@ class CalendarController extends Controller
         if ($request->hasFile('imagen')) {
             $imagen = $request->file('imagen');
             $filename = time().'.'.$imagen->getClientOriginalExtension();
-            $path = public_path('uploads/calendario/' . $filename);
+            $path = 'img/calendario/'.$filename;
             Image::make($imagen)->resize(null, 400, function ($constraint) {
                     $constraint->aspectRatio();
                     $constraint->upsize();
                 })->save($path);
 
         
-            $calendario->imagen = '/uploads/calendario/'.$filename;
+            $calendario->imagen = '/img/calendario/'.$filename;
         }
 
         $calendario = Calendar::findOrfail($id);

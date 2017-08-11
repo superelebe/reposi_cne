@@ -183,13 +183,13 @@
     </div> 
 </div>
 <div class='fondo_2'>
-    <div class="ocho80">
+    <div id="organigrama_cnec" class="ocho80">
         <section class="row row-centered padding_organigrama ">
             <div class='col-md-12 border_linea_verde alineado_centrado'>
                 <div class='titulo_cnec_med titulo_cnec_mediano texto_organigrama'>
                     <span>ORGANIGRAMA</span> <br>CONSEJO DIRECTIVO 2017-2018: 
                 </div>
-            </div>
+            </div> 
             <div class='col-md-12 background_organi'>
                 <div class="centrado organigrama">
                     <div class='presi'>
@@ -223,7 +223,7 @@
                     <div class="col-sm-5 col-xs-6">
                         
                     </div>
-                    <div class="col-sm-5 col-xs-6 margen_arriba_100">
+                    <div class="col-sm-5 col-xs-6 texto_estrellas">
                         <p>Desde el año 2002 cuando se instituyó el Premio Nacional de Ética y Valores en la Industria por la CONCAMIN</p>
                         <p class='galardonado borde_verde_delgado'><span>CNEC</span> ha sido galardonada en 12 ocasiones y 7 veces consecutivas.</p>
                     </div>
@@ -231,7 +231,7 @@
             </div>
             <div class='col-md-12 alineado_izq'>
                 <div class='titulo_cnec_med titulo_cnec_mediano color_azul_clarito borde_verde_delgado margen_arriba_200'>
-                    REPRESENTANTES MUNICIPALES <br><span>DIRECTORIO DE CONSEJO DIRECTIVO</span> 
+                    REPRESENTANTES <br> MUNICIPALES <br><span>DIRECTORIO DE<br> CONSEJO DIRECTIVO</span> 
                 </div>
             </div>
             <div class='col-md-12'>

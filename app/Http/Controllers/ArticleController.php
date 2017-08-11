@@ -54,14 +54,14 @@ class ArticleController extends Controller
             if ($request->hasFile('imagen')) {
                 $imagen = $request->file('imagen');
                 $filename = time().'.'.$imagen->getClientOriginalExtension();
-                $path = public_path('uploads/noticias/' . $filename);
+                $path = 'img/noticias/'.$filename;
                 Image::make($imagen)->resize(null, 400, function ($constraint) {
                     $constraint->aspectRatio();
                     $constraint->upsize();
                 })->save($path);
                 
 
-                $article->imagen = '/uploads/noticias/'.$filename;
+                $article->imagen = '/img/noticias/'.$filename;
                 
             }
                 
@@ -128,14 +128,14 @@ class ArticleController extends Controller
         if ($request->hasFile('imagen')) {
             $imagen = $request->file('imagen');
             $filename = time().'.'.$imagen->getClientOriginalExtension();
-            $path = public_path('uploads/noticias/' . $filename);
+            $path = 'img/noticias/'.$filename;
             Image::make($imagen)->resize(null, 400, function ($constraint) {
                 $constraint->aspectRatio();
                 $constraint->upsize();
             })->save($path);
 
 
-            $article->imagen = '/uploads/noticias/'.$filename;
+            $article->imagen = '/img/noticias/'.$filename;
 
         }
                 

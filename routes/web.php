@@ -16,6 +16,12 @@ Route::get('/', 'WelcomeController@index');
 
 Route::get('usuarios/home', 'HomeController@index')->name('home');
 
+Route::get('contacto' , function(){
+  return view('estatico.contacto');
+});
+
+Route::post('enviar_correo_contacto', 'WelcomeController@enviarcontacto')->name('enviar_correo_contacto');
+
 Route::get('editarusuario', 'HomeController@editar')->name('editar-afiliado');
 Route::post('usuarios/{id}/update', 'HomeController@update');
 
@@ -31,6 +37,8 @@ Route::post('ver_usuario/{id}/update', 'AdminController@updateEstatusUsuario');
 
 Route::get('afiliados', 'WelcomeController@afiliados');
 Route::get('detalle_afiliado/{id}', 'WelcomeController@detalleAfiliado');
+
+Route::get('organigrama_cnec', 'OrganiController@organi');
 
 Route::get('cnec' , 'OrganiController@cnec');
 
@@ -51,6 +59,9 @@ Route::get('consultores' , function(){
 });
 Route::get('adiestramiento' , function(){
   return view('estatico.adiestramiento');
+});
+Route::get('certificados' , function(){
+  return view('estatico.certificados');
 });
 Route::get('afiliadas' , function(){
   return view('estatico.afiliadas');
@@ -171,6 +182,7 @@ Route::get('noticia/{id}', 'ArticleController@noticia');
 Route::get('bolsa_trabajo_cnec/{id}','BolsaTrabajoController@show')->name('bolsa_trabajo_cnec');
 Route::get('todas_las_vacantes','BolsaTrabajoController@todasVacantes')->name('todas_las_vacantes');
 Route::post('enviar_correo_vacante','BolsaTrabajoController@enviarCorreo')->name('enviar_correo_vacante');
-Route::post('
-  ','WelcomeController@enviarCorreoAfiliado')->name('enviarCorreoAfiliado');
+Route::post('enviar_correo_afiliado','WelcomeController@enviarCorreoAfiliado')->name('enviar_correo_afiliado');
+Route::post('enviar_correo_afiliarse','WelcomeController@enviarCorreoAfiliarse')->name('enviar_correo_afiliarse');
+Route::get('afiliarse','WelcomeController@afiliarse');
 Route::get('verificacion/{token}', 'Auth\RegisterController@verificado')->name('verificacion');

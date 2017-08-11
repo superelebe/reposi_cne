@@ -27,7 +27,8 @@ class CorreoVacante extends Mailable
      * @return $this
      */
     public function build()
-    {
+    {   
+        $
         return $this->markdown('emails.vacantes.mensajevacante')->with(['data', $this->data]);
     }
 }

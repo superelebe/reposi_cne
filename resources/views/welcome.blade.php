@@ -9,7 +9,6 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 <div class='inicio_1'>
-  <div class="ocho80">
   <div id="rotador-index">
                     @foreach($otro_banner as $banner)
                           <div title="{{$banner->titulo}}">
@@ -33,6 +32,7 @@
         <div title="Aviso de Privacidad"><a href="http://www.cnecgto.org/avisoprivacidad"><img src="img/rot-banner-05.jpg" /></a></div> 
         
   </div>
+  <div class="ocho80">
     <div class='row row-centered'>
       <div class='col-sm-5 col-centered alineado_izq margen_30'>
         <div>
@@ -122,8 +122,8 @@
           </div>
           <div class="col-md-12 margen_30">
             <div>
-              <div class='iconos_cnec'>
-                <img src="{{asset('img/target_1.png')}}" alt="">
+              <div class='iconos_cnec alineado_centro'>
+                <img class='img_target' src="{{asset('img/target_1.png')}}" alt="">
               </div>
               <div  class='titulo_lineas_inicio'>
                 <div class='alineado_izq alineado_izq titulo_cnec_mediano titulo_cnec_med_inicio color_azul'>
@@ -154,7 +154,7 @@
           <div class='iconos_cnec alineado_centro'>
             <i class="fa fa-user-circle icono_azul_lupa" aria-hidden="true"></i>
           </div>
-          <div  class='titulo_lineas_cnec'>
+          <div  class='titulo_lineas_inicio'>
             <div class='alineado_izq alineado_izq titulo_cnec_mediano titulo_cnec_med_inicio color_azul'>
               MENSAJE <br>
               DEL PRESIDENTE <br>
@@ -211,7 +211,7 @@
         </div>
       </div>
       
-      <div class="col-sm-12 paddign_40">
+      <div class="col-sm-12 paddign_60">
         <div class="row row-centered">
             @foreach($fechas as $fecha)
               <div class="col-sm-5 col-centered alineado_izq">
@@ -307,12 +307,9 @@
         <div class="col-sm-10 col-centered">
           <div class="row">
             <div class="col-sm-6 col-centered">
-              <div class="col-sm-12 col-centered alineado_izq borde_social">
-                <div class='iconos_cnec'>
-                  <i class="fa fa-facebook icono_inicio_sociales texto_azul" aria-hidden="true"></i>
-                </div>
-                <div class="titulo_lineas_cnec">
-                  FACEBOOK
+              <div class="col-sm-12 col-centered alineado_centro">
+                <div>
+                  <img class='imagen_al_100' src="{{asset('img/icono_facebook_cnec.jpg')}}" alt="">
                 </div>
               </div>
               <div class="margen_50">
@@ -321,12 +318,9 @@
                
             </div>
             <div class="col-sm-6 col-centered">
-              <div class="col-sm-col-sm-12 col-centered alineado_izq borde_social">
-                <div class='iconos_cnec'>
-                  <i class="fa fa-twitter icono_inicio_sociales texto_azul" aria-hidden="true"></i>
-                </div>
-                <div class="titulo_lineas_cnec">
-                  TWITTER
+              <div class="col-sm-12 col-centered alineado_centro">
+                <div>
+                  <img class='imagen_al_100' src="{{asset('img/icono_twitter_cnec.jpg')}}" alt="">
                 </div>
               </div>
               <div class="margen_50"> 
@@ -353,13 +347,19 @@
             <a href="{{url('')}}"><img class='largo_imagenes_cursos' src="{{asset('img/banner_iniciar_sesion.png')}}" alt=""></a>
           </div>
           <div class="col-sm-6 margen_10">
-            <a href="{{url('')}}"><img class='largo_imagenes_cursos' src="{{asset('img/banner_registro_afiliados.png')}}" alt=""></a>
+            <a href="{{url('register')}}"><img class='largo_imagenes_cursos' src="{{asset('img/banner_registro_afiliados.png')}}" alt=""></a>
           </div>
           <div class="col-sm-6 margen_10">
-            <a href="{{url('')}}"><img class='largo_imagenes_cursos' src="{{asset('img/banner_ley_federal.png')}}" alt=""></a>
+            <a href="http://www.cnecgto.org/leydecondominio.html"><img class='largo_imagenes_cursos' src="{{asset('img/banner_ley_federal.png')}}" alt=""></a>
           </div>
           <div class="col-sm-6 margen_10">
-            <a href="{{url('')}}"><img class='largo_imagenes_cursos' src="{{asset('img/banner_ley_trabajo.png')}}" alt=""></a>
+            <a href="http://www.cnecgto.org/leydetrabajo.html"><img class='largo_imagenes_cursos' src="{{asset('img/banner_ley_trabajo.png')}}" alt=""></a>
+          </div>
+          <div class="col-sm-6 margen_10">
+            <a href="http://www.cnecgto.org/avisoprivacidad/CNEC_GTO_Aviso_de_Privacidad.pdf"><img class='largo_imagenes_cursos' src="{{asset('img/banner_aviso_privacidad.png')}}" alt=""></a>
+          </div>
+          <div class="col-sm-6 margen_10">
+            <a href="http://www.cnecgto.org/reglasoperatividad/reglas_de_operacion.pdf"><img class='largo_imagenes_cursos' src="{{asset('img/banner_reglas_opertatividad.png')}}" alt=""></a>
           </div>
           <div class="col-sm-12 margen_10">
             <a href="{{url('')}}"><img class='largo_imagenes_cursos' src="{{asset('img/banner_convenios.png')}}" alt=""></a>

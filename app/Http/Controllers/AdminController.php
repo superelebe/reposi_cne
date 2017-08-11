@@ -31,13 +31,13 @@ class AdminController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(){
-        $noticias = Article::orderBy('id', 'desc')->take(5)->get();
-        $vacantes = BolsaTrabajo::orderBy('id', 'desc')->take(5)->get();
-        $eventos = Calendar::CalendarActivo()->orderBy('id', 'desc')->take(10)->get();
-        $capacitaciones = Capacitacion::FechaActivo()->orderBy('id', 'desc')->take(5)->get();
-        $banners = Banner::orderBy('id', 'desc')->take(5)->get();
-        $organigramas = Organigrama::orderBy('id', 'desc')->get();
-        $puestos = Puesto::orderBy('id', 'desc')->get();
+        $noticias = Article::orderBy('id', 'desc')->take(4)->get();
+        $vacantes = BolsaTrabajo::orderBy('id', 'desc')->take(4)->get();
+        $eventos = Calendar::CalendarActivo()->orderBy('id', 'desc')->take(4)->get();
+        $capacitaciones = Capacitacion::FechaActivo()->orderBy('id', 'desc')->take(4)->get();
+        $banners = Banner::orderBy('id', 'desc')->take(4)->get();
+        $organigramas = Organigrama::orderBy('id', 'desc')->take(4)->get();
+        $puestos = Puesto::orderBy('id', 'desc')->take(4)->get();
         $noAfiliados = User::NoAfiliados()->take(3)->get();
         return view('admincnec.dashboard', compact('noAfiliados','noticias','vacantes','eventos', 'capacitaciones', 'banners', 'organigramas', 'puestos'));
     }
