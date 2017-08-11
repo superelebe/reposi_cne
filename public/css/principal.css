@@ -81,7 +81,7 @@ h3{
 
 /*----- HEADER -----*/
 #header {
-	background-color: #808c97;
+	background-color: #465663;
 }
 #menu {
     position: fixed;
@@ -103,12 +103,12 @@ h3{
 	}
 
 #menu li a{
-	color: #f1f1f1;
-    height: 12px;
+    color: #f1f1f1;
     display: block;
     padding-bottom: 15px;
-    background: #808C97;
-    padding-left: 5px;
+    background: #465663;
+    padding: 3px 5px;
+    margin: 5px;
 }
 #menu li a:hover{
 	background:#A1BA77;
