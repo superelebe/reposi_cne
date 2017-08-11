@@ -1,22 +1,15 @@
 @extends('layouts.app')
 @section('content')
 
-<section class="content">
-    <div class="fondo_generico">
+<section class="contenedor">
+    <div class="fondo_organigrama">
         <div class="ocho80">
             <div class="row row_centered">
                 <div class="col-12">
                     <div class="organizar_puestos alineado_centro margen_50">
-
-
                         <div id="organigrama_cnec" class="ocho80">
                             <section class="row row-centered padding_organigrama ">
-                                <div class='col-md-12 border_linea_verde alineado_centrado'>
-                                    <div class='titulo_cnec_med titulo_cnec_mediano texto_organigrama'>
-                                        <span>ORGANIGRAMA</span> <br>CONSEJO DIRECTIVO 2017-2018: 
-                                    </div>
-                                </div> 
-                                <div class='col-md-12 background_organi'>
+                                <div class='col-sm-12'>
                                     <div class="centrado organigrama">
                                         <div class='presi'>
                                             <img src="{{$elpresi->imagen}}" alt="">

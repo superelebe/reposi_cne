@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 
-<div class='fondo_certificaciones'>
+<div class='fondo_certificaciones' id='regresar'>
     <div class="ocho80">
         <section>
             <div class='row row-centered'>
@@ -16,11 +16,13 @@
                         
                     </div>
                     <div class='wrap_certificados_1'>
-                        <div class='cinco50 margen_50'>
+                        <div class='ocho80 margen_50'>
                             <div class='titulo_certificado'>
                                 CERTIFICACIÓN DE <br>
                                 <span class='color_verde'>COMPETENCIAS</span>
                             </div>
+                        </div>
+                        <div class='cinco50'>
                             <div class='alieando_justificado margen_20 color_azul_certificado'>
                                 CNEC Delegación Guanajuato fue el Primer Centro de Evaluación acreditado por la Secretaría de Desarrollo Económico Sustentable del estado de Guanajuato (SDES) en el modelo de Certificación de Competencias Laborales a nivel nacional CONOCER.  
                             </div>
@@ -96,9 +98,11 @@ EC0076 Evaluación de la competencia de candidatos con base en Estándares de Co
                                 <div>
                                     PARA MAS INFORMACIÓN CONTACTANOS
                                 </div>
-                                <div class='contacto_certificaciones'>
-                                    CONTACTO
-                                </div>
+                                <a href="{{url('/contacto')}}">
+                                    <div class='contacto_certificaciones'>
+                                        CONTACTO
+                                    </div>
+                                </a>
                                 <div>
                                     
                                     <p class='proyectos_especiales'>
@@ -117,11 +121,13 @@ EC0076 Evaluación de la competencia de candidatos con base en Estándares de Co
 
 
                     <div class='wrap_certificados_2'>
-                        <div class='cinco50 margen_50'>
+                        <div class='ocho80 margen_50'>
                             <div class='titulo_certificado'>
-                                CERTIFICACIÓN DE <br>
+                                CERTIFICACIÓN <br>
                                 <span class='color_verde'>DOCUMENTAL</span>
                             </div>
+                        </div>
+                        <div  class='cinco50 margen_50'>
                             <div class='alieando_justificado color_azul_certificado'>
                                 Certifica tu área de especialidad y dale a tu Empresa de Consultoría el Distintivo que apoye a tu competitividad y te permita promover nuevas oportunidades de negocios.  
                             </div>
@@ -186,9 +192,11 @@ EC0076 Evaluación de la competencia de candidatos con base en Estándares de Co
                                 <div>
                                     PARA MAS INFORMACIÓN CONTACTANOS
                                 </div>
-                                <div class='contacto_certificaciones'>
-                                    CONTACTO
-                                </div>
+                                <a href="{{url('/contacto')}}">
+                                    <div class='contacto_certificaciones'>
+                                        CONTACTO
+                                    </div>
+                                </a>
                                 <div>
                                     
                                     <p class='proyectos_especiales'>
@@ -201,6 +209,13 @@ EC0076 Evaluación de la competencia de candidatos con base en Estándares de Co
                                     Correo: proyectosespeciales@cnecgto.org</p>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class='cinco50 margen_50 alineado_derecha regresar'>
+                            <a href="#regresar">
+                                <img src="{{asset('img/btn-regresar.png')}}" alt="">
+                            </a>
                         </div>
                     </div>
                 </div>

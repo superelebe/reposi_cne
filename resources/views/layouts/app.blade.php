@@ -21,11 +21,27 @@
     <link rel="stylesheet" href="{{asset('css/font-awesome.min.css')}}">
     <link href="{{ asset('css/principal.css') }}" rel="stylesheet" rel="stylesheet">
 
+    <!-- Bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+    <!-- <link rel="stylesheet" href="{{ asset('bootstrap-3.3.7/css/bootstrap.min.css') }}"  > -->
+    <!-- Optional theme -->
+    <link rel="stylesheet" href= "{{ asset('bootstrap-3.3.7/css/bootstrap-theme.min.css') }}" >
+    
+    <link rel="stylesheet" href= "{{ asset('css/bootstrap-theme-cnec.css') }}" >
+
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+     <script src="{{ asset('bootstrap-3.3.7/js/bootstrap.min.js') }}"></script>
+
+   
+
     <script type="text/javascript" src="{{asset('js/jquery.tools.min.js')}}" ></script><!--estos son temporales--> 
     <script type="text/javascript" src="{{asset('js/jquery.jshowoff.min.js')}}" ></script><!--estos son temporales-->
     <script src="{{asset('js/jquery.tweet.js')}}" type="text/javascript"></script>
     <script src="{{asset('js/jqFancyTransitions.1.8.js')}}" type="text/javascript"></script>
     <script src="{{ asset('js/jquery-ui.min.js') }}"></script>
+
 
     <script src="{{ asset('js/moment.js') }}"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.js"></script>
@@ -52,6 +68,71 @@
 </head>
 <body><!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 <!-- ////////////////////////////////////////////// H E A D E R ///////////////////////////////////////////////////// -->
+
+
+
+
+
+<!-- __ _ __ __ _ _ _ _ _ _ _  __ _ _  _/ / / / / / / / / / / / /     MENU PRINCIPAL  / / / / / / / / / / / / /__ _ __ __ _ _ _ _ _ _ _  __ _ _  _ -->
+
+
+
+ <div class="navbar-wrapper">
+      <div class="containermenu">
+
+        <nav class="navbar navbar-inverse navbar-static-top navbar-fixed-top">
+          <div class="containermenu">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#"><img src="{{ asset('img/CNEC-logo-blanco.png') }}" alt="Camara Nacional de Empresas de Consultoria"></a>
+              <img src="{{ asset('img/CNEC-logo-header.png') }}" alt="CNEC LOGOS ASOCIACIONES" class="navbar-logos">
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="{{url('/')}}">HOME</a></li>
+                <li><a href="{{ url('/organigrama_cnec') }}">ORGANIGRAMA</a></li>
+                <li><a href="{{ url('/cnec') }}">¿QUÉ ES LA CNEC?</a></li>
+                <li><a href="{{ url('/certificados') }}">CERTIFICACIÓN</a></li>
+                <li><a href="{{ url('/afiliados') }}">AFILIADOS</a></li>
+                <li><a href="{{ url('/eventos') }}">CALENDARIO</a></li>
+                <li><a href="{{ url('/capacitacion') }}">CAPACITACIÓN</a></li>
+                <li><a href="{{ url('/todas_las_vacantes') }}">BOLSA DE TRABAJO</a></li>
+                <li><a href="{{ url('/servicios') }}">SERVICIOS</a></li>
+                <li><a href="{{ url('/convenios') }}">CONVENIOS</a></li>
+                @if (Auth::guard('web')->check())
+                <li><a href="{{ url('/logout') }}" onclick="event.preventDefault();
+                   document.getElementById('logout-form').submit();">
+                   SALIR
+               </a>
+
+               <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                {{ csrf_field() }}
+            </form>>SALIR</a></li>
+            @else
+            <li><a href="{{ url('/afiliarse') }}">AFÍLIATE</a></li>
+            @endif
+            <li><a href="{{ url('/contacto') }}">CONTACTO</a></li>
+
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+      </div>
+    </div>
+
+
+
+
+
+<!-- 
 <div class='bloque_menu'>
     <div class='barra_navegador'>
         
@@ -117,12 +198,20 @@
 
 </div>
 
+ -->
+
+
+
+
+
+
+<!-- ////// E  N  D   /////////__ _ __ __ _ _ _ _ _ _ _  __ _ _  _/ / / / / / / / / / / / /     MENU PRINCIPAL  / / / / / / / / / / / / /__ _ __ __ _ _ _ _ _ _ _  __ _ _  _ -->
 
 <div id="rotador" class="limpiar margen_menu_top">
     <div class="ocho80">
         <div class="row row-centered">
             <div class="col-sm-5 col-centered logo_top">
-                <a href='{{url('/')}}'><img src="{{ asset('img/logo-cnec-cuadro.png') }}"  alt="logo cnec" /></a>
+                <a href='{{url('/')}}'><img src="{{ asset('img/CNEC-logo.png') }}"  alt="logo cnec" /></a>
             </div>
             <div class="col-sm-7 col-centered">
                 <div id="slides"><!---SlideShow Ini-->
@@ -286,4 +375,18 @@
     <!-- Scripts -->
 
 </body>
+
+
+  <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    
+   <!-- <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script> -->
+      <!--<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js -->"></script>
+    <!-- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
+     <!-- Latest compiled and minified JavaScript -->
+
+
 </html>

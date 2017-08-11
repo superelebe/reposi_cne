@@ -85,14 +85,10 @@ h3{
 
 /*----- HEADER -----*/
 #header {
-<<<<<<< HEAD
-	background-color: #465663;
-=======
 	background-color: #808c97;
     display: inline-block;
     width: 100%;
     vertical-align: top;
->>>>>>> 8974b9cacfd07ce2820cdaf8e850290685e7833b
 }
 #menu {
 	display: inline-block;
@@ -615,7 +611,6 @@ ESTILOS POR SECIONES DEL SITIO
 
 #calendario {
 	position:relative;
-	background-color:#FFF;
 	margin-top: 30px;
 	margin-bottom:30px;
 }
@@ -894,12 +889,12 @@ ESTILOS POR SECIONES DEL SITIO
 background: url(../img/fondo-servicios-2.png) no-repeat;
     padding-top: 1px;
     margin-top: -220px;
-    background-position: 60% 10%;
+    background-position: 110% 10%;
+    margin-bottom: 100px;
 }
 
 #servicios #contenedorserv{
-	margin-top: 600px;
-	margin-left: 73px;
+	margin-top: 700px;
 }
 
 .tiraservicio{
@@ -1457,10 +1452,10 @@ background: url(../img/fondo-servicios-2.png) no-repeat;
 	width:540px;
 }
 
-#formulario #enviar{
+ #enviar{
 	background:#455560;	
 	color:#fff;
-	margin:-9px 0 0 362px
+	border:none;
 }
 
 #telefono, #email{
@@ -1683,16 +1678,15 @@ background: url(../img/fondo-servicios-2.png) no-repeat;
 }
 
 .titulo_certificado{
-	font-family: 'Myrad';
-	color: #495664;
-	text-align: right;
-	font-size: 40px;
-	line-height: 50px;
+    font-family: 'Myrad';
+    color: #495664;
+    text-align: right;
+    font-size: 8vw;
+    line-height: 70px;
 }
 
 .titulo_certificado span{
-	font-family: #A6C36F;
-	font-size: 62px;
+	font-size: 13vw;
 }
 
 
@@ -1749,12 +1743,25 @@ background: url(../img/fondo-servicios-2.png) no-repeat;
 .noticia a, .vacante a{
 	display:inline-block;
 	width:100px;
-	padding:10px;
 	text-align:center;
-	background-color:#A1BA77;
 	color:#FFF;
+}
+
+.noticia a{
+	background-color:#A1BA77;
 	border-bottom:2px #769D2E solid;
 	border-top:1px #fff solid;
+	padding:10px;
+}
+.vacante a{
+	background-color:#465663;
+	border-top:1px #fff solid;
+	padding:8px 10px;
+}
+
+.alto_imagen{
+    height: 150px;
+    overflow-y: hidden;
 }
 
 .margin_30{
@@ -2485,6 +2492,37 @@ margin-top: -2261px;
     margin: 20px 0;
 }
 
+.fondo_organigrama{
+	background-image: url("../img/fondo_organigrama.png");
+	background-repeat: no-repeat;
+    background-position: 50% 0%;		
+}
+
+#mapa_cnec{
+	height: 300px;
+	width: 100%;
+	margin-top: 15px;
+}
+
+.fondo_contacto{
+	background-image: url("../img/fondo_contacto.png");
+	background-repeat: no-repeat;
+    background-position: 50% 0%;		
+}
+
+
+.fondo_bolsa_trabajo{
+	background-image: url("../img/fondo_bolsadetrabajo.png");
+	background-repeat: no-repeat;
+    background-position: 50% 0%;	
+}
+
+.fondo_calendario{
+	background-image: url("../img/fondo_calendario.png");
+	background-repeat: no-repeat;
+    background-position: 50% 0%;	
+}
+
 .fondo_generico{
 	background-image: url("../img/fondo_generico.png");
 	background-repeat: no-repeat;
@@ -2514,6 +2552,46 @@ margin-top: -2261px;
 
 .padding_400{
 	padding: 400px 0;
+}
+
+.padding_400_50{
+	padding: 400px 0 50px 0;
+}
+
+.
+
+
+.datos_contacto_del{
+    color: #434A52;
+    font-weight: bold;
+	line-height: 1px;
+}
+
+.deleg_gto{
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 1px;
+}
+
+
+.num_tel_1{
+	display: inline-block;
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+.num_tel_2{
+    display: inline-block;
+    font-size: 27px;
+    color: white;
+    line-height: 24px;
+    text-align: left;
+    vertical-align: middle;
+}
+.padding_delega{
+	padding: 40px 0 20px 0;
 }
 
 .justificado{
@@ -2608,6 +2686,29 @@ margin-top: -2261px;
 	background-size: 1311px ;
 }
 
+.fondo_formulario_contact{
+    background: url(../img/fondo_formulario_contacto.jpg) no-repeat;
+    background-color: #808E9D;
+    background-size: cover;
+	background-position: 50% 0%;
+}
+
+.label_contacto{
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.nota_formulario{
+    font-size: 11px;
+    font-weight: bold;
+    color: white;
+}
+
+.padding_formulario{
+	padding: 20px 10px;
+}
+
 .galardonado{
     color: #465663;
     font-size: 24px;
@@ -2627,7 +2728,7 @@ margin-top: -2261px;
 }
 
 .padding_organigrama{
-	padding: 100px 0 0 0;
+	padding: 300px 0 0 0;
 }
 
 .borde_verde_delgado{
@@ -2957,7 +3058,24 @@ margin-top: -2261px;
 
 }
 
+
+.fondo_contacto{
+	background: url(../img/fondo_contacto.png) no-repeat;
+    padding-top: 1px;
+    margin-top: -90px;
+    background-position: 60% -12%;
+}
+
 @media (min-width:650px)  {
+	.titulo_certificado{
+	    font-size: 80px;
+	    line-height: 85px;
+	}
+
+	.titulo_certificado span{
+		font-size: 125px;
+	}
+
 	.logo_header{
 		text-align: right;
 	}

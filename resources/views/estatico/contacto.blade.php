@@ -2,51 +2,114 @@
 @extends('layouts.app')
 @section('content')
 
-
-<div id="contacto">
-    <div class="top">
-        <div class="ocho80">
+<div class="contenedor">
+    <div class="fondo_contacto">
+        <div class="ocho80 padding_400_50">
             <div class="row row-centered">
-                <div class="col-md-6">
-                    <p><img src="img/icon-tel.png" alt="iconos contacto"/><span>01 (477) 711 2168 y 711 0433</span><br /></p>
-                    <p><img src="img/icon-mail.png" alt="iconos contacto"/><span>informes@cnecgto.org</span><br /></p>
-                    <p><img src="img/icon-casa.png" alt="iconos contacto"/><span>Delegación Guanajuato<br />
-        Blvd. Mariano Escobedo No. 4502, local 32<br />
-        Col. San Isidro, León Guanajuato, México</span></p>
+                <div class="col-12 fondo_verde">
+                    <div class="row">
+                        <div class="col-12">
+                            <div id="mapa_cnec">
+                                
+                            </div>
+                        </div>
+                        <div class="col-12 padding_delega">
+                            <div class="row row-centered">
+                                <div class="col-12 col-sm-5 col-centered alineado_izq">
+                                    <div class="datos_contacto_del">    
+                                        <p class='deleg_gto'>Delegación Guanajuato</p>
+                                        <p>
+                                        Blvd. Mariano Escobedo No. 4502, local 32<br />
+                                        Col. San Isidro, León Guanajuato, México</span>
+                                        </p>  
+                                        <div>
+                                           informes@cnecgto.org
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-5 col-centered">
+                                    <div>
+                                        <div class='num_tel_1'>
+                                            01 (477)
+                                        </div>
+                                        <div class='num_tel_2'>
+                                            711 2168 y <br>
+                                            711 0433
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-6">
-                    <iframe id="map" width="420" height="260" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com.mx/maps/ms?msa=0&amp;msid=218263960438665249356.0004c018cb5e888624791&amp;ie=UTF8&amp;t=m&amp;ll=21.104079,-101.643845&amp;spn=0.002602,0.004495&amp;z=17&amp;output=embed"></iframe>
+                <div class="col-12">
+                    <div class="row row-centered fondo_formulario_contact">
+                        <div class="col-7 alineado_izq">
+                            <form class='padding_formulario' method="post" action="{{route('enviar_correo_contacto')}}">
+                                {!! csrf_field() !!}
+                                <div class="form-group">
+                                    <label class="form-control-label label_contacto" for="nombre">Nombre:</label>
+                                    <input class="form-control"  type="text" name="nombre" />
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-md-6">
+                                        <label class="form-control-label label_contacto" for="email">Correo electrónico:</label>
+                                        <input class="form-control"  type="text" name="correo" />    
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-control-label label_contacto" for="asunto">Teléfono:</label>
+                                        <input class="form-control"  type="text" name="telefono" />    
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-control-label label_contacto" for="asunto">Asunto:</label>
+                                    <input class="form-control"  type="text" name="asunto" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-control-label label_contacto" for="mensaje">Mensaje:</label>
+                                    <textarea class="form-control"  name="mensaje" ></textarea>
+                                </div>
+                                <div class="row">
+                                    <div class='col-6'>
+                                        <div class='nota_formulario'>
+                                            ES INDISPENSABLE QUE TODOS LOS CAMPOS ESTEN CONTESTADOS PARA SU CORRECTO REGISTRO
+                                            
+                                        </div>
+                                        
+                                    </div>
+                                    <div class='col-6 alineado_derecha'>
+                                        <input type="submit" id="enviar" value="ENVIAR" />
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    
-    <div class="bottom">
-        <div class="ocho80">
-            <form method="post" action="{{route('enviar_correo_contacto')}}" id="form_contacto">
-                {!! csrf_field() !!}
-                <label for="nombre">Escriba su nombre y apellidos:</label><br />
-                <input type="text" name="nombre" id="nombre" /><br />
-                
-                <label for="email">Dirección de correo electrónico:</label>
-                <br />
-                <input type="text" name="correo" id="email" /><br />
-                
-                <label for="asunto">Asunto del Mensaje:</label><br />
-                <input type="text" name="asunto" id="asunto" /><br />
-                <label for="asunto">Teléfono:</label> <br />
-                <input type="text" name="telefono" id="telefono" /><br />
-                
-                <label for="mensaje">Escriba su mensaje:</label>
-                <textarea name="mensaje" id="mensaje" rows="2"></textarea>
-                <br />
-                <span>ES INDISPENSABLE QUE TODOS LOS CAMPOS ESTEN CONTESTADOS PARA SU CORRECTO REGISTRO</span><br />
-                <input type="submit" id="enviar" value="ENVIAR" />
-            </form>
-        </div>
-    </div>
-    
 </div>
+
+<script>
+      function initMap() {
+        // Create a map object and specify the DOM element for display.
+        var map = new google.maps.Map(document.getElementById('mapa_cnec'), {
+          center: {lat: 21.1039887, lng: -101.6437081},
+          scrollwheel: false,
+          zoom: 16,
+        });
+        var image = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
+        var beachMarker = new google.maps.Marker({
+          position: {lat: 21.1039887, lng: -101.6437081},
+          map: map,
+          icon: image
+        });
+      }
+
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDdBOLTPYDCPiKl-3UjPd2wvHZStL0-A90&callback=initMap"
+    async defer></script>
+
 <!--termina div del servicios-->
 <!--termina div del servicios-->
 @endsection

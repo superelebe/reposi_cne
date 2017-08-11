@@ -184,7 +184,7 @@
 </div>
 <div class='fondo_2'>
     <div id="organigrama_cnec" class="ocho80">
-        <section class="row row-centered padding_organigrama ">
+        <section class="row row-centered padding_organigrama_cnec">
             <div class='col-md-12 border_linea_verde alineado_centrado'>
                 <div class='titulo_cnec_med titulo_cnec_mediano texto_organigrama'>
                     <span>ORGANIGRAMA</span> <br>CONSEJO DIRECTIVO 2017-2018: 

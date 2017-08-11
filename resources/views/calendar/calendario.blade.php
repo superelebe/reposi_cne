@@ -2,37 +2,39 @@
 @section('content')
 
 	<div class='contenedor'>
-	    <div class="row row-centered">
-	        <div class="col-md-12 col-centered img_centrada"><img src="{{asset('img/banner-cal.png')}}" alt=""></div>
-	    </div>
-		<div class="row row-centered">
-			<div class="col-xs-12 col-md-7 col-centered">
-				<div id="calendario">
-					
-				</div>
-			</div>
-			<div class="col-xs-12 col-md-4 col-centered">
-				<div class="eventos_calendario">
-					<div class="titulo_eventos_calendario">
-						<h3>EVENTOS</h3>
-					</div>
-					<div class="fechas_calendario">
-						<ul>
-							@foreach($eventos as $k)
-								<li class="evento">
-									<span>
-										{{$potato =  date("d - m - Y", strtotime($k['start']))}}
-									</span>  
-									{{$k['title']}}
-									<a href="{{$k['url']}}" target="_blank"></a>
-								</li>
-							@endforeach
+		<div  class='fondo_calendario'>
+			<div class="ocho80 padding_400_50">
+				<div class="row row-centered">
+					<div class="col-xs-12 col-md-7 col-centered">
+						<div id="calendario">
 							
-						</ul>
+						</div>
 					</div>
-				</div>
-			</div>
-		</div>		
+					<div class="col-xs-12 col-md-4 col-centered">
+						<div class="eventos_calendario">
+							<div class="titulo_eventos_calendario">
+								<h3>EVENTOS</h3>
+							</div>
+							<div class="fechas_calendario">
+								<ul>
+									@foreach($eventos as $k)
+										<li class="evento">
+											<span>
+												{{$potato =  date("d - m - Y", strtotime($k['start']))}}
+											</span>  
+											{{$k['title']}}
+											<a href="{{$k['url']}}" target="_blank"></a>
+										</li>
+									@endforeach
+									
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>	
+			</div>	
+		</div>
+	
 	</div>
 
 
