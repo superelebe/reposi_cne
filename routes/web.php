@@ -78,8 +78,14 @@ Route::get('comisiones' , function(){
 Route::get('conocimiento' , function(){
   return view('estatico.conocimiento');
 });
+Route::get('reglas_operativas' , function(){
+  return view('estatico.reglas_operativas');
+});
 Route::get('siem' , function(){
   return view('estatico.siem');
+});
+Route::get('areas_especialidad' , function(){
+  return view('estatico.areas_especialidad');
 });
 // Route::get('capacitacion' , function(){
 //   return view('estatico.capacitacion');
@@ -164,6 +170,16 @@ Route::group(['middleware'=> 'auth:admin'],function(){
   Route::get('curso/{id}/deleteMsg','CapacitacionController@DeleteMsg');
 });
 
+Route::group(['middleware'=> 'auth:admin'],function(){
+  Route::resource('convenio','ConvenioController', ['only' => ['create', 'store', 'index', 'edit']]);
+  Route::post('convenio/{id}/update','ConvenioController@update');
+  Route::get('convenio/{id}/delete','ConvenioController@destroy');
+  Route::get('convenio/{id}/deleteMsg','ConvenioController@DeleteMsg');
+});
+
+Route::get('convenios', 'ConvenioController@convenios');
+
+
 Route::get('event/{id}', 'EventController@show');
 
 Route::get('calendario/{id}','CalendarController@show');
@@ -171,6 +187,7 @@ Route::get('calendario/{id}','CalendarController@show');
 Route::get('cargadorFecha', 'CalendarController@cargadoFechas');
 
 Route::get('capacitacion','CapacitacionController@cursos');
+
 Route::get('cursos/{id}','CapacitacionController@show');
 
 Route::get('eventos','CalendarController@calendario');

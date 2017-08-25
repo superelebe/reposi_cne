@@ -213,7 +213,7 @@ class BolsaTrabajoController extends Controller
               'empresa' => $request->empresaVacante
         ];
         Mail::to($request->correo)->send(new CorreoVacante($data));
-        Mail::to('emmanegr@gmail.com')->send(new SolicitudVacante($data));
+        Mail::to('desarrolloempresarial@cnecgto.org')->send(new SolicitudVacante($data));
         return redirect('todas_las_vacantes');
     }
 

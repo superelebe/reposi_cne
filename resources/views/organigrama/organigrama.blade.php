@@ -82,7 +82,30 @@
                             @endforeach
                         </div>
                     </div>
-
+                    <div class="organizar_puestos alineado_centro margen_50">
+                        <div class='titulo_cnec_med titulo_cnec_mediano texto_organigrama '>
+                            DELEGACIÓN GUANAJUATO 2017-2018
+                        </div>
+                        <div class='border_linea_verde margen_10'>
+                            
+                        </div>
+                        <div class="row row-centered">
+                            @foreach($losdemas as $demas)
+                                    <div class='col-12  col-sm-6 margen_10'>
+                                        <div class="row">
+                                            <div class="col-3">
+                                                <img class='imagen_al_100' src='{{asset("$demas->imagen")}}'>
+                                            </div>
+                                            <div class="col-8">
+                                                <p class='alineado_izq'>{{$demas->titulo}}</p>
+                                                <div class='pleca_titulo_organi'>{{ $demas->nombre }}</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                            @endforeach
+                        </div>
+                    </div>
                 </div>
             </div>
 

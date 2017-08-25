@@ -14,8 +14,8 @@ class Calendar extends Model
 	protected $dates = ['deleted_at','start', 'end'];
 
     public function scopeCalendarActivo($query){
-        $now = Carbon::today('America/Mexico_City');
-        return $query->where('end', '>=',$now)->orderBy('start');
+        $now = Carbon::today('America/Mexico_City')->year;
+        return $query->where('end', '>=',$now)->orderBy('end')->limit(2);
     }
     protected $table = 'calendar';
     protected $fillable = ['title', 'url','start', 'end', 'imagen', 'color','subtitulo','descripcion' , 'lugar', 'horarios' , 'inversion'];

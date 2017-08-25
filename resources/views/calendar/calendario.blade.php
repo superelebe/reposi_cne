@@ -3,7 +3,7 @@
 
 	<div class='contenedor'>
 		<div  class='fondo_calendario'>
-			<div class="ocho80 padding_400_50">
+			<div class="ocho80 padding_convenios">
 				<div class="row row-centered">
 					<div class="col-xs-12 col-md-7 col-centered">
 						<div id="calendario">

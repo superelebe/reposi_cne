@@ -163,6 +163,26 @@
                 <div class='crear_nuevo fondo_verde'>
                    <a href="{{route('puesto.create')}}">Agregar al Puesto Organigrama</a>
                 </div>
+            </div>            
+            <div class='caja_administrador caja_verde'>
+                <div class='crear_nuevo fondo_verde titulo_crear'>
+                    CONVENIOS
+                </div>
+                <div class='padding_15'>
+                    @foreach($convenios as $convenio)
+                        <div class='crear_border_abajo'>
+                            <div>
+                                <div>convenio: {{$convenio->nombre}}</div>
+                            </div>
+                            <div>
+                                <a href="../convenio/{{$convenio->id}}/edit"> EDITAR</a>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+                <div class='crear_nuevo fondo_verde'>
+                   <a href="{{route('convenio.create')}}">Agregar al Puesto Organigrama</a>
+                </div>
             </div>
         </div>
     </div>

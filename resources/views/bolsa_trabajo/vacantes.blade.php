@@ -4,7 +4,7 @@
     <div class='contendor'>
         <div class='fondo_bolsa_trabajo'>
             <section class="ocho80">
-                <div class='padding_400_50'>
+                <div class='padding_convenios'>
                     <div class='row row-centered vacante '>
                             @foreach($vacante as $vacantes)
                             <div class='col-xs-12 col-md-4 margin_30'>

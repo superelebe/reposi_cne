@@ -5,7 +5,7 @@
     <div class="ocho80">
         <section>
             <div class='row row-centered'>
-                <div class='col-md-12 col-centered margen_40'>
+                <div class='col-md-12 col-centered padding_cetificaciones'>
                     <div class="row row-centered">
                         <div class='col-6 col-sm-5 col-centered'>
                             <img class='certificado_1 imagen_al_100' src="{{asset('img/certificado_1.png')}}" alt="">
@@ -200,13 +200,14 @@ EC0076 Evaluación de la competencia de candidatos con base en Estándares de Co
                                 <div>
                                     
                                     <p class='proyectos_especiales'>
-                                        Ing. Laura Isabel Padilla Lucio <br>
-                                        Proyectos Especiales
+                                        Lic. Claudia Y. Ramos Rodríguez<br>
+                                        Desarrollo Empresarial 
                                     </p>
                                     <br>
 
                                     <p>Tel. (477) 711 21 68- 711 04 33 <br>
-                                    Correo: proyectosespeciales@cnecgto.org</p>
+                                    Correo: desarrolloempresarial@cnecgto.org
+</p>
                                 </div>
                             </div>
                         </div>

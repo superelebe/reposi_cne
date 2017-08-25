@@ -2,7 +2,7 @@
 @section('content')
 	
 	<div class="fondo_afiliados">
-		<div class="ocho80 padding_400">
+		<div class="ocho80 padding_convenios">
 			<div class="row row-centered">
 				<div class="col-12 selects fondo_verde_obs padding_10">
 		    			<form name="form1" method="post" action="">
@@ -20,9 +20,9 @@
 								<div id="muestrasubmit" style="float:left; margin-right:10px"></div>
 		    			</form>
 				</div>
-				<div class='margen_50 table-responsive' id="paginacion">
+				<div class='table-responsive escritorio' id="paginacion">
 		    		   <table class='table'>
-					        <thead>
+					        <thead class='fondo_barra'>
 					        	<th>LOGOTIPO</th>
 					            <th>EMPRESA</th>
 					            <th>CIUDAD</th>
@@ -38,7 +38,26 @@
 					                <td>{{$afiliado->ciudad->nombre}}</td>
 					                <td>{{$afiliado->servicios->nombre }}</td>
 					                <td>{{$afiliado->certificados }}</td>
-					                <td><a href="/detalle_afiliado/{{$afiliado->id}}">Ver detalle</a></td>
+					                <td><a class='btn_ver_mas' href="/detalle_afiliado/{{$afiliado->id}}">Ver detalle</a></td>
+					            </tr>
+					            @endforeach 
+					        </tbody>
+					    </table>
+		    			{!! $afiliados->render() !!}
+		    	</div>
+				<div class='table-responsive movil' id="paginacion">
+		    		   <table class='table'>
+					        <thead class='fondo_barra'>
+					        	<th>LOGOTIPO</th>
+					            <th>EMPRESA</th>
+					            <th>DETALLES</th>
+					        </thead>
+					        <tbody>
+					            @foreach($afiliados as $afiliado) 
+					            <tr>
+					            	<td>{{$afiliado->imagen}}</td>
+					                <td>{{$afiliado->empresa}}</td>
+					                <td><a class='btn_ver_mas' href="/detalle_afiliado/{{$afiliado->id}}">Ver detalle</a></td>
 					            </tr>
 					            @endforeach 
 					        </tbody>

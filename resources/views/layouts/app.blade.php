@@ -20,7 +20,7 @@
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('css/font-awesome.min.css')}}">
     <link href="{{ asset('css/principal.css') }}" rel="stylesheet" rel="stylesheet">
-
+<link href="//cdn.rawgit.com/noelboss/featherlight/1.7.8/release/featherlight.min.css" type="text/css" rel="stylesheet" />
     <!-- Bootstrap -->
     <!-- Latest compiled and minified CSS -->
     <!-- <link rel="stylesheet" href="{{ asset('bootstrap-3.3.7/css/bootstrap.min.css') }}"  > -->
@@ -34,7 +34,7 @@
 
      <script src="{{ asset('bootstrap-3.3.7/js/bootstrap.min.js') }}"></script>
 
-   
+ 
 
     <script type="text/javascript" src="{{asset('js/jquery.tools.min.js')}}" ></script><!--estos son temporales--> 
     <script type="text/javascript" src="{{asset('js/jquery.jshowoff.min.js')}}" ></script><!--estos son temporales-->
@@ -65,6 +65,7 @@
   })();
 
 </script>
+    <script src="//cdn.rawgit.com/noelboss/featherlight/1.7.8/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>  
 </head>
 <body><!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 <!-- ////////////////////////////////////////////// H E A D E R ///////////////////////////////////////////////////// -->
@@ -89,21 +90,21 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="#"><img src="{{ asset('img/CNEC-logo-blanco.png') }}" alt="Camara Nacional de Empresas de Consultoria"></a>
-              <img src="{{ asset('img/CNEC-logo-header.png') }}" alt="CNEC LOGOS ASOCIACIONES" class="navbar-logos">
+              <a class="navbar-brand" href="{{url('/')}}"><img src="{{ asset('img/CNEC-logo-blanco.png') }}" alt="Camara Nacional de Empresas de Consultoria"></a>
+              <img src="{{ asset('img/CNEC-logo-header.png') }}" alt="CNEC LOGOS ASOCIACIONES" class="solo_escritorio navbar-logos">
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
-                <li class="active"><a href="{{url('/')}}">HOME</a></li>
-                <li><a href="{{ url('/organigrama_cnec') }}">ORGANIGRAMA</a></li>
-                <li><a href="{{ url('/cnec') }}">¿QUÉ ES LA CNEC?</a></li>
-                <li><a href="{{ url('/certificados') }}">CERTIFICACIÓN</a></li>
-                <li><a href="{{ url('/afiliados') }}">AFILIADOS</a></li>
-                <li><a href="{{ url('/eventos') }}">CALENDARIO</a></li>
-                <li><a href="{{ url('/capacitacion') }}">CAPACITACIÓN</a></li>
-                <li><a href="{{ url('/todas_las_vacantes') }}">BOLSA DE TRABAJO</a></li>
-                <li><a href="{{ url('/servicios') }}">SERVICIOS</a></li>
-                <li><a href="{{ url('/convenios') }}">CONVENIOS</a></li>
+                <li {{ Request::is('/') ? 'class=active' : '' }} ><a  href="{{url('/')}}">HOME</a></li>
+                <li {{ Request::is('organigrama_cnec') ? 'class=active' : '' }}><a href="{{ url('/organigrama_cnec') }}">ORGANIGRAMA</a></li>
+                <li {{ Request::is('cnec') ? 'class=active' : '' }}><a  href="{{ url('/cnec') }}">¿QUÉ ES LA CNEC?</a></li>
+                <li {{ Request::is('certificados') ? 'class=active' : '' }} ><a href="{{ url('/certificados') }}">CERTIFICACIÓN</a></li>
+                <li {{ Request::is('afiliados') ? 'class=active' : '' }}><a  href="{{ url('/afiliados') }}">AFILIADOS</a></li>
+                <li {{ Request::is('eventos') ? 'class=active' : '' }}><a  href="{{ url('/eventos') }}">CALENDARIO</a></li>
+                <li {{ Request::is('capacitacion') ? 'class=active' : '' }}><a href="{{ url('/capacitacion') }}">CAPACITACIÓN</a></li>
+                <li {{ Request::is('todas_las_vacantes') ? 'class=active' : '' }}><a href="{{ url('/todas_las_vacantes') }}">BOLSA DE TRABAJO</a></li>
+                <li {{ Request::is('servicios') ? 'class=active' : '' }}><a href="{{ url('/servicios') }}">SERVICIOS</a></li>
+                <li {{ Request::is('convenios') ? 'class=active' : '' }}><a href="{{ url('/convenios') }}">CONVENIOS</a></li>
                 @if (Auth::guard('web')->check())
                 <li><a href="{{ url('/logout') }}" onclick="event.preventDefault();
                    document.getElementById('logout-form').submit();">
@@ -114,9 +115,9 @@
                 {{ csrf_field() }}
             </form>>SALIR</a></li>
             @else
-            <li><a href="{{ url('/afiliarse') }}">AFÍLIATE</a></li>
+            <li  {{ Request::is('afiliarse') ? 'class=active' : '' }}><a href="{{ url('/afiliarse') }}">AFÍLIATE</a></li>
             @endif
-            <li><a href="{{ url('/contacto') }}">CONTACTO</a></li>
+            <li {{ Request::is('contacto') ? 'class=active' : '' }}><a href="{{ url('/contacto') }}">CONTACTO</a></li>
 
                   </ul>
                 </li>

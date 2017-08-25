@@ -18,10 +18,10 @@ use App\Mail\SolicitudAfiliarse;
 
 class WelcomeController extends Controller{
    public function index(){
-   	$otro_banner      = Banner::Activo();
+   	$otro_banner      = Banner::Activo()->take(4);
    	$noticias         = Article::orderBy('id','asc')->take(2)->get();
-    $calendarios      = Calendar::CalendarActivo()->get(['title','start', 'imagen', 'descripcion','url','id'])->toArray();
-    $capacitaciones   = Capacitacion::FechaActivo()->get(['title','start','imagen', 'descripcion', 'url','id'])->toArray();
+    $calendarios      = Calendar::CalendarActivo()->take(1)->get(['title','start', 'imagen', 'descripcion','url','id'])->toArray();
+    $capacitaciones   = Capacitacion::FechaActivo()->take(1)->get(['title','start','imagen', 'descripcion', 'url','id'])->toArray();
     $fechas           = array_merge($calendarios, $capacitaciones);
 
    	return view('welcome',compact('otro_banner','noticias', 'fechas'));
@@ -30,7 +30,6 @@ class WelcomeController extends Controller{
 
     public function edit($id,Request $request){
         $users = User::findOrfail($id);
-        
         return view('capacitacion.edit',compact('users'));
     }
 
@@ -51,7 +50,7 @@ class WelcomeController extends Controller{
               'telefono' => $request->telefono,
               'asunto' => $request->asunto
         ];
-        Mail::to('emmanegr@gmail.com')->send(new NuevoCorreoContacto($data));
+        Mail::to('desarrolloempresarial@cnecgto.org')->send(new NuevoCorreoContacto($data));
         return redirect('/');
     }
    public function update(){
@@ -99,7 +98,7 @@ class WelcomeController extends Controller{
               'ciudad' => $request->ciudad,
               'servicios' => $request->servicios
         ];
-        Mail::to('emmanegr@gmail.com')->send(new SolicitudAfiliarse($data));
+        Mail::to('desarrolloempresarial@cnecgto.org')->send(new SolicitudAfiliarse($data));
         return redirect('/');
    }
 

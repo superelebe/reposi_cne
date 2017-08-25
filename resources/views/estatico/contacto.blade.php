@@ -5,20 +5,20 @@
 <div class="contenedor">
     <div class="fondo_contacto">
         <div class="ocho80 padding_400_50">
-            <div class="row row-centered">
-                <div class="col-12 fondo_verde">
-                    <div class="row">
-                        <div class="col-12">
+            <div class="ancho_al_100">
+                <div class="fondo_verde">
+                    <div class="">
+                        <div class="">
                             <div id="mapa_cnec">
                                 
                             </div>
                         </div>
-                        <div class="col-12 padding_delega">
-                            <div class="row row-centered">
-                                <div class="col-12 col-sm-5 col-centered alineado_izq">
+                        <div class="padding_delega">
+                            <div class="">
+                                <div class="ancho_al_40 col-centered alineado_izq">
                                     <div class="datos_contacto_del">    
                                         <p class='deleg_gto'>Delegación Guanajuato</p>
-                                        <p>
+                                        <p class='line_20'>
                                         Blvd. Mariano Escobedo No. 4502, local 32<br />
                                         Col. San Isidro, León Guanajuato, México</span>
                                         </p>  
@@ -27,7 +27,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12 col-sm-5 col-centered">
+                                <div class="ancho_al_40 col-centered">
                                     <div>
                                         <div class='num_tel_1'>
                                             01 (477)
@@ -44,7 +44,7 @@
                 </div>
                 <div class="col-12">
                     <div class="row row-centered fondo_formulario_contact">
-                        <div class="col-7 alineado_izq">
+                        <div class="col-12 col-sm-7 alineado_izq">
                             <form class='padding_formulario' method="post" action="{{route('enviar_correo_contacto')}}">
                                 {!! csrf_field() !!}
                                 <div class="form-group">

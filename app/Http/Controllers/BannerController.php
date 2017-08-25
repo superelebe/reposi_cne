@@ -55,8 +55,8 @@ class BannerController extends Controller
                 $imagen = $request->file('imagen');
                 $filename = time().'.'.$imagen->getClientOriginalExtension();
 
-                $path = public_path('uploads/banner/' . $filename);
-                $thumbpath = public_path('uploads/banner/thumb/' . $filename);
+                $path = 'img/banner/'.$filename;
+                $thumbpath = 'img/banner/thumb_'.$filename;
                 Image::make($imagen)->resize(null, 400, function ($constraint) {
                     $constraint->aspectRatio();
                     $constraint->upsize();
@@ -67,8 +67,8 @@ class BannerController extends Controller
                     $constraint->upsize();
                 })->save($thumbpath);
                  
-                $banner->thumb = '/uploads/banner/thumb/'.$filename;
-                $banner->imagen = '/uploads/banner/'.$filename;
+                $banner->thumb = 'img/banner/thumb_'.$filename;
+                $banner->imagen = 'img/banner/'.$filename;
                 
             }
         
@@ -136,7 +136,26 @@ class BannerController extends Controller
     	
         $banner->titulo = $request->titulo;
         
-        $banner->imagen = $request->imagen;
+            if ($request->hasFile('imagen')) {
+                $imagen = $request->file('imagen');
+                $filename = time().'.'.$imagen->getClientOriginalExtension();
+
+                $path = 'img/banner/'.$filename;
+                $thumbpath = 'img/banner/thumb_'.$filename;
+                Image::make($imagen)->resize(null, 400, function ($constraint) {
+                    $constraint->aspectRatio();
+                    $constraint->upsize();
+                })->save($path);
+
+                Image::make($imagen)->resize(null, 100, function ($constraint) {
+                    $constraint->aspectRatio();
+                    $constraint->upsize();
+                })->save($thumbpath);
+                 
+                $banner->thumb = 'img/banner/thumb_'.$filename;
+                $banner->imagen = 'img/banner/'.$filename;
+                
+            }
         
         $banner->thumb = $request->thumb;
         

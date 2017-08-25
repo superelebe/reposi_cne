@@ -128,8 +128,8 @@ class OrganiController extends Controller
     $vices->shift();
 
     $vices->all();
-
-    return view('organigrama.organigrama', compact('puestos', 'elpresi', 'representantes', 'vices'));
+    $losdemas = Puesto::join('organigrama','puesto.id','=','organigrama.puesto_id')->where('titulo', 'NOT LIKE', '%Representante%')->where('titulo', 'NOT LIKE', '%Vice%')->where('titulo', 'NOT LIKE', '%Secretario%')->where('titulo', 'NOT LIKE', '%Tesorero%')->where('titulo', 'NOT LIKE', '%Presidente%')->get();
+    return view('organigrama.organigrama', compact('puestos', 'elpresi', 'representantes', 'vices','losdemas'));
    }
 
     public function update($id, Request $request)

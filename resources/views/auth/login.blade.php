@@ -4,12 +4,9 @@
 
 
 
-<div class="contenedor">
+<div class="contenedor_inicio_sesion">
     <div class="row row-centered">
-        <div class="col-md-12 col-centered img_centrada"><img src="{{asset('img/banner-iniciar-sesion.png')}}" alt=""></div>
-    </div>
-    <div class="row row-centered">
-        <div class="col-md-8 col-centered">
+        <div class="col-md-8 col-centered padding_400_50">
             <div class="panel panel-default">
                 <div class="titulo_seccion">Afiliados Login</div>
                 <div class="panel-body">

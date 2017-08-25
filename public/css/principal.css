@@ -80,7 +80,7 @@ h3{
 }
 
 #app{
-	margin-top: -50px;
+	margin-top: -12px;
 }
 
 /*----- HEADER -----*/
@@ -127,7 +127,44 @@ h3{
     margin: 55px 0 10px 0;
 }
 
+.texto_convenio_1{
+    color: #495664;
+    font-size: 27px;
+    line-height: 35px;	
+}
 
+.texto_convenio_2{
+    color: #8898A9;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 35px;
+}
+
+.texto_convenio_3{
+    color: #A6C36F;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 35px;	
+}
+
+
+.escritorio{
+	display: none;
+}
+
+.movil{
+	display: inline;
+}
+
+.afiliate_convenio{
+	background: #465663;
+    padding: 1px 40px;
+    width: 62%;
+    margin: 24px auto;
+    font-weight: bold;
+    color: white;
+    font-size: 30px;
+}
 
 .lista_certificado{
 	padding-left: 50px;
@@ -136,11 +173,24 @@ h3{
 .contacto_certificaciones{
 	background-color: #414C52;
 	color: white;
-	width: 100%;
+	width: 80%;
 	padding: 10px 0;
 	font-family: 'Myrad';
 	font-size: 25px;
-	margin: 20px 0;
+	margin: 20px auto;
+	-webkit-transition: all 1s; /* Safari */
+    transition: all 1s;
+}
+
+
+.contacto_certificaciones:hover{
+	background-color: #668E00;
+	color: white;
+	pointer: cursor;
+}
+
+a .contacto_certificaciones{
+	text-decoration: none;
 }
 
 .subtitulo_certificadoo_verde{
@@ -148,6 +198,22 @@ h3{
 	font-size: 30px;
 	text-align: left;
 	font-family: 'Myrad';
+}
+
+.line_20{
+	line-height: 20px;
+}
+
+.ancho_al_100{
+	width: 100%;
+	margin: 0 auto;
+}
+
+.ancho_al_40{
+	width: 40%;
+	margin: 0 auto;
+	display: inline-block;
+	vertical-align: top;
 }
 
 .proyectos_especiales{
@@ -185,10 +251,26 @@ h3{
 /*----- ROTADOR -----*/
 #slides{
 	margin: 0 auto;
+	top: 20px;
+}
+
+.margin_arriba_70{
+    margin-top: -70px;
 }
 
 .poster img{
 	width:100%;
+}
+
+.navbar-wrapper{
+	position: fixed;
+    width: 100%;
+    z-index: 9999;
+}
+
+.fondo_barra{
+	background-color: #465663;
+	color:white;
 }
 
 .con_display{
@@ -638,8 +720,12 @@ ESTILOS POR SECIONES DEL SITIO
 	font-family: Myrad;
 	color: #455560;
 	font-size: 18px;
+	line-height: 17px;
 }
 
+.texto_presentacion{
+	line-height: 18px;
+}
 
 .fecha a{
 	background:url(../img/cruzmas.gif) no-repeat top left;
@@ -886,15 +972,16 @@ ESTILOS POR SECIONES DEL SITIO
 
 /*----- SERVICIOS CNEC -----*/
 #servicios{
-background: url(../img/fondo-servicios-2.png) no-repeat;
+	background: url(../img/fondo-servicios-2.png) no-repeat;
     padding-top: 1px;
     margin-top: -220px;
-    background-position: 110% 10%;
+    background-position: 36% 6%;
     margin-bottom: 100px;
+    background-size: 170%
 }
 
-#servicios #contenedorserv{
-	margin-top: 700px;
+#servicios #contenedorserv {
+    margin-top: 500px;
 }
 
 .tiraservicio{
@@ -1387,6 +1474,7 @@ background: url(../img/fondo-servicios-2.png) no-repeat;
 /*-----  AFILIATE  -----*/
 #afiliate{
 	background:url(../img/afiliate-a-la-cenec-banner2.png) no-repeat center top;
+	background-size: 170%;
 }
 
 
@@ -1504,12 +1592,12 @@ background: url(../img/fondo-servicios-2.png) no-repeat;
 }
 /*-----AREAS DE ESPECIALIDAD -----*/
 #arease{
-	background:url(../img/banner-areas.png) no-repeat center top;
+	background:url(../img/fondo_areasespecialidad.png) no-repeat center top;
 	padding-top:1px;
 }
 #arease #contenedorareas{
-	margin:260px 0 0;
-
+	margin: 300px 0 100px;
+    padding: 100px 0;
 }
 .tiraarea{
 	clear:both;
@@ -1520,7 +1608,7 @@ background: url(../img/fondo-servicios-2.png) no-repeat;
 #arease .areatit a{
 	background:#A1BA77;
     float: left;
-    height: 70px;
+    height: 100px;
     margin: 5px;
     padding:9px;
     text-align: center;
@@ -1825,6 +1913,19 @@ background: url(../img/fondo-servicios-2.png) no-repeat;
 	font-size:1.5em;
 	color:#455560;
 	padding-top:10px;
+}
+
+.btn_ver_mas{
+    background-color: #668E00;
+    padding: 5px 8px;
+    color: white;
+    transition: all 0.5s;
+}
+
+.btn_ver_mas:hover{
+	background-color: #A8C467;
+	color: white;
+	text-decoration: none;
 }
 .dia a{
 	color:#455560;
@@ -2150,13 +2251,14 @@ AZULGRISOSCURO : #455560;
 
 /*----- CLASES -----*/
 .ocho80 {
-    max-width: 880px;
-    min-width: 375px;
+    width: 880px;
+    max-width: 100%;
     margin: 0 auto;
+	padding: 0 15px;
 }
 .cinco50 {
-    max-width: 550px;
-    min-width: 375px;
+    max-width: 100%;
+    width: 550px;
     margin: 0 auto;
 }
 .clearfix {
@@ -2324,7 +2426,7 @@ margin-top: -2261px;
 	font-size: 36px;
     text-align: center;
     color: #455560;
-    width: 505px;
+    width: 100%;
     padding: 10px 0;
     background: #A1BA77;
     margin-bottom: 10px;
@@ -2338,6 +2440,11 @@ margin-top: -2261px;
 
 .fc-time{
    display : none;
+}
+
+.fc-center{
+    width: 100%;
+    margin: 0 auto;
 }
 
 .ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight{
@@ -2495,7 +2602,27 @@ margin-top: -2261px;
 .fondo_organigrama{
 	background-image: url("../img/fondo_organigrama.png");
 	background-repeat: no-repeat;
-    background-position: 50% 0%;		
+    background-position: 50% 0%;
+    background-size: 170%;	
+}
+
+.contenedor_inicio_sesion{
+	background-image: url("../img/fondo_iniciar_sesion.png");
+	background-repeat: no-repeat;
+    background-position: 50% 0%;	
+}
+
+.fondo_calendario_2{
+	background-image: url("../img/fondo_calendario_2.png");
+	background-repeat: no-repeat;
+    background-position: 50% 0%;
+}
+
+.fondo_convenio{
+	background-image: url("../img/fondo_convenios.png");
+	background-repeat: no-repeat;
+    background-position: 50% 0%;
+    background-size: 170%;	
 }
 
 #mapa_cnec{
@@ -2504,29 +2631,33 @@ margin-top: -2261px;
 	margin-top: 15px;
 }
 
-.fondo_contacto{
-	background-image: url("../img/fondo_contacto.png");
-	background-repeat: no-repeat;
-    background-position: 50% 0%;		
-}
-
 
 .fondo_bolsa_trabajo{
 	background-image: url("../img/fondo_bolsadetrabajo.png");
 	background-repeat: no-repeat;
-    background-position: 50% 0%;	
+    background-position: 50% 0%;
+	background-size: 170%;   
 }
 
 .fondo_calendario{
 	background-image: url("../img/fondo_calendario.png");
 	background-repeat: no-repeat;
-    background-position: 50% 0%;	
+    background-position: 50% 0%;
+    background-size: 170%;	
 }
 
 .fondo_generico{
 	background-image: url("../img/fondo_generico.png");
 	background-repeat: no-repeat;
     background-position: 50% -20%;		
+}
+
+
+.fondo_generico2{
+	background-image: url("../img/fondo_certificados.png");
+	background-repeat: no-repeat;
+	background-size: 90%;
+    background-position: 50% 1%;	
 }
 
 .fondo_noticias{
@@ -2546,7 +2677,7 @@ margin-top: -2261px;
 	background-image: url("../img/fondo_afiliados.png");
 	background-repeat: no-repeat;
     background-position: 50% 0%;
-    background-size: 1300px;
+    background-size: 170%;
 
 }
 
@@ -2558,19 +2689,20 @@ margin-top: -2261px;
 	padding: 400px 0 50px 0;
 }
 
-.
-
+.padding_100_50{
+	padding: 100px 0 50px 0;
+}
 
 .datos_contacto_del{
     color: #434A52;
     font-weight: bold;
-	line-height: 1px;
+	line-height: 15px;
 }
 
 .deleg_gto{
     font-size: 25px;
     font-weight: bold;
-    line-height: 1px;
+    line-height: 22px;
 }
 
 
@@ -2683,7 +2815,7 @@ margin-top: -2261px;
 	background-image: url('../img/fondo_que_es_la_cnec-31.png');
 	background-repeat: no-repeat;
 	background-position: 25% 0%;
-	background-size: 1311px ;
+	background-size: 1268px;
 }
 
 .fondo_formulario_contact{
@@ -2728,7 +2860,11 @@ margin-top: -2261px;
 }
 
 .padding_organigrama{
-	padding: 300px 0 0 0;
+	padding: 150px 0 0 0;
+}
+
+.padding_organigrama_cnec{
+	padding: 100px 0 0 0;
 }
 
 .borde_verde_delgado{
@@ -2763,6 +2899,15 @@ margin-top: -2261px;
 	.imagen_ques_es{
 	    margin-left: 7%;
 	}
+
+.vigencia_convenio{
+	background: #465663;
+    color: white;
+    padding: 5px 8px;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+}
 
 .padding_100{
     padding-top: 100px;
@@ -2866,15 +3011,16 @@ margin-top: -2261px;
 }
 
 .margen_aun_no_estas{
-	margin-top:625px;
+	margin-top:75px;
 }
 
 .margen_registro{
-    margin-top: 250px;
+    margin-top: 170px;
 }
 
 .pdf_registro{
-	margin-top: 427px;
+	margin-top: 187px;
+	text-align: left;
 }
 
 .img_sec_curso{
@@ -2893,10 +3039,11 @@ margin-top: -2261px;
 	background-image: url('../img/fondo-capacitacion3.png');
 	background-position: 50% 0%;
     background-repeat: no-repeat;
+    background-size: 170%;
 }
 
 .texto_organigrama span{
-    font-size: 51px;
+    font-size: 45px;
     color: #8195A5;
 }
 
@@ -2969,7 +3116,7 @@ margin-top: -2261px;
 }
 
 .jshowoff{
-    background: #639100 none repeat scroll 0 0;
+    background: none;
     margin: 0 auto;
     width: 100%;
     overflow-x: hidden;
@@ -2979,7 +3126,6 @@ margin-top: -2261px;
 	background: #639100;
     position: absolute;
     overflow: hidden;
-    max-width: 880px;
     width: 100%;
     margin: 0 auto;
     height: auto;
@@ -2994,7 +3140,7 @@ margin-top: -2261px;
 	margin: auto;
 }
 .thumbFeatures .jshowoff-slidelinks a {
-    width: 120px;
+    width: 80px;
     height: 27px;
     background-color: none;
     background-repeat: no-repeat;
@@ -3009,7 +3155,7 @@ margin-top: -2261px;
 }
 
 .thumbFeatures p.jshowoff-slidelinks {    
-	background: #639100;
+	background: none;
     margin: 3px auto;
     max-width: 880px;
     width: 100%;
@@ -3020,7 +3166,7 @@ margin-top: -2261px;
     text-align: center;
 }
 .margen_menu_top{
-    margin-top: 180px;
+    margin-top: 120px;
     display: inline-block;
 	width: 100%;
 }
@@ -3043,19 +3189,17 @@ margin-top: -2261px;
 	right: 0;
 }
 
-.fondo_generico{
-	background: url(../img/fondo_que_es_la_cnec-2.png) no-repeat;
-    padding-top: 1px;
-    margin-top: -90px;
-    background-position: 60% 0%;
-}
 
 .fondo_certificaciones{
 	background: url(../img/fondo_generico.png) no-repeat;
     padding-top: 1px;
-    margin-top: -90px;
+    margin-top: -10px;
     background-position: 60% -12%;
 
+}
+
+.padding_cetificaciones{
+    margin: 56px 0;
 }
 
 
@@ -3063,17 +3207,153 @@ margin-top: -2261px;
 	background: url(../img/fondo_contacto.png) no-repeat;
     padding-top: 1px;
     margin-top: -90px;
-    background-position: 60% -12%;
+    background-position: 60% 11%;
+    background-size: 170%;
 }
 
+.nombreInfo{
+	font-family: 'Myrad';
+	font-size: 20px;
+	color: #808c97;
+}
+
+.datos_info{
+	font-family: 'Myrad';
+	font-size: 16px;
+	color: #639100;	
+}
+
+/* the overlayed element */
+.simple_overlay {
+ 
+    /* must be initially hidden */
+    display:none;
+ 
+    /* place overlay on top of other elements */
+    z-index:10000;
+ 
+    /* styling */
+   
+ 
+    width:880px;
+    min-height:200px;
+    border:1px solid #666;
+	
+	margin:-50px;
+	background:#CAC8C8;
+ 
+    /* CSS3 styling for latest browsers */
+    -moz-box-shadow:0 0 90px 5px #000;
+    -webkit-box-shadow: 0 0 90px #000;
+}
+ 
+/* close button positioned on upper right corner */
+.simple_overlay .close {
+    background-image:url(../img/close.png);
+    position:absolute;
+    right:-5px;
+    top:-5px;
+    cursor:pointer;
+    height:45px;
+    width:35px;
+}
+	.titulo_lineas_inicio{
+	    display: inline-block;
+	    vertical-align: bottom;
+	    margin-top: 4px;
+		width: 75%;
+	}
+.pdf_registro img{
+	width: 70px;
+}
+
+.inicio_1{
+    margin-top: 40px;
+}
+.padding_convenios{
+    padding: 200px 30px 50px 30px;
+}
+
+
 @media (min-width:650px)  {
+.padding_cetificaciones{
+    margin: 20px 0;
+}
+
+
+.fondo_certificaciones{
+    margin-top: -45px;
+
+}
+
+#servicios{
+    background-size: auto;
+    background-position: 50% 12%;
+}
+
+
+#servicios #contenedorserv{
+	margin-top: 700px;
+}
+
+.padding_convenios{
+	padding: 400px 30px 50px 30px;
+}
+
+.fondo_convenio{
+    background-size: auto;
+}
+
+.pdf_registro{
+	margin-top: 427px;
+}
+
+.pdf_registro img{
+	width: auto;
+}
+.margen_registro{
+    margin-top: 250px;
+}
+
+#afiliate{
+	background-size: auto;
+}
+
+.escritorio{
+	display: inline-block;
+}
+
+.movil{
+	display: none;
+}
+
+.margen_aun_no_estas{
+	margin-top:625px;
+}
+
+	#slides{
+		margin: 0 auto;
+		top: -16px;
+	}
+	#app{
+		margin-top: -5px;
+	}
+	.fondo_contacto{
+		background-position: 60% 9%;
+	}
+	.fondo_organigrama, .fondo_contacto, .fondo_afiliados, .fondo_bolsa_trabajo, .fondo_calendario, .fondo_capacitacion{
+		background-size: auto;	
+	}
+	.padding_organigrama{
+		padding: 300px 0 0 0;
+	}
 	.titulo_certificado{
 	    font-size: 80px;
 	    line-height: 85px;
 	}
 
 	.titulo_certificado span{
-		font-size: 125px;
+		    font-size: 110px;
 	}
 
 	.logo_header{
@@ -3081,7 +3361,7 @@ margin-top: -2261px;
 	}
 
 	.margen_menu_top{
-	    margin-top: 100px;
+	    margin-top: 170px;
 	}
 	#menu {
 	    width: 347px;
@@ -3123,7 +3403,7 @@ margin-top: -2261px;
 	    display: inline-block;
 	    vertical-align: bottom;
 	    margin-top: 4px;
-		width: 75%;
+		width: 70%;
 	}
 	.margen_premio_cnec{
 		margin-top: 100px;
